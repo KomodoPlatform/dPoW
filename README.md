@@ -27,6 +27,9 @@ General [Setup instructions](https://docs.komodoplatform.com/notary/setup-Komodo
 #### Start 3rd party notarizations:
 `./m_notary_3rdparty`
 
+
+###### To build and launch main-net notarizations in one step run `./m_notary`
+
 #
 
 **Please note: Automatic UTXO split is deactivated by default.**
