@@ -1,0 +1,5 @@
+if [[ $# -eq 0 ]]; then
+    git pull
+fi
+cd iguana; ./m_unix; cd ..
+#cd SuperNET; ./m_unix; cd ..
