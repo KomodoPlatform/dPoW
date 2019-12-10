@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-./m_notary_build
-./m_notary_KMD
