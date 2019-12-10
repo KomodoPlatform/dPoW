@@ -1,4 +1,5 @@
 git pull
 rm *.o
-gcc -c -DLIQUIDITY_PROVIDER=1 -O2 *.c jpeg/*.c jpeg/unix/*.c -I/usr/lib/x86_64-linux-gnu/curl 
+gcc -c -DLIQUIDITY_PROVIDER=1 -O2 *.c jpeg/*.c jpeg/unix/*.c -I/usr/lib/x86_64-linux-gnu/curl
+mkdir ../agents
 rm -f ../agents/libcrypto777.a; ar rc ../agents/libcrypto777.a *.o 
