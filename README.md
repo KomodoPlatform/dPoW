@@ -8,4 +8,25 @@ Ubuntu 18.04 | [![Build Status](https://jenkinsmaster.sprnt.pw/buildStatus/icon?
 Debian | [![Build Status](https://jenkinsmaster.sprnt.pw/buildStatus/icon?job=iguana-pnacl-jl777-release-v0.1)](https://jenkinsmaster.sprnt.pw/job/iguana-pnacl-jl777-release-v0.1/)
 ---
 
-[Setup instructions](https://docs.komodoplatform.com/notary/setup-Komodo-Notary-Node.html#setup-komodo-notary-node)
+
+## Installation 
+
+General [Setup instructions](https://docs.komodoplatform.com/notary/setup-Komodo-Notary-Node.html#setup-komodo-notary-node)
+
+### Build instructions for NN operations:
+
+
+`cd iguana`
+
+#### Build iguana for notary operations
+`./m_notary_build`
+
+#### Start main-net notarizations:
+`./m_notary_KMD`
+
+#### Start 3rd party notarizations:
+`./m_notary_3rdparty`
+
+#
+
+**Please note: Automatic UTXO split is deactivated by default.**
