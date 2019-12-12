@@ -12,3 +12,4 @@ curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dp
 ~/komodo/src/listassetchains | while read chain; do
     curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"$chain\",\"pubkey\":\"$pubkey\"}"
 done
+curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"NZT\",\"pubkey\":\"$pubkey\"}"
