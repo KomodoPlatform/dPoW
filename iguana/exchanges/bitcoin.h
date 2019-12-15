@@ -67,3 +67,4 @@ int32_t oldbitcoin_verify(uint8_t *sig,int32_t siglen,uint8_t *data,int32_t data
 
 
 #endif
+

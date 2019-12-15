@@ -728,3 +728,4 @@ char *WITHDRAW(struct exchange_info *exchange,char *base,double amount,char *des
 struct exchange_funcs bitcoin_funcs = EXCHANGE_FUNCS(bitcoin,EXCHANGE_NAME);
 
 #include "exchange_undefs.h"
+
