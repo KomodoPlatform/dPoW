@@ -4,7 +4,7 @@ This repository is based on the original SuperNET codebase - commit [f29913e92b1
 
 OS | Build Status 
 -------------|------
-Ubuntu (16.04, 18.04) | [![Build Status](https://github.com/komodoplatform/dpow/workflows/CI/badge.svg)](https://github.com/komodoplatform/dpow/workflows/CI/badge.svg)
+Ubuntu (16.04, 18.04) | [![Build Status](https://github.com/komodoplatform/dpow/workflows/CI/badge.svg)](https://github.com/KomodoPlatform/dPoW/actions)
 
 ---
 
