@@ -4,8 +4,8 @@ This repository is based on the original SuperNET codebase - commit [f29913e92b1
 
 OS | Build Status 
 -------------|------
-Ubuntu 18.04 | [![Build Status](https://jenkinsmaster.sprnt.pw/buildStatus/icon?job=iguana-unix-jl777-release-v0.1)](https://jenkinsmaster.sprnt.pw/job/iguana-unix-jl777-release-v0.1)
-Debian | [![Build Status](https://jenkinsmaster.sprnt.pw/buildStatus/icon?job=iguana-pnacl-jl777-release-v0.1)](https://jenkinsmaster.sprnt.pw/job/iguana-pnacl-jl777-release-v0.1/)
+Ubuntu (16.04, 18.04) | [![Build Status](https://github.com/komodoplatform/dpow/workflows/CI/badge.svg)](https://github.com/komodoplatform/dpow/workflows/CI/badge.svg)
+
 ---
 
 
