@@ -5,7 +5,7 @@ This repository is based on the original SuperNET codebase - commit [f29913e92b1
 Integration | Status 
 -------------|------
 CI build - Ubuntu (16.04, 18.04) | [![Build Status](https://github.com/komodoplatform/dpow/workflows/CI/badge.svg)](https://github.com/KomodoPlatform/dPoW/actions)
-Codefactor analysis | [![Grade](https://img.shields.io/codefactor/grade/github/komodoplatform/dpow)](https://img.shields.io/codefactor/grade/github/komodoplatform/dpow)
+Codefactor analysis | [![Grade](https://img.shields.io/codefactor/grade/github/komodoplatform/dpow)](https://www.codefactor.io/repository/github/komodoplatform/dpow)
 ---
 
 
