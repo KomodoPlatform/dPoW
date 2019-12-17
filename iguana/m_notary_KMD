@@ -34,3 +34,8 @@ curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"ad
 sleep 30
 # dpow for KMD-> BTC.
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"KMD\",\"pubkey\":\"$pubkey\"}"
+ 
+echo Launching dPoW for ACs
+sleep 20
+# dpow for ACs
+./dpowassets
