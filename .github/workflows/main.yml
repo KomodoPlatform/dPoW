@@ -1,0 +1,26 @@
+name: CI
+
+on: [push, pull_request]
+jobs:
+  build:
+    name: Build dPoW client "iguana" on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-16.04, ubuntu-18.04]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies
+      run: |
+        sudo apt-get update && sudo apt-get upgrade -y
+        sudo apt-get install build-essential pkg-config cmake libsodium-dev libc6-dev m4 g++-multilib libtool libncurses-dev zlib1g-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libdb++-dev ntp ntpdate software-properties-common libevent-dev curl libcurl4-gnutls-dev clang jq -y
+    - name: Install nanomsg
+      run: |
+        git clone https://github.com/nanomsg/nanomsg
+        cd nanomsg
+        cmake . -DNN_TESTS=OFF -DNN_ENABLE_DOC=OFF
+        make -j2
+        sudo make install
+        sudo ldconfig
+    - name: Build dpow client "iguana"
+      run: cd iguana && ./m_notary_build
