@@ -2,10 +2,10 @@
 
 This repository is based on the original SuperNET codebase - commit [f29913e92b117399cd42e2fd05ff0d69d152c8fa](https://github.com/ca333/SuperNET/commit/f29913e92b117399cd42e2fd05ff0d69d152c8fa)
 
-OS | Build Status 
+Integration | Status 
 -------------|------
-Ubuntu 18.04 | [![Build Status](https://jenkinsmaster.sprnt.pw/buildStatus/icon?job=iguana-unix-jl777-release-v0.1)](https://jenkinsmaster.sprnt.pw/job/iguana-unix-jl777-release-v0.1)
-Debian | [![Build Status](https://jenkinsmaster.sprnt.pw/buildStatus/icon?job=iguana-pnacl-jl777-release-v0.1)](https://jenkinsmaster.sprnt.pw/job/iguana-pnacl-jl777-release-v0.1/)
+CI build - Ubuntu (16.04, 18.04) | [![Build Status](https://github.com/komodoplatform/dpow/workflows/CI/badge.svg)](https://github.com/KomodoPlatform/dPoW/actions)
+Codefactor analysis | [![Grade](https://img.shields.io/codefactor/grade/github/komodoplatform/dpow)](https://www.codefactor.io/repository/github/komodoplatform/dpow)
 ---
 
 

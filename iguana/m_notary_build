@@ -1,4 +1,5 @@
 #!/bin/bash
+pkill -15 iguana
 rm -f ../agents/iguana *.o
 cd secp256k1; ./m_unix; cd ..
 cd ../crypto777; ./m_LP; cd ../iguana

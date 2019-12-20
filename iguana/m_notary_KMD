@@ -26,6 +26,7 @@ curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"ad
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"5.9.142.219\"}"
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"200.25.4.38\"}"
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"139.99.136.148\"}"
+curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"185.65.205.98\"}" # indenodes_ae
 
 # This will add all KMD assetchains from assetchains.json.
 ./add_coins
@@ -33,3 +34,8 @@ curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"ad
 sleep 30
 # dpow for KMD-> BTC.
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"KMD\",\"pubkey\":\"$pubkey\"}"
+ 
+echo Launching dPoW for ACs
+sleep 20
+# dpow for ACs
+./dpowassets
