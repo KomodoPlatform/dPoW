@@ -37,6 +37,8 @@ General [Setup instructions](https://docs.komodoplatform.com/notary/setup-Komodo
 
 ### dPoW asset status
 
+![dPOW Status](http://159.69.45.70/svg/date_badge.svg)
+
 Coin | src | Version | Status | dPoW 
 --------|------|---|------|------
 KMD | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/KMD_badge.svg) | dPoW-Mainnet
