@@ -4,7 +4,7 @@ This repository is based on the original SuperNET codebase - commit [f29913e92b1
 
 Integration | Status 
 -------------|------
-CI build - Ubuntu (16.04, 18.04) | [![Build Status](https://github.com/komodoplatform/dpow/workflows/CI/badge.svg)](https://github.com/KomodoPlatform/dPoW/actions)
+CI build - Ubuntu (16.04, 18.04) | [![Build Status](https://github.com/komodoplatform/dpow/workflows/CI/badge.svg?maxAge=60)](https://github.com/KomodoPlatform/dPoW/actions)
 Codefactor analysis | [![Grade](https://img.shields.io/codefactor/grade/github/komodoplatform/dpow)](https://www.codefactor.io/repository/github/komodoplatform/dpow)
 
 ---
@@ -37,26 +37,26 @@ General [Setup instructions](https://docs.komodoplatform.com/notary/setup-Komodo
 
 ### dPoW asset status
 
-![dPOW Status](http://159.69.45.70/svg/date_badge.svg)
+![dPOW Status](http://159.69.45.70/svg/date_badge.svg?maxAge=60)
 * active - last notarization less than 2.5 hours ago
 * irregular - last notarization more than 2.5 and less than 24 hours ago
 * inactive - last notarization more than 24 hours ago
 
 Coin | src | Version | Status | dPoW 
 --------|------|---|------|------
-KMD | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/KMD_badge.svg) | dPoW-Mainnet
-BTC | [bitcoin](https://github.com/bitcoin/bitcoin) | 0.16 | ![dPOW Status](http://159.69.45.70/svg/KMD_badge.svg) | dPoW-Mainnet
-AXO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/AXO_badge.svg) | dPoW-mainnet
-BET | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/BET_badge.svg) | dPoW-mainnet
-BNTN | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/BNTN_badge.svg) | dPoW-mainnet
-BOTS | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/BOTS_badge.svg) | dPoW-mainnet
-BTCH | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/BTCH_badge.svg) | dPoW-mainnet
-CCL | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/CCL_badge.svg) | dPoW-mainnet
-CEAL | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/CEAL_badge.svg) | dPoW-mainnet
-CHAIN | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/CHAIN_badge.svg) | dPoW-mainnet
-CHIPS | [chips](https://github.com/jl777/chips3/tree/dev) | dev | ![dPOW Status](http://159.69.45.70/svg/CHIPS_badge.svg) | dPoW-3P
-COMMOD | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/COMMOD_badge.svg) | dPoW-mainnet
-COQUICASH | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/COQUICASH_badge.svg) | dPoW-mainnet
+KMD | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/KMD_badge.svg?maxAge=60) | dPoW-Mainnet
+BTC | [bitcoin](https://github.com/bitcoin/bitcoin) | 0.16 | ![dPOW Status](http://159.69.45.70/svg/KMD_badge.svg?maxAge=60) | dPoW-Mainnet
+AXO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/AXO_badge.svg?maxAge=60) | dPoW-mainnet
+BET | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/BET_badge.svg?maxAge=60) | dPoW-mainnet
+BNTN | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/BNTN_badge.svg?maxAge=60) | dPoW-mainnet
+BOTS | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/BOTS_badge.svg?maxAge=60) | dPoW-mainnet
+BTCH | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/BTCH_badge.svg?maxAge=60) | dPoW-mainnet
+CCL | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/CCL_badge.svg?maxAge=60) | dPoW-mainnet
+CEAL | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/CEAL_badge.svg?maxAge=60) | dPoW-mainnet
+CHAIN | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/CHAIN_badge.svg?maxAge=60) | dPoW-mainnet
+CHIPS | [chips](https://github.com/jl777/chips3/tree/dev) | dev | ![dPOW Status](http://159.69.45.70/svg/CHIPS_badge.svg?maxAge=60) | dPoW-3P
+COMMOD | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/COMMOD_badge.svg?maxAge=60) | dPoW-mainnet
+COQUICASH | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/COQUICASH_badge.svg?maxAge=60) | dPoW-mainnet
 CRYPTO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/CRYPTO_badge.svg) | dPoW-mainnet
 DEX | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/DEX_badge.svg) | dPoW-mainnet
 DION | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | ![dPOW Status](http://159.69.45.70/svg/DION_badge.svg) | dPoW-mainnet
