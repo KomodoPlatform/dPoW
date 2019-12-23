@@ -38,6 +38,9 @@ General [Setup instructions](https://docs.komodoplatform.com/notary/setup-Komodo
 ### dPoW asset status
 
 ![dPOW Status](http://159.69.45.70/svg/date_badge.svg)
+* active - last notarization less than 2.5 hours ago
+* irregular - last notarization more than 2.5 and less than 24 hours ago
+* inactive - last notarization more than 24 hours ago
 
 Coin | src | Version | Status | dPoW 
 --------|------|---|------|------
