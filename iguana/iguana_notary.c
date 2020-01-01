@@ -544,7 +544,7 @@ STRING_ARG(iguana,addnotary,ipaddr)
 }
 
 char NOTARY_CURRENCIES[][65] = {
-    "REVS", "SUPERNET", "DEX", "PANGEA", "JUMBLR", "BET", "CRYPTO", "HODL", "BOTS", "MGW", "COQUICASH", "WLC", "KV", "CEAL", "MESH", "MSHARK", "AXO", "ETOMIC", "BTCH", "NINJA", "OOT", "CHAIN", "BNTN", "PRLPAY", "DSEC", "EQL", "ZILLA", "RFOX", "SEC", "CCL", "PIRATE", "PGT", "KMDICE", "DION", "KSB", "OUR", "ILN", "RICK", "MORTY", "HUSH3", "KOIN", "ZEXO", "K64", "THC", "WLC21", "CNYT"
+    "REVS", "SUPERNET", "DEX", "PANGEA", "JUMBLR", "BET", "CRYPTO", "HODL", "BOTS", "MGW", "COQUICASH", "WLC", "KV", "CEAL", "MESH", "MSHARK", "AXO", "ETOMIC", "BTCH", "NINJA", "OOT", "CHAIN", "BNTN", "PRLPAY", "DSEC", "EQL", "ZILLA", "RFOX", "SEC", "CCL", "PIRATE", "PGT", "KMDICE", "DION", "KSB", "OUR", "ILN", "RICK", "MORTY", "HUSH3", "KOIN", "ZEXO", "K64", "THC", "WLC21"
 };
 
 // "LTC", "USD", "EUR", "JPY", "GBP", "AUD", "CAD", "CHF", "NZD", "CNY", "RUB", "MXN", "BRL", "INR", "HKD", "TRY", "ZAR", "PLN", "NOK", "SEK", "DKK", "CZK", "HUF", "ILS", "KRW", "MYR", "PHP", "RON", "SGD", "THB", "BGN", "IDR", "HRK",
