@@ -1428,6 +1428,7 @@ TWOSTRINGS_AND_INT(bitcoinrpc,walletpassphrase,password,permanentfile,timeout)
         privkey = jumblr_privkey(myinfo,coinaddr,0,KMDaddr,"btc ");
         smartaddress_add(myinfo,privkey,"btc","KMD",0.,0.);
     }
+    strcpy(retstr, "walletpassphrase call finished"); // TODO: Enhancement: replace each private key with *** except few first and last characters
     return(retstr);
 }
 
