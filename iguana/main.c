@@ -132,7 +132,7 @@ void SuperNET_MYINFOadd(struct supernet_info *myinfo)
     if ( SuperNET_MYINFOfind(&num,myinfo->myaddr.persistent) == 0 )
     {
         MYINFOS = realloc(MYINFOS,(num + 2) * sizeof(*MYINFOS));
-        char str[65]; printf("MYNFOadd[%d] <- %s\n",num,bits256_str(str,myinfo->myaddr.pubkey));
+        char str[65]; printf("MYNFOadd[%d] <- %s\n",num,bits256_str(str,myinfo->myaddr.persistent));
         MYINFOS[num] = calloc(1,sizeof(*myinfo));
         *MYINFOS[num] = *myinfo;
         MYINFOS[++num] = 0;
