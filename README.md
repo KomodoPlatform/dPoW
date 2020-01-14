@@ -57,7 +57,6 @@ COQUICASH | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW
 CRYPTO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/CRYPTO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 DEX | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/DEX_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 DION | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/DION_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-DSEC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/DSEC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 EMC2 | [emc2](https://github.com/emc2foundation/einsteinium) | lastest master | [![dPOW Status](http://159.69.45.70/svg/DION_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 EQL | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/EQL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 ETOMIC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/ETOMIC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
