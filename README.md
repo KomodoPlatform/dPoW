@@ -48,7 +48,6 @@ KMD | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Statu
 BTC | [bitcoin](https://github.com/bitcoin/bitcoin) | 0.16 | [![dPOW Status](http://159.69.45.70/svg/KMD_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-Mainnet
 AXO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/AXO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 BET | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/BET_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-BNTN | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/BNTN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 BOTS | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/BOTS_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 BTCH | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/BTCH_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 CCL | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/CCL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
@@ -56,9 +55,7 @@ CHIPS | [chips](https://github.com/jl777/chips3/tree/dev) | dev | [![dPOW Status
 COQUICASH | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/COQUICASH_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 CRYPTO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/CRYPTO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 DEX | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/DEX_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-DION | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/DION_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 EMC2 | [emc2](https://github.com/emc2foundation/einsteinium) | lastest master | [![dPOW Status](http://159.69.45.70/svg/DION_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
-EQL | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/EQL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 ETOMIC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/ETOMIC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 GAME | [game](https://github.com/gamecredits-project/GameCredits) | latest master | [![dPOW Status](http://159.69.45.70/svg/GAME_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 GIN | [gin](https://github.com/GIN-coin/gincoin-core) | latest master | [![dPOW Status](http://159.69.45.70/svg/GIN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
@@ -80,7 +77,6 @@ OUR | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Statu
 PANGEA | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/PANGEA_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 PGT | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/PGT_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 PIRATE | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/PIRATE_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-PRLPAY | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/PRLPAY_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 REVS | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/REVS_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 RFOX | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/RFOX_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 RICK | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/RICK_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
