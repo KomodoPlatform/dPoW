@@ -60,7 +60,7 @@ ETOMIC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW St
 GAME | [game](https://github.com/gamecredits-project/GameCredits) | latest master | [![dPOW Status](http://159.69.45.70/svg/GAME_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 GIN | [gin](https://github.com/GIN-coin/gincoin-core) | latest master | [![dPOW Status](http://159.69.45.70/svg/GIN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 HODL | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/HODL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-HUSH3 | [hush3](https://github.com/myhush/hush3) | [master](https://github.com/myhush/hush3) | [![dPOW Status](http://159.69.45.70/svg/HUSH3_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
+HUSH3 | [hush3](https://github.com/myhush/hush3) | [v3.3.1](https://github.com/MyHush/hush3/tree/v3.3.1) | [![dPOW Status](http://159.69.45.70/svg/HUSH3_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 ILN | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/ILN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 JUMBLR | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/JUMBLR_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 K64 | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/K64_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
