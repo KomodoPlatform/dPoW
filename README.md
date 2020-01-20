@@ -83,7 +83,7 @@ RICK | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Stat
 SEC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/SEC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 SUPERNET | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/SUPERNET_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 THC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/THC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-VRSC | [verus](https://github.com/VerusCoin/VerusCoin) | 0.6.0-7 | [![dPOW Status](http://159.69.45.70/svg/VRSC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
+VRSC | [verus](https://github.com/VerusCoin/VerusCoin) | [0.6.0-7](https://github.com/VerusCoin/VerusCoin/releases/tag/v0.6.0-7) | [![dPOW Status](http://159.69.45.70/svg/VRSC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 WLC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/WLC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 WLC21 | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/WLC21_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 ZEXO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.0 | [![dPOW Status](http://159.69.45.70/svg/ZEXO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
