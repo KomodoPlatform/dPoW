@@ -1,5 +1,8 @@
 ### dPoW 0.1.1 update informations:
 
+<b>Please note</b>: https://github.com/KomodoPlatform/dPoW#dpow-asset-status contains repo, branch and version information ref. all dPoW assets. For Komodo, ACs and dPoW you can either use the master branch or the tagged release version.
+
+
 - Komodo core was updated to [0.5.2](https://github.com/KomodoPlatform/komodo/releases/tag/0.5.2) - please update your AC & Komodo mining-nodes and restart the mining daemon with `-opretmintxfee=0.004` - this feature was added in https://github.com/KomodoPlatform/komodo/commit/c4d60f8defbe8036846a9baa410411f26528355a and allows miners to set the desired minimum transaction fee for processing big opret transactions (>256 bytes). We recommend min 0.004 per 1 Kb.
 
 ```shell
@@ -29,5 +32,4 @@ cd iguana
 ./m_notary_build
 ```
 
-https://github.com/KomodoPlatform/dPoW#dpow-asset-status contains repo, branch and version information ref. all dPoW assets. For Komodo, ACs and dPoW you can either use the master branch or the tagged release version from the above instructions.
 
