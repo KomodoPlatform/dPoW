@@ -12,7 +12,9 @@ git checkout 0.5.2
 - HUSH3 was upgraded to [3.3.1](https://github.com/MyHush/hush3/releases/tag/v3.3.1) and will hard fork on January 29th with the season 3.5 3rd party pubkeys. Please update your HUSH3 daemon on the main NNs (keep operating on the main NN for now) and prepare the hush daemon on your 3P NN. We are updating `dPoW` for 3P operations a few days prior to the hardfork activation and will notify you for the 3P migration.
 
 ```
+cd ~/
 git clone https://github.com/MyHush/hush3
+cd hush3
 git checkout v3.3.1
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
