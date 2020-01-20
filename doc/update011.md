@@ -22,7 +22,7 @@ git checkout v3.3.1
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
-- dPoW was updated to [0.1.1](https://github.com/KomodoPlatform/dPoW/releases/tag/0.1.1) which removes obsoleted coins, added update instructions, NN_changelog and bumped version to 0.1.1.
+- dPoW was updated to [0.1.1](https://github.com/KomodoPlatform/dPoW/releases/tag/0.1.1) which removes obsoleted coins, added update instructions, NN [changelog](https://github.com/KomodoPlatform/dPoW/blob/master/doc/changelog.md) and bumped version to 0.1.1.
 
 ```shell
 cd ~/dPoW
