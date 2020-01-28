@@ -19,5 +19,5 @@ cd ~/dPoW
 git pull
 git checkout 0.1.2 #or master branch
 cd iguana
-./m_notary_build
+./m_notary_build #rebuild/restart dPoW when HF activates
 ```
