@@ -44,7 +44,7 @@ coins/chips_7779
 coins/game_7779
 coins/emc2_7779
 coins/gin_7779
-# coins/hush3_7779 //HUSH moving to 3P in Q1 2020
+coins/hush3_7779
 
 sleep 30
 
