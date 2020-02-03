@@ -264,12 +264,20 @@ In case of such a spot-loss or disqualification, the next candidate from the ele
 
 You find all essential infos and setup instructions on https://github.com/KomodoPlatform/dPoW
 
-#### Recommended min hardware setup: 
+#### Recommended min hardware setup for main NN: 
  
 - OS: Ubuntu 18.x or Debian 10.x is recommended.
 - CPU: A High-Performance CPU (e.g. Xeon, i7/i9, Ryzen, EPYC, etc.)
 - RAM: 64 GB or more
 - Disk: 1 TB SSD or greater
+- Bandwidth: 100 Mbps or higher
+
+#### Recommended min hardware setup for 3P NN: 
+ 
+- OS: Ubuntu 18.x or Debian 10.x is recommended.
+- CPU: A High-Performance CPU (e.g. Xeon, i7/i9, Ryzen, EPYC, etc.)
+- RAM: 32 GB or more
+- Disk: 500 GB SSD or greater
 - Bandwidth: 100 Mbps or higher
 
 ### Polls and voting:
