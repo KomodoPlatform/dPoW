@@ -2,7 +2,7 @@
 
 
 
-<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, and election procedures for the Komodo Notary Node network, as well as details regarding the new NN ranking algorithm, links to other important documents, and more. The NN bible comes into effect by the start of NN Season 4, which will be on April 15, 2020. Please read carefully. 
+<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. The NN bible comes into effect by the start of NN Season 4, which will be on April 15, 2020. Please read carefully. 
 
 #
 
@@ -12,9 +12,8 @@
 2. [How to become a Notary Node operator](#how-to-become-a-notary-node-operator)
 3. [The Notary Node election process](#the-notary-node-election-process)
 4. [Responsibilities of a NN](#responsibilities-rights-and-duties-of-a-nn)
-5. [Notary Node Ranking Algorithm 2020](https://github.com/KomodoPlatform/dPoW/new/dev/doc#notary-node-ranking-algorithm-2020)
-6. [Guideline, general infos and policies](#guideline-general-infos-and-policies)
-7. [Code of Conduct](#code-of-conduct)
+5. [Guideline, general infos and policies](#guideline-general-infos-and-policies)
+6. [Code of Conduct](#code-of-conduct)
 
 #
 
@@ -148,74 +147,6 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 - <b>iii.</b> Having the opportunity to get automatically re-elected upon reaching a specific ranking.
 - <b>iv.</b> Accessing the private NN Discord community chat, as long as a mature and respectful basis of discussion is given. 
 - <b>v.</b> Having the chance to become the NN guru for your region if you are ranked #1 NN in that region for a minimum of 1 full month. 
-
-<br>
-
-## Notary Node Ranking Algorithm 2020
-
-The old dPoW ranking algorithm is now obsolete and was replaced by a new algorithm that will promote an ongoing competition among NN Operators. A monthly-based ranking calculation with an additional new NN-index is now in place. The NN-index is the monthly average, based on the full season metrics of a 12 month calculation. This dynamic value increases each month. The sum of both values is equal to the NN-ranking score as shown in the following example.
-
-### Example: 
-
-#### Month 1:
-
-NN1 has 50 BTC notarizations and 100 AC notarizations = NN1 score = 150 <br>
-NN2 has 40 BTC notarizations and 100 AC notarizations = NN2 score = 140 <br>
-
-
-NN1 index = (score month1 + score monthN)/12 = 150/12 <br>
-NN2 index = 140/12 <br>
-
-NN1 ranking score = NN1 score + NN1 index = 150 + 150/12 = <b>162.5</b> <br>
-NN2 ranking score = 140 + 140/12 = <b>151.7</b> <br>
-
-
-#### Month 2:
-
-NN1 has 30 BTC notarizations and 100 AC notarizations = 130 points <br>
-NN2 has 40 BTC notarizations and 110 AC notarizations = 150 points <br>
-
-NN1 index = (NN1 score month1 + score monthN)/12 = 280/12 <br>
-NN2 index = 290/12 <br>
-
-NN1 ranking score: 130 + 280/12 = <b>153.2</b> <br>
-NN2 ranking score: 150 + 290/12 = <b>174.2</b> <br>
-
-
-#### Month 3:
-
-NN1 has 30 BTC notarizations and 100 AC notarizations = 130 points <br>
-NN2 has 40 BTC notarizations and 110 AC notarizations = 150 points <br>
-
-NN1 index = (NN1 score month1 + score monthN)/12 = 150 + 130 + 130 = 410/12 <br>
-NN2 index = 440/12 <br>
-
-NN1 ranking score: 130 + 410/12 = <b>164.2</b> <br>
-NN2 ranking score: 150 + 440/12 = <b>186.7</b> <br>
-
-
-#### Month 4:
-
-NN1 has 30 BTC notarizations and 100 AC notarizations = 130 points <br>
-NN2 has 40 BTC notarizations and 110 AC notarizations = 150 points <br>
-
-NN1 index = (NN1 score month1 + score monthN)/12 = 150 + 130 +130 +130 = 540/12 <br>
-NN2 index = 590/12 <br>
-
-NN1 ranking score: 130 + 540/12 = <b>175</b> <br>
-NN2 ranking score: 150 + 590/12 = <b>199.2</b> <br>
-
-
-#### Month 5:
-
-NN1 has 30 BTC notarizations and 120 AC notarizations = 150 points <br>
-NN2 has 20 BTC notarizations and 110 AC notarizations = 130 points <br>
-
-NN1 index = (NN1 score month1 + score monthN)/12 = 150 + 130 + 130 + 130 + 150 = 690/12 <br>
-NN2 index = 870/12 <br>
-
-NN1 ranking score: 150 + 690/12 = <b>207.5</b> <br>
-NN2 ranking score: 130 + 720/12 = <b>190</b> <br>
 
 <br>
 
