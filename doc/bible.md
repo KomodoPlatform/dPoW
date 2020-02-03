@@ -215,7 +215,7 @@ NN1 index = (NN1 score month1 + score monthN)/12 = 150 + 130 + 130 + 130 + 150 =
 NN2 index = 870/12 <br>
 
 NN1 ranking score: 150 + 690/12 = <b>207.5</b> <br>
-NN2 ranking score: 130 + 870/12 = <b>202.5</b> <br>
+NN2 ranking score: 130 + 720/12 = <b>190</b> <br>
 
 <br>
 
