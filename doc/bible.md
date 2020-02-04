@@ -105,7 +105,7 @@ The Komodo Notary Node Elections are stake weighted, meaning that those who hold
  
 A special voting token — let’s call it VOTE2020 — will be airdropped to KMD holders at a 1:1 ratio. If you have 1000 KMD, you will receive 1000 VOTE2020 tokens.
  
-The airdrop will take place on March 1st, 2020. The current supply of KMD is around 120 Million, so roughly 120 Million VOTE2020 tokens will be airdropped.
+The airdrop will take place on March 15th, 2020. The current supply of KMD is around 120 Million, so roughly 120 Million VOTE2020 tokens will be airdropped.
  
 It’s important to note that you must hold you private keys in order to receive your VOTE2020 tokens. If you hold your KMD on a centralized exchange, then you do not hold your private keys and you will not receive any VOTE2020 tokens.
  
@@ -119,13 +119,13 @@ Apart from that, community members may vote for any candidates in any region. VO
  
 For instance, if you want to send 100% of your VOTE2020 tokens to a single candidate, you may do so. If you want to send 20% of your votes to five different candidates in a single region, you may do that, too. If you want to send an equal 25% of your votes to one candidate in each of the four regions, that’s also an option. There are no rules dictating how you cast your ballot.
  
-Voting will be open for two weeks, until March 14th. It is highly recommended that each community member read through the proposals of all the candidates before casting their vote. The proposals contain important information about how each candidate intends to help the Komodo ecosystem. 
+Voting will be open for around two weeks, until March 31st. It is highly recommended that each community member read through the proposals of all the candidates before casting their vote. The proposals contain important information about how each candidate intends to help the Komodo ecosystem. 
  
 All of the candidates' proposals, along with other useful information, will be posted on this new Komodo Notary Node Election GitHub repo.
 
-<b>The top 30 NNs who will be auto-elected will be announced on March 30th. 30 Notary Node spots are available in the 2020 election. Starting with season 4 the automatic re-elections are reduced to 3 spots per region.
+<b>The top 30 NNs who will be auto-elected will be announced on March 31st. 30 Notary Node spots are available in the 2020 election. Starting with season 4 the automatic re-elections are reduced to 3 spots per region.
 
-The elections start on March 1st with the airdrop of the Vote2020 tokens and end on March 15th. The Komodo Core update is planned for March 31st and the hardfork activation for May 31st, 2020. </b>
+The elections start on March 15th with the airdrop of the Vote2020 tokens and end on March 31st. The Komodo Core update is planned for April 1st and the hardfork activation for May 31st, 2020. </b>
 
 
 <br>
