@@ -178,6 +178,14 @@ The NN gurus are the top NN operators of each region (ranked #1). These NN opera
 
 NN gurus have additional duties and rights. They are “responsible” for their geo-region and should do their best to motivate, support, and push “weak” NN Operators to boost their region’s notarization statistics. NN gurus also support the Komodo team during the elections, initial setups, etc. In exchange the Komodo team will assign these NN gurus additional bounties and bonuses.
 
+### NN judge:
+
+A Komodo team-member that is not involved in the NN/dpow operations nor in the NN community gets the role of a NN judge assigned which will make a final decisions ref. rule violation and ban. The NN judge will be announced prior to the start of season 4. 
+
+### NN tribunal:
+
+Two additional team-members form together with the NN judge a NN tribunal which ensures an objective decision finding process in case of unclear situations and controversial debates related to a rule violation. The NN tribunal gets announced prior to the start of season 4.
+
 #### The current NN gurus are:
 
 Shossain (@SHossain#0007 on discord): AR and EU region <br>
