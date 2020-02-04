@@ -2,7 +2,7 @@
 
 
 
-<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. The NN bible comes into effect by the start of NN Season 4, which will be on April 15, 2020. Please read carefully. 
+<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. The NN bible comes into effect by the start of NN Season 4, which will be on May 31st, 2020. Please read carefully. 
 
 #
 
@@ -125,7 +125,7 @@ All of the candidates' proposals, along with other useful information, will be p
 
 <b>The top 30 NNs who will be auto-elected will be announced on March 1st. 30 Notary Node spots are available in the 2020 election. Starting with season 4 the automatic re-elections are reduced to 3 spots per region.
 
-The elections start on March 1st with the airdrop of the Vote2020 tokens and end on March 15th. The Komodo Core update is planned for March 31st and the hardfork activation for April 15th, 2020. </b>
+The elections start on March 1st with the airdrop of the Vote2020 tokens and end on March 15th. The Komodo Core update is planned for March 31st and the hardfork activation for May 31st, 2020. </b>
 
 
 <br>
