@@ -209,6 +209,9 @@ We reconsidered this part and decided to author and publish these transparent gu
 
 In case of such a spot-loss or disqualification, the next candidate from the election results will be eligible for the spot and the pubkey would be replaced with the next scheduled hardfork update. 
 
+### NN season
+
+A NN season may not equal 12 months - it will cover mininmum 75%, 3 quarters (9 months) of a year. 
 
 ### Notary Node setup:
 
