@@ -211,7 +211,7 @@ In case of such a spot-loss or disqualification, the next candidate from the ele
 
 ### NN season
 
-A NN season may not equal 12 months - it will cover mininmum 75%, 3 quarters (9 months) of a year. 
+A NN season may not equal 12 months - it will cover mininmum 75%, 3 quarters (9 months) of a year but could also last longer than a year under specific circumstances. 
 
 ### Notary Node setup:
 
