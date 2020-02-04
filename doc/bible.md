@@ -102,7 +102,9 @@ It’s important to note that you must hold you private keys in order to receive
  
 Once you’ve received your VOTE2020 tokens, you may cast your ballot by sending them to the candidate(s) of your choice. All candidates will publicly post an address and the community votes by sending the tokens to the candidate(s) they wish to see elected.
  
-The only rule for voting is that the sale of VOTE2020 tokens is strictly prohibited. Anyone caught selling VOTE2020 tokens will be disqualified from participating in the election.
+The only rule for voting is that any redistribution or sale of VOTE2020 tokens is strictly prohibited. Anyone caught selling VOTE2020 tokens will be disqualified from participating in the election.
+
+It is also strictly prohibited to offer NN revenue shares (mining revenue share) to voters.
  
 Apart from that, community members may vote for any candidates in any region. VOTE2020 tokens can be sent in any amount so there is no requirement to cast votes in any set percentages for any number of candidates in any region.
  
