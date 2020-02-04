@@ -123,7 +123,7 @@ Voting will be open for two weeks, until March 14th. It is highly recommended th
  
 All of the candidates' proposals, along with other useful information, will be posted on this new Komodo Notary Node Election GitHub repo.
 
-<b>The top 30 NNs who will be auto-elected will be announced on March 1st. 30 Notary Node spots are available in the 2020 election. Starting with season 4 the automatic re-elections are reduced to 3 spots per region.
+<b>The top 30 NNs who will be auto-elected will be announced on March 30th. 30 Notary Node spots are available in the 2020 election. Starting with season 4 the automatic re-elections are reduced to 3 spots per region.
 
 The elections start on March 1st with the airdrop of the Vote2020 tokens and end on March 15th. The Komodo Core update is planned for March 31st and the hardfork activation for May 31st, 2020. </b>
 
