@@ -56,14 +56,23 @@ While the notarization process is critical to the security, blockchain interoper
 
 Anyone with the required hardware and technical knowledge can become a Notary Node Operator. Please note that dPoW currently only operates on Linux, so an advanced understanding of Linux is implicitly required.
  
-<b>The hardware requirements are as follows:</b>
+<b>The hardware requirements for the main NN server are as follows:</b>
  
 - OS: Ubuntu 18.x or Debian 10.x is recommended.
 - CPU: A High-Performance CPU (e.g. Xeon, i7/i9, Ryzen, EPYC, etc.)
 - RAM: 64 GB or more
 - Disk: 1 TB SSD or greater
 - Bandwidth: 100 Mbps or higher
- 
+
+<b>The hardware requirements for the 3P NN server are as follows:</b>
+
+- OS: Ubuntu 18.x or Debian 10.x is recommended.
+- CPU: A High-Performance CPU (e.g. Xeon, i7/i9, Ryzen, EPYC, etc.)
+- RAM: 32 GB or more
+- Disk: 500 GB SSD or greater
+- Bandwidth: 100 Mbps or higher
+
+
 Apart from these hardware specifications and the technical know-how, there are no requirements to become a Notary Node Operator. 
  
 Candidates do not need to own a single KMD coin to run.  In fact, as pointed out in this article by veteran Komodo team member Satinder Grewal, candidates don’t need to be a current member of the KMD community or know anything about the inner workings of Komodo’s technology to become an NN Operator.
