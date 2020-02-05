@@ -2,7 +2,7 @@
 
 
 
-<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. The NN bible comes into effect by the start of NN Season 4, which will be on May 31st, 2020. Please read carefully. 
+<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. The NN bible comes into effect by the start of NN Season 4, which will be on May 31st, 2020. Election related rules apply for the Season 4 elections, with immediate effect. Please read carefully. 
 
 #
 
