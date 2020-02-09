@@ -4,7 +4,7 @@
 git clone https://github.com/jl777/komodo.git dexkomodo
 cd ~/dexkomodo
 git checkout DEX
-./zcutil/build.sh -j8
+./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
 add line to .komodo/komodo.conf
