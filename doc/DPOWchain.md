@@ -26,14 +26,14 @@ OR
 echo 'blocknotify=notarizer BTC bitcoin-cli %s' >> ~/.bitcoin/bitcoin.conf
 echo 'blocknotify=notarizer DEX "" %s' >> ~/.komodo/DEX/DEX.conf
 echo 'blocknotify=notarizer KMD"" %s' >> ~/.komodo/komodo.conf
-
+```
 stop the affected chains
+
 ```bash
 komodo-cli stop
 komodo-cli -ac_name=DEX stop
 bitcoin-cli stop
 ```
-
 start KMD ( you are on mainnode don't forget setgenerate true 1),  
 start BTC 
 start DEX
