@@ -36,8 +36,10 @@ komodo-cli stop
 komodo-cli -ac_name=DEX stop
 bitcoin-cli stop
 ```
-start KMD ( you are on mainnode don't forget setgenerate true 1),  
+start KMD ( you are on mainnode don't forget setgenerate true 1)
+
 start BTC
+
 start DEX
 
 start the DPOW chain: set 3P pubkey and handle ( find your handle here: https://github.com/jl777/komodo/blob/DEX/src/cc/dapps/pubkeys )
@@ -75,6 +77,7 @@ komodo-cli -ac_name=DPOW DEX_list 0 0 handles | grep tagB
 if you show up in the list you are fine
 
 Please PR is something is missing
+
 CHMEX
 
 
