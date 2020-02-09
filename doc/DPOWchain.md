@@ -73,7 +73,7 @@ sudo gcc -o /usr/bin/notarizer cc/dapps/notarizer.c -lm
 wait 2 minutes after that run
 
 ```bash
-komodo-cli -ac_name=DPOW DEX_list 0 0 handles | grep tagB
+komodo-cli -ac_name=DPOW DEX_list 0 0 handles | jq '.matches[].tagB' | sort | uniq | jq
 ```
 if you show up in the list you are fine
 
