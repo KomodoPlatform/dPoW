@@ -68,9 +68,10 @@ go to
 ```bash
 cd ~/dexkomodo/src/
 sudo gcc -o /usr/bin/notarizer cc/dapps/notarizer.c -lm
-```bash
+```
 
-wait 5 minutes after that run
+wait 2 minutes after that run
+
 ```bash
 komodo-cli -ac_name=DPOW DEX_list 0 0 handles | grep tagB
 ```
