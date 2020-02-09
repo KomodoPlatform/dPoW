@@ -1,3 +1,5 @@
+### Howto setup DPOW chain and notarizer exec
+
 ```bash
 git clone https://github.com/jl777/komodo.git dexkomodo
 cd ~/dexkomodo
@@ -35,16 +37,16 @@ komodo-cli -ac_name=DEX stop
 bitcoin-cli stop
 ```
 start KMD ( you are on mainnode don't forget setgenerate true 1),  
-start BTC 
+start BTC
 start DEX
 
-
 start the DPOW chain: set 3P pubkey and handle ( find your handle here: https://github.com/jl777/komodo/blob/DEX/src/cc/dapps/pubkeys )
+This chain does not have blocks so as long as you getconnections its fine
+
 ```bash
 cd ~/dexkomodo/src/
 ./komodod -ac_name=DPOW -dexp2p=2 -addnode=136.243.58.134 -pubkey=<3rd party notarypubkey> -handle=YOUR-HANDLE
 ```
-
 Import 3P KMD Priv Key to DPOW chain
 ```bash
 komodo-cli -ac_name=DPOW importprivkey YOUR-3PKEY-HERE
