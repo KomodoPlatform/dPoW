@@ -1,6 +1,6 @@
 ### Howto setup DPOW chain and notarizer exec
 
-You need to do this on your #### Main NN Node if you don't want to touch it you can also use a completly new node.
+You need to do this on your **Main NN Node** if you don't want to touch it you can also use a completly new node.
 The 3rd Party Node is not involved you only need the KMD Pubkey and KMD Private Key from it
 
 ```bash
