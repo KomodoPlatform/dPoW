@@ -198,7 +198,8 @@ Two additional team-members form together with the NN judge a NN tribunal which 
 
 #### The current NN gurus are:
 
-Shossain (@SHossain#0007 on discord): AR and EU region <br>
+PHBA2061 (@PHBA2061#2530 on discord): EU region <br>
+Shossain (@SHossain#0007 on discord): AR region <br>
 Strob (@Strob#3417 on discord): NA region <br>
 Titomane (@titomane#3101): SH region <br>
 
