@@ -7,7 +7,7 @@ The 3rd Party Node is not involved you only need the KMD Pubkey and KMD Private 
 ```bash
 git clone https://github.com/jl777/komodo.git dexkomodo
 cd ~/dexkomodo
-git checkout DEX
+git checkout jl777
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
