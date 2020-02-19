@@ -1,8 +1,8 @@
 ### Howto setup DPOW chain and notarizer exec
 
-You need to do this on your **Main NN Node** if you don't want to touch it you can also use a completely new Node wich KMD BTC and DEX synced.
+You need to do this on your **Main NN Node** if you don't want to touch it you can also use a completely new Node with KMD BTC and DEX  synced.
 
-The 3rd Party Node is not involved you only need the KMD Pubkey and KMD Private Key from it
+The 3rd Party Node is not involved you only need the KMD Pubkey and KMD Private Key from it.
 
 ```bash
 git clone https://github.com/jl777/komodo.git dexkomodo
@@ -40,7 +40,7 @@ komodo-cli stop
 komodo-cli -ac_name=DEX stop
 bitcoin-cli stop
 ```
-start KMD ( you are on mainnode don't forget setgenerate true 1)
+start KMD ( if you are on Main NN Node don't forget setgenerate true 1)
 
 start BTC
 
