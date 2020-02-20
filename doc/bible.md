@@ -166,8 +166,10 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 
 ### Important dates for Season 4:
 
+- KMD snapshot: March 13th, 2020
 - Autoelection announcement: March 15th - cutoff time: March 15th 2020, 12pm UTC
 - Proposal deadline: March 16th 2020, 12pm UTC
+- Vote2020 airdrop: March 16th, 2020
 - Season 4 Election start: March 16th 2020, 12pm UTC
 - Season 4 Election end: April 6th 2020, 12pm UTC
 - Public Komodo update announcement: April 13th, 2020
