@@ -23,7 +23,7 @@ curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"ad
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"77.75.121.139\"}"
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"103.6.12.117\"}"
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"139.162.45.144\"}"
-curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"152.89.105.66\"}"
+curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"69.64.46.20\"}"      # cipi_NA
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"152.89.104.58\"}"
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"5.53.120.34\"}"
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"139.99.208.141\"}"
