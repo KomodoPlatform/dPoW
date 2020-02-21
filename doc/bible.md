@@ -12,8 +12,9 @@
 2. [How to become a Notary Node operator](#how-to-become-a-notary-node-operator)
 3. [The Notary Node election process](#the-notary-node-election-process)
 4. [Responsibilities of a NN](#responsibilities-rights-and-duties-of-a-nn)
-5. [Guideline, general infos and policies](#guideline-general-infos-and-policies)
-6. [Code of Conduct](#code-of-conduct)
+5. [Notary Node regions](#notaray-node-regions)
+6. [Guideline, general infos and policies](#guideline-general-infos-and-policies)
+7. [Code of Conduct](#code-of-conduct)
 
 #
 
@@ -159,6 +160,17 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 - <b>iii.</b> Having the opportunity to get automatically re-elected upon reaching a specific ranking.
 - <b>iv.</b> Accessing the private NN Discord community chat, as long as a mature and respectful basis of discussion is given. 
 - <b>v.</b> Having the chance to become the NN guru for your region if you are ranked #1 NN in that region for a minimum of 1 full month. 
+
+<br>
+
+## Notary Node regions
+
+- Green: NA
+- Yellow: EU
+- Red: SH
+- Blue: AR
+
+![NN Regions](https://github.com/komodoplatform/dpow/blob/master/doc/img/NN_regions.jpeg)
 
 <br>
 
