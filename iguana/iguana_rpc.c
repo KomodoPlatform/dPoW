@@ -923,6 +923,8 @@ char *SuperNET_rpcparse(struct supernet_info *myinfo,char *retbuf,int32_t bufsiz
             return(filestr);
         else return(clonestr("{\"error\":\"cant find index7778\"}"));
     }
+    /*
+    // disable file serving through RPC requests of any type (GET/POST/unknown)
     else if ( (filestr= OS_filestr(&filesize,furl)) != 0 )
     {
         *jsonflagp = 1;
@@ -934,6 +936,7 @@ char *SuperNET_rpcparse(struct supernet_info *myinfo,char *retbuf,int32_t bufsiz
         //printf("return filetype.(%s) size.%ld\n",filetype,filesize);
         return(filestr);
     }
+    */
     if ( strncmp(&url[i],"/api",strlen("/api")) == 0 )
     {
         *jsonflagp = 1;
