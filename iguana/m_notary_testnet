@@ -37,5 +37,5 @@ sleep 30
 source pubkey.txt
 echo $pubkey
 sleep 3
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"RICK\",\"pubkey\":\"$pubkey\"}"
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"MORTY\",\"pubkey\":\"$pubkey\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"freq\":10,\"symbol\":\"RICK\",\"pubkey\":\"$pubkey\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"freq\":10,\"symbol\":\"MORTY\",\"pubkey\":\"$pubkey\"}"
