@@ -111,7 +111,7 @@ Please feel free to join the Komodo discord where you can ask some help into the
 #### * Start/restart notorization with Iguana
 *This script must be run from within the `2020NNtestnet/iguana` directory.*
 ```shell
-cd ~/2019NNtestnet/iguana
+cd ~/2020NNtestnet/iguana
 ./m_notary_testnet
 ```
 #### * Ressources
