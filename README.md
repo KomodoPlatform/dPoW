@@ -16,7 +16,7 @@ sudo apt install build-essential pkg-config libc6-dev m4 \
 ```
 #### * Install nanomsg from https://github.com/nanomsg/nanomsg
 #### * Clone and build Komodo from https://github.com/jl777/komodo --branch dev
-#### * Create ~/.komodo.conf
+#### * Create ~/.komodo/komodo.conf
 ```
 rpcuser=<secure username>
 rpcpassword=<secure password>
