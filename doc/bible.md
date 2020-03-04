@@ -12,7 +12,7 @@
 2. [How to become a Notary Node operator](#how-to-become-a-notary-node-operator)
 3. [The Notary Node election process](#the-notary-node-election-process)
 4. [Responsibilities of a NN](#responsibilities-rights-and-duties-of-a-nn)
-5. [Notary Node regions](#notaray-node-regions)
+5. [Notary Node regions](#notary-node-regions)
 6. [Guideline, general infos and policies](#guideline-general-infos-and-policies)
 7. [Code of Conduct](#code-of-conduct)
 
@@ -190,6 +190,10 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 - Public Komodo update announcement: April 13th, 2020
 - dPoW season 4 start: May 31st, 2020
 
+### Komodo Core and AC hardfork activation:
+
+- Komodo core hardfork activation: KMD block `1.903.000` (Sunday, May 31st, 2020)
+- SmartChain hardfork activation: Timestamp `1590926400` (Sunday, May 31st, 2020 12:00:00 PM UTC)
 
 ### The Komodo Mining ecosystem:
 
