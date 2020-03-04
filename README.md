@@ -1,91 +1,124 @@
-# dPoW client _iguana_
+# How to partcipate
 
-This repository is based on the original SuperNET codebase - commit [f29913e92b117399cd42e2fd05ff0d69d152c8fa](https://github.com/ca333/SuperNET/commit/f29913e92b117399cd42e2fd05ff0d69d152c8fa)
+Make a Pull Request with your IP Address added to `iguana/m_notary_testnet` and your public key and name added to `iguana/testnet.json`.
 
-Integration | Status 
--------------|------
-CI build - Ubuntu (16.04, 18.04) | [![Build Status](https://github.com/komodoplatform/dpow/workflows/CI/badge.svg?maxAge=60)](https://github.com/KomodoPlatform/dPoW/actions)
-Codefactor analysis | [![Grade](https://img.shields.io/codefactor/grade/github/komodoplatform/dpow)](https://www.codefactor.io/repository/github/komodoplatform/dpow)
-Version | [![Version](https://img.shields.io/github/v/release/komodoplatform/dPoW)](https://github.com/KomodoPlatform/dPoW/releases)
+# Install and start the notary
 
----
+#### * Clone this repo
+#### * Install dependencies
+```shell
+sudo apt install build-essential pkg-config libc6-dev m4 \
+        g++-multilib autoconf libtool ncurses-dev unzip git python \
+        zlib1g-dev wget bsdmainutils automake libboost-all-dev \
+        libssl-dev libprotobuf-dev protobuf-compiler \
+        libqrencode-dev libdb++-dev ntp ntpdate vim software-properties-common \
+        curl libevent-dev libcurl4-gnutls-dev libsodium-dev cmake clang
+```
+#### * Install nanomsg from https://github.com/nanomsg/nanomsg
+#### * Clone and build Komodo from https://github.com/jl777/komodo --branch dev
+#### * Create ~/.komodo/komodo.conf
+```
+rpcuser=<secure username>
+rpcpassword=<secure password>
+txindex=1
+server=1
+daemon=1
+rpcworkqueue=256
+```
+#### * Start KMD daemon
+```shell
+komodod
+```
+#### * Export keys
+```shell
+# Get your address (to backup)
+komodo-cli getaccountaddress ""
+<your address>
+# Retrieve your public key (to backup)
+komodo-cli validateaddress <your address>
+{
+  "isvalid": true,
+  "address": "<your address>",
+  "scriptPubKey": "<you don't need to use your scriptPubKey, do not use>",
+  "segid": 63,
+  "ismine": true,
+  "iswatchonly": false,
+  "isscript": false,
+  "pubkey": "<your public key>",
+  "iscompressed": true,
+  "account": ""
+}
+# Get private key (to backup and keep secret)
+komodo-cli dumpprivkey <your address>
+<your private key>
+```
+Please do not share your private key, keep it secret.
+#### * Edit files and make the PR
+Edit `iguana/m_notary_testnet` and `iguana/testnet.json` to add an entry for you using <your public key> and your public IP address. Edit files into your fork of this github repository then make a Pull Request to this repository.
 
+What is my public IP ?
+```shell
+curl https://ipinfo.io/ip
+```
+or
+```shell
+dig +short myip.opendns.com @resolver1.opendns.com
+```
+#### * Stop KMD daemon
+```shell
+komodo-cli stop
+```
+#### * Start KMD daemon with `-pubkey=<your public key>`
+#### * Start RICK and MORTY `-pubkey=<your public key>`. The parameters can be found in `komodo/src/assetchains.old`
 
-## Installation 
+#### * (Optional but recommended for better performance) Open ports required for p2p. These values can get found as `"p2pport"` using the `getinfo` rpc method. 
 
-General [Setup instructions](https://docs.komodoplatform.com/notary/setup-Komodo-Notary-Node.html#setup-komodo-notary-node)
+| Coin          | Port          |
+| ------------- |-------------: |
+| KMD           | 7770          |
+| RICK          | 25434         |
+| MORTY         | 16347         |
+| Iguana        | 17778         |
 
-### Build instructions for NN operations:
+#### * Fund public key address on komodo and each asset chain.
+*If you need RICK or MORTY, use the faucets at https://www.atomicexplorer.com/#/faucet/ or ask in #notarynode channel.*
 
+#### * Import your private key to all 3 nodes.
+```shell
+komodo-cli -ac_name=<coin name> importprivkey <your private key>
+```
+#### * Create `~/2020NNtestnet/iguana/pubkey.txt`
+```
+pubkey=<your public key>
+```
+#### * Create `~/2020NNtestnet/iguana/wp_testnet` and change its permissions
+```
+curl --url "http://127.0.0.1:7778" --data "{\"method\":\"walletpassphrase\",\"params\":[\"<YOUR WIF OR PASSPHRASE>\", 9999999]}"
+```
+```shell
+chmod 700 wp_testnet
+```
 
-`cd iguana`
+#### Compile iguana
+```shell
+cd ~/2020NNtestnet/iguana
+./m_notary_build
+```
 
-#### Build iguana for notary operations
-`./m_notary_build`
+#### * Wait until the PR is merged.
+Please feel free to join the Komodo discord where you can ask some help into the #notarynode channel https://discord.gg/UdwpxrG
 
-#### Start main-net notarizations:
-`./m_notary_KMD`
+#### * Start/restart notorization with Iguana
+*This script must be run from within the `2020NNtestnet/iguana` directory.*
+```shell
+cd ~/2020NNtestnet/iguana
+./m_notary_testnet
+```
+#### * Ressources
+This repository contains many useful scripts but you should read and understand before executing blindly. You'll find useful scripts at the following repositories but you should read the readme, adapt the config and read the code of the scripts you want to execute.
+https://github.com/KMDLabs/StakedNotary/
+https://github.com/KomodoPlatform/komodotools
+http://www.notarynodewiki.info
+https://github.com/MrMLynch/nnutils
 
-#### Start 3rd party notarizations:
-`./m_notary_3rdparty`
-
-
-###### To build and launch main-net notarizations in one step run `./m_notary`
-
-#
-
-**Please note: Automatic UTXO split is deactivated by default.**
-
-### dPoW asset status
-
-[![dPOW Status](http://159.69.45.70/svg/date_badge.svg?maxAge=60)](https://komodostats.com)
-* active - last notarization less than 2.5 hours ago
-* irregular - last notarization more than 2.5 and less than 24 hours ago
-* inactive - last notarization more than 24 hours ago
-
-Coin | src | Version | Status | dPoW 
---------|------|---|------|------
-KMD | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/KMD_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-Mainnet
-BTC | [bitcoin](https://github.com/bitcoin/bitcoin) | 0.16 | [![dPOW Status](http://159.69.45.70/svg/KMD_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-Mainnet
-AXO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/AXO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-BET | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/BET_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-BOTS | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/BOTS_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-BTCH | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/BTCH_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-CCL | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/CCL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-CHIPS | [chips](https://github.com/jl777/chips3/tree/dev) | dev | [![dPOW Status](http://159.69.45.70/svg/CHIPS_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
-COQUICASH | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/COQUICASH_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-CRYPTO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/CRYPTO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-DEX | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/DEX_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-EMC2 | [emc2](https://github.com/emc2foundation/einsteinium) | lastest master | [![dPOW Status](http://159.69.45.70/svg/DION_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
-ETOMIC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/ETOMIC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-GAME | [game](https://github.com/gamecredits-project/GameCredits) | latest master | [![dPOW Status](http://159.69.45.70/svg/GAME_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
-GIN | [gin](https://github.com/GIN-coin/gincoin-core) | latest master | [![dPOW Status](http://159.69.45.70/svg/GIN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
-HODL | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/HODL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-HUSH3 | [hush3](https://github.com/myhush/hush3) | [v3.3.1](https://github.com/MyHush/hush3/tree/v3.3.1) | [![dPOW Status](http://159.69.45.70/svg/HUSH3_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
-ILN | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/ILN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-JUMBLR | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/JUMBLR_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-K64 | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/K64_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-KOIN | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/KOIN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-KSB | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/KSB_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-KV | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/KV_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-MESH | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/MESH_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-MGW | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/MGW_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-MORTY | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/MORTY_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-MSHARK | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/MSHARK_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-NINJA | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/NINJA_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-OOT | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/OOT_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-OUR | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/OUR_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-PANGEA | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/PANGEA_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-PGT | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/PGT_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-PIRATE | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/PIRATE_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-REVS | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/REVS_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-RFOX | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/RFOX_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-RICK | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/RICK_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-SEC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/SEC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-SUPERNET | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/SUPERNET_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-THC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/THC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-VRSC | [verus](https://github.com/VerusCoin/VerusCoin) | [0.6.0-7](https://github.com/VerusCoin/VerusCoin/releases/tag/v0.6.0-7) | [![dPOW Status](http://159.69.45.70/svg/VRSC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-WLC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/WLC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-WLC21 | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/WLC21_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-ZEXO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/ZEXO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-ZILLA | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://159.69.45.70/svg/ZILLA_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
+https://blog.komodoplatform.com/delayed-proof-of-work-explained-9a74250dbb86
