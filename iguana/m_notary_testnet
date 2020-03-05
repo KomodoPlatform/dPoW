@@ -4,7 +4,7 @@
 komodo-cli lockunspent true `komodo-cli listlockunspent | jq -c .` 
 
 # Start testnet iguana, no split is default on this branch. This uses RPC port 7778, allows 2 iguana on same OS, incase OP does not have capacity to use 2 VM or 2 servers. 
-wget -qO testnet2020 https://raw.githubusercontent.com/Alrighttt/2020NNtestnet/master/iguana/testnet.json
+wget -qO testnet2020 https://raw.githubusercontent.com/KomodoPlatform/dPoW/testnet/iguana/testnet.json
 stdbuf -oL $1 ../agents/iguana testnet2020 & #> iguana.log 2> error.log  &
 
 myip=`curl -s4 checkip.amazonaws.com`
