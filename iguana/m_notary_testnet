@@ -36,7 +36,7 @@ curl --url "http://127.0.0.1:7778" --data "{\"conf\":\"komodo.conf\",\"path\":\"
 # add testnet coins to iguana
 coins/rick_testnet
 coins/morty_testnet
-
+coins/txsclapow_testnet
 
 sleep 30
 
@@ -44,5 +44,7 @@ sleep 30
 source pubkey.txt
 echo $pubkey
 sleep 3
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"RICK\",\"pubkey\":\"$pubkey\"}"
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"MORTY\",\"pubkey\":\"$pubkey\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"freq\":10,\"symbol\":\"RICK\",\"pubkey\":\"$pubkey\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"freq\":10,\"symbol\":\"MORTY\",\"pubkey\":\"$pubkey\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"freq\":10,\"symbol\":\"TXSCLAPOW\",\"pubkey\":\"$pubkey\"}"
+
