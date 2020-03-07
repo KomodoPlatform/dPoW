@@ -87,11 +87,11 @@ komodo-cli stop
 ```shell
 komodo-cli -ac_name=<coin name> importprivkey <your private key>
 ```
-#### * Create `~/2020NNtestnet/iguana/pubkey.txt`
+#### * Create `~/dPoW/iguana/pubkey.txt`
 ```
 pubkey=<your public key>
 ```
-#### * Create `~/2020NNtestnet/iguana/wp_testnet` and change its permissions
+#### * Create `~/dPoW/iguana/wp_testnet` and change its permissions
 ```
 curl --url "http://127.0.0.1:7778" --data "{\"method\":\"walletpassphrase\",\"params\":[\"<YOUR WIF OR PASSPHRASE>\", 9999999]}"
 ```
@@ -101,7 +101,7 @@ chmod 700 wp_testnet
 
 #### Compile iguana
 ```shell
-cd ~/2020NNtestnet/iguana
+cd ~/dPoW/iguana
 ./m_notary_build
 ```
 
@@ -109,9 +109,9 @@ cd ~/2020NNtestnet/iguana
 Please feel free to join the Komodo discord where you can ask some help into the #notarynode channel https://discord.gg/UdwpxrG
 
 #### * Start/restart notorization with Iguana
-*This script must be run from within the `2020NNtestnet/iguana` directory.*
+*This script must be run from within the `dPoW/iguana` directory.*
 ```shell
-cd ~/2020NNtestnet/iguana
+cd ~/dPoW/iguana
 ./m_notary_testnet
 ```
 #### * Ressources
