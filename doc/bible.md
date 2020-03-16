@@ -181,14 +181,14 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 
 ### Important dates for Season 4:
 
-- KMD snapshot: March 13th, 2020
+- KMD snapshot: April 12th, 2020
 - Autoelection announcement: April 12th - cutoff time: April 12th 2020, 12pm UTC
 - Proposal deadline: April 13th 2020, 12pm UTC
-- Vote2020 airdrop: March 16th, 2020
-- Season 4 Election start: March 16th 2020, 12pm UTC
+- Vote2020 airdrop: April 13th 2020, 12pm UTC
+- Season 4 Election start: April 13th 2020, 12pm UTC
 - Season 4 Election end: May 4th 2020, 12pm UTC
-- Public Komodo update announcement: April 13th, 2020
-- dPoW season 4 start: May 31st, 2020
+- Public Komodo update announcement: May 11th, 2020
+- dPoW season 4 start: June 14th, 2020
 
 ### Komodo Core and AC hardfork activation:
 
