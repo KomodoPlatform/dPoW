@@ -12,7 +12,7 @@
 2. [How to become a Notary Node operator](#how-to-become-a-notary-node-operator)
 3. [The Notary Node election process](#the-notary-node-election-process)
 4. [Responsibilities of a NN](#responsibilities-rights-and-duties-of-a-nn)
-5. [Notary Node regions](#notaray-node-regions)
+5. [Notary Node regions](#notary-node-regions)
 6. [Guideline, general infos and policies](#guideline-general-infos-and-policies)
 7. [Code of Conduct](#code-of-conduct)
 
@@ -115,6 +115,8 @@ Once you’ve received your VOTE2020 tokens, you may cast your ballot by sending
 The only rule for voting is that any redistribution or sale of VOTE2020 tokens is strictly prohibited. Anyone caught selling VOTE2020 tokens will be disqualified from participating in the election.
 
 It is also strictly prohibited to offer NN revenue shares (mining revenue share) to voters.
+
+CEX (wallets) are excluded from voting and users are advised to vote only from wallets whose private keys they fully control. VOTE2020 token transactions from CEX wallets are not counted.
  
 Apart from that, community members may vote for any candidates in any region. VOTE2020 tokens can be sent in any amount so there is no requirement to cast votes in any set percentages for any number of candidates in any region.
  
@@ -176,17 +178,22 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 
 ## Guideline, general infos and policies 
 
+
 ### Important dates for Season 4:
 
 - KMD snapshot: March 13th, 2020
-- Autoelection announcement: March 15th - cutoff time: March 15th 2020, 12pm UTC
-- Proposal deadline: March 16th 2020, 12pm UTC
+- Autoelection announcement: April 12th - cutoff time: April 12th 2020, 12pm UTC
+- Proposal deadline: April 13th 2020, 12pm UTC
 - Vote2020 airdrop: March 16th, 2020
 - Season 4 Election start: March 16th 2020, 12pm UTC
-- Season 4 Election end: April 6th 2020, 12pm UTC
+- Season 4 Election end: May 4th 2020, 12pm UTC
 - Public Komodo update announcement: April 13th, 2020
 - dPoW season 4 start: May 31st, 2020
 
+### Komodo Core and AC hardfork activation:
+
+- Komodo core hardfork activation: KMD block `1.903.000` (Sunday, May 31st, 2020)
+- SmartChain hardfork activation: Timestamp `1590926400` (Sunday, May 31st, 2020 12:00:00 PM UTC)
 
 ### The Komodo Mining ecosystem:
 
