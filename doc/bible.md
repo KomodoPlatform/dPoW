@@ -15,6 +15,7 @@
 5. [Notary Node regions](#notary-node-regions)
 6. [Guideline, general infos and policies](#guideline-general-infos-and-policies)
 7. [Code of Conduct](#code-of-conduct)
+8. [Developer Notary Nodes](#developer nodes proposal)
 
 #
 
@@ -330,7 +331,35 @@ https://github.com/komodoplatform
 #### Emergency contact for vuln reports:
 security@komodoplatform.com 
 
+## developer nodes proposal
 
+We have 4 developer nodes those are specific to Komodo Official Team and its used for testing purpose(I believe) 
+
+If we can categorize some positions on each region ( like 4-5 positions each region) should allocate to persons who provide value to our KMD ecosystem, which encourages the community bring some new talent(core developers).
+
+<b> Objective :--
+
+ To bring more dedicated developers who are part of ecosystem, who create a working project around Komodo
+
+1) This Node can run by one person/Entity
+2) Developer is must for that position ( this solves most of our lack of developers )
+3) Should create meaningful project by next year (by seeing the progress we can decide by voting as best project category and they are eligible for the developer NN position).
+4) People should poll them as best project
+5) Community moderation is must for every position.
+6) If community failed to acheive this ( we can allocate this node to most number of votes participant)
+
+<b> Perks for running Developer Node : --
+
+So many people are donating funds  for Developer fund, we can allocate share from this fund. 
+
+Todo-list: --
+
+This Node has more responsibilty and Importance than anyother notary nodes. for this node Community has to vote as best project which should be around KMD ecosystem
+
+1) Helping JL with core code
+2) Creating CC 
+3) NN tasks is mandatory
+3) etc ..,
 
 
 
