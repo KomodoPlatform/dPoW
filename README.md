@@ -43,11 +43,12 @@ General [Setup instructions](https://docs.komodoplatform.com/notary/setup-Komodo
 * irregular - last notarization more than 2.5 and less than 24 hours ago
 * inactive - last notarization more than 24 hours ago
 
-Coin | src | Version | Status | dPoW 
+Coin | src | Version/Tree | Status | dPoW 
 --------|------|---|------|------
 KMD | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/KMD_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-Mainnet
 BTC | [bitcoin](https://github.com/bitcoin/bitcoin) | 0.16 | [![dPOW Status](http://116.203.64.110/svg/KMD_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-Mainnet
 AXO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/AXO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
+AYA | [aryacoin](https://github.com/sillyghost/AYAv2) | 7c8498 | [![dPOW Status](http://116.203.64.110/svg/AYA_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 BET | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/BET_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 BOTS | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/BOTS_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 BTCH | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/BTCH_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
@@ -68,6 +69,7 @@ K64 | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Statu
 KOIN | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/KOIN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 KSB | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/KSB_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 KV | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/KV_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
+MCL | [marmara](https://github.com/marmarachain/Marmara-v.1.0) | 2b7c16e | [![dPOW Status](http://116.203.64.110/svg/MCL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 MESH | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/MESH_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 MGW | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/MGW_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 MORTY | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/MORTY_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
