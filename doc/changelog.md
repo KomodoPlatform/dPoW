@@ -1,3 +1,10 @@
+
+### 0.1.3
+
+- add MCL (3P)
+- add AYA (3P)
+- bumped version
+
 ### 0.1.2
 
 - migrate HUSH3 NN operations from main to 3P
