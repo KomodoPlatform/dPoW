@@ -1,7 +1,6 @@
 
 ### 0.1.3
 
-- add MCL (3P)
 - add AYA (3P)
 - bumped version
 
