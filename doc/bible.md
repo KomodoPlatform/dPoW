@@ -192,8 +192,8 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 
 ### Komodo Core and AC hardfork activation:
 
-- Komodo core hardfork activation: KMD block `1.903.000` (Sunday, May 31st, 2020)
-- SmartChain hardfork activation: Timestamp `1590926400` (Sunday, May 31st, 2020 12:00:00 PM UTC)
+- Komodo core hardfork activation: KMD block `1.922.320` (Sunday, June 14th, 2020)
+- SmartChain hardfork activation: Timestamp `1592146800` (Sunday, June 14th, 2020 03:00:00 PM UTC)
 
 ### The Komodo Mining ecosystem:
 
