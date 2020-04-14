@@ -2,6 +2,7 @@
 ### 0.1.3
 
 - add AYA (3P)
+- add VOTE2020 (main)
 - bumped version
 
 ### 0.1.2
