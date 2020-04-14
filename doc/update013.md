@@ -2,6 +2,12 @@
 
 <b>Please note</b>: https://github.com/KomodoPlatform/dPoW#dpow-asset-status contains repo, branch and version information ref. all dPoW assets. For Komodo, ACs and dPoW you can either use the master branch or the tagged release version.
 
-Please install AYA on your 3P notary node and start the dPoW operations now. The [dPoW table](https://github.com/KomodoPlatform/dPoW#dpow-asset-status) contains tree commit and repo URL. 
+Please install:
+
+- AYA on your 3P notary node 
+- VOTE2020 on your main NN
+- start the dPoW operations for both blockchains now. 
+
+The [dPoW table](https://github.com/KomodoPlatform/dPoW#dpow-asset-status) contains tree commit and repo URL. 
 
 Decker's [genkomodo.php script](https://github.com/DeckerSU/komodo_scripts/blob/master/genkomodo.php) supports AYA for pubkey/privkey derivation.
