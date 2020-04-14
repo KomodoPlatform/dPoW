@@ -1,12 +1,9 @@
 ### dPoW 0.1.3 update informations:
 
-<b>Please note</b>: https://github.com/KomodoPlatform/dPoW#dpow-asset-status contains repo, branch and version information ref. all dPoW assets. For Komodo, ACs and dPoW you can either use the master branch or the tagged release version.
-
-Please install:
+<b>Please install and start dPoW operations for:</b>
 
 - AYA on your 3P notary node 
 - VOTE2020 on your main NN
-- start the dPoW operations for both blockchains now. 
 
 The [dPoW table](https://github.com/KomodoPlatform/dPoW#dpow-asset-status) contains tree commit and repo URL. 
 
