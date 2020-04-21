@@ -83,6 +83,7 @@ REVS | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Stat
 RFOX | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/RFOX_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 RICK | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/RICK_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 SEC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/SEC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
+STBL | [komodo](https://github.com/komodoplatform/komodo) | [212c4e7](https://github.com/KomodoPlatform/komodo/tree/212c4e7f44fddca6121953258966407e4e91f6a5/) | [![dPOW Status](http://116.203.64.110/svg/STBL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 SUPERNET | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/SUPERNET_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 THC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/THC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 VOTE2020 | [komodo](https://github.com/komodoplatform/komodo) | [b099cf6](https://github.com/KomodoPlatform/komodo/tree/b099cf66c2964412574784196c29ffcad03bfcd8) | [![dPOW Status](http://116.203.64.110/svg/VOTE2020_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
