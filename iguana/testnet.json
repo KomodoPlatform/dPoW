@@ -1,7 +1,7 @@
 {
 "port": 17778,
 "BTCminsigs": 13,
-"minsigs": 8,
+"minsigs": 12,
 "seeds": [
 	"195.201.20.230",
 	"159.69.72.206",
@@ -35,7 +35,8 @@
     {"greer": "0317f14421e3a76e9f640e83cd9371a39444a3224d91630704ee3e2bcfd48a1edc"},
     {"starfleet2": "03b79b2ed65e165654acdfed36e6258f897459838f6681921a10de062bc1feceb2"},
     {"mihailo": "0243f421b32908c30616307764acb629d09ea7b2ee379430c2290d5a615110969e"},
-    {"mcrypt": "02db030628e7e0e21d806d900dbefa590eee4eaad7cb7ef964881dfd29dd582eab"}
-    {"PowerWolf": "0289fcda051fd9988f6f57b6bc6c8d46b5a3cea738e3fb22b694d37d29b3961d42"}
+    {"mcrypt": "02db030628e7e0e21d806d900dbefa590eee4eaad7cb7ef964881dfd29dd582eab"},
+    {"PowerWolf": "0289fcda051fd9988f6f57b6bc6c8d46b5a3cea738e3fb22b694d37d29b3961d42"},
+    {"daemonfox": "022d6f4885f53cbd668ad7d03d4f8e830c233f74e3a918da1ed247edfc71820b3d"}
 ]}
 
