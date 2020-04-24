@@ -8,6 +8,6 @@ sleep 3
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"RFOX\",\"freq\":10,\"pubkey\":\"$pubkey\"}"
 
 # Loop through assetchains.json and call dpow for them. ROFX will not add a second time. 
-listassetchains | while read chain; do
+./listassetchains | while read chain; do
     curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"$chain\",\"pubkey\":\"$pubkey\"}"
 done
