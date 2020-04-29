@@ -16,6 +16,7 @@ sleep 3
 
 # TODO: Need to get some seeds for both networks. 
 
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"81.19.249.114\"}"   # Alright
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"195.201.20.230\"}"   # Alright
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"159.69.72.206\"}"    # node-9
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"37.9.62.186\"}"
