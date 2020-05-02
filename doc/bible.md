@@ -205,7 +205,7 @@ The top 3 NNs (according to the new NN algorithm) get automatically re-elected. 
 
 ### Developer Nodes:
 
-Four Nodes are reserved for the Komodo team for mining and experimental, debugging, or research operations, which include the usage of custom and experimental core code.
+Four Nodes are reserved for the Komodo team for mining and experimental, debugging, or research operations, which include the usage of custom and experimental core code. Starting with Season 5, six Notary Nodes are reserved for developer and research operations.
 
 ### Hunting unclaimed rewards: 
 
