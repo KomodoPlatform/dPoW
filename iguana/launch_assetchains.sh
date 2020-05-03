@@ -11,7 +11,7 @@ if [ -z "$delay" ]; then delay=20; fi
 
 ./listassetchainparams | while read args; do
   gen=""
-  if [ $[RANDOM % 10] == 1 ]; then
+  if [ $[RANDOM % 20] == 1 ]; then
       gen=" -gen -genproclimit=1"
   fi
 
