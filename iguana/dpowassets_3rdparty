@@ -11,5 +11,5 @@ curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dp
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"GIN\",\"pubkey\":\"$pubkey\"}"
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"HUSH3\",\"pubkey\":\"$pubkey\"}"
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"AYA\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
-curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"BLUR\",\"pubkey\":\"$pubkey\"}"
+curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"BLUR\",\"freq\":16,\"pubkey\":\"$pubkey\"}"
 
