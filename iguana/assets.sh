@@ -1,13 +1,7 @@
-#!/bin/bash
-set -eo pipefail
+#!/usr/bin/env bash
+# set -eo pipefail
 
-source pubkey.txt
-# source $HOME/config.nn
-
-seed_ip=`getent hosts zero.kolo.supernet.org | awk '{ print $1 }'`
-komodo_binary="$HOME/komodo/src/komodod"
-cli_binary="$HOME/komodo/src/komodo-cli"
-delay=20
+source $HOME/config.nn
 
 case "$1" in
 
@@ -19,7 +13,7 @@ case "$1" in
           gen=" -gen -genproclimit=1"
         fi
         $komodo_binary $gen $args -pubkey=$pubkey -addnode=$seed_ip &
-        sleep $delay
+        sleep ${delay:-20}
     done
   ;;
 
