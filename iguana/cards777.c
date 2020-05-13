@@ -434,7 +434,7 @@ void cards777_test()
     for (j=0; j<52; j++)
         otherpairs[j][0] = curve25519_keypair(&otherpairs[j][1]);
     bits256 zmone;zmone = crecip_donna(keypairs[0][0]);
-    printf("DEBUG.%d %llx vs %llx | %llx -> %llx/%llx\n",Debuglevel,(long long)keypairs[0][0].txid,(long long)fcontract(fexpand(keypairs[0][0])).txid,(long long)zmone.txid,(long long)fexpand(fmul_donna(keypairs[0][0],zmone)).txid,(long long)fmul(fexpand(keypairs[0][0]),fexpand(zmone)).txid);
+    printf("DEBUG.%d %llx vs %llx | %llx -> %llx/%llx\n",Debuglevel,(long long)keypairs[0][0].txid,(long long)fcontract(fexpand(keypairs[0][0])).txid,(long long)zmone.txid,(long long)fexpand(fmul_donna(keypairs[0][0],zmone)).txid,(long long)fmul320(fexpand(keypairs[0][0]),fexpand(zmone)).txid);
     for (i=0; i<52; i++)
     {break;
         buf[0] = 0;

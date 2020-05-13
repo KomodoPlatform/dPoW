@@ -28,6 +28,9 @@
 #define PACKED __attribute__((packed))
 #endif
 
+#if defined(__GNUC__) && !defined(_GNU_SOURCE)
+#define _GNU_SOURCE /* for pthread_setname_np() */
+#endif
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -40,7 +43,6 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <time.h>
-
 #ifdef _WIN32
 #define sleep(x) Sleep(1000*(x))
 #include "../OSlibs/win/mingw.h"
@@ -79,6 +81,9 @@
 #ifndef MAP_FILE
 #define MAP_FILE        0
 #endif
+
+
+void RenameThread(const char* name);
 
 //#define fopen myfopen
 //#define fclose myfclose
