@@ -176,7 +176,9 @@ struct supernet_info
     void *PAXDATA;
     struct liquidity_info linfos[512]; cJSON *liquidity_currencies; struct pending_trade *trades; portable_mutex_t pending_mutex;
     struct komodo_notaries NOTARY;
-    char seedipaddr[64]; uint32_t dpowipbits[128]; int32_t numdpowipbits; portable_mutex_t notarymutex,dpowmutex;
+    char seedipaddr[64]; uint32_t dpowipbits[128]; int32_t numdpowipbits;
+    portable_mutex_t notarymutex;
+    portable_mutex_t dpowmutex;
 #ifdef NOTARY_TESTMODE
     char dexseed_ipaddrs[1][64];
 #else

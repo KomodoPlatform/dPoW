@@ -13,6 +13,9 @@
  *                                                                            *
  ******************************************************************************/
 
+static pthread_mutex_t def_notarymutex = PTHREAD_MUTEX_INITIALIZER;
+static pthread_mutex_t def_dpowmutex = PTHREAD_MUTEX_INITIALIZER;
+
 extern uint16_t Notaries_port;
 extern int32_t Notaries_numseeds;
 extern char *Notaries_seeds[];
@@ -222,6 +225,7 @@ char *nanomsg_tcpname(struct supernet_info *myinfo,char *str,char *ipaddr,uint16
 
 void dpow_psockloop(void *_ptr)
 {
+    RenameThread("dpow_psockloop");
     int32_t i,nonz,size,sentbytes; uint32_t now; struct psock *ptr; void *buf; struct supernet_info *myinfo = _ptr;
     while ( 1 )
     {
@@ -1406,8 +1410,13 @@ int32_t dpow_addnotary(struct supernet_info *myinfo,struct dpow_info *dp,char *i
         if (dead_or_alive[in_list_flag] == -1) return -1;
     // -E- [+] Decker ---
 #endif
+    //int err_lock = portable_mutex_lock(&myinfo->notarymutex);
+    int err_lock = portable_mutex_lock(&def_notarymutex);
+    if (err_lock) {
+        printf("[ Decker ] %s.%d (%s): ip = %s\n", __FILE__, __LINE__, __func__, ipaddr);
+        printf("[ Decker ] %s.%d (%s): err_lock = %d\n", __FILE__, __LINE__, __func__, err_lock);
+    }
 
-    portable_mutex_lock(&myinfo->notarymutex);
     if ( myinfo->dpowsock >= 0 )//&& myinfo->dexsock >= 0 )
     {
         ipbits = (uint32_t)calc_ipbits(ipaddr);
@@ -1448,7 +1457,13 @@ int32_t dpow_addnotary(struct supernet_info *myinfo,struct dpow_info *dp,char *i
                 break;
         }
     }
-    portable_mutex_unlock(&myinfo->notarymutex);
+
+    //int err_unlock = portable_mutex_unlock(&myinfo->notarymutex);
+    int err_unlock = portable_mutex_unlock(&def_notarymutex);
+    if (err_unlock) {
+        printf("[ Decker ] %s.%d (%s): ip = %s\n", __FILE__, __LINE__, __func__, ipaddr);
+        printf("[ Decker ] %s.%d (%s): err_unlock = %d\n", __FILE__, __LINE__, __func__, err_unlock);
+    }
     return(retval);
 }
 
@@ -1462,7 +1477,8 @@ void dpow_nanomsginit(struct supernet_info *myinfo,char *ipaddr)
     }
     if ( myinfo->IAMNOTARY == 0 )
         return;
-    portable_mutex_lock(&myinfo->notarymutex);
+    //portable_mutex_lock(&myinfo->notarymutex);
+    portable_mutex_lock(&def_notarymutex);
     dpowsock = myinfo->dpowsock;
     dexsock = myinfo->dexsock;
     repsock = myinfo->repsock;
@@ -1557,7 +1573,8 @@ void dpow_nanomsginit(struct supernet_info *myinfo,char *ipaddr)
         myinfo->repsock = repsock;
     if ( myinfo->pubsock != pubsock )
         myinfo->pubsock = pubsock;
-    portable_mutex_unlock(&myinfo->notarymutex);
+    //portable_mutex_unlock(&myinfo->notarymutex);
+    portable_mutex_unlock(&def_notarymutex);
     dpow_addnotary(myinfo,0,ipaddr);
 }
 
@@ -2265,6 +2282,7 @@ void dpow_ipbitsadd(struct supernet_info *myinfo,struct dpow_info *dp,uint32_t *
             }
     } else if ( missing > 0 )
         printf("IGNORE from.%d RECV numips.%d numipbits.%d matched.%d missing.%d maxipbits.%d\n",fromid,numipbits,n,matched,missing,maxipbits);
+
     expand_ipbits(ipaddr,senderipbits);
     dpow_addnotary(myinfo,dp,ipaddr);
     expand_ipbits(ipaddr,myinfo->myaddr.myipbits);
@@ -2282,7 +2300,11 @@ int32_t dpow_nanomsg_update(struct supernet_info *myinfo)
         myinfo->numnotaries = komodo_notaries("KMD",myinfo->notaries,-1);
         printf("INIT with %d notaries\n",myinfo->numnotaries);
     }
-    portable_mutex_lock(&myinfo->dpowmutex);
+    //int err_lock = portable_mutex_lock(&myinfo->dpowmutex);
+    int err_lock = portable_mutex_lock(&def_dpowmutex);
+    if (err_lock) {
+        printf("[ Decker ] %s.%d (%s): err_lock = %d\n", __FILE__, __LINE__, __func__, err_lock);
+    }
     num = num2 = n = 0;
     for (iter=0; iter<100; iter++)
     {
@@ -2406,7 +2428,12 @@ int32_t dpow_nanomsg_update(struct supernet_info *myinfo)
             lastval = (num + n + num2);
         } else break;
     }
-    portable_mutex_unlock(&myinfo->dpowmutex);
+    //int err_unlock = portable_mutex_unlock(&myinfo->dpowmutex);
+    int err_unlock = portable_mutex_unlock(&def_dpowmutex);
+    if (err_unlock) {
+        printf("[ Decker ] %s.%d (%s): err_lock = %d\n", __FILE__, __LINE__, __func__, err_lock);
+    }
+
     return(num+n+num2);
 }
 #else

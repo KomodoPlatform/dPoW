@@ -19,6 +19,26 @@
 #define MAP_FILE        0
 #endif
 
+void RenameThread(const char* name)
+{
+#if defined(PR_SET_NAME)
+    // Only the first 15 characters are used (16 - NUL terminator)
+    ::prctl(PR_SET_NAME, name, 0, 0, 0);
+#elif (defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__))
+    pthread_set_name_np(pthread_self(), name);
+#elif (defined(MAC_OSX))
+    pthread_setname_np(name);
+#else
+    #if defined(__linux__)
+        #if ((__GLIBC__ > 2) || ((__GLIBC__ == 2) && (__GLIBC_MINOR__ >= 12)))
+            pthread_setname_np(pthread_self(), name);
+        #endif
+    #endif
+    // Prevent warnings for unused parameters...
+    (void)name;
+#endif
+}
+
 void OS_portable_init()
 {
 #ifdef _WIN32

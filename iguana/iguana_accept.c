@@ -103,6 +103,7 @@ int32_t iguana_acceptspoll(uint8_t *buf,int32_t bufsize,struct iguana_accept *ac
 
 void iguana_acceptloop(void *args)
 {
+    RenameThread("iguana_acceptloop");
     struct iguana_peer *addr; struct iguana_info *coin = args;
     struct pollfd pfd; int32_t sock; struct iguana_accept *ptr; uint16_t port = coin->chain->portp2p;
     socklen_t clilen; struct sockaddr_in cli_addr; char ipaddr[64]; uint32_t i,ipbits,flag;

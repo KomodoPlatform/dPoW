@@ -780,6 +780,7 @@ void jumblr_loop(void *ptr)
 
 void dpow_loop(void *arg)
 {
+    RenameThread("dpow_loop");
     struct supernet_info *myinfo = arg; double startmilli,endmilli; 
     int32_t counter = 0;
     printf("start dpow loop\n");
@@ -2285,9 +2286,31 @@ void iguana_main(void *arg)
     //iguana_urlinit(myinfo,ismainnet,usessl);
     portable_mutex_init(&myinfo->pending_mutex);
     portable_mutex_init(&myinfo->MoM_mutex);
+    /*
+    // try to use PTHREAD_MUTEX_RECURSIVE, instead of PTHREAD_MUTEX_NORMAL, currently disabled
+    pthread_mutexattr_t mta_dpow;
+    pthread_mutexattr_init(&mta_dpow);
+    pthread_mutexattr_settype(&mta_dpow, PTHREAD_MUTEX_RECURSIVE);
+    int rc_dpowmutex = pthread_mutex_init(&myinfo->dpowmutex, &mta_dpow);
+    if ( rc_dpowmutex != 0) {
+        printf("[ Decker ] %s.%d (%s): rc_dpowmutex = %d\n", __FILE__, __LINE__, __func__, rc_dpowmutex);
+    }
+    */
     portable_mutex_init(&myinfo->dpowmutex);
+    /*
+    // try to use PTHREAD_MUTEX_RECURSIVE, instead of PTHREAD_MUTEX_NORMAL, currently disabled
+    pthread_mutexattr_t mta_notary;
+    pthread_mutexattr_init(&mta_notary);
+    pthread_mutexattr_settype(&mta_notary, PTHREAD_MUTEX_RECURSIVE);
+    int rc_notarymutex = pthread_mutex_init(&myinfo->notarymutex, &mta_notary);
+    if ( rc_notarymutex != 0) {
+        printf("[ Decker ] %s.%d (%s): rc_notarymutex = %d\n", __FILE__, __LINE__, __func__, rc_notarymutex);
+    }
+    */
     portable_mutex_init(&myinfo->notarymutex);
+
     portable_mutex_init(&myinfo->psockmutex);
+
 #if LIQUIDITY_PROVIDER
     myinfo->tradingexchanges[myinfo->numexchanges++] = exchange_create(clonestr("nxtae"),0);
     myinfo->tradingexchanges[myinfo->numexchanges++] = exchange_create(clonestr("bitcoin"),0);
