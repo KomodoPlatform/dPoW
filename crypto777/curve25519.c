@@ -92,7 +92,7 @@ static inline bits320 fscalar_product(const bits320 in,const uint64_t scalar)
 // Multiply two numbers: output = in2 * in
 // output must be distinct to both inputs. The inputs are reduced coefficient form, the output is not.
 // Assumes that in[i] < 2**55 and likewise for in2. On return, output[i] < 2**52
-bits320 fmul(const bits320 in2,const bits320 in)
+bits320 fmul320(const bits320 in2,const bits320 in)
 {
     uint128_t t[5]; uint64_t r0,r1,r2,r3,r4,s0,s1,s2,s3,s4,c; bits320 out;
     r0 = in.ulongs[0], r1 = in.ulongs[1], r2 = in.ulongs[2], r3 = in.ulongs[3], r4 = in.ulongs[4];
@@ -187,7 +187,7 @@ bits256 curve25519(bits256 mysecret,bits256 basepoint)
     mysecret.bytes[0] &= 0xf8, mysecret.bytes[31] &= 0x7f, mysecret.bytes[31] |= 0x40;
     bp = fexpand(basepoint);
     cmult(&x,&z,mysecret,bp);
-    return(fcontract(fmul(x,crecip(z))));
+    return(fcontract(fmul320(x,crecip(z))));
 }
 
 #else
@@ -745,7 +745,7 @@ bits256 fcontract(const bits320 in)
     return(contracted);
 }
 
-bits320 fmul(const bits320 in,const bits320 in2)
+bits320 fmul320(const bits320 in,const bits320 in2)
 {
     /*limb output[11],input[10],input2[10]; int32_t i;
     for (i=0; i<10; i++)
@@ -788,15 +788,15 @@ fmonty(bits320 *x2, bits320 *z2, // output 2Q
     *x = fsum(*x,*z), fdifference_backwards(z->ulongs,origx.ulongs);  // does x - z
     origxprime = *xprime;
     *xprime = fsum(*xprime,*zprime), fdifference_backwards(zprime->ulongs,origxprime.ulongs);
-    xxprime = fmul(*xprime,*z), zzprime = fmul(*x,*zprime);
+    xxprime = fmul320(*xprime,*z), zzprime = fmul320(*x,*zprime);
     origxprime = xxprime;
     xxprime = fsum(xxprime,zzprime), fdifference_backwards(zzprime.ulongs,origxprime.ulongs);
-    *x3 = fsquare_times(xxprime,1), *z3 = fmul(fsquare_times(zzprime,1),qmqp);
+    *x3 = fsquare_times(xxprime,1), *z3 = fmul320(fsquare_times(zzprime,1),qmqp);
     xx = fsquare_times(*x,1), zz = fsquare_times(*z,1);
-    *x2 = fmul(xx,zz);
+    *x2 = fmul320(xx,zz);
     fdifference_backwards(zz.ulongs,xx.ulongs);  // does zz = xx - zz
     zzz = fscalar_product(zz,121665);
-    *z2 = fmul(zz,fsum(zzz,xx));
+    *z2 = fmul320(zz,fsum(zzz,xx));
 }
 
 // -----------------------------------------------------------------------------
@@ -851,26 +851,26 @@ inline bits320 crecip(const bits320 z)
     bits320 a,t0,b,c;
     /* 2 */ a = fsquare_times(z, 1); // a = 2
     /* 8 */ t0 = fsquare_times(a, 2);
-    /* 9 */ b = fmul(t0, z); // b = 9
-    /* 11 */ a = fmul(b, a); // a = 11
+    /* 9 */ b = fmul320(t0, z); // b = 9
+    /* 11 */ a = fmul320(b, a); // a = 11
     /* 22 */ t0 = fsquare_times(a, 1);
-    /* 2^5 - 2^0 = 31 */ b = fmul(t0, b);
+    /* 2^5 - 2^0 = 31 */ b = fmul320(t0, b);
     /* 2^10 - 2^5 */ t0 = fsquare_times(b, 5);
-    /* 2^10 - 2^0 */ b = fmul(t0, b);
+    /* 2^10 - 2^0 */ b = fmul320(t0, b);
     /* 2^20 - 2^10 */ t0 = fsquare_times(b, 10);
-    /* 2^20 - 2^0 */ c = fmul(t0, b);
+    /* 2^20 - 2^0 */ c = fmul320(t0, b);
     /* 2^40 - 2^20 */ t0 = fsquare_times(c, 20);
-    /* 2^40 - 2^0 */ t0 = fmul(t0, c);
+    /* 2^40 - 2^0 */ t0 = fmul320(t0, c);
     /* 2^50 - 2^10 */ t0 = fsquare_times(t0, 10);
-    /* 2^50 - 2^0 */ b = fmul(t0, b);
+    /* 2^50 - 2^0 */ b = fmul320(t0, b);
     /* 2^100 - 2^50 */ t0 = fsquare_times(b, 50);
-    /* 2^100 - 2^0 */ c = fmul(t0, b);
+    /* 2^100 - 2^0 */ c = fmul320(t0, b);
     /* 2^200 - 2^100 */ t0 = fsquare_times(c, 100);
-    /* 2^200 - 2^0 */ t0 = fmul(t0, c);
+    /* 2^200 - 2^0 */ t0 = fmul320(t0, c);
     /* 2^250 - 2^50 */ t0 = fsquare_times(t0, 50);
-    /* 2^250 - 2^0 */ t0 = fmul(t0, b);
+    /* 2^250 - 2^0 */ t0 = fmul320(t0, b);
     /* 2^255 - 2^5 */ t0 = fsquare_times(t0, 5);
-    /* 2^255 - 21 */ return(fmul(t0, a));
+    /* 2^255 - 21 */ return(fmul320(t0, a));
 }
 
 void OS_randombytes(unsigned char *x,long xlen);
