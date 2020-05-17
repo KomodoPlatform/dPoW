@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install dependencies
       run: |
-        sudo apt-get remove php7.1-fpm php7.2-fpm php7.3-fpm php7.3-common php7.0-fpm php5.6-fpm php7.4-fpm
+        sudo apt-get remove php* msodbcsql17 mysql*
         sudo apt-get update && sudo apt-get upgrade -y
         sudo apt-get install build-essential pkg-config cmake libsodium-dev libc6-dev m4 g++-multilib libtool libncurses-dev zlib1g-dev libssl-dev libprotobuf-dev protobuf-compiler libgtest-dev libdb++-dev ntp ntpdate software-properties-common libevent-dev curl libcurl4-gnutls-dev clang jq -y
     - name: Install nanomsg
