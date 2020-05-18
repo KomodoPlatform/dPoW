@@ -2541,6 +2541,7 @@ int32_t basilisk_alicetxs(struct supernet_info *myinfo,struct basilisk_swap *swa
 
 void basilisk_swaploop(void *_swap)
 {
+    RenameThread("basilisk_swaploop");
     uint8_t *data; uint32_t expiration,savestatebits=0,saveotherbits=0; uint32_t channel; int32_t iters,retval=0,j,datalen,maxlen; struct supernet_info *myinfo; struct basilisk_swap *swap = _swap;
     myinfo = swap->myinfoptr;
     fprintf(stderr,"start swap\n");

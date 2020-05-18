@@ -274,6 +274,12 @@ void dpow_statemachinestart(void *ptr)
     srcprevvout0 = destprevvout0 = -1;
     myinfo = ptrs[0];
     dp = ptrs[1];
+
+    char smname[16];
+    memset(smname, 0, sizeof(smname));
+    snprintf(smname, sizeof(smname)-1, "dpowsm_%s",dp->symbol);
+    RenameThread(smname);
+
     minsigs = (uint32_t)(long)ptrs[2];
     duration = (uint32_t)(long)ptrs[3];
     jsonstr = ptrs[4];

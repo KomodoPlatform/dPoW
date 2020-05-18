@@ -1156,6 +1156,7 @@ int32_t iguana_getheadersize(char *buf,int32_t recvlen)
 
 void iguana_rpcloop(void *args)
 {
+    RenameThread("iguana_rpcloop");
     static char *jsonbuf;
     uint16_t port; struct supernet_info *myinfo = args; char filetype[128],content_type[128];
     int32_t recvlen,flag,bindsock,postflag=0,contentlen,sock,remains,numsent,jsonflag=0,hdrsize,len;

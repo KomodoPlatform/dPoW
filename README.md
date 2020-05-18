@@ -87,7 +87,7 @@ STBL | [komodo](https://github.com/komodoplatform/komodo) | [212c4e7](https://gi
 SUPERNET | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/SUPERNET_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 THC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/THC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 VOTE2020 | [komodo](https://github.com/komodoplatform/komodo) | [b099cf6](https://github.com/KomodoPlatform/komodo/tree/b099cf66c2964412574784196c29ffcad03bfcd8) | [![dPOW Status](http://116.203.64.110/svg/VOTE2020_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-VRSC | [verus](https://github.com/VerusCoin/VerusCoin) | [0.6.0-7](https://github.com/VerusCoin/VerusCoin/releases/tag/v0.6.0-7) | [![dPOW Status](http://116.203.64.110/svg/VRSC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
+VRSC | [verus](https://github.com/VerusCoin/VerusCoin) | [391c403 (v0.6.4-3)](https://github.com/VerusCoin/VerusCoin/tree/391c403814d25434b75cd3a82e1d79dfeb8ab0eb) | [![dPOW Status](http://116.203.64.110/svg/VRSC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 WLC21 | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/WLC21_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 ZEXO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/ZEXO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 ZILLA | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/ZILLA_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
