@@ -215,6 +215,8 @@
     "RELAY": -1,
     "VALIDATE": 0,
     "portp2p": 57777,
+    "p2p": 57777,
+    "rpc": 57776,
     "minconfirms": 1,
     "pubval": 60,
     "p2shval": 85,
