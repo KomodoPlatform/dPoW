@@ -65,7 +65,6 @@ HUSH3 | [hush3](https://github.com/myhush/hush3) | [v3.3.1](https://github.com/M
 ILN | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/ILN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 JUMBLR | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/JUMBLR_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 KOIN | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/KOIN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-KV | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/KV_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 MCL | [marmara](https://github.com/marmarachain/Marmara-v.1.0) | [2c2530c](https://github.com/marmarachain/Marmara-v.1.0/tree/2c2530ca09187b0ecc933a6978299387dd41d5ef) | [![dPOW Status](http://116.203.64.110/svg/MCL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 MESH | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/MESH_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 MGW | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/MGW_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
