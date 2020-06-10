@@ -60,7 +60,6 @@ DEX | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Statu
 EMC2 | [emc2](https://github.com/emc2foundation/einsteinium) | [28e6c4a](https://github.com/emc2foundation/einsteinium/tree/28e6c4a2d8e2cb5d8df0d6635317ae240c61ec55) | [![dPOW Status](http://116.203.64.110/svg/EMC2_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 ETOMIC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/ETOMIC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 GAME | [game](https://github.com/gamecredits-project/GameCredits) | latest master | [![dPOW Status](http://116.203.64.110/svg/GAME_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
-GIN | [gin](https://github.com/GIN-coin/gincoin-core) | latest master | [![dPOW Status](http://116.203.64.110/svg/GIN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 HODL | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/HODL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 HUSH3 | [hush3](https://github.com/myhush/hush3) | [v3.3.1](https://github.com/MyHush/hush3/tree/v3.3.1) | [![dPOW Status](http://116.203.64.110/svg/HUSH3_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 ILN | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/ILN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
@@ -88,7 +87,7 @@ STBL | [komodo](https://github.com/komodoplatform/komodo) | [212c4e7](https://gi
 SUPERNET | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/SUPERNET_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 THC | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/THC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 VOTE2020 | [komodo](https://github.com/komodoplatform/komodo) | [b099cf6](https://github.com/KomodoPlatform/komodo/tree/b099cf66c2964412574784196c29ffcad03bfcd8) | [![dPOW Status](http://116.203.64.110/svg/VOTE2020_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-VRSC | [verus](https://github.com/VerusCoin/VerusCoin) | [391c403 (v0.6.4-3)](https://github.com/VerusCoin/VerusCoin/tree/391c403814d25434b75cd3a82e1d79dfeb8ab0eb) | [![dPOW Status](http://116.203.64.110/svg/VRSC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
+VRSC | [verus](https://github.com/VerusCoin/VerusCoin) | [c1057a5 (v0.7.0)](https://github.com/VerusCoin/VerusCoin/tree/c1057a53938fdd453d484486687d3b610de1990c) | [![dPOW Status](http://116.203.64.110/svg/VRSC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 WLC21 | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/WLC21_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 ZEXO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/ZEXO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 ZILLA | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/ZILLA_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
