@@ -59,7 +59,7 @@ CRYPTO | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW St
 DEX | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/DEX_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 EMC2 | [emc2](https://github.com/emc2foundation/einsteinium) | [28e6c4a](https://github.com/emc2foundation/einsteinium/tree/28e6c4a2d8e2cb5d8df0d6635317ae240c61ec55) | [![dPOW Status](http://116.203.64.110/svg/EMC2_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 ETOMIC | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/ETOMIC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-GAME | [game](https://github.com/gamecredits-project/GameCredits) | latest master | [![dPOW Status](http://116.203.64.110/svg/GAME_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
+GAME | [game](https://github.com/gamecredits-project/GameCredits) | latest master (025f105) | [![dPOW Status](http://116.203.64.110/svg/GAME_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 HODL | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/HODL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 HUSH3 | [hush3](https://github.com/myhush/hush3) | [v3.3.1](https://github.com/MyHush/hush3/tree/v3.3.1) | [![dPOW Status](http://116.203.64.110/svg/HUSH3_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 ILN | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/ILN_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
