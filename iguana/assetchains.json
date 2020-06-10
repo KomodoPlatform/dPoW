@@ -76,10 +76,6 @@
     ]
   },
   {
-    "ac_name": "KV",
-    "ac_supply": "1000000"
-  },
-  {
     "ac_name": "MESH",
     "ac_supply": "1000007",
     "ac_ccactivate": "320000"
