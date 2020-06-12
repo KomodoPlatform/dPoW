@@ -48,12 +48,12 @@ Coin | src | Version/Tree | Status | dPoW
 KMD | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/KMD_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-Mainnet
 BTC | [bitcoin](https://github.com/bitcoin/bitcoin) | 0.16 | [![dPOW Status](http://116.203.64.110/svg/KMD_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-Mainnet
 AXO | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/AXO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-AYA | [aryacoin](https://github.com/sillyghost/AYAv2) | [fd94422 (AYAv2.1.0)](https://github.com/sillyghost/AYAv2/tree/aa6d65b412954fea3063215daecac96cf03fee03) | [![dPOW Status](http://116.203.64.110/svg/AYA_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
+AYA | [aryacoin](https://github.com/sillyghost/AYAv2) | [fd94422 (AYAv2.1.0)](https://github.com/sillyghost/AYAv2/tree/fd94422aff2886919dc963d85c313df4dfb0d770) | [![dPOW Status](http://116.203.64.110/svg/AYA_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 BET | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/BET_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 BOTS | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/BOTS_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 BTCH | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/BTCH_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 CCL | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/CCL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-CHIPS | [chips](https://github.com/jl777/chips3/tree/master) | [31d59f9](https://github.com/jl777/chips3/tree/65c1d27ebf5c1172bd322b428770f2e81f697cf9) | [![dPOW Status](http://116.203.64.110/svg/CHIPS_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
+CHIPS | [chips](https://github.com/jl777/chips3/tree/master) | [31d59f9](https://github.com/jl777/chips3/tree/31d59f9d8fa4a8e00dd474ef0561a5b174056d86) | [![dPOW Status](http://116.203.64.110/svg/CHIPS_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 COQUICASH | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/COQUICASH_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 CRYPTO | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/CRYPTO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 DEX | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/DEX_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
