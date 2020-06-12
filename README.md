@@ -76,7 +76,7 @@ PIRATE | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW St
 REVS | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/REVS_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 RFOX | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/RFOX_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 RICK | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/RICK_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-STBL | [komodo](https://github.com/komodoplatform/komodo) | [212c4e7](https://github.com/KomodoPlatform/komodo/tree/212c4e7f44fddca6121953258966407e4e91f6a5/) | [![dPOW Status](http://116.203.64.110/svg/STBL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
+STBL | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/STBL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 SUPERNET | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/SUPERNET_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 THC | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/THC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 VRSC | [verus](https://github.com/VerusCoin/VerusCoin) | [c1057a5 (v0.7.0)](https://github.com/VerusCoin/VerusCoin/tree/c1057a53938fdd453d484486687d3b610de1990c) | [![dPOW Status](http://116.203.64.110/svg/VRSC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
