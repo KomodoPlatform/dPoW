@@ -194,8 +194,8 @@
     "wifval": 188,
     "git": {
       "repo": "https://github.com/jl777/chips3.git",
-      "branch": "dev",
-      "commit": "65c1d27",
+      "branch": "master",
+      "commit": "31d59f9",
       "tag": ""
     }
   },
