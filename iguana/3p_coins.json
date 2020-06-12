@@ -39,7 +39,7 @@
     "git": {
       "repo": "https://github.com/sillyghost/AYAv2",
       "branch": "master",
-      "commit": "",
+      "commit": "aa6d65b",
       "tag": ""
     }
   },
@@ -124,7 +124,7 @@
     "git": {
       "repo": "https://github.com/gamecredits-project/GameCredits.git",
       "branch": "master",
-      "commit": "",
+      "commit": "025f105",
       "tag": ""
     }
   },
@@ -168,7 +168,7 @@
     "git": {
       "repo": "https://github.com/emc2foundation/einsteinium.git",
       "branch": "master",
-      "commit": "",
+      "commit": "28e6c4a",
       "tag": ""
     }
   },
@@ -195,7 +195,7 @@
     "git": {
       "repo": "https://github.com/jl777/chips3.git",
       "branch": "dev",
-      "commit": "",
+      "commit": "65c1d27",
       "tag": ""
     }
   }
