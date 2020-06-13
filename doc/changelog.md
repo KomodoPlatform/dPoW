@@ -1,3 +1,10 @@
+### 0.2.0
+
+- removed inactive coins
+- update bible
+- bumped version
+- update iguana and NN network to dPoW Season 4
+
 ### 0.1.5
 
 - update VRSC (main)
