@@ -57,7 +57,7 @@ CHIPS | [chips](https://github.com/jl777/chips3/tree/master) | [31d59f9](https:/
 COQUICASH | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/COQUICASH_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 CRYPTO | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/CRYPTO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 DEX | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/DEX_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-EMC2 | [emc2](https://github.com/emc2foundation/einsteinium) | [28e6c4a](https://github.com/emc2foundation/einsteinium/tree/28e6c4a2d8e2cb5d8df0d6635317ae240c61ec55) | [![dPOW Status](http://116.203.64.110/svg/EMC2_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
+EMC2 | [emc2](https://github.com/emc2foundation/einsteinium) | [70d7dc2](https://github.com/emc2foundation/einsteinium/commit/70d7dc2b94e0b275f026ae51fda2a23725929bfd) | [![dPOW Status](http://116.203.64.110/svg/EMC2_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 GAME | [game](https://github.com/gamecredits-project/GameCredits) | latest master (025f105) | [![dPOW Status](http://116.203.64.110/svg/GAME_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 HODL | [komodo](https://github.com/komodoplatform/komodo) | 0.6.0 | [![dPOW Status](http://116.203.64.110/svg/HODL_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 HUSH3 | [hush3](https://github.com/myhush/hush3) | [v3.3.1](https://github.com/MyHush/hush3/tree/v3.3.1) | [![dPOW Status](http://116.203.64.110/svg/HUSH3_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
