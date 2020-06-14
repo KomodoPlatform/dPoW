@@ -58,9 +58,4 @@ curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dp
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"GIN\",\"pubkey\":\"$pubkey\"}"
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"HUSH3\",\"pubkey\":\"$pubkey\"}"
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"AYA\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
-<<<<<<< HEAD
-curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"MCL\",\"pubkey\":\"$pubkey\"}"
-=======
 # curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"MCL\",\"pubkey\":\"$pubkey\"}"
-
->>>>>>> 7878588679b92d00d8831a1f62694a75049308ba
