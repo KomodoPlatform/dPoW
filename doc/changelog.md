@@ -1,3 +1,8 @@
+### 0.2.1
+
+- changed network ports
+- updated main network participants pubkeys
+
 ### 0.2.0
 
 - removed inactive coins
