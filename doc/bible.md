@@ -203,6 +203,16 @@ The Komodo mining ecosystem is exceptional in that a large part of the mining re
 
 The top 3 NNs (according to the new NN algorithm) get automatically re-elected. Only 3 spots per region are eligible for the auto-reelection. The other 48 public NN spots are claimable through the annual NN elections. 
 
+### Notary scoring:
+
+To determine relative participation notary scoring, refer to the following:
+
+KMD -> BTC Notarisation: 0.0325 
+Smartchain -> KMD notarisation: 0.8698/(number of active main server chains) 
+3rd Party chain -> KMD notarisation: 0.0977/(number of active 3rd party server chains) 
+
+Notarisation counts to be determined from decoded notarisation transaction OP_RETURN data on KMD block chain.
+
 ### Developer Nodes:
 
 Four Nodes are reserved for the Komodo team for mining and experimental, debugging, or research operations, which include the usage of custom and experimental core code. Starting with Season 5, six Notary Nodes are reserved for developer and research operations.
