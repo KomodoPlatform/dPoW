@@ -207,9 +207,9 @@ The top 3 NNs (according to the new NN algorithm) get automatically re-elected. 
 
 To determine relative participation notary scoring, refer to the following:
 
-KMD -> BTC Notarisation: 0.0325 
-Smartchain -> KMD notarisation: 0.8698/(number of main server chains*, not including KMD/BTC)
-3rd Party chain -> KMD notarisation: 0.0977/(number of active 3rd party server chains*, not including KMD) 
+- KMD -> BTC Notarisation: 0.0325 
+- Smartchain -> KMD notarisation: 0.8698/(number of main server chains*, not including KMD/BTC)
+- 3rd Party chain -> KMD notarisation: 0.0977/(number of active 3rd party server chains*, not including KMD) 
 
 Notarisation counts to be determined from decoded notarisation transaction OP_RETURN data on KMD block chain.
 
