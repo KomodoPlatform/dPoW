@@ -213,7 +213,7 @@ Smartchain -> KMD notarisation: 0.8698/(number of main server chains*, not inclu
 
 Notarisation counts to be determined from decoded notarisation transaction OP_RETURN data on KMD block chain.
 
-* As listed in https://github.com/KomodoPlatform/dPoW/README.md
+\**As listed in https://github.com/KomodoPlatform/dPoW/README.md
 
 ### Developer Nodes:
 
