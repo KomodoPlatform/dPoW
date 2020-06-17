@@ -80,8 +80,8 @@
     "git": {
       "repo": "https://github.com/myhush/hush3",
       "branch": "",
-      "commit": "",
-      "tag": "v3.3.1"
+      "commit": "7f7876d",
+      "tag": ""
     }
   },
   {
@@ -238,8 +238,8 @@
     "git": {
       "repo": "https://github.com/VerusCoin/VerusCoin",
       "branch": "master",
-      "commit": "9d4787b",
-      "tag": "v0.7.0-1"
+      "commit": "5611c0a",
+      "tag": "v0.7.0-3"
     }
   }
 ]
