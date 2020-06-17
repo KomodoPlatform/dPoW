@@ -8,9 +8,10 @@ cd ~/hush3
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
-- Launch it (replace `$pubkey` with your 3p pubkey)
+- Launch it
 
 ```bash
+source ~/dPoW/iguana/pubkey.txt
 ~/hush3/src/hushd -pubkey=$pubkey -daemon
 ```
 
@@ -27,5 +28,6 @@ git pull
 - Start Notarizing Hush
 
 ```bash
-
+source ~/dPoW/iguana/pubkey.txt
+ curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"HUSH3\",\"pubkey\":\"$pubkey\"}"
 ```
