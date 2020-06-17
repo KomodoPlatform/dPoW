@@ -1,10 +1,11 @@
 **The Hush coin's codebase is ready for Season 4 Activation in 3P node**
 
-- Please update your Hush codebase to [7f7876d](https://github.com/MyHush/hush3/tree/7f7876d2084daebc89b1914c870fa407c4fbef4e)
-- Build it
+- Please update your Hush codebase to [7f7876d](https://github.com/MyHush/hush3/tree/7f7876d2084daebc89b1914c870fa407c4fbef4e) and built it
 
 ```bash
 cd ~/hush3
+git pull
+git checkout 7f7876d
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
