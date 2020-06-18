@@ -203,6 +203,18 @@ The Komodo mining ecosystem is exceptional in that a large part of the mining re
 
 The top 3 NNs (according to the new NN algorithm) get automatically re-elected. Only 3 spots per region are eligible for the auto-reelection. The other 48 public NN spots are claimable through the annual NN elections. 
 
+### Notary scoring:
+
+To determine relative participation notary scoring, refer to the following:
+
+- KMD -> BTC Notarisation: 0.0325 
+- Smartchain -> KMD notarisation: 0.8698/(number of main server chains*, not including KMD/BTC)
+- 3rd Party chain -> KMD notarisation: 0.0977/(number of active 3rd party server chains*, not including KMD) 
+
+Notarisation counts to be determined from decoded notarisation transaction OP_RETURN data on KMD block chain.
+
+\* *As listed in https://github.com/KomodoPlatform/dPoW/blob/master/README.md*
+
 ### Developer Nodes:
 
 Four Nodes are reserved for the Komodo team for mining and experimental, debugging, or research operations, which include the usage of custom and experimental core code. Starting with Season 5, six Notary Nodes are reserved for developer and research operations.
@@ -213,7 +225,7 @@ The consensus rules allow every network participant to hunt the so-called “unc
 
 ### Mine Komodo blocks with your NN pubkey:
 
-In the event a NN opts to hunt, as above, that NN must find some way to contribute block production to the network similar to the result of "traditional NN mining". This contribution shall be no less than 75% of the blocks produced by the region's leading block producing NN and in any event not below 15 blocks per day on average over the course of a week. The contribution may be through means of only hunting part time, employing "external" hashrate full-time, or some combination of the two. This contribution shall <b>not</b> include mining several blocks in a short time with "external" hashrate and then abandoning the chain for a time, such an action does not produce a "similar result".
+In the event a NN opts to hunt, as above, that NN must find some way to contribute block production to the network similar to the result of "traditional NN mining". This contribution shall be no less than 75% of the blocks produced by the region's leading block producing NN and in any event not below 15 blocks per day on average over the course of a calender month. The contribution may be through means of only hunting part time, employing "external" hashrate full-time, or some combination of the two. This contribution shall <b>not</b> include mining several blocks in a short time with "external" hashrate and then abandoning the chain for a time, such an action does not produce a "similar result".
 
 ### NN gurus:
 
