@@ -213,7 +213,7 @@ To determine relative participation notary scoring, refer to the following:
 
 Notarisation counts to be determined from decoded notarisation transaction OP_RETURN data on KMD block chain.
 
-\* *As listed in https://github.com/KomodoPlatform/dPoW/README.md*
+\* *As listed in https://github.com/KomodoPlatform/dPoW/blob/master/README.md*
 
 ### Developer Nodes:
 
