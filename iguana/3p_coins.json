@@ -241,5 +241,49 @@
       "commit": "5611c0a",
       "tag": "v0.7.0-3"
     }
-  }
+  },
+  {
+    "conf": "tecracoin.conf",
+    "path": "$${HOME#'/'}/.tecracoin",
+    "RELAY": -1,
+    "VALIDATE": 0,
+    "prefetchlag": -1,
+    "poll": 100,
+    "active": 1,
+    "agent": "iguana",
+    "method": "addcoin",
+    "startpend": 68,
+    "endpend": 68,
+    "services": 129,
+    "maxpeers": 125,
+    "newcoin": "TCR",
+    "name": "Tecracoin",
+    "hasheaders": 1,
+    "useaddmultisig": 0,
+    "netmagic": "9ece3c7c",
+    "p2p": 2718,
+    "rpc": 9045,
+    "pubval": 65,
+    "p2shval": 27,
+    "wifval": 58,
+    "isPoS": 0,
+    "minoutput": 10000,
+    "minconfirms": 2,
+    "genesishash": "000008c721bdb1312f1954156f64828a052e8e8ce5a914f7b301a44eba154989",
+    "genesis": {
+      "version": 2,
+      "timestamp": 1539907200,
+      "nBits": "1e0ffff0",
+      "nonce": 317425,
+      "merkle_root": "9cb610c4373619597a4e6e2bcf131a09f6aac19edcfbcdf5eb6185d53947f26d"
+      },
+    "alertpubkey": "04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f",
+    "protover":90026,
+    "git": {
+      "repo": "https://github.com/tecracoin/tecracoin",
+      "branch": "dpow",
+      "commit": "c8bd996",
+      "tag": ""
+      }
+    }
 ]
