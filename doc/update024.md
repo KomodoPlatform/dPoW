@@ -2,7 +2,7 @@
 
 **The Marmarachain's codebase is ready for Season 4 Activation in 3P node**
 
-- Please update your Hush codebase to [03dd780](https://github.com/marmarachain/Marmara-v.1.0/tree/03dd78037067ebb27af8b33f6adcdbede3813007) and build it
+- Please update your Marmarachain's codebase to [03dd780](https://github.com/marmarachain/Marmara-v.1.0/tree/03dd78037067ebb27af8b33f6adcdbede3813007) and build it
 
 ```bash
 cd Marmara-v.1.0
