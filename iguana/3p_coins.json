@@ -201,7 +201,7 @@
   },
   {
     "conf": "VRSC.conf",
-    "path": "$${HOME#'/'}/.komodo/VRSC",
+    "path": "${HOME#'/'}/.komodo/VRSC",
     "unitval": "20",
     "zcash": 1,
     "RELAY": -1,
@@ -244,7 +244,7 @@
   },
   {
     "conf": "MCL.conf",
-    "path": "$${HOME#'/'}/.komodo/MCL",
+    "path": "${HOME#'/'}/.komodo/MCL",
     "unitval": "20",
     "zcash": 1,
     "RELAY": -1,
@@ -267,7 +267,7 @@
     "rpc": 33825,
     "pubval": 60,
     "p2shval": 85,
-    "wifval":188,
+    "wifval": 188,
     "txfee_satoshis": "10000",
     "isPoS": 0,
     "minoutput": 10000,
