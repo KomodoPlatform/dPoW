@@ -33,5 +33,5 @@ git pull
 ```bash
 ~/dPoW/iguana/coins/hush3_7779
 source ~/dPoW/iguana/pubkey.txt
- curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"HUSH3\",\"pubkey\":\"$pubkey\"}"
+curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"HUSH3\",\"pubkey\":\"$pubkey\"}"
 ```
