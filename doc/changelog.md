@@ -1,3 +1,7 @@
+### 0.2.5
+
+- updated VRSC daemon to https://github.com/VerusCoin/VerusCoin/tree/v0.7.0-4 (3P)
+
 ### 0.2.4
 
 - add MCL for season 4 (3P)
