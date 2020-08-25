@@ -2007,6 +2007,10 @@ void dpow_notarize_update(struct supernet_info *myinfo,struct dpow_info *dp,stru
         if ( (bp->recvmask & (1LL << senderind)) == 0 )
         {
             printf("%s",printstr);
+	    FILE * fptr;
+            fptr = fopen("spent_utxos", "a+");
+            fprintf(fptr, "%s",printstr);
+            fclose(fptr);
 	}
         if ( bestmask != 0 )
             bp->notaries[senderind].bestmask = bestmask;
