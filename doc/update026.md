@@ -1,10 +1,10 @@
-### dPoW 0.2.6 update information:
+### dPoW 0.3.0 update information:
 
 **The Chips blockchain will perform a mandatory Hard Fork at block 6874120, which comes around 3rd Sep**
 ** The bitcoin DDA will be changed to adaptivePoW allowing CPU & ASIC mining without chain stalling**
 ** Please update your Chips node prior to the HF (or you'll end up on a stuck/wrong chain) on your 3P NN Server**
 
-- Please update your Chips Coin's codebase **prior to 6874120** and build it
+- Please update your Chips Coin's and iguana codebase **prior to 6874120** and build it
 - It is not mandatory to mine Chips with your notary node CPU but you are encouraged to mine Chips with any CPU
 - adaptivePoW was developed by jl777 and zawy12 based on LWMA, tested by KMD Team. The apow integrated in Chips is based on one of the first stable iteration/version of apow from Komodo codebase
 - Mining, transactions and HF tests were performed by phm87
@@ -33,7 +33,8 @@ Remark: make can be more rapid than a whole build.sh
 source ~/komodo/src/pubkey.txt
 chipsd -pubkey=$pubkey &
 ```
-4. Launch iguana
+
+4. Update & Launch iguana
 
 5. Make sure your iguana is running properly and has not crashed. Restart iguana if it has crashed.
 
