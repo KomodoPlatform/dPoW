@@ -1978,33 +1978,46 @@ void dpow_ratify_update(struct supernet_info *myinfo,struct dpow_info *dp,struct
 
 void dpow_notarize_update(struct supernet_info *myinfo,struct dpow_info *dp,struct dpow_block *bp,uint8_t senderind,int8_t bestk,uint64_t bestmask,uint64_t recvmask,bits256 srcutxo,uint16_t srcvout,bits256 destutxo,uint16_t destvout,uint8_t siglens[2],uint8_t sigs[2][DPOW_MAXSIGLEN],uint32_t paxwdcrc)
 {
-    bits256 srchash; uint32_t now; int32_t i,flag,bestmatches = 0,matches = 0,paxmatches = 0,paxbestmatches = 0; char str[65],printstr[65536];
+    bits256 srchash; uint32_t now; int32_t i,flag,bestmatches = 0,matches = 0,paxmatches = 0,paxbestmatches = 0; cJSON* tmpjson = 0; char str[65],printstr[65536];
     if ( bp->myind < 0 )
         return;
     if ( bp->isratify == 0 && bp->state != 0xffffffff && senderind >= 0 && senderind < bp->numnotaries && bits256_nonz(srcutxo) != 0 && bits256_nonz(destutxo) != 0 )
     {
         if ( bp->myind != senderind )
         {
-            if ( bits256_nonz(srcutxo) != 0 )
+            if ( bits256_nonz(srcutxo) != 0 ) // this will be always true because this is contained inside a if at line 1984 with this condition
             {
                 bp->notaries[senderind].src.prev_hash = srcutxo;
                 bp->notaries[senderind].src.prev_vout = srcvout;
                 //char str[65]; printf("%s senderind.%d <- %s/v%d\n",dp->symbol,senderind,bits256_str(str,srcutxo),srcvout);
             }
 	    else sprintf(printstr,MAGENTA"[%s:%i]: coin.(%s) node.(%s) txid.(%s) v.(%i) is spent\n"RESET,bp->srccoin->symbol,bp->height,bp->srccoin->symbol,Notaries_elected[senderind][0],bits256_str(str,srcutxo),srcvout);
-            if ( bits256_nonz(destutxo) != 0 )
+	    if ( (tmpjson= dpow_gettxout(myinfo, bp->srccoin, srcutxo, srcvout)) == 0 )
+	        sprintf(printstr,MAGENTA"[%s:%i]: coin.(%s) node.(%s) txid.(%s) v.(%i) is spent\n"RESET,bp->srccoin->symbol,bp->height,bp->srccoin->symbol,Notaries_elected[senderind][0],bits256_str(str,srcutxo),srcvout);
+	    else {
+		free_json(tmpjson);
+                tmpjson = 0;
+	    }
+	
+            if ( bits256_nonz(destutxo) != 0 ) // this will be always true because this is contained inside a if at line 1984 with this condition
             {
                 bp->notaries[senderind].dest.prev_hash = destutxo;
                 bp->notaries[senderind].dest.prev_vout = destvout;
             }
 	    else sprintf(printstr,MAGENTA"[%s:%i]: coin.(%s) node.(%s) txid.(%s) v.(%i) is spent\n"RESET,bp->srccoin->symbol,bp->height,dp->dest,Notaries_elected[senderind][0],bits256_str(str,destutxo),destvout);
+	    if ( (tmpjson= dpow_gettxout(myinfo, bp->destcoin, destutxo, destvout)) == 0 )
+	        sprintf(printstr,MAGENTA"[%s:%i]: coin.(%s) node.(%s) txid.(%s) v.(%i) is spent\n"RESET,bp->srccoin->symbol,bp->height,dp->dest,Notaries_elected[senderind][0],bits256_str(str,destutxo),destvout);
+	    else {
+		free_json(tmpjson);
+                tmpjson = 0;
+	    }
         }
         else
         {
             bp->notaries[bp->myind].src.prev_hash = bp->mysrcutxo;
             bp->notaries[bp->myind].dest.prev_hash = bp->mydestutxo;
         }
-        if ( (bp->recvmask & (1LL << senderind)) == 0 )
+        if ( (tmpjson= dpow_gettxout(myinfo, bp->srccoin, srcutxo, srcvout)) == 0 || (tmpjson= dpow_gettxout(myinfo, bp->destcoin, destutxo, destvout)) == 0 )
         {
             printf("%s",printstr);
 	    FILE * fptr;
@@ -2012,6 +2025,9 @@ void dpow_notarize_update(struct supernet_info *myinfo,struct dpow_info *dp,stru
             fprintf(fptr, "%s",printstr);
             fclose(fptr);
 	}
+	free_json(tmpjson);
+        tmpjson = 0;
+	
         if ( bestmask != 0 )
             bp->notaries[senderind].bestmask = bestmask;
         if ( recvmask != 0 )
