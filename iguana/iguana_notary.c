@@ -362,9 +362,7 @@ THREE_STRINGS_AND_DOUBLE(iguana,dpow,symbol,dest,pubkey,freq)
         dp->srcconfirms = DPOW_FIFOSIZE;
     if ( strcmp("BTC",dp->dest) == 0 )
     {
-        if ( freq == 0 )
-            dp->freq = DPOW_CHECKPOINTFREQ;
-        else dp->freq = freq;
+        dp->freq = 20;
         dp->minsigs = Notaries_BTCminsigs; //DPOW_MINSIGS;
     }
     else

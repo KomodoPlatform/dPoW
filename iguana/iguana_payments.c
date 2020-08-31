@@ -1817,7 +1817,7 @@ STRING_ARRAY_OBJ_STRING(bitcoinrpc,signrawtransaction,rawtx,vins,privkeys,sighas
         //for (i=0; i<msgtx.tx_in; i++)
         //    if ( msgtx.vins[i].redeemscript != 0 )
         //        free(msgtx.vins[i].redeemscript), msgtx.vins[i].redeemscript = 0;
-    } else jaddstr(retjson,"error",uselessbitcoin_error != 0 ? "-22" : "no rawtx or rawtx too big");
+    } else jaddstr(retjson,"error",uselessbitcoin_error != 0 ? "-22" : "no vins or no rawtx or rawtx too big");
     return(jprint(retjson,1));
 }
 #include "../includes/iguana_apiundefs.h"
