@@ -4,7 +4,8 @@
 ** The bitcoin DDA will be changed to adaptivePoW allowing CPU & ASIC mining without chain stalling**
 ** Please update your Chips node prior to the HF (or you'll end up on a stuck/wrong chain) on your 3P NN Server**
 
-- Please update your Chips Coin's and iguana codebase **prior to 6874120** and build it
+- Please update your Chips Coin's (3P NN) and iguana codebase (main NN) **prior to 6874120** and build it
+- The BTC freq change requires main NN update!
 - It is not mandatory to mine Chips with your notary node CPU but you are encouraged to mine Chips with any CPU
 - adaptivePoW was developed by jl777 and zawy12 based on LWMA, tested by KMD Team. The apow integrated in Chips is based on one of the first stable iteration/version of apow from Komodo codebase
 - Mining, transactions and HF tests were performed by phm87
