@@ -1,3 +1,7 @@
+### 0.3.0a
+
+- updated Chips daemon for HF update [hotfix]
+
 ### 0.3.0
 
 - updated Chips daemon for HF update
