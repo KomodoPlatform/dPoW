@@ -1991,7 +1991,9 @@ void dpow_notarize_update(struct supernet_info *myinfo,struct dpow_info *dp,stru
                 bp->notaries[senderind].src.prev_vout = srcvout;
                 //char str[65]; printf("%s senderind.%d <- %s/v%d\n",dp->symbol,senderind,bits256_str(str,srcutxo),srcvout);
             }
-	    else sprintf(printstr,MAGENTA"[%s:%i]: coin.(%s) node.(%s) txid.(%s) v.(%i) is spent\n"RESET,bp->srccoin->symbol,bp->height,bp->srccoin->symbol,Notaries_elected[senderind][0],bits256_str(str,srcutxo),srcvout);
+	    else sprintf(printstr,MAGENTA"[%s:%i]: coin.(%s) node.(%s) txid.(%s) v.(%i) is spent\n"RESET,bp->srccoin->symbol,bp->height,bp->srccoin->symbol,Notaries_elected[senderind][0],bits256_str(str,srcutxo),srcvout); // the else clause is impossible to be reached so this log won't ever be printer
+	    
+	    // Source: https://github.com/KMDLabs/SuperNET/blob/blackjok3r/iguana/dpow/dpow_network.c#L1989
 	    if ( (tmpjson= dpow_gettxout(myinfo, bp->srccoin, srcutxo, srcvout)) == 0 )
 	        sprintf(printstr,MAGENTA"[%s:%i]: coin.(%s) node.(%s) txid.(%s) v.(%i) is spent\n"RESET,bp->srccoin->symbol,bp->height,bp->srccoin->symbol,Notaries_elected[senderind][0],bits256_str(str,srcutxo),srcvout);
 	    else {
@@ -2004,7 +2006,9 @@ void dpow_notarize_update(struct supernet_info *myinfo,struct dpow_info *dp,stru
                 bp->notaries[senderind].dest.prev_hash = destutxo;
                 bp->notaries[senderind].dest.prev_vout = destvout;
             }
-	    else sprintf(printstr,MAGENTA"[%s:%i]: coin.(%s) node.(%s) txid.(%s) v.(%i) is spent\n"RESET,bp->srccoin->symbol,bp->height,dp->dest,Notaries_elected[senderind][0],bits256_str(str,destutxo),destvout);
+	    else sprintf(printstr,MAGENTA"[%s:%i]: coin.(%s) node.(%s) txid.(%s) v.(%i) is spent\n"RESET,bp->srccoin->symbol,bp->height,dp->dest,Notaries_elected[senderind][0],bits256_str(str,destutxo),destvout); // the else clause is impossible to be reached so this log won't ever be printer
+
+	    // Source: https://github.com/KMDLabs/SuperNET/blob/blackjok3r/iguana/dpow/dpow_network.c#L1989
 	    if ( (tmpjson= dpow_gettxout(myinfo, bp->destcoin, destutxo, destvout)) == 0 )
 	        sprintf(printstr,MAGENTA"[%s:%i]: coin.(%s) node.(%s) txid.(%s) v.(%i) is spent\n"RESET,bp->srccoin->symbol,bp->height,dp->dest,Notaries_elected[senderind][0],bits256_str(str,destutxo),destvout);
 	    else {
@@ -2017,11 +2021,13 @@ void dpow_notarize_update(struct supernet_info *myinfo,struct dpow_info *dp,stru
             bp->notaries[bp->myind].src.prev_hash = bp->mysrcutxo;
             bp->notaries[bp->myind].dest.prev_hash = bp->mydestutxo;
         }
+
+	// Source: https://github.com/KMDLabs/SuperNET/blob/blackjok3r/iguana/dpow/dpow_network.c#L2016
         if ( (tmpjson= dpow_gettxout(myinfo, bp->srccoin, srcutxo, srcvout)) == 0 || (tmpjson= dpow_gettxout(myinfo, bp->destcoin, destutxo, destvout)) == 0 )
         {
             printf("%s",printstr);
 	    FILE * fptr;
-            fptr = fopen("spent_utxos", "a+");
+            fptr = fopen("spent_utxos", "a+"); // this log file will keep growing, TODO: add log rotate
             fprintf(fptr, "%s",printstr);
             fclose(fptr);
 	}
