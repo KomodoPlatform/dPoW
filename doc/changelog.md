@@ -2,6 +2,10 @@
 
 - updated Hush daemon for the `Exponential Extremophile` upgrade. Version: https://github.com/MyHush/hush3/tree/3a276a7b61ae4195c10a8ecc58a50a13c979620b (3P)
 
+### 0.3.0a
+
+- updated Chips daemon for HF update [hotfix]
+
 ### 0.3.0
 
 - updated Chips daemon for HF update
