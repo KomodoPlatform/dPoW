@@ -238,8 +238,8 @@
     "git": {
       "repo": "https://github.com/VerusCoin/VerusCoin",
       "branch": "master",
-      "commit": "ab82cc9",
-      "tag": "v0.7.0-4"
+      "commit": "9a9d036",
+      "tag": "v0.7.2-2"
     }
   },
   {
