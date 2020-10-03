@@ -1,3 +1,7 @@
+### 0.3.1
+
+- update bible [voted change]
+
 ### 0.3.0a
 
 - updated Chips daemon for HF update [hotfix]
