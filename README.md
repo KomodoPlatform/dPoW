@@ -38,6 +38,10 @@ General [Setup instructions](https://docs.komodoplatform.com/notary/setup-Komodo
 
 ### dPoW asset status
 
+#### dPoW assets update requirements
+
+**Please note:** All dPoW protected blockchain projects are required to open an issue ticket with upgrade details in this repository and at least 4 weeks prior to a mandatory update - in case of significant code changes (>2000 lines of code altered/added) open the issue ticket at least 8 weeks prior to the mandatory update. Send the official update announcement ref to `partners@komodoplatform.com`.
+
 #### [Notary Node metrics](http://stats.kmd.io/) - http://stats.kmd.io/
 
 [![dPOW Status](http://116.203.64.110/svg/date_badge.svg?maxAge=60)](https://komodostats.com)
