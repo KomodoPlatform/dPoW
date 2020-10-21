@@ -1039,9 +1039,15 @@ int32_t dpow_haveutxo(struct supernet_info *myinfo,struct iguana_info *coin,bits
                 i = r % n;
                 printf("[%s] : chosen = %d  out of %d loop.(%d)\n",coin->symbol,i,n,j);
                 if ( (item= jitem(unspents,i)) == 0 )
-                    continue;
+		{
+		    j++;
+		    continue;
+		}
                 if ( is_cJSON_False(jobj(item,"spendable")) != 0 )
-                    continue;
+		{
+		    j++;
+		    continue;
+		}
                 if ( (satoshis= SATOSHIDEN * jdouble(item,"amount")) == 0 )
                     satoshis= SATOSHIDEN * jdouble(item,"value");
                 if ( satoshis == DPOW_UTXOSIZE && (address= jstr(item,"address")) != 0 && strcmp(address,coinaddr) == 0 )
