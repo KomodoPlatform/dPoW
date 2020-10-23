@@ -112,9 +112,9 @@ tail -f ~/.gleecbtc/debug.log
 
 #### Step 6: Import the privkey for GleecBTC corresponding to your 3p server
 
-Generate your GleecBTC wif by following the guide at [https://docs.komodoplatform.com/notary/generate-privkeys-third-party-coins-from-passphrase.html](https://docs.komodoplatform.com/notary/generate-privkeys-third-party-coins-from-passphrase.html)
+Generate your GleecBTC wif by following the guide at [https://docs.komodoplatform.com/notary/generate-privkeys-third-party-coins-from-passphrase.html](https://docs.komodoplatform.com/notary/generate-privkeys-third-party-coins-from-passphrase.html). If you need to convert a KMD wif to GleecBTC wif, use https://gist.github.com/gcharang/39027275e433693b98b81adef812478c
 
-GleecBTC's rpc calls are similar to BTC's post version `v0.18`. So familiar commands like `getinfo` don't work, and `validateaddress` doesn't output `ismine` info. To check if your address was imported, use `getaddressinfo` and check the `ismine` key in the response.
+GleecBTC's rpc calls are similar to BTC's after version `v0.18`. So familiar commands like `getinfo` don't work, and `validateaddress` doesn't output `ismine` info. To check if your address was imported, use `getaddressinfo` and check the `ismine` key in the response.
 
 Wait for the sync and rescan(if any) to finish
 
