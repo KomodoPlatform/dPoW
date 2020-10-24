@@ -1,6 +1,6 @@
 ### dPoW 0.3.2 update instructions
 
-- Clone and Build GleecBTC in your 3p node. Checkout to the commit `b4fcc9`
+- Clone and Build GleecBTC in your 3p node. Checkout to the commit `b4ffcc9`
 
 #### Step 1: Clone GleecBTC source
 
