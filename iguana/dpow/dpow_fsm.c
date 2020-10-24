@@ -406,7 +406,7 @@ void dpow_statemachinestart(void *ptr)
     }
     dp->ratifying += bp->isratify;
 
-	if (strcmp(src->chain->symbol, "HUSH") == 0)
+	if (strcmp(src->chain->symbol, "ZECTEST") == 0)
 		bitcoin_address_ex(src->chain->symbol, srcaddr, 0x1c, src->chain->pubtype, dp->minerkey33, 33);
 	else
 		bitcoin_address(srcaddr, src->chain->pubtype, dp->minerkey33, 33);
