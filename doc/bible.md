@@ -144,7 +144,7 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 - <b>ii.</b> Notarize all active dPoW assets and participating in all expected notarization rounds without any interruptions (this will be checked daily). 
 - <b>iii.</b> Mine Komodo blocks with your NN pubkey.
 - <b>iv.</b> Follow update instructions within 24 hours on an update announcement (do not run for a NN position unless you can guarantee daily maintenance).
-- <b>v.</b> Reach at least 33% of your region’s best monthly NN notarization score. This is checked on the first day of each month, beginning one month after the new NN season has begun.
+- <b>v.</b> Reach at least 33% of the average monthly NN notarization scores in your region. This is checked on the first day of each month, beginning one month after the new NN season has begun.
 - <b>vi.</b> Help other NN Operators in need and keep an eye on your geo-regional statistics. The most reliable regions will receive additional benefits and bounties. 
 - <b>vii.</b> Report any violation that you notice ASAP to the Komodo team through security@komodoplatform.com.
 - <b>viii.</b> Participate in discussions and publish your improvement proposals on https://github.com/KomodoPlatform/dpow. (exempt from enforcement)
