@@ -321,10 +321,7 @@ cJSON *iguana_getaddressesbyaccount(struct supernet_info *myinfo,struct iguana_i
         {
             HASH_ITER(hh,subset->waddr,waddr,tmp2)
             {
-				if (strcmp(coin->chain->symbol, "HUSH") == 0)
-					bitcoin_address_ex(coin->chain->symbol, coinaddr, 0x1c, coin->chain->pubtype, waddr->rmd160, 20);
-				else
-					bitcoin_address(coinaddr, coin->chain->pubtype, waddr->rmd160, 20);
+				bitcoin_address(coinaddr, coin->chain->pubtype, waddr->rmd160, 20);
                 printf("%s ",coinaddr);
                 jaddistr(array,coinaddr);
             }
@@ -332,19 +329,13 @@ cJSON *iguana_getaddressesbyaccount(struct supernet_info *myinfo,struct iguana_i
     }
     else
     {
-		if (strcmp(coin->chain->symbol, "HUSH") == 0) 
-			bitcoin_address_ex(coin->chain->symbol, refaddr, 0x1c, coin->chain->pubtype, myinfo->persistent_pubkey33, 33);
-		else
-			bitcoin_address(refaddr, coin->chain->pubtype, myinfo->persistent_pubkey33, 33);
+		bitcoin_address(refaddr, coin->chain->pubtype, myinfo->persistent_pubkey33, 33);
         
 		HASH_ITER(hh,myinfo->wallet,subset,tmp)
         {
             HASH_ITER(hh,subset->waddr,waddr,tmp2)
             {
-				if (strcmp(coin->chain->symbol, "HUSH") == 0)
-					bitcoin_address_ex(coin->chain->symbol, coinaddr, 0x1c, coin->chain->pubtype, waddr->rmd160, 20);
-				else
-					bitcoin_address(coinaddr, coin->chain->pubtype, waddr->rmd160, 20);
+				bitcoin_address(coinaddr, coin->chain->pubtype, waddr->rmd160, 20);
 
                 jaddistr(array,coinaddr);
                 if ( strcmp(coinaddr,refaddr) == 0 )
@@ -371,34 +362,18 @@ int32_t iguana_addressvalidate(struct iguana_info *coin,uint8_t *addrtypep,char 
     *addrtypep = 0;
     memset(rmd160,0,sizeof(rmd160));
     
-	if (strcmp(coin->symbol, "HUSH") == 0)
-		bitcoin_addr2rmd160_ex(coin->symbol, 0x1c, addrtypep, rmd160, address);
-	else
-		bitcoin_addr2rmd160(addrtypep,rmd160,address);
+	bitcoin_addr2rmd160(addrtypep,rmd160,address);
 	
     //int32_t i; for (i=0; i<20; i++)
     //    printf("%02x",rmd160[i]); // 764692cd5473f62ffa8a93e55d876f567623de07
     //printf(" rmd160 addrtype.%02x\n",*addrtypep);
     
-	if (strcmp(coin->symbol, "HUSH") == 0)
-	{
-		if (bitcoin_address_ex(coin->symbol, checkaddr, 0x1c, *addrtypep, rmd160, 20) == checkaddr && strcmp(address, checkaddr) == 0 && (*addrtypep == coin->chain->pubtype || *addrtypep == coin->chain->p2shtype))
-			return(0);
-		else
-		{
-			//printf(" checkaddr.(%s) address.(%s) type.%02x vs (%02x %02x)\n",checkaddr,address,*addrtypep,coin->chain->pubtype,coin->chain->p2shtype);
-			return(-1);
-		}
-	}
+	if (bitcoin_address(checkaddr, *addrtypep, rmd160, 20) == checkaddr && strcmp(address, checkaddr) == 0 && (*addrtypep == coin->chain->pubtype || *addrtypep == coin->chain->p2shtype))
+		return(0);
 	else
 	{
-		if (bitcoin_address(checkaddr, *addrtypep, rmd160, 20) == checkaddr && strcmp(address, checkaddr) == 0 && (*addrtypep == coin->chain->pubtype || *addrtypep == coin->chain->p2shtype))
-			return(0);
-		else
-		{
-			//printf(" checkaddr.(%s) address.(%s) type.%02x vs (%02x %02x)\n",checkaddr,address,*addrtypep,coin->chain->pubtype,coin->chain->p2shtype);
-			return(-1);
-		}
+		//printf(" checkaddr.(%s) address.(%s) type.%02x vs (%02x %02x)\n",checkaddr,address,*addrtypep,coin->chain->pubtype,coin->chain->p2shtype);
+		return(-1);
 	}
 }
 
@@ -1433,7 +1408,7 @@ TWOSTRINGS_AND_INT(bitcoinrpc,walletpassphrase,password,permanentfile,timeout)
 
 THREE_STRINGS(bitcoinrpc,encryptwallet,passphrase,password,permanentfile)
 {
-    char *retstr,buf[128],wifstr[128]; cJSON *retjson; int32_t need_HUSH = 0,need_KMD = 0,need_BTC = 0,need_GAME = 0,need_EMC2 = 0;
+    char *retstr,buf[128],wifstr[128]; cJSON *retjson; int32_t need_KMD = 0,need_BTC = 0,need_GAME = 0,need_EMC2 = 0;
     if ( remoteaddr != 0 || coin == 0 )
         return(clonestr("{\"error\":\"no remote encrypt or no coin\"}"));
     iguana_walletlock(myinfo,coin);
@@ -1466,25 +1441,19 @@ THREE_STRINGS(bitcoinrpc,encryptwallet,passphrase,password,permanentfile)
         jaddbits256(retjson,"privkey",waddr.privkey);
         sprintf(buf,"%swif",coin->symbol);
         jaddstr(retjson,buf,wifstr);
+        // TODO: use switch(coin->symbol)... - ca333
         if ( strcmp(coin->symbol,"KMD") != 0 )
             need_KMD = 1;
         if ( strcmp(coin->symbol,"BTC") != 0 )
             need_BTC = 1;
         if ( strcmp(coin->symbol,"GAME") != 0 )
             need_GAME = 1;
-        if ( strcmp(coin->symbol,"HUSH") != 0 )
-            need_HUSH = 1;
         if ( strcmp(coin->symbol,"EMC2") != 0 )
             need_EMC2 = 1;
         if ( need_KMD != 0 && (coin= iguana_coinfind("KMD")) != 0 )
         {
             bitcoin_priv2wif(wifstr,waddr.privkey,coin->chain->wiftype);
             jaddstr(retjson,"KMDwif",wifstr);
-        }
-        if ( need_HUSH != 0 && (coin= iguana_coinfind("HUSH")) != 0 )
-        {
-            bitcoin_priv2wif(wifstr,waddr.privkey,coin->chain->wiftype);
-            jaddstr(retjson,"HUSHwif",wifstr);
         }
         if ( (coin= iguana_coinfind("LTC")) != 0 )
         {

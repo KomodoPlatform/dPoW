@@ -523,10 +523,7 @@ char *iguana_calcrawtx(struct supernet_info *myinfo,struct iguana_info *coin,cJS
                     return(0);
                 }
 
-				if (strcmp(coin->symbol, "HUSH") == 0)
-					bitcoin_addr2rmd160_ex(coin->symbol, 0x1c, &addrtype, rmd160, changeaddr);
-				else 
-					bitcoin_addr2rmd160(&addrtype,rmd160,changeaddr);
+				bitcoin_addr2rmd160(&addrtype,rmd160,changeaddr);
 
                 spendlen = bitcoin_standardspend(spendscript,0,rmd160);
                 bitcoin_txoutput(txobj,spendscript,spendlen,change);
