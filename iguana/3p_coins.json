@@ -88,7 +88,7 @@
     }
   },
   {
-    "txfee": 0.000001,
+    "txfee": 0.00001,
     "conf": "gleecbtc.conf",
     "path": "",
     "startpend": 68,
@@ -110,7 +110,7 @@
     "pubval": 35,
     "p2shval": 38,
     "wifval": 65,
-    "txfee_satoshis": "100",
+    "txfee_satoshis": "1000",
     "minoutput": 10000,
     "minconfirms": 2,
     "genesishash": "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
