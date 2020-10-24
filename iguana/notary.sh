@@ -81,7 +81,7 @@ case "$1" in
     sleep 20
 
     # ./dpowassets
-    # add non default assetchains here, HUSH because not in assetchains.json, and RFOX because its freq=10.
+    # add non default assetchains here - RFOX because its freq=10.
     curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"RFOX\",\"freq\":10,\"pubkey\":\"$pubkey\"}"
 
     # Loop through assetchains.json and call dpow for them. ROFX will not add a second time.
@@ -131,7 +131,6 @@ case "$1" in
     coins/game_7779
     coins/emc2_7779
     coins/gin_7779
-    coins/hush3_7779
     coins/aya_7779
 
     sleep 30
@@ -140,7 +139,6 @@ case "$1" in
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"GAME\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"EMC2\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"GIN\",\"pubkey\":\"$pubkey\"}"
-    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"HUSH3\",\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"AYA\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
 
   ;;
