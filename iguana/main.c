@@ -942,7 +942,10 @@ cJSON *SuperNET_rosettajson(struct supernet_info *myinfo,bits256 privkey,int32_t
     {
         if ( coin != 0 && coin->symbol[0] != 0 )
         {
-			paddr = bitcoin_address(addr, coin->chain->pubtype, pub, 33);
+			if (strcmp(coin->chain->symbol, "HUSH") == 0)
+				paddr = bitcoin_address_ex(coin->chain->symbol, addr, 0x1c, coin->chain->pubtype, pub, 33);
+			else
+				paddr = bitcoin_address(addr, coin->chain->pubtype, pub, 33);
 
             if ( paddr != 0 )
             {

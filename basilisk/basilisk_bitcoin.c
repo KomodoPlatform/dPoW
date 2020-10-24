@@ -585,7 +585,10 @@ char *iguana_utxoduplicates(struct supernet_info *myinfo,struct iguana_info *coi
     if ( signedtxidp != 0 )
         memset(signedtxidp,0,sizeof(*signedtxidp));
     
-	bitcoin_address(changeaddr, coin->chain->pubtype, myinfo->persistent_pubkey33, 33);
+	if (strcmp(coin->chain->symbol, "HUSH") == 0)
+		bitcoin_address_ex(coin->chain->symbol, changeaddr, 0x1c, coin->chain->pubtype, myinfo->persistent_pubkey33, 33);
+	else
+		bitcoin_address(changeaddr, coin->chain->pubtype, myinfo->persistent_pubkey33, 33);
 
     txfee = (coin->txfee + duplicates*coin->txfee/10);
 	uint32_t txversion = 1; // txversion = 1 for non-overwintered and non-sapling coins
