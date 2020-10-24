@@ -31,9 +31,15 @@ int32_t dpow_smallopreturn(char *symbol)
 
 int32_t dpow_is015(char *symbol)
 {
-    if ( strcmp("CHIPS",symbol) == 0 || strcmp("GAME",symbol) == 0 || strcmp("EMC2",symbol) == 0 || strcmp(symbol,"AYA") == 0 || strcmp(symbol,"GLEEC") == 0) //strcmp("BTC",symbol) == 0 ||
-        return(1);
-    else return(0);
+    // for dpow_is015 enabled coins validateaddress call will be auto-changed on getaddressinfo, if initial validateaddress 
+    // call will return an error, also signrawtransaction will be replaced with signrawtransactionwithwallet, also, it seems
+    // GAME, EMC2 and AYA shouldn't be there, bcz they don't have getaddressinfo and signrawtransactionwithwallet .
+    const char *dpow_015_coins[] = {"CHIPS", "GLEEC"};
+    for (size_t i = 0; i < sizeof(dpow_015_coins) / sizeof(dpow_015_coins[0]); i++)
+    {
+        if (0 == strcmp(dpow_015_coins[i],symbol)) return 1;
+    }
+    return 0;
 }
 
 char *bitcoind_getinfo(char *symbol,char *serverport,char *userpass,char *getinfostr)
