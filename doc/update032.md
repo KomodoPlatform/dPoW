@@ -1,7 +1,7 @@
 ### dPoW 0.3.2 update instructions
 
 - Stop HUSH daemon and dPoW operations
-- Clone and Build GleecBTC in your 3p node. Checkout to the commit `308f4f0`
+- Clone and Build GleecBTC in your 3p node. Checkout to the commit `b4ffcc9`
 
 #### Step 1: Clone GleecBTC source
 
@@ -9,7 +9,7 @@
 cd ~
 git clone https://github.com/KomodoPlatform/GleecBTC-FullNode-Win-Mac-Linux
 cd ~/GleecBTC-FullNode-Win-Mac-Linux
-git checkout 308f4f0
+git checkout b4ffcc9
 ```
 
 #### Build
