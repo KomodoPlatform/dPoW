@@ -5,8 +5,10 @@
 
 ### 0.3.1
 
+- update bible [voted change]
 - updated Hush daemon for the `Exponential Extremophile` upgrade. Version: https://github.com/MyHush/hush3/tree/3a276a7b61ae4195c10a8ecc58a50a13c979620b (3P)
 - updated VRSC daemon to tag `v0.7.2-2`. Version: https://github.com/VerusCoin/VerusCoin/tree/9a9d036615b1a8af280421ddfead172aeee84259 (3P)
+
 
 ### 0.3.0a
 
