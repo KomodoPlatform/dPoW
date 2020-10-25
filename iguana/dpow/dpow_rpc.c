@@ -813,7 +813,7 @@ char *dpow_sendrawtransaction(struct supernet_info *myinfo,struct iguana_info *c
         paramstr = jprint(array,1);
         retstr = bitcoind_passthru(coin->symbol,coin->chain->serverport,coin->chain->userpass,"sendrawtransaction",paramstr);
         char colour[16];
-        sprintf(colour,mine != 0 ? GREEN : RED);
+        snprintf(colour, sizeof(colour), mine != 0 ? GREEN : RED);
         fprintf(stderr,"%s>>>>>>>>>>> %s dpow_sendrawtransaction (%s)\n"RESET,colour,coin->symbol,retstr);
         free(paramstr);
         return(retstr);
@@ -1092,7 +1092,7 @@ char *dpow_issuemethod(char *userpass,char *method,char *params,uint16_t port)
         params = (char *)"[]";
     if ( strlen(params) < sizeof(postdata)-128 )
     {
-        sprintf(url,(char *)"http://127.0.0.1:%u",port);
+        snprintf(url, sizeof(url), (char *)"http://127.0.0.1:%u", port);
         sprintf(postdata,"{\"method\":\"%s\",\"params\":%s}",method,params);
         //printf("postdata.(%s) USERPASS.(%s)\n",postdata,KMDUSERPASS);
         retstr2 = bitcoind_RPC(&retstr,(char *)"debug",url,userpass,method,params,0);
