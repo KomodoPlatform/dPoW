@@ -147,10 +147,11 @@ cd ~/dPoW
 git pull
 ```
 
-- Kill iguana and start it
+- Kill iguana, rebuild and start it
 
 ```bash
 pkill -15 iguana
 cd ~/dPoW/iguana
+./m_notary_build
 ./m_notary_3rdparty
 ```
