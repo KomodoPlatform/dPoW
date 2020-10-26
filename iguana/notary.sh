@@ -41,8 +41,6 @@ case "$1" in
     sleep 3
 
     # TODO: Need to get some seeds for both networks.
-    curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"178.128.93.117\"}"   # lukechilds_AR
-    curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"67.207.94.69\"}"     # lukechilds_NA
     curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"2.56.153.50\"}"      # cipi_AR
     curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"38.91.101.236\"}"    # cipi_NA
     curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"95.213.238.100\"}"
@@ -105,8 +103,6 @@ case "$1" in
 
     # TODO: Need to get some seeds for both networks.
 
-    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"157.230.47.150\"}"   # lukechilds_AR
-    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"167.71.178.51\"}"    # lukechilds_NA
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"103.6.12.117\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"139.99.189.228\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"95.213.238.99\"}"
@@ -128,18 +124,20 @@ case "$1" in
 
     # add 3rd party coins to iguana
     coins/chips_7779
-    coins/game_7779
     coins/emc2_7779
-    coins/gin_7779
+    coins/mcl_7779
+    coins/vrsc_7779
     coins/aya_7779
+    coins/gleec_7779
 
     sleep 30
 
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"CHIPS\",\"pubkey\":\"$pubkey\"}"
-    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"GAME\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"EMC2\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
-    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"GIN\",\"pubkey\":\"$pubkey\"}"
+    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"MCL\",\"pubkey\":\"$pubkey\"}"
+    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"VRSC\",\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"AYA\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
+    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"GLEEC\",\"pubkey\":\"$pubkey\"}"
 
   ;;
 
