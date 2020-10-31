@@ -27,7 +27,7 @@ make
 
 #### Step 3: Continue AYA dpow operations
 
-- Restart iguana
+- Continue AYA dPoW operations
 
 note: iguana does not require rebuild
 
