@@ -1,3 +1,7 @@
+### 0.3.3
+
+- update AYA
+
 ### 0.3.2
 
 - add GleecBTC to 3p nodes
