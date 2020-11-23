@@ -1,3 +1,7 @@
+### 0.3.4
+
+- add PBC to 3P NN
+
 ### 0.3.3
 
 - update AYA
