@@ -1,6 +1,6 @@
 ### dPoW 0.3.4 update instructions
 
-- Clone and Build `powerblockcoin-core` in your 3p node. Checkout to the commit `6649d49`
+- Clone and Build `powerblockcoin-core` in your 3p node. Checkout to the commit `51f456a`
 
 #### Step 1: Clone powerblockcoin-core source
 
@@ -8,7 +8,7 @@
 cd ~
 git clone https://github.com/pbcllc/powerblockcoin-core
 cd ~/powerblockcoin-core
-git checkout 6649d49
+git checkout 51f456a
 ```
 
 #### Build
@@ -148,10 +148,11 @@ cd ~/dPoW
 git pull
 ```
 
-- Kill iguana, and start it
+- Kill iguana, rebuild and start it
 
 ```bash
 pkill -15 iguana
 cd ~/dPoW/iguana
+./m_notary_build
 ./m_notary_3rdparty
 ```
