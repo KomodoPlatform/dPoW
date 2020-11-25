@@ -320,7 +320,7 @@
       "version": 1,
       "timestamp": 1595448103,
       "nBits": "1d00ffff",
-      "nonce": "0x64ace9c7",
+      "nonce": 1689053639,
       "merkle_root": "684e583fc7780c5225fe4b968c29e536b005228e557c622a8d8940585401740b"
     },
     "alertpubkey": "0x0",
