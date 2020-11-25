@@ -124,7 +124,7 @@ Powerblockcoin's  address and wif format are the same as KMD. You can import you
 
 Then import the privkey using the `importprivkey` command.
 
-Powerblockcoin's rpc calls are similar to BTC's after version `v0.18`. So familiar commands like `getinfo` don't work, and `validateaddress` doesn't output `ismine` info. To check if your address was imported, use `getaddressinfo` and check the `ismine` key in the response.
+Powerblockcoin's rpc calls are similar to BTC's after version `v0.16`. So instead of `getinfo`, use other rpc like `getblockchaininfo`, `getnetworkinfo`, `getwalletinfo`, `getmininginfo` for the appropriate fields.
 
 Wait for the sync and rescan(if any) to finish
 
@@ -145,7 +145,7 @@ powerblockcoind -pubkey=$pubkey
 sudo ufw allow 47777/tcp
 ```
 
-- Split the available balance into utxos needed by iguana for notarization
+- Split the available balance into utxos needed by iguana (size: 0.0001) for notarization
 
 #### Step 9: Update the dPoW folder and restart iguana
 
