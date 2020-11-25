@@ -24,7 +24,7 @@ uint64_t dpow_utxosize(char *symbol)
 
 int32_t dpow_smallopreturn(char *symbol)
 {
-    if ( strcmp(symbol,"GAME") == 0 || strcmp(symbol,"GIN") == 0 || strcmp(symbol,"EMC2") == 0 || strcmp(symbol,"ZECTEST") == 0 || strcmp(symbol,"AYA") == 0 || strcmp(symbol,"GLEEC") == 0)
+    if ( strcmp(symbol,"GAME") == 0 || strcmp(symbol,"GIN") == 0 || strcmp(symbol,"EMC2") == 0 || strcmp(symbol,"ZECTEST") == 0 || strcmp(symbol,"AYA") == 0 || strcmp(symbol,"GLEEC") == 0 || strcmp(symbol,"PBC") == 0)
         return(1);
     else return(0);
 }
@@ -34,7 +34,7 @@ int32_t dpow_is015(char *symbol)
     // for dpow_is015 enabled coins validateaddress call will be auto-changed on getaddressinfo, if initial validateaddress 
     // call will return an error, also signrawtransaction will be replaced with signrawtransactionwithwallet, also, it seems
     // GAME, EMC2 and AYA shouldn't be there, bcz they don't have getaddressinfo and signrawtransactionwithwallet .
-    const char *dpow_015_coins[] = {"CHIPS", "GLEEC"};
+    const char *dpow_015_coins[] = {"CHIPS", "GLEEC", "PBC"};
     for (size_t i = 0; i < sizeof(dpow_015_coins) / sizeof(dpow_015_coins[0]); i++)
     {
         if (0 == strcmp(dpow_015_coins[i],symbol)) return 1;
