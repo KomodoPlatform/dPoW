@@ -290,7 +290,7 @@
     }
   },
   {
-    "txfee": 0.00001,
+    "txfee": 0.0001,
     "conf": "powerblockcoin.conf",
     "path": "",
     "startpend": 68,
@@ -312,7 +312,7 @@
     "pubval": 60,
     "p2shval": 85,
     "wifval": 188,
-    "txfee_satoshis": "1000",
+    "txfee_satoshis": "10000",
     "minoutput": 10000,
     "minconfirms": 2,
     "genesishash": "00000000a9eab671c3f2753a9d21e449b3c12a1fd62b3a9c388e580617e5a363",
