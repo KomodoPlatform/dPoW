@@ -145,7 +145,7 @@ powerblockcoind -pubkey=$pubkey
 sudo ufw allow 47777/tcp
 ```
 
-- Split the available balance into utxos needed by iguana for notarization
+- Split the available balance into utxos needed by iguana (size: 0.0001) for notarization
 
 #### Step 9: Update the dPoW folder and restart iguana
 
