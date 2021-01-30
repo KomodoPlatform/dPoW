@@ -1,4 +1,4 @@
-### dPoW 0.3.1 update information
+### dPoW 0.3.5 update information
 
 - Update your Verus Coin's codebase to [3fde9bf](https://github.com/VerusCoin/VerusCoin/tree/3fde9bfd727c5081e0308a98d47925379945cac1), build it and then restart it
 
