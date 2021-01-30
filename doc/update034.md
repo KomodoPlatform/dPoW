@@ -120,7 +120,7 @@ tail -f ~/.powerblockcoin/debug.log
 
 #### Step 6: Import the privkey for Powerblockcoin corresponding to your 3p server
 
-Powerblockcoin's  address and wif format are the same as KMD. You can import your 3p KND node's wif into the Powerblockcoin daemon directly.
+Powerblockcoin's  address and wif format are the same as KMD. You can import your 3p KMD node's wif into the Powerblockcoin daemon directly.
 
 Then import the privkey using the `importprivkey` command.
 
