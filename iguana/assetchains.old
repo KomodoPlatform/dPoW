@@ -26,7 +26,6 @@ echo $pubkey
 ./komodod -pubkey=$pubkey -ac_name=PGT -ac_supply=10000000 -ac_end=1 -addnode=190.114.254.104 $1 &
 ./komodod -pubkey=$pubkey -ac_name=PIRATE -ac_supply=0 -ac_reward=25600000000 -ac_halving=77777 -ac_private=1 -addnode=178.63.77.56 $1 &
 ./komodod -pubkey=$pubkey -ac_name=REVS -ac_supply=1300000 -addnode=95.213.238.98 $1 &
-./komodod -pubkey=$pubkey -ac_name=RFOX -ac_supply=1000000000 -ac_reward=100000000 -addnode=95.213.238.98 $1 &
 ./komodod -pubkey=$pubkey -ac_name=RICK -ac_supply=90000000000 -ac_reward=100000000 -ac_cc=3 -ac_staked=10 -addnode=95.217.44.58 -addnode=138.201.136.145 $1 &
 ./komodod -pubkey=$pubkey -ac_name=STBL -ac_supply=50000000 -ac_cc=1 -ac_public=1 -ac_adaptivepow=1 -ac_end=1 -addnode=142.93.173.53 -addnode=68.183.74.250 $1 &
 ./komodod -pubkey=$pubkey -ac_name=SUPERNET -ac_supply=816061 -addnode=95.213.238.98 $1 &

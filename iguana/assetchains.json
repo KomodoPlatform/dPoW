@@ -115,11 +115,6 @@
     "ac_supply": "1300000"
   },
   {
-    "ac_name": "RFOX",
-    "ac_supply": "1000000000",
-    "ac_reward": "100000000"
-  },
-  {
     "ac_name": "RICK",
     "ac_supply": "90000000000",
     "ac_reward": "100000000",
