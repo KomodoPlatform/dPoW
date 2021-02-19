@@ -1,6 +1,7 @@
 ### 0.3.6
 
 - update VRSC to tag `v0.7.2-8`. Version: https://github.com/VerusCoin/VerusCoin/tree/d3cffbe4e088166f980afdcf14ed5fbed72b542b (3P)
+- remove RFOX
 
 ### 0.3.5
 
