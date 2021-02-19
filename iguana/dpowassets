@@ -4,8 +4,7 @@ source pubkey.txt
 echo $pubkey
 sleep 3
 
-# add non default assetchains here, and RFOX because its freq=10.
-curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"RFOX\",\"freq\":10,\"pubkey\":\"$pubkey\"}"
+# add non default assetchains here.
 
 # Loop through assetchains.json and call dpow for them. ROFX will not add a second time.
 ./listassetchains | while read chain; do
