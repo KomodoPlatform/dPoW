@@ -56,7 +56,7 @@ char *MM_fields[] =
 
 char *MM_coins[] =
 {
-    "KMD", "BTC", "CRC", "VOT", "INN", "MOON", "CRW", "EFL", "GBX", "BCO", "BLK", "BTG", "BCH", "ABY", "STAK", "XZC", "QTUM", "PURA", "DSR", "MNZ", "BTCZ", "MAGA", "BSD", "IOP", "BLOCK", "CHIPS", "888", "ARG", "GLT", "ZER", "HODLC", "UIS", "HUC", "PIVX", "BDL", "ARC", "ZCL", "VIA", "ERC", "FAIR", "FLO", "SXC", "CREA", "TRC", "BTA", "SMC", "NMC", "NAV", "EMC2", "SYS", "I0C", "DASH", "STRAT", "MUE", "MONA", "XMY", "MAC", "BTX", "XRE", "LBC", "SIB", "VTC", "REVS", "JUMBLR", "DOGE", "ZEC", "DGB", "ZET", "GAME", "LTC", "SUPERNET", "WLC", "PANGEA", "DEX", "BET", "CRYPTO", "HODL", "MSHARK", "BOTS", "MGW", "COQUI", "KV", "CEAL", "MESH", "ETOMIC", "BTCH", "ETH"
+    "KMD", "BTC", "CRC", "VOT", "INN", "MOON", "CRW", "EFL", "GBX", "BCO", "BLK", "BTG", "BCH", "ABY", "STAK", "XZC", "QTUM", "PURA", "DSR", "MNZ", "BTCZ", "MAGA", "BSD", "IOP", "BLOCK", "CHIPS", "888", "ARG", "GLT", "ZER", "HODLC", "UIS", "HUC", "PIVX", "BDL", "ARC", "ZCL", "VIA", "ERC", "FAIR", "FLO", "SXC", "CREA", "TRC", "BTA", "SMC", "NMC", "NAV", "EMC2", "SYS", "I0C", "DASH", "STRAT", "MUE", "MONA", "XMY", "MAC", "BTX", "XRE", "LBC", "SIB", "VTC", "REVS", "JUMBLR", "DOGE", "ZEC", "DGB", "ZET", "LTC", "SUPERNET", "WLC", "PANGEA", "DEX", "BET", "CRYPTO", "HODL", "MSHARK", "BOTS", "MGW", "COQUI", "KV", "CEAL", "MESH", "ETOMIC", "BTCH", "ETH"
 };
 
 int32_t mmjson_coinfind(char *symbol)
