@@ -25,5 +25,6 @@ cd dPoW
 git checkout master
 git pull
 ```
+- Shut down RFOX daemon. RFOX was removed from dPoW assets.
 
 Make sure your iguana is running properly.
