@@ -16,6 +16,10 @@ sleep 3
 
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"195.201.137.5\"}"   # Alright
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"195.201.20.230\"}"   # Alright
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"23.124.56.139\"}"   # daemonfox
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"112.202.250.130\"}"   # dudezmobi
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"202.61.249.29\"}"   # gcharang
+
 
 
 # add KMD
