@@ -4,7 +4,7 @@ Make a Pull Request with your IP Address added to `iguana/m_notary_testnet2021` 
 
 # Install and start the notary
 
-#### * Clone this repo
+#### * Clone this repo, use `2021-testnet` branch
 #### * Install dependencies
 ```shell
 sudo apt install build-essential pkg-config libc6-dev m4 \
