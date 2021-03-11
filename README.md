@@ -81,7 +81,7 @@ komodo-cli stop
 | Iguana        | 17778         |
 
 #### * Fund public key address on komodo and each asset chain.
-*If you need RICK or MORTY, use the faucets at https://www.atomicexplorer.com/#/faucet/ or ask in #notarynode channel.*
+*If you need RICK or MORTY, use the faucets at https://www.atomicexplorer.com/#/faucet/ or http://stats.kmd.io/faucet/  or ask in #notarynode channel.*
 
 #### * Import your private key to all 3 nodes.
 ```shell
@@ -118,7 +118,7 @@ cd ~/dPoW/iguana
 This repository contains many useful scripts but you should read and understand before executing blindly. You'll find useful scripts at the following repositories but you should read the readme, adapt the config and read the code of the scripts you want to execute.
 https://github.com/KMDLabs/StakedNotary/
 https://github.com/KomodoPlatform/komodotools
-http://www.notarynodewiki.info
+https://github.com/webworker01/nntools
 https://github.com/MrMLynch/nnutils
 
 https://blog.komodoplatform.com/delayed-proof-of-work-explained-9a74250dbb86
