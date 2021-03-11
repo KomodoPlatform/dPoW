@@ -80,6 +80,8 @@ komodo-cli stop
 | MORTY         | 16347         |
 | Iguana        | 17778         |
 
+*NOTE: Iguana Port 17778 MUST be open
+
 #### * Fund public key address on komodo and each asset chain.
 *If you need RICK or MORTY, use the faucets at https://www.atomicexplorer.com/#/faucet/ or ask in #notarynode channel.*
 
