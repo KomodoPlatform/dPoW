@@ -1,4 +1,4 @@
-### dPoW 0.3.6 update information
+### dPoW 0.3.7 update information
 
 - Remove PGT and STBL SmartChains from dPoW security in Main server.
 - Update your dPoW repo and restart iguana
