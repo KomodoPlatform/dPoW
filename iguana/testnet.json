@@ -1,7 +1,7 @@
 {
 "port": 17778,
 "BTCminsigs": 13,
-"minsigs": 6,
+"minsigs": 7,
 "seeds": [
     "195.201.20.230",
     "195.201.137.5",
@@ -28,7 +28,8 @@
     {"tonyL": "031dc30665bf0cdec6330aad72639717e153324f715592b94c3f5310998356267f"},
     {"Strob": "03cd7d3f5d7bd1c2bde405aa2916c91c3320c854b1b558d5e43aeed1a7a526ec83"},
     {"pbca26": "03831c34de63595f449461171835b4543bb8a382fd996e5ec80f47e4b9fcb514bf"},
-    {"biz": "02a9a46aaa33936e3fd4507f24f997ccb053e6d86289abd781ec9ca2677b2bbdaa"}
+    {"biz": "02a9a46aaa33936e3fd4507f24f997ccb053e6d86289abd781ec9ca2677b2bbdaa"},
+    {"mcrypt": "022cee72fe1972d806993de8f73269625b38a23aa1d24f9d1912d450fa027bf967"}
 ]}
 
 
