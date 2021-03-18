@@ -322,9 +322,10 @@ You may send reports to developer@komodoplatform.com.
 
 If you wish to contact specific maintainers directly, the following have made themselves available for conduct issues:
 
+- smk762 (smk762 at komodoplatform.com)
+- TonyL (alysakov at komodoplatform.com)
+- gcharang (gcharang at komodoplatform.com)
 - ca333 (ca333 at komodoplatform.com)
-- Steve Lee (steve at komodoplatform.com)
-- Support Team (support at komodoplatform.com)
 
 This Code of Conduct is adapted from https://www.contributor-covenant.org/version/1/3/0/ 
 https://www.contributor-covenant.org 
@@ -333,11 +334,13 @@ https://www.contributor-covenant.org
 
 
 #### E-mail:
-- ca333@komodoplatform.com
+
 - alysakov@komodoplatform.com
+- smk762@komodoplatform.com
 - alright@komodoplatform.com
 - kolo@komodoplatform.com 
 - dpow@komodoplatform.com
+- ca333@komodoplatform.com
 
 #### Discord:
 http://www.komodoplatform.com/discord
