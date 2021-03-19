@@ -17,23 +17,29 @@
 
 uint64_t dpow_utxosize(char *symbol)
 {
-    if ( strcmp(symbol,"GAME") == 0 || strcmp(symbol,"EMC2") == 0)
+    if ( strcmp(symbol,"GAME") == 0 || strcmp(symbol,"EMC2") == 0 || strcmp(symbol,"AYA") == 0)
         return(100000);
     else return(10000);
 }
 
 int32_t dpow_smallopreturn(char *symbol)
 {
-    if ( strcmp(symbol,"GAME") == 0 || strcmp(symbol,"GIN") == 0 || strcmp(symbol,"EMC2") == 0 || strcmp(symbol,"HUSH") == 0 )
+    if ( strcmp(symbol,"GAME") == 0 || strcmp(symbol,"GIN") == 0 || strcmp(symbol,"EMC2") == 0 || strcmp(symbol,"ZECTEST") == 0 || strcmp(symbol,"AYA") == 0 || strcmp(symbol,"GLEEC") == 0 || strcmp(symbol,"PBC") == 0)
         return(1);
     else return(0);
 }
 
 int32_t dpow_is015(char *symbol)
 {
-    if ( strcmp("CHIPS",symbol) == 0 || strcmp("GAME",symbol) == 0 || strcmp("EMC2",symbol) == 0 ) //strcmp("BTC",symbol) == 0 ||
-        return(1);
-    else return(0);
+    // for dpow_is015 enabled coins validateaddress call will be auto-changed on getaddressinfo, if initial validateaddress 
+    // call will return an error, also signrawtransaction will be replaced with signrawtransactionwithwallet, also, it seems
+    // GAME, EMC2 and AYA shouldn't be there, bcz they don't have getaddressinfo and signrawtransactionwithwallet .
+    const char *dpow_015_coins[] = {"CHIPS", "GLEEC", "PBC"};
+    for (size_t i = 0; i < sizeof(dpow_015_coins) / sizeof(dpow_015_coins[0]); i++)
+    {
+        if (0 == strcmp(dpow_015_coins[i],symbol)) return 1;
+    }
+    return 0;
 }
 
 char *bitcoind_getinfo(char *symbol,char *serverport,char *userpass,char *getinfostr)
@@ -807,7 +813,7 @@ char *dpow_sendrawtransaction(struct supernet_info *myinfo,struct iguana_info *c
         paramstr = jprint(array,1);
         retstr = bitcoind_passthru(coin->symbol,coin->chain->serverport,coin->chain->userpass,"sendrawtransaction",paramstr);
         char colour[16];
-        sprintf(colour,mine != 0 ? GREEN : RED);
+        snprintf(colour, sizeof(colour), mine != 0 ? GREEN : RED);
         fprintf(stderr,"%s>>>>>>>>>>> %s dpow_sendrawtransaction (%s)\n"RESET,colour,coin->symbol,retstr);
         free(paramstr);
         return(retstr);
@@ -1031,7 +1037,6 @@ int32_t dpow_haveutxo(struct supernet_info *myinfo,struct iguana_info *coin,bits
             j=0;
             while (haveutxo < 1)
             {
-                j++;
                 if (j == n) {
                   haveutxo=0;
                   break;
@@ -1040,9 +1045,15 @@ int32_t dpow_haveutxo(struct supernet_info *myinfo,struct iguana_info *coin,bits
                 i = r % n;
                 printf("[%s] : chosen = %d  out of %d loop.(%d)\n",coin->symbol,i,n,j);
                 if ( (item= jitem(unspents,i)) == 0 )
-                    continue;
+		{
+		    j++;
+		    continue;
+		}
                 if ( is_cJSON_False(jobj(item,"spendable")) != 0 )
-                    continue;
+		{
+		    j++;
+		    continue;
+		}
                 if ( (satoshis= SATOSHIDEN * jdouble(item,"amount")) == 0 )
                     satoshis= SATOSHIDEN * jdouble(item,"value");
                 if ( satoshis == DPOW_UTXOSIZE && (address= jstr(item,"address")) != 0 && strcmp(address,coinaddr) == 0 )
@@ -1062,6 +1073,7 @@ int32_t dpow_haveutxo(struct supernet_info *myinfo,struct iguana_info *coin,bits
                         }
                     }
                 }
+		j++;
             }
             if ( haveutxo == 0 )
               printf("no (%s -> %s) utxo: need to fund address.(%s) or wait for splitfund to confirm\n",srccoin,coin->symbol,coinaddr);
@@ -1080,7 +1092,7 @@ char *dpow_issuemethod(char *userpass,char *method,char *params,uint16_t port)
         params = (char *)"[]";
     if ( strlen(params) < sizeof(postdata)-128 )
     {
-        sprintf(url,(char *)"http://127.0.0.1:%u",port);
+        snprintf(url, sizeof(url), (char *)"http://127.0.0.1:%u", port);
         sprintf(postdata,"{\"method\":\"%s\",\"params\":%s}",method,params);
         //printf("postdata.(%s) USERPASS.(%s)\n",postdata,KMDUSERPASS);
         retstr2 = bitcoind_RPC(&retstr,(char *)"debug",url,userpass,method,params,0);

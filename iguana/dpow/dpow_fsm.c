@@ -274,6 +274,12 @@ void dpow_statemachinestart(void *ptr)
     srcprevvout0 = destprevvout0 = -1;
     myinfo = ptrs[0];
     dp = ptrs[1];
+
+    char smname[16];
+    memset(smname, 0, sizeof(smname));
+    snprintf(smname, sizeof(smname)-1, "dpowsm_%s",dp->symbol);
+    RenameThread(smname);
+
     minsigs = (uint32_t)(long)ptrs[2];
     duration = (uint32_t)(long)ptrs[3];
     jsonstr = ptrs[4];
@@ -400,7 +406,7 @@ void dpow_statemachinestart(void *ptr)
     }
     dp->ratifying += bp->isratify;
 
-	if (strcmp(src->chain->symbol, "HUSH") == 0)
+	if (strcmp(src->chain->symbol, "ZECTEST") == 0)
 		bitcoin_address_ex(src->chain->symbol, srcaddr, 0x1c, src->chain->pubtype, dp->minerkey33, 33);
 	else
 		bitcoin_address(srcaddr, src->chain->pubtype, dp->minerkey33, 33);

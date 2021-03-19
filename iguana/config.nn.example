@@ -1,0 +1,21 @@
+# Config for notary node
+# Should be placed in home directory as ~/config.nn
+
+# Pubkey
+pubkey="02849e12199dcc27ba09c3902686d2ad0adcbfcee9d67520e9abbdda045ba83227"
+
+# This server IP
+myip=`curl -s4 checkip.amazonaws.com`
+
+# Wallet passphrase
+mysecretpassphrase="EXAMPLE"
+
+# Seed node IP for assets
+seed_ip=`getent hosts zero.kolo.supernet.org | awk '{ print $1 }'`
+
+# Binary paths
+komodo_binary="$HOME/komodo/src/komodod"
+cli_binary="$HOME/komodo/src/komodo-cli"
+
+# Delay between starting assetchains. Depends on server specs.
+delay=20

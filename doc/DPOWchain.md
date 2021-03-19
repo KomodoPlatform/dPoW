@@ -68,10 +68,11 @@ cd ~/dexkomodo/src/
 ./komodod -ac_name=DPOW -dexp2p=2 -addnode=136.243.58.134 -pubkey=<3rd party notarypubkey> -handle=YOUR-HANDLE    ( find your handle here: https://github.com/jl777/komodo/blob/DEX/src/cc/dapps/pubkeys )
 ```
 
-go to
+### Compile `notarizer`
+Make sure you have `gcc8` installed in your system. This is required for compiling `notarizer` with the following commands.
 ```bash
-cd ~/dexkomodo/src/
-gcc -o ~/.dpow/bin/notarizer cc/dapps/notarizer.c -lm
+cd ~/dexkomodo/src/cc/dapps/
+./make_notarizer.sh
 ```
 
 wait 2 minutes after that run

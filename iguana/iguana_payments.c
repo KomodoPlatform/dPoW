@@ -523,7 +523,7 @@ char *iguana_calcrawtx(struct supernet_info *myinfo,struct iguana_info *coin,cJS
                     return(0);
                 }
 
-				if (strcmp(coin->symbol, "HUSH") == 0)
+				if (strcmp(coin->symbol, "ZECTEST") == 0)
 					bitcoin_addr2rmd160_ex(coin->symbol, 0x1c, &addrtype, rmd160, changeaddr);
 				else 
 					bitcoin_addr2rmd160(&addrtype,rmd160,changeaddr);
@@ -1817,7 +1817,7 @@ STRING_ARRAY_OBJ_STRING(bitcoinrpc,signrawtransaction,rawtx,vins,privkeys,sighas
         //for (i=0; i<msgtx.tx_in; i++)
         //    if ( msgtx.vins[i].redeemscript != 0 )
         //        free(msgtx.vins[i].redeemscript), msgtx.vins[i].redeemscript = 0;
-    } else jaddstr(retjson,"error",uselessbitcoin_error != 0 ? "-22" : "no rawtx or rawtx too big");
+    } else jaddstr(retjson,"error",uselessbitcoin_error != 0 ? "-22" : "no vins or no rawtx or rawtx too big");
     return(jprint(retjson,1));
 }
 #include "../includes/iguana_apiundefs.h"
