@@ -291,7 +291,8 @@ void dpow_statemachinestart(void *ptr)
     dpow_getchaintip(myinfo,&merkleroot,&srchash,&srctime,dp->srctx,&dp->numsrctx,src);
     if ( src == 0 || dest == 0 )
     {
-        printf("null coin ptr? (%s %p or %s %p)\n",dp->symbol,src,dp->dest,dest);
+        fprintf(stderr, "[---] null coin ptr? (%s %p or %s %p)\n",dp->symbol,src,dp->dest,dest);
+        free(ptr);
         return;
     }
     MoMdepth = 0;
@@ -305,8 +306,12 @@ void dpow_statemachinestart(void *ptr)
     }
     if ( (bp= dpow_heightfind(myinfo,dp, checkpoint.blockhash.height)) == 0 )
     {
-        if ( (blockindex= dpow_blockfind(myinfo,dp)) < 0 )
+        if ( (blockindex= dpow_blockfind(myinfo,dp)) < 0 ) {
+            fprintf(stderr, "[---] blockindex == -1\n");
+            free(ptr);
             return;
+        }
+
         portable_mutex_lock(&dpowT_mutex);
         bp = calloc(1,sizeof(*bp));
         dp->blocks[blockindex] = bp;
