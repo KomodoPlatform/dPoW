@@ -34,6 +34,10 @@ struct iguana_info *iguana_coinfind(char *symbol)
     }
     symbolcrc = calc_crc32(0,symbol,(int32_t)strlen(symbol));
     //portable_mutex_lock(&myinfo->allcoins_mutex);
+        // debug print for output items and buckets count in uthash hash table
+        // if (myinfo && myinfo->allcoins && myinfo->allcoins->hh.tbl->num_items != 31)  {
+        //     fprintf(stderr, "[---] items: %d, buckets: %d\n",myinfo->allcoins->hh.tbl->num_items, myinfo->allcoins->hh.tbl->num_buckets);
+        // }
         HASH_FIND(hh,myinfo->allcoins,&symbolcrc,sizeof(coin->symbolcrc),coin);
     //portable_mutex_unlock(&myinfo->allcoins_mutex);
     return(coin);
