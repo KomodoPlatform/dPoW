@@ -542,7 +542,7 @@ STRING_ARG(iguana,addnotary,ipaddr)
 }
 
 char NOTARY_CURRENCIES[][65] = {
-    "REVS", "SUPERNET", "DEX", "PANGEA", "JUMBLR", "BET", "CRYPTO", "HODL", "BOTS", "MGW", "COQUICASH", "KV", "MESH", "MSHARK", "AXO", "ETOMIC", "BTCH", "NINJA", "OOT", "ZILLA", "SEC", "CCL", "PIRATE", "PGT", "KSB", "OUR", "ILN", "RICK", "MORTY", "KOIN", "ZEXO", "K64", "THC", "WLC21", "VOTE2020", "STBL"
+    "REVS", "SUPERNET", "DEX", "PANGEA", "JUMBLR", "BET", "CRYPTO", "HODL", "BOTS", "MGW", "COQUICASH", "MESH", "MSHARK", "AXO", "BTCH", "NINJA", "OOT", "ZILLA", "CCL", "PIRATE", "ILN", "RICK", "MORTY", "KOIN", "THC", "WLC21"
 };
 
 // "LTC", "USD", "EUR", "JPY", "GBP", "AUD", "CAD", "CHF", "NZD", "CNY", "RUB", "MXN", "BRL", "INR", "HKD", "TRY", "ZAR", "PLN", "NOK", "SEK", "DKK", "CZK", "HUF", "ILS", "KRW", "MYR", "PHP", "RON", "SGD", "THB", "BGN", "IDR", "HRK",
