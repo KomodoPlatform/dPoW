@@ -184,10 +184,10 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 
 - KMD snapshot: April 2nd, 2021
 - Vote2021 airdrop: April 2nd 2021, 12pm UTC
-- Season 4 Election start: April 2nd 2021, 12pm UTC
+- Season 5 Election start: April 2nd 2021, 12pm UTC
 - Autoelection announcement: April 17th 2021 - cutoff time: April 17th 2021, 12pm UTC
 - Proposal deadline: April 17th 2021, 12pm UTC
-- Season 4 Election end: April 23rd 2021, 12pm UTC
+- Season 5 Election end: April 23rd 2021, 12pm UTC
 - Public Komodo update announcement: April 30th, 2021
 - dPoW season 5 start: June 14th, 2021
 
