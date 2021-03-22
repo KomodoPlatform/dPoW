@@ -102,13 +102,15 @@ Those running for election must declare in which region they intend to operate t
  
 If that new candidate proves his reliability and ability to operate a NN by making it to the top 3 rankings for his region at the end of the season, he is able to apply for up to two additional NN spots in different regions for the next elections.
 
-Candidates that landed in the top 3 ranking with more than one NN can seek 1 additional NN <b>per top 3 operated region</b> - region must be operated as top 3 NN as of ranking snapshot on April 17th, 2021. Six is the maximum number of spots that any one candidate is permitted to operate.
+Candidates that landed in the top 3 ranking with more than one NN can seek 1 additional NN <b>per top 3 operated region</b> - region must be operated as top 3 NN as of ranking snapshot on April 2nd, 2021. Six is the maximum number of spots that any one candidate is permitted to operate.
 
 The Komodo Notary Node Elections are stake weighted, meaning that those who hold more KMD have more voting power in the election. The process works as follows.
  
 A special voting token — let’s call it VOTE2021 — will be airdropped to KMD holders at a 1:1 ratio. If you have 1000 KMD, you will receive 1000 VOTE2021 tokens.
- 
-The airdrop will take place on April 2nd, 2021. The current supply of KMD is around 125 Million, so roughly 125 Million VOTE2021 tokens will be airdropped.
+
+A snapshot for the airdrop will be taken at the same time as the Notary Node ranking snapshot on April 2nd, 2021. Auto-elected Notary Nodes (top 3 in each region) will be announced and VOTE2021 tokens will be airdroped on April 9th, 2021.
+
+The current supply of KMD is around 125 Million, so roughly 125 Million VOTE2021 tokens will be airdropped.
  
 It’s important to note that you must hold you private keys in order to receive your VOTE2021 tokens. If you hold your KMD on a centralized exchange, then you do not hold your private keys and you will not receive any VOTE2021 tokens.
  
@@ -130,7 +132,7 @@ All of the candidates' proposals, along with other useful information, will be p
 
 <b>The top 12 NNs who will be auto-elected will be announced on April 17th. 44 Notary Node spots are available in the 2021 election. Starting with season 4 the automatic re-elections were reduced to 3 spots per region.
 
-The elections start on April 2nd with the airdrop of the VOTE2021 tokens and end on April 23rd, 2021. The Komodo Core update is planned for April 30th, 2021 and the hardfork activation for June 14th, 2021. </b>
+The elections start on April 9th with the airdrop of the VOTE2021 tokens and end on April 23rd, 2021. The Komodo Core update is planned for April 30th, 2021 and the hardfork activation for June 14th, 2021. </b>
 
 
 <br>
@@ -182,10 +184,10 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 
 ### Important dates for Season 5:
 
-- KMD snapshot: April 2nd, 2021
-- Vote2021 airdrop: April 2nd 2021, 12pm UTC
-- Season 5 Election start: April 2nd 2021, 12pm UTC
-- Autoelection announcement: April 17th 2021 - cutoff time: April 17th 2021, 12pm UTC
+- KMD snapshot: April 2nd 2021, 12pm UTC (for both VOTE2021 allocations and Regional Top 3 Notary Node scoring)
+- Vote2021 airdrop: April 9th 2021, 12pm UTC
+- Season 5 Election start: April 9nd 2021, 12pm UTC
+- Regional Top 3 Autoelection announcement: April 9th 2021
 - Proposal deadline: April 17th 2021, 12pm UTC
 - Season 5 Election end: April 23rd 2021, 12pm UTC
 - Public Komodo update announcement: April 30th, 2021
