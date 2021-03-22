@@ -1,7 +1,7 @@
 {
 "port": 17778,
 "BTCminsigs": 13,
-"minsigs": 6,
+"minsigs": 9,
 "seeds": [
     "195.201.20.230",
     "195.201.137.5",
@@ -28,6 +28,11 @@
     {"tonyL": "031dc30665bf0cdec6330aad72639717e153324f715592b94c3f5310998356267f"},
     {"Strob": "03cd7d3f5d7bd1c2bde405aa2916c91c3320c854b1b558d5e43aeed1a7a526ec83"},
     {"pbca26": "03831c34de63595f449461171835b4543bb8a382fd996e5ec80f47e4b9fcb514bf"},
+    {"biz": "02a9a46aaa33936e3fd4507f24f997ccb053e6d86289abd781ec9ca2677b2bbdaa"},
+    {"mcrypt": "022cee72fe1972d806993de8f73269625b38a23aa1d24f9d1912d450fa027bf967"},
+    {"crackers": "028ec691456204718b3ad07eff57399378f009a828a9581307d364e08dd5baee16"},
+    {"metaphilibert": "0271298c7b958721bada560ae41b8ab62be8737c9c2cbc70bb1981f680a76956dc"},
+    {"arnomad": "03069e5271e0abd0d7b8daf66c017d0ab5edf7ca3f4286b3be6d3342378d05e865"},
     {"rustytwilight": "03491764a17598e32f994fc53ccc515947edd2280a5db669a28a8876ea1a8ced20"}
 ]}
 
