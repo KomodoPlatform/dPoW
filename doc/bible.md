@@ -100,9 +100,11 @@ Those running for election must declare in which region they intend to operate t
  
 <b>Candidates may choose to run for one seat in one of the four regions. That means that, at the most, any new candidate can seek 1 Notary Node position in their first election participation. </b>
  
-If that new candidate proves his reliability and ability to operate a NN by making it to the top 3 rankings for his region at the end of the season, he is able to apply for up to two additional NN spots in different regions for the next elections.
+If that new candidate proves his reliability and ability to operate a NN by making it to the top 3 rankings for his region at the end of the season, he is able to apply for up to two additional NN spots in different regions for the next elections. For example, if a first year notary makes it to the top 3 in EU, the following season they are eligible to run for additional nodes in SH and AR.
 
-Candidates that landed in the top 3 ranking with more than one NN can seek 1 additional NN per region - region must be operated as Top 3 NN as of ranking snapshot on April 17th, 2021. For example, achieving a top 3 position in the NA region makes you elibile to run for a second node in NA region. Six is the maximum number of spots that any one candidate is permitted to operate.
+Candidates that landed in the top 3 ranking with more than one NN can seek 1 additional NN per region - region must be operated as Top 3 NN as of ranking snapshot on April 17th, 2021. For example, achieving a top 3 position in the NA region makes you elibile to run for a second node in NA region.
+
+Six is the maximum number of spots that any one candidate is permitted to operate.
 
 The Komodo Notary Node Elections are stake weighted, meaning that those who hold more KMD have more voting power in the election. The process works as follows.
  
