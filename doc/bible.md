@@ -97,12 +97,16 @@ Conversely, even if you are an ardent supporter of the Komodo ecosystem, you may
 There are four Notary Node regions: Europe (EU), Asia-Russia (AR), North America (NA), and the Southern Hemisphere (SH). Each region contains at least 13 notary nodes, boosting the physical distribution and security of Komodo’s Notary Node network. In 2021, each region will have an even 14 Notary Nodes.
  
 Those running for election must declare in which region they intend to operate their Notary Node. If anyone is discovered to be running a node in a region other than the one for which they were elected, this operator will be immediately disqualified and the NN spot gets assigned to the next candidate in the election result list. This keeps things fair, as different geographic locations offer Internet connections at varying costs and speeds.
- 
-<b>Candidates may choose to run for one seat in one of the four regions. That means that, at the most, any new candidate can seek 1 Notary Node position in their first election participation. </b>
- 
-If that new candidate proves his reliability and ability to operate a NN by making it to the top 3 rankings for his region at the end of the season, he is able to apply for up to two additional NN spots in different regions for the next elections.
 
-Candidates that landed in the top 3 ranking with more than one NN can seek 1 additional NN <b>per top 3 operated region</b> - region must be operated as top 3 NN as of ranking snapshot on April 2nd, 2021. Six is the maximum number of spots that any one candidate is permitted to operate.
+New candidates are eligible to submit a candidacy for a single notary node in any of the four regions in their first election. Participation in the pre-season testnet is <b>highly recommended</b> to learn the basics and demonstrate capability.
+
+Notary nodes achieving a regional top 3 ranking at the ranking snapshot date are automatically re-elected to operate that node in the next season. 
+
+Notary nodes achieving a regional top 5 ranking are eligible to submit a candidacy for an additional notary node for each region they held a top 5 position in at the ranking snapshot date.
+
+Notary nodes who are not in their regional top 5 at the end of the season can reapply for a single node in each of the region(s) they served in during the previous season.
+
+<b>No notary can hold more than 2 nodes in a single region, or more than 6 nodes in total.</b>
 
 The Komodo Notary Node Elections are stake weighted, meaning that those who hold more KMD have more voting power in the election. The process works as follows.
  
