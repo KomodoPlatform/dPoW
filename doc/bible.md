@@ -88,8 +88,9 @@ At a minimum, every candidate must announce the region in which they are running
  
 In general, the Komodo community elects Notary Node Operators who are committed to the development of the ecosystem. If your primary motivation is personal financial gain, you may find it difficult to garner support, even if you have proven your technical skills on Komodo’s test net.
 
-Conversely, even if you are an ardent supporter of the Komodo ecosystem, you may fail to win a seat if your node is under-performing on the test net. A balance of both attributes — dedication to the Komodo ecosystem and strong technical abilities — is the ideal combination.
+Conversely, even if you are an ardent supporter of the Komodo ecosystem, you may fail to win a seat if your technical skills are unproven. A balance of both attributes — dedication to the Komodo ecosystem and strong technical abilities — is the ideal combination.
 
+For more information on joining the preseason testnet check out the [testnet README](https://github.com/KomodoPlatform/dPoW/blob/2021-testnet/README.md)
 <br>
 
 ## The Notary Node election process
