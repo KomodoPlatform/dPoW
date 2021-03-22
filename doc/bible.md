@@ -126,11 +126,11 @@ Apart from that, community members may vote for any candidates in any region. VO
  
 For instance, if you want to send 100% of your VOTE2021 tokens to a single candidate, you may do so. If you want to send 20% of your votes to five different candidates in a single region, you may do that, too. If you want to send an equal 25% of your votes to one candidate in each of the four regions, that’s also an option. There are no rules dictating how you cast your ballot.
  
-Voting will be open for around three weeks, until April 23rd, 2021. It is highly recommended that each community member read through the proposals of all the candidates before casting their vote. The proposals contain important information about how each candidate intends to help the Komodo ecosystem.
+Voting will be open for around two weeks, until April 23rd, 2021. It is highly recommended that each community member read through the proposals of all the candidates before casting their vote. The proposals contain important information about how each candidate intends to help the Komodo ecosystem.
  
 All of the candidates' proposals, along with other useful information, will be posted on this new Komodo Notary Node Election GitHub repo.
 
-<b>The top 12 NNs who will be auto-elected will be announced on April 17th. 44 Notary Node spots are available in the 2021 election. Starting with season 4 the automatic re-elections were reduced to 3 spots per region.
+<b>The top 12 NNs who will be auto-elected will be announced on April 9th. 44 Notary Node spots are available in the 2021 election. Starting with season 4 the automatic re-elections were reduced to 3 spots per region.
 
 The elections start on April 9th with the airdrop of the VOTE2021 tokens and end on April 23rd, 2021. The Komodo Core update is planned for April 30th, 2021 and the hardfork activation for June 14th, 2021. </b>
 
