@@ -25,7 +25,7 @@
 // FIXME Alright, the "BTCminsigs" field in elected JSON was bypassed at one point 
 // no apparent reason why, but safer to manually edit this until I know for sure
 //#define DPOW_MINSIGS 13
-#define DPOW_MINSIGS 3
+#define DPOW_MINSIGS 4
 
 #define DPOW_MIN_ASSETCHAIN_SIGS 11
 //#define DPOW_M(bp) ((bp)->minsigs)  // (((bp)->numnotaries >> 1) + 1)
