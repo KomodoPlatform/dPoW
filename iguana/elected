@@ -15,5 +15,7 @@
 "notaries": [
     {"Alright0": "02480688f3bd5d455481c63607d5ab2ddbe3f9ba407b7dd91b68f7e983e8b8c2e4"},
     {"Alright1": "026943ec773d7a273d56d50546583ded7bc3521a731cc9d4dba273e67c721d2832"},
-    {"smk": "03e81e1333f9f91a8d2afcfe3fcffaba8ba543d5552e4cbe3faf7cf64d2887d4f5"}
+    {"smk": "03e81e1333f9f91a8d2afcfe3fcffaba8ba543d5552e4cbe3faf7cf64d2887d4f5"},
+    {"daemonfox": "0314e6cf7d6f8e4e54c63ab179c77d64f36e17f7032e614ed5a38e4f9001c47217"},
+    {"metaphilibert": "0271298c7b958721bada560ae41b8ab62be8737c9c2cbc70bb1981f680a76956dc"}
 ]}
