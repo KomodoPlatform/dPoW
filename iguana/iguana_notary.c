@@ -146,6 +146,7 @@ void dpow_srcupdate(struct supernet_info *myinfo,struct dpow_info *dp,int32_t he
         //dpow_heightfind(myinfo,dp,checkpoint.blockhash.height + 1000);
         dp->prevDESTHEIGHT = dp->DESTHEIGHT;
         ptrs = calloc(1,sizeof(void *)*5 + sizeof(struct dpow_checkpoint) + sizeof(pthread_t));
+        // we will not pass pthread_t as last param, so sizeof(pthread_t) above can be removed
         ptrs[0] = (void *)myinfo;
         ptrs[1] = (void *)dp;
         ptrs[2] = (void *)(uint64_t)dp->minsigs;
@@ -154,7 +155,23 @@ void dpow_srcupdate(struct supernet_info *myinfo,struct dpow_info *dp,int32_t he
         memcpy(&ptrs[5],&checkpoint,sizeof(checkpoint));
         dp->activehash = checkpoint.blockhash.hash;
         ht = checkpoint.blockhash.height;
-        OS_thread_create((void *)((uint64_t)&ptrs[5] + sizeof(struct dpow_checkpoint)),NULL,(void *)dpow_statemachinestart,(void *)ptrs);
+
+        // int err;
+        // pthread_attr_t attr; size_t stack_size = 0x100000; /* The stack size limit is 1 MB (0x100000 bytes) */
+        // err = pthread_attr_init(&attr);
+        // err = pthread_attr_setstacksize(&attr, stack_size);
+
+        pthread_t thread_id; // (void *)((uint64_t)&ptrs[5] + sizeof(struct dpow_checkpoint))
+        int err = OS_thread_create(&thread_id, NULL /* &attr */,(void *)dpow_statemachinestart,(void *)ptrs);
+        if (err) {
+            fprintf(stderr, "[!!!] dpow_statemachinestart.%s thread creation failed : %d\n", dp->symbol, err);
+        }
+        err = pthread_detach(thread_id);
+        if (err) {
+            fprintf(stderr, "[!!!] dpow_statemachinestart.%s failed to detach thread : %d\n", dp->symbol, err);
+        }
+
+        // err = pthread_attr_destroy(&attr);
     }
 }
 
