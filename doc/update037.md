@@ -9,7 +9,8 @@ git checkout master
 git pull
 pkill -15 iguana
 cd ~/dPoW/iguana
-./m_notary_KMD
+./m_notary_build # build iguana
+./m_notary_KMD # start notarization
 ```
 
 - Stop the daemons
