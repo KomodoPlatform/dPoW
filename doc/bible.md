@@ -100,11 +100,11 @@ Those running for election must declare in which region they intend to operate t
 
 New candidates are eligible to submit a candidacy for a single notary node in any of the four regions in their first election. Participation in the pre-season testnet is <b>highly recommended</b> to learn the basics and demonstrate capability.
 
-Notary nodes achieving a regional top 3 ranking at the ranking snapshot date are automatically re-elected to operate that node in the next season. 
+Notary nodes achieving a regional top 3 ranking at the ranking snapshot date are automatically re-elected to operate that node in the next season, and are eligible to submit candidacies for additional notary nodes in any region (max 2 per region and 6 in total).
 
-Notary nodes achieving a regional top 5 ranking are eligible to submit a candidacy for an additional notary node for each region they held a top 5 position in at the ranking snapshot date.
+Notary nodes achieving a regional top 7 ranking at the ranking snapshot date are eligible to submit candidacies for additional notary nodes in any region (max 2 per region and 4 in total).
 
-Notary nodes who are not in their regional top 5 at the end of the season can reapply for a single node in each of the region(s) they served in during the previous season.
+Veteran Notary nodes having served in at least one season historically and who did not place in top 7 or operate a node in the prior season are eligible to submit candidacies for notary nodes in any region (max 2 in total).
 
 <b>No notary can hold more than 2 nodes in a single region, or more than 6 nodes in total.</b>
 
