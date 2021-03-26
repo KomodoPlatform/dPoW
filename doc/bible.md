@@ -152,16 +152,15 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 - <b>i.</b> Keep your Notary Node up to date (daily maintenance, update and upgrade check) and secured (according to the industry's best practices).
 - <b>ii.</b> Notarize all active dPoW assets and participating in all expected notarization rounds without any interruptions (this will be checked daily). 
 - <b>iii.</b> Mine Komodo blocks with your NN pubkey.
-- <b>iv.</b> Follow update instructions within 24 hours on an update announcement (do not run for a NN position unless you can guarantee daily maintenance).
+- <b>iv.</b> Subscribe to https://github.com/KomodoPlatform/dpow and react in a timely manner (<24h) to notifications and update announcements (do not run for a NN position unless you can guarantee daily maintenance).
 - <b>v.</b> Help other NN Operators in need and keep an eye on your geo-regional statistics. The most reliable regions will receive additional benefits and bounties. 
 - <b>vi.</b> Report any violation that you notice ASAP to the Komodo team through security@komodoplatform.com.
 - <b>vii.</b> Participate in discussions and publish your improvement proposals on https://github.com/KomodoPlatform/dpow. (exempt from enforcement)
 - <b>viii.</b> Physically separate your main and 3rd party NN operations by using different servers.
 - <b>ix.</b> Use ONLY the original dPoW and Komodo Core codebases. Any core or protocol modification, non-public optimization, or similar code changes, will lead to immediate loss of the spot and disqualification.
 - <b>x.</b> Operate your NN in the assigned region. Using hosting providers with DCs in other regions and obfuscating this by using IPs from other regions will lead to immediate disqualification. 
-- <b>xi.</b> Subscribe to https://github.com/KomodoPlatform/dpow and react in a timely manner (<24h) to notifications and announcements.
-- <b>xii.</b> Selling a NN spot is prohibited. This rule applies to all forms of disposition (giveaway, renting,...).
-- <b>xiii.</b> Notarization funds, deposited on your NN keys by the Komodo team, are reserved for dPoW operations - it is strictly prohibited to transfer this funds or to use them for anything other then notarizations. At the end of the NN season or if you lose your spot, all NN funds must be returned to the Komodo team. Notaries are responsible for ensuring sufficient KMD is sent from main node to third party node for use in notarisation (funding for other chains will be provided by the Komodo Team).
+- <b>xi.</b> Selling a NN spot is prohibited. This rule applies to all forms of disposition (giveaway, renting,...).
+- <b>xii.</b> Notarization funds, deposited on your NN keys by the Komodo team, are reserved for dPoW operations - it is strictly prohibited to transfer this funds or to use them for anything other then notarizations. At the end of the NN season or if you lose your spot, all NN funds must be returned to the Komodo team. Notaries are responsible for ensuring sufficient KMD is sent from main node to third party node for use in notarisation (funding for other chains will be provided by the Komodo Team).
 
 ### NN Rights:
 
