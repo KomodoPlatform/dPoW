@@ -31,3 +31,4 @@ echo $pubkey
 #~/VerusCoin/src/verusd -pubkey=$pubkey $1 &
 ./komodod -pubkey=$pubkey -ac_name=WLC21 -ac_supply=21000000 -ac_reward=190258751 -ac_staked=90 -ac_public=1 -addnode=37.187.225.231 -addnode=51.38.38.134 $1 &
 ./komodod -pubkey=$pubkey -ac_name=ZILLA -ac_supply=11000000 -ac_sapling=5000000 -addnode=51.68.215.104 $1 &
+./komodod -pubkey=$pubkey -ac_public=1 -ac_name=VOTE2021 -ac_supply=129848152 -addnode=77.74.197.115 $1 &
