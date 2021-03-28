@@ -105,7 +105,7 @@ Notary nodes achieving a regional top 3 ranking at the ranking snapshot date are
 
 Notary nodes achieving a regional top 5 ranking are eligible to submit a candidacy for an additional notary node for each region they held a top 5 position in at the ranking snapshot date.
 
-Notary nodes who are not in their regional top 5 at the end of the season can reapply for a single node in each of the region(s) they served in during the previous season.
+Notary nodes who are not in their regional top 5 at the end of the season can reapply for a single node for each of the region(s) they served in during the previous season.
 
 <b>No notary can hold more than 2 nodes in a single region, or more than 6 nodes in total.</b>
 
