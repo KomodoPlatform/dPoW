@@ -1,3 +1,8 @@
+### 0.3.9
+
+- adds GLEEC (main)
+- bumped version
+
 ### 0.3.8
 
 - add VOTE2021 (main)
