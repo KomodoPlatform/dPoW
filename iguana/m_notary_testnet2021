@@ -45,8 +45,8 @@ curl --url "http://127.0.0.1:7776" --data "{\"conf\":\"komodo.conf\",\"path\":\"
 
 
 # add testnet coins to iguana
-coins/rick_testnet
-coins/morty_testnet
+coins/rick_7776
+coins/morty_7776
 
 sleep 30
 
