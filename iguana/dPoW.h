@@ -22,11 +22,7 @@
 
 #define DPOW_MAXFREQ 100
 #define DPOW_CHECKPOINTFREQ 10
-// FIXME Alright, the "BTCminsigs" field in elected JSON was bypassed at one point 
-// no apparent reason why, but safer to manually edit this until I know for sure
-//#define DPOW_MINSIGS 13
-#define DPOW_MINSIGS 4
-
+#define DPOW_MINSIGS 13
 #define DPOW_MIN_ASSETCHAIN_SIGS 11
 //#define DPOW_M(bp) ((bp)->minsigs)  // (((bp)->numnotaries >> 1) + 1)
 #define DPOW_MODIND(bp,offset) (((((bp)->height / DPOW_CHECKPOINTFREQ) % (bp)->numnotaries) + (offset)) % (bp)->numnotaries)
