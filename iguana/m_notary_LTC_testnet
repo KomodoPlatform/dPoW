@@ -28,5 +28,5 @@ curl --url "http://127.0.0.1:7776" --data "{\"conf\":\"litecoin.conf\",\"path\":
 
 sleep 30
 # dpow for KMD->LTC.
-curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"freq\":5,\"symbol\":\"KMD\",\"pubkey\":\"$pubkey\"}"
- 
+curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"KMD\",\"pubkey\":\"$pubkey\"}"
+
