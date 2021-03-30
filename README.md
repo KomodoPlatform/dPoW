@@ -1,6 +1,6 @@
 # How to partcipate
 
-Make a Pull Request with your IP Address added to `iguana/m_notary_testnet2021` and your public key and name added to `iguana/testnet.json`.
+Make a Pull Request with your IP Address added to `iguana/m_notary_testnet2021` and your public key and name added to `iguana/testnet.json`. Please specify your discord name in the pull request. You will be added to a discord role used for notifying operators.
 
 # Install and start the notary
 
@@ -25,6 +25,39 @@ server=1
 daemon=1
 rpcworkqueue=256
 ```
+#### * set permissions
+```
+chmod 600 ~/.komodo/komodo.conf
+```
+
+#### * Clone and build Litecoin
+```
+git clone https://github.com/litecoin-project/litecoin --branch 0.16
+cd litecoin
+git checkout 0.16
+./autogen
+./configure --without-gui --with-incompatible-bdb
+make -j4
+```
+optional, add a bash shortcut to litecoin-cli and litecoind
+```
+make install
+```
+
+# create ~/.litecoin and litecoin.conf 
+```
+mkdir ~/.litecoin
+```
+create `~/.litecoin/litecoin.conf` with:
+```
+rpcuser=<secure username>
+rpcpassword=<secure password>
+txindex=1
+```
+```
+chmod 600 ~/.litecoin/litecoin.conf
+```
+
 #### * Start KMD daemon
 ```shell
 komodod
@@ -54,7 +87,7 @@ komodo-cli dumpprivkey <your address>
 ```
 Please do not share your private key, keep it secret.
 #### * Edit files and make the PR
-Edit `iguana/m_notary_testnet2021` and `iguana/testnet.json` to add an entry for you using <your public key> and your public IP address. Edit files into your fork of this github repository then make a Pull Request to this repository.
+Edit `iguana/m_notary_testnet2021` and `iguana/testnet.json` to add an entry with <your public key> and your public IP address. Edit files into your fork of this github repository then make a Pull Request to this repository.
 
 What is my public IP ?
 ```shell
@@ -70,24 +103,31 @@ komodo-cli stop
 ```
 #### * Start KMD daemon with `-pubkey=<your public key>`
 #### * Start RICK and MORTY `-pubkey=<your public key>`. The parameters can be found in `komodo/src/assetchains.old`
+#### * Start LTC daemon 
 
 #### * (Optional but recommended for better performance) Open ports required for p2p. These values can get found as `"p2pport"` using the `getinfo` rpc method. 
 
 | Coin          | Port          |
 | ------------- |-------------: |
 | KMD           | 7770          |
+| LTC           | 9333          |
 | RICK          | 25434         |
 | MORTY         | 16347         |
 | Iguana        | 17778         |
 
 *NOTE: Iguana Port 17778 MUST be open
 
-#### * Fund public key address on komodo and each asset chain.
+#### * Fund public key address on litecoin, komodo and each asset chain.
 *If you need RICK or MORTY, use the faucets at https://www.atomicexplorer.com/#/faucet/ or http://stats.kmd.io/faucet/  or ask in #notarynode channel.*
+There is plenty of volume on Atomicdex's KMD/LTC pair. 
 
-#### * Import your private key to all 3 nodes.
+#### * Import your private key to all 3 komodod nodes.
 ```shell
 komodo-cli -ac_name=<coin name> importprivkey <your private key>
+```
+#### * Import your private key to LTC node. See https://docs.komodoplatform.com/notary/setup-Komodo-Notary-Node.html#generate-two-pubkey-address-wif-s
+```shell
+litecoin-cli importprivkey <your LTC private key>
 ```
 #### * Create `~/dPoW/iguana/pubkey.txt`
 ```
@@ -95,7 +135,7 @@ pubkey=<your public key>
 ```
 #### * Create `~/dPoW/iguana/wp_testnet` and change its permissions
 ```
-curl --url "http://127.0.0.1:7778" --data "{\"method\":\"walletpassphrase\",\"params\":[\"<YOUR WIF OR PASSPHRASE>\", 9999999]}"
+curl --url "http://127.0.0.1:7776" --data "{\"method\":\"walletpassphrase\",\"params\":[\"<YOUR WIF OR PASSPHRASE>\", 9999999]}"
 ```
 ```shell
 chmod 700 wp_testnet

@@ -291,7 +291,8 @@ void dpow_statemachinestart(void *ptr)
     dpow_getchaintip(myinfo,&merkleroot,&srchash,&srctime,dp->srctx,&dp->numsrctx,src);
     if ( src == 0 || dest == 0 )
     {
-        printf("null coin ptr? (%s %p or %s %p)\n",dp->symbol,src,dp->dest,dest);
+        fprintf(stderr, "[---] null coin ptr? (%s %p or %s %p)\n",dp->symbol,src,dp->dest,dest);
+        free(ptr);
         return;
     }
     MoMdepth = 0;
@@ -303,10 +304,47 @@ void dpow_statemachinestart(void *ptr)
         MoM = dpow_calcMoM(&MoMdepth,myinfo,src,checkpoint.blockhash.height);
         kmdheight = dest->longestchain;
     }
-    if ( (bp= dpow_heightfind(myinfo,dp, checkpoint.blockhash.height)) == 0 )
+
+    bp = 0; blockindex = -1;
+
+    if (dp)
     {
-        if ( (blockindex= dpow_blockfind(myinfo,dp)) < 0 )
+        int32_t busy_blocks = 0;
+
+        // below is replacement for dpow_heightfind and dpow_blockfind calls, bcz having one loop over dp->maxblocks
+        // is better than iterating twice, also we probably need to protect bp search by mutex, to avoid possible
+        // rewrite of dp->blocks[i] in other threads at the moment of search
+
+        portable_mutex_lock(&dpowT_mutex);
+        for (int32_t i = 0; i < dp->maxblocks; i++)
+        {
+            if ( dp->blocks[i] != 0 ) {
+                busy_blocks++;
+                if (checkpoint.blockhash.height == dp->blocks[i]->height) {
+                    bp = dp->blocks[i]; // dpow_heightfind
+                }
+            } else {
+                if (blockindex < 0) {
+                        blockindex = i; // dpow_blockfind
+                    }
+            }
+        }
+        portable_mutex_unlock(&dpowT_mutex);
+
+        fprintf(stderr, "[---] State: sym.%s, dest.%s, blocks.%d/%d (size.%zu)\n", dp->symbol, dp->dest, busy_blocks, dp->maxblocks, sizeof(*bp));
+    }
+
+    //if ( (bp= dpow_heightfind(myinfo,dp, checkpoint.blockhash.height)) == 0 )
+    if ( bp == 0 )
+    {
+        //if ( (blockindex= dpow_blockfind(myinfo,dp)) < 0 )
+        if ( blockindex < 0 )
+        {
+            fprintf(stderr, "[---] blockindex == -1\n");
+            free(ptr);
             return;
+        }
+
         portable_mutex_lock(&dpowT_mutex);
         bp = calloc(1,sizeof(*bp));
         dp->blocks[blockindex] = bp;
