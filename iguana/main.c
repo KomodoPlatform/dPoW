@@ -2259,7 +2259,7 @@ void iguana_main(void *arg)
         else
         {
             // this means that an elected file was specified for 3rd party network, so use diffrent RPC port. 
-            myinfo->rpcport = 7778; // hardcoded for 2021 testnet
+            myinfo->rpcport = IGUANA_NOTARYPORT2;
             myinfo->IAMNOTARY = 1;
             myinfo->DEXEXPLORER = 0;//1; disable as SPV is used now
             elected = (char *)arg;

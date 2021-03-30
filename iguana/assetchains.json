@@ -42,6 +42,13 @@
   {
     "ac_name": "DEX",
     "ac_supply": "999999"
+  },  
+  {
+    "ac_name": "GLEEC",
+    "ac_supply": "21000000",
+    "ac_public": "1",
+    "ac_staked": "100",
+    "addnode":["95.217.161.126"]
   },
   {
     "ac_name": "HODL",
@@ -95,12 +102,6 @@
   {
     "ac_name": "PANGEA",
     "ac_supply": "999999"
-  },
-  {
-    "ac_name": "PGT",
-    "ac_supply": "10000000",
-    "ac_end": "1",
-    "addnode": ["190.114.254.104"]
   },
   {
     "ac_name": "PIRATE",
@@ -158,12 +159,9 @@
     "addnode": ["51.68.215.104"]
   },
   {
-    "ac_name": "STBL",
-    "ac_supply": "50000000",
-    "ac_cc": "1",
+    "ac_name": "VOTE2021",
+    "ac_supply": "129848152",
     "ac_public": "1",
-    "ac_adaptivepow": "1",
-    "ac_end": "1",
-    "addnode": ["142.93.173.53", "68.183.74.250"]
+    "addnode": ["77.74.197.115"]
   }
 ]
