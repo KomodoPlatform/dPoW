@@ -1,3 +1,13 @@
+### 0.3.8
+
+- add VOTE2021 (main)
+- adds GLEEC (main)
+- bumped version
+
+### 0.3.7
+
+- remove PGT and STBL
+
 ### 0.3.6
 
 - update VRSC to tag `v0.7.2-8`. Version: https://github.com/VerusCoin/VerusCoin/tree/d3cffbe4e088166f980afdcf14ed5fbed72b542b (3P)
