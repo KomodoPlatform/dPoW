@@ -4,11 +4,18 @@
 
 Useful info:
 
-- Check the correct chain params:
+- Start the chains with the params below (remembering to start with your NN pubkey):
 
 ```
--ac_public=1 -ac_name=VOTE2021 -ac_supply=129848152 -addnode=77.74.197.115
--ac_name=GLEEC -ac_supply=21000000 -ac_public=1 -ac_staked=100 -addnode=95.217.161.126
+./komodod -ac_name=VOTE2021 -ac_public=1 -ac_supply=129848152 -addnode=77.74.197.115 -pubkey=$pubkey &
+./komodod -ac_name=GLEEC -ac_supply=21000000 -ac_public=1 -ac_staked=100 -addnode=95.217.161.126 -pubkey=$pubkey &
+```
+
+- Import your privkey into both chains
+
+```
+./komodo-cli -ac_name=VOTE2021 importprivkey ***
+./komodo-cli -ac_name=GLEEC importprivkey ***
 ```
 
 - Open `tcp/55637` and `tcp/33300` and  for incoming p2p connections:
@@ -18,7 +25,25 @@ sudo ufw allow 55637/tcp comment 'VOTE2021 p2p port'
 sudo ufw allow 33300/tcp comment 'GLEEC p2p port'
 ```
 
-- Don't forget to add split commands for VOTE2021 and GLEEC to your autosplit script(s)
+- Add VOTE2021 and GLEEC to your autosplit script(s)
+
+assetchains.json additions below:
+```  
+  {
+    "ac_name": "GLEEC",
+    "ac_supply": "21000000",
+    "ac_public": "1",
+    "ac_staked": "100",
+    "addnode":["95.217.161.126"]
+  },
+  {
+    "ac_name": "VOTE2021",
+    "ac_supply": "129848152",
+    "ac_public": "1",
+    "addnode": ["77.74.197.115"]
+  },
+```
+    
 - Update your dPoW repo, rebuild and restart iguana
 
 ```bash
@@ -32,3 +57,5 @@ cd ~/dPoW/iguana
 ```
 
 Make sure your iguana is running properly.
+
+- Split VOTE2021 & GLEEC UTXO's once Iguana is running
