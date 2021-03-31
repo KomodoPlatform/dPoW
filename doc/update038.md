@@ -29,15 +29,19 @@ sudo ufw allow 33300/tcp comment 'GLEEC p2p port'
 
 assetchains.json additions below:
 ```  
-{
-  "ac_name": "GLEEC",
-  "ac_supply": "21000000",
-  "ac_staked": "10"
-},
-{
-  "ac_name": "VOTE2021",
-  "ac_supply": "129848152"
-},
+  {
+    "ac_name": "GLEEC",
+    "ac_supply": "21000000",
+    "ac_public": "1",
+    "ac_staked": "100",
+    "addnode":["95.217.161.126"]
+  },
+  {
+    "ac_name": "VOTE2021",
+    "ac_supply": "129848152",
+    "ac_public": "1",
+    "addnode": ["77.74.197.115"]
+  },
 ```
     
 - Update your dPoW repo, rebuild and restart iguana
