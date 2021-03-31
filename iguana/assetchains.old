@@ -12,7 +12,7 @@ echo $pubkey
 ./komodod -pubkey=$pubkey -ac_name=COQUICASH -ac_supply=72000000 -ac_reward=7200000000 -ac_staked=50 -ac_halving=420000 -ac_cc=2 -ac_ccenable=227,235,236,241 -addnode=78.47.108.168 $1 &
 ./komodod -pubkey=$pubkey -ac_name=CRYPTO -ac_supply=999999 -addnode=95.213.238.98 $1 &
 ./komodod -pubkey=$pubkey -ac_name=DEX -ac_supply=999999 -addnode=95.213.238.98 $1 &
-./komodod -pubkey=$pubkey -ac_name=GLEEC -ac_supply=21000000 -ac_public=1 -ac_staked=100 -addnode=95.217.161.126 $1 &
+./komodod -pubkey=$pubkey -ac_name=GLEEC -ac_supply=210000000 -ac_public=1 -ac_staked=100 -addnode=95.217.161.126 $1 &
 ./komodod -pubkey=$pubkey -ac_name=HODL -ac_supply=9999999 -addnode=95.213.238.98 $1 &
 ./komodod -pubkey=$pubkey -ac_name=ILN -ac_supply=10000000000 -ac_cc=2 -addressindex=1 -spentindex=1 -addnode=51.75.122.83 $1 &
 ./komodod -pubkey=$pubkey -ac_name=JUMBLR -ac_supply=999999 -addnode=95.213.238.98 $1 &
