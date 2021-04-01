@@ -34,6 +34,7 @@ curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"ad
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"135.181.219.27\"}"  #dathbezumniy
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"139.99.134.200\"}"   # hsukrd
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"135.125.233.86\"}"  # block9
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"106.154.9.201\"}"  # pangz
 
 # add LTC
 curl --url "http://127.0.0.1:7776" --data "{\"conf\":\"litecoin.conf\",\"path\":\"${HOME#"/"}/.litecoin\",\"prefetchlag\":-1,\"poll\":1,\"active\":1,\"agent\":\"iguana\",\"method\":\"addcoin\",\"newcoin\":\"LTC\",\"startpend\":64,\"endpend\":64,\"services\":0,\"maxpeers\":512,\"RELAY\":-1,\"VALIDATE\":0,\"portp2p\":10111,\"minconfirms\":1,\"name\":\"litecoin\",\"netmagic\":\"deadbeef\",\"p2p\":9333,\"rpc\":9332,\"pubval\":48,\"p2shval\":5,\"wifval\":176}"
