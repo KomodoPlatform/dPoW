@@ -113,6 +113,14 @@ Newcomers can apply **only for 1 spot in any region**.
 
 The regional top rank benefits are cumulative for each region rank (see examples below)
 
+Cheatsheet :key:
+
+- TOP 3 keeps their spot and can apply for 1 spot in any region.
+- RANK 4-5 can apply for 2 spots per owned node in any region.
+- Below TOP 5 can re-apply for 1 spot per owned node in any region.
+- Newcomers can apply only for 1 spot in any region.
+- No notary can hold more than 2 nodes in a single region, or more than 6 nodes in total.
+
 Examples:
 - If you operated one node, and it was ranked top 3 in AR, you keep the AR node, and can apply for one node with no region restriction.
 - If you operated one node, and it was ranked 4 or 5 in AR, you can apply for two nodes with no region restriction.
