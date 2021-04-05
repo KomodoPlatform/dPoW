@@ -101,18 +101,6 @@ Those running for election must declare in which region they intend to operate t
 
 New candidates are eligible to submit a candidacy for a single notary node in any of the four regions in their first election. Participation in the pre-season testnet is <b>highly recommended</b> to learn the basics and demonstrate capability.
 
-Notary nodes achieving a regional top 3 ranking at the ranking snapshot date are **automatically re-elected to operate that node (same region)** in the next season, and can apply for an **one spot in any region** as long as you have no more than two nodes in a region, or six in total.
-
-Notary nodes achieving a regional ranking of 4 or 5 are eligible to apply for an **two spots without any restriction on which region(s)** as long as you have no more than two nodes in a region, or six in total.
-
-Notary nodes who are not in their regional top 5 at the end of the season can apply for a **one spot without any restriction on which region(s)** as long as you have no more than two nodes in a region, or six in total.
-
-Newcomers can apply **only for 1 spot in any region**.
-
-<b>No notary can hold more than 2 nodes in a single region, or more than 6 nodes in total.</b>
-
-The regional top rank benefits are cumulative for each region rank (see examples below)
-
 Cheatsheet :key:
 
 - TOP 3 keeps their spot and can apply for 1 spot in any region.
@@ -120,17 +108,6 @@ Cheatsheet :key:
 - Below TOP 5 can re-apply for 1 spot per owned node in any region.
 - Newcomers can apply only for 1 spot in any region.
 - No notary can hold more than 2 nodes in a single region, or more than 6 nodes in total.
-
-Examples:
-- If you operated one node, and it was ranked top 3 in AR, you keep the AR node, and can apply for one node with no region restriction.
-- If you operated one node, and it was ranked 4 or 5 in AR, you can apply for two nodes with no region restriction.
-- If you operated one node, and it was ranked 6 to 14, you can apply for one node with no region restriction.
-
-- If you operated two nodes, and one was ranked top 3, but the other was ranked 6 to 14, you keep the top 3 node, and can apply for one node with no region restriction, as long as you have no more than two nodes in a region.
-
-- If you operated three nodes, and one was ranked top 3, but the two were ranked 4 or 5, you keep the top 3 node, and can apply for four nodes with no region restriction, as long as you have no more than two nodes in a region.
- 
-- If you operated four nodes, and all were in the top 3, you keep those four nodes and can apply for two nodes with no region restriction, as long as you have no more than two nodes in a region (more than that would be more than the maximum of six total).
 
 The Komodo Notary Node Elections are stake weighted, meaning that those who hold more KMD have more voting power in the election. The process works as follows.
  
