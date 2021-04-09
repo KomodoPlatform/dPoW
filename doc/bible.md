@@ -103,10 +103,10 @@ New candidates are eligible to submit a candidacy for a single notary node in an
 
 Cheatsheet :key:
 
-- TOP 3 keeps their spot and can apply for 1 spot in any region.
-- RANK 4-5 can apply for 2 spots per owned node in any region.
-- Below TOP 5 can re-apply for 1 spot per owned node in any region.
-- Newcomers can apply only for 1 spot in any region.
+- TOP 3 **keeps their spot** and can *apply* for **1 spot** in **any** region.
+- RANK 4-5 can *apply* for **2 spots** per owned node in **any** region.
+- Below TOP 5 can *re-apply* for **1 spot** per owned node in **any** region.
+- Newcomers can *apply* **for 1 spot only** in **any** region.
 - No notary can hold more than 2 nodes in a single region, or more than 6 nodes in total.
 
 The Komodo Notary Node Elections are stake weighted, meaning that those who hold more KMD have more voting power in the election. The process works as follows.
