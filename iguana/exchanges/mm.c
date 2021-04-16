@@ -208,11 +208,11 @@ int main(int argc, const char * argv[])
             } else printf("nn_connect error to IPC_ENDPOINT\n");
         } else printf("error opening IPC_ENDPOINT\n");
     }
-    else if ( argv[1] != 0 && strcmp(argv[1],"hush") == 0 )
+    else if ( argv[1] != 0 && strcmp(argv[1],"ZECTEST") == 0 )
     {
         uint32_t timestamp; char str[65],wifstr[128]; bits256 privkey; int32_t i;
         timestamp = (uint32_t)time(NULL);
-        //printf("start hush vanitygen t.%u\n",timestamp);
+        //printf("start ZECTEST vanitygen t.%u\n",timestamp);
         for (i=0; i<1000000000; i++)
         {
             OS_randombytes(privkey.bytes,sizeof(privkey));
@@ -223,7 +223,7 @@ int main(int argc, const char * argv[])
             privkey.bytes[4] = 0x06;
             privkey.bytes[5] = 0xdd;
             privkey.bytes[6] = 0xbb;
-            bitcoin_priv2wiflong("HUSH",0xab,wifstr,privkey,0x36);
+            bitcoin_priv2wiflong("ZECTEST",0xab,wifstr,privkey,0x36);
             if ( wifstr[2] == 'x' && wifstr[4] == 'H' && wifstr[5] == 'u' && wifstr[6] == 's' )//&& wifstr[3] == 'x' )
             {
                 if ( wifstr[7] == 'h' && wifstr[8] == 'L' && wifstr[9] == 'i' )
@@ -237,7 +237,7 @@ int main(int argc, const char * argv[])
                 }
             } //else printf("failed %s\n",wifstr);
         }
-        //printf("done hush vanitygen done %u elapsed %d\n",(uint32_t)time(NULL),(uint32_t)time(NULL) - timestamp);
+        //printf("done ZECTEST vanitygen done %u elapsed %d\n",(uint32_t)time(NULL),(uint32_t)time(NULL) - timestamp);
         exit(0);
     }
     else if ( argv[1] != 0 && strcmp(argv[1],"vanity") == 0 && argv[2] != 0 )
@@ -286,11 +286,11 @@ int main(int argc, const char * argv[])
                 {
                     addrstr = flag, floatstr = buf;
                     //addrstr = buf, floatstr = flag;
-                    //bitcoin_addr2rmd160("HUSH",28,&addrtype,rmd160,buf);
+                    //bitcoin_addr2rmd160("ZECTEST",28,&addrtype,rmd160,buf);
                     bitcoin_addr2rmd160("BTC",0,&addrtype,rmd160,addrstr);
                     bitcoin_address("KMD",coinaddr,0,addrtype == 0 ? 60 : 85,rmd160,20);
                     bitcoin_addr2rmd160("KMD",0,&checktype,checkrmd160,coinaddr);
-                    //bitcoin_address("HUSH",checkaddr,28,checktype == 60 ? 184 : 189,checkrmd160,20);
+                    //bitcoin_address("ZECTEST",checkaddr,28,checktype == 60 ? 184 : 189,checkrmd160,20);
                     bitcoin_address("BTC",checkaddr,0,checktype == 60 ? 0 : 5,checkrmd160,20);
                     if ( memcmp(rmd160,checkrmd160,20) != 0 || strcmp(addrstr,checkaddr) != 0 )
                     {
