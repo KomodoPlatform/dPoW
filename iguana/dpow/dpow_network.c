@@ -2348,7 +2348,7 @@ int32_t dpow_nanomsg_update(struct supernet_info *myinfo)
                                                 dpow_nanoutxoget(myinfo,dp,bp,&np->notarize,0,np->senderind,np->channel);
                                             else dpow_nanoutxoget(myinfo,dp,bp,&np->ratify,1,np->senderind,np->channel);
                                             dpow_datahandler(myinfo,dp,bp,np->senderind,np->channel,np->height,np->packet,np->datalen);
-                                        } else printf("wrong senderind.%d\n",np->senderind);
+                                        } else printf("wrong senderind.%d (for symbol %s) while the ind of my own NN is %d\n",np->senderind, np->symbol,bp->myind);
                                     }
                                 } //else printf("height.%d bp.%p state.%x senderind.%d\n",np->height,bp,bp!=0?bp->state:0,np->senderind);
                                 //dp->crcs[firstz] = crc32;
