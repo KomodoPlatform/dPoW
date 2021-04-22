@@ -43,7 +43,7 @@ git clone https://github.com/KomodoPlatform/dPoW --branch LTC-dev --single-branc
 cd dPoW
 ```
 
-Recreate pubkey.txt in komodo/src and dPoW/iguana if using fresh clones
+Recreate pubkey.txt in komodo/src and dPoW/iguana if using fresh clones (and wp_7776 in dPoW/iguana)
 
 (3) Stop iguana, komodod and bitcoind
 
