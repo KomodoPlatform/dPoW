@@ -68,20 +68,20 @@ chmod 600 ~/.litecoin/litecoin.conf
 
 Start and sync LTC daemon
 
-#### (2) Rebuild Komodod based on https://github.com/KomodoPlatform/komodo/tree/dev
+#### (2) Rebuild Komodod based on https://github.com/KomodoPlatform/komodo/tree/master
 
-clone KMD dev branch
+clone KMD
 ```shell
-git clone https://github.com/KomodoPlatform/komodo --branch dev --single-branch
+git clone https://github.com/KomodoPlatform/komodo --branch master --single-branch
 cd komodo
 ```
 
-build Komodo daemon according to https://github.com/KomodoPlatform/komodo/tree/dev#build-komodo - make sure you are using `dev` branch
+build Komodo daemon according to https://github.com/KomodoPlatform/komodo/tree/master#build-komodo - make sure you are using `master` branch
 
-#### (3) rebuild dPoW client iguana based on https://github.com/KomodoPlatform/dPoW/tree/LTC-dev
+#### (3) rebuild dPoW client iguana based on https://github.com/KomodoPlatform/dPoW/tree/master
 
 ```shell
-git clone https://github.com/KomodoPlatform/dPoW --branch LTC-dev --single-branch
+git clone https://github.com/KomodoPlatform/dPoW --branch master --single-branch
 cd dPoW/iguana
 ./m_notary_build
 ```
