@@ -40,7 +40,8 @@ build Komodo daemon according to https://github.com/KomodoPlatform/komodo/tree/d
 
 ```shell
 git clone https://github.com/KomodoPlatform/dPoW --branch LTC-dev --single-branch
-cd dPoW
+cd dPoW/iguana
+./m_notary_build
 ```
 
 Recreate pubkey.txt in komodo/src and dPoW/iguana if using fresh clones
