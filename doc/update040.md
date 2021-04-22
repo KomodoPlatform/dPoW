@@ -5,7 +5,7 @@
 clone LTC
 ```shell
 git clone https://github.com/litecoin-project/litecoin --branch 0.16 --single-branch
-cd litcoin
+cd litecoin
 ```
 
 build LTC daemon according to https://github.com/litecoin-project/litecoin/blob/0.16/doc/build-unix.md
@@ -33,7 +33,7 @@ cd dPoW
 
 (4) Split LTC UTXOs
 
-(5) Start komodod with arg `-notary="~/.litecoin/litecoin.conf"`
+(5) Start komodod with arg `-notary=".litecoin/litecoin.conf"`
 
 (6) Restart iguana with `./m_notary_LTC`
 
