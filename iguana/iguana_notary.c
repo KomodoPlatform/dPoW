@@ -344,15 +344,15 @@ THREE_STRINGS_AND_DOUBLE(iguana,dpow,symbol,dest,pubkey,freq)
     if ( dest == 0 || dest[0] == 0 )
     {
         if ( strcmp(symbol,"KMD") == 0 )
-            dest = "BTC";
+            dest = "LTC";
         else dest = "KMD";
     }
     //if ( myinfo->numdpows == 1 )
     //    komodo_assetcoins(-1);
     if ( iguana_coinfind(symbol) == 0 )
         return(clonestr("{\"error\":\"cant dPoW an inactive coin\"}"));
-    if ( strcmp(symbol,"KMD") == 0 && iguana_coinfind("BTC") == 0 )
-        return(clonestr("{\"error\":\"cant dPoW KMD without BTC\"}"));
+    if ( strcmp(symbol,"KMD") == 0 && iguana_coinfind("LTC") == 0 )
+        return(clonestr("{\"error\":\"cant dPoW KMD without LTC\"}"));
     else if ( iguana_coinfind(dest) == 0 )
         return(clonestr("{\"error\":\"cant dPoW without KMD (dest)\"}"));
     if ( myinfo->numdpows > 0 )
@@ -367,7 +367,7 @@ THREE_STRINGS_AND_DOUBLE(iguana,dpow,symbol,dest,pubkey,freq)
     strcpy(dp->symbol,symbol);
     if ( strcmp(dp->symbol,"KMD") == 0 )
     {
-        strcpy(dp->dest,"BTC");
+        strcpy(dp->dest,"LTC");
         dp->srcconfirms = DPOW_KOMODOCONFIRMS;
     }
     else
@@ -377,9 +377,9 @@ THREE_STRINGS_AND_DOUBLE(iguana,dpow,symbol,dest,pubkey,freq)
     }
     if ( dp->srcconfirms > DPOW_FIFOSIZE )
         dp->srcconfirms = DPOW_FIFOSIZE;
-    if ( strcmp("BTC",dp->dest) == 0 )
+    if ( strcmp("LTC",dp->dest) == 0 )
     {
-        dp->freq = 20;
+        dp->freq = 10;
         dp->minsigs = Notaries_BTCminsigs; //DPOW_MINSIGS;
     }
     else
@@ -814,8 +814,11 @@ ZERO_ARGS(dpow,notarychains)
     return(jprint(array,1));
 }
 
+// FIXME Alright, unsure if anyone still uses this
+// safest option may be to remove it and see if anyone complains
 STRING_AND_INT(dpow,fundnotaries,symbol,numblocks)
 {
+    return(clonestr("{\"error\":\"Deprecated. Can be reenabled if needed. see Alright\"}"));
     int32_t komodo_notaries(char *symbol,uint8_t pubkeys[64][33],int32_t height);
     uint8_t pubkeys[64][33]; cJSON *infojson; char coinaddr[64],cmd[1024]; uint64_t signedmask; int32_t i,j,n,sendflag=0,current=0,height; FILE *fp; double vals[64],sum,val = 0.01;
     if ( (coin= iguana_coinfind("KMD")) == 0 )
