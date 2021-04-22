@@ -60,6 +60,7 @@ create `~/.litecoin/litecoin.conf` with:
 ```
 rpcuser=<secure username>
 rpcpassword=<secure password>
+rpcport=9332
 txindex=1
 ```
 ```
