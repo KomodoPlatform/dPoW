@@ -44,6 +44,7 @@ cd dPoW
 ```
 
 Recreate pubkey.txt in komodo/src and dPoW/iguana if using fresh clones
+
 Create `wp_7776` according to https://docs.komodoplatform.com/notary/setup-Komodo-Notary-Node.html#create-wp-7776 
 
 #### (4) Stop iguana, komodod and bitcoind
