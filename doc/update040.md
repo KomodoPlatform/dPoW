@@ -33,7 +33,7 @@ cd dPoW
 
 (4) Split LTC UTXOs
 
-(5) Start komodod with arg `-notary=“~/.litecoin/litecoin.conf”`
+(5) Start komodod with arg `-notary="~/.litecoin/litecoin.conf"`
 
 (6) Restart iguana with `./m_notary_LTC`
 
