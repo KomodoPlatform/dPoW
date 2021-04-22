@@ -10,6 +10,20 @@ cd litecoin
 
 build LTC daemon according to https://github.com/litecoin-project/litecoin/blob/0.16/doc/build-unix.md
 
+# create ~/.litecoin and litecoin.conf 
+```
+mkdir ~/.litecoin
+```
+create `~/.litecoin/litecoin.conf` with:
+```
+rpcuser=<secure username>
+rpcpassword=<secure password>
+txindex=1
+```
+```
+chmod 600 ~/.litecoin/litecoin.conf
+```
+
 Start and sync LTC daemon
 
 (2) Rebuild Komodod based on https://github.com/KomodoPlatform/komodo/tree/dev
@@ -28,6 +42,8 @@ build Komodo daemon according to https://github.com/KomodoPlatform/komodo/tree/d
 git clone https://github.com/KomodoPlatform/dPoW --branch LTC-dev --single-branch
 cd dPoW
 ```
+
+Recreate pubkey.txt in komodo/src and dPoW/iguana if using fresh clones
 
 (3) Stop iguana, komodod and bitcoind
 
