@@ -7,7 +7,7 @@ coins/kmd_7776
 ./wp_7776
 
 # external coins.
-coins/btc_7776
+coins/ltc_7776
 
 # Loop through assetchains.json and build the path to the approptiate coins file and run it.
 ./listassetchains | while read chain; do
