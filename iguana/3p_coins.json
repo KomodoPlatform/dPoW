@@ -258,7 +258,7 @@
     "poll": 10,
     "active": 1,
     "maxpeers": 128,
-    "newcoin": "SFUSD",
+    "newcoin": "SMARTUSD",
     "name": "SMARTUSD",
     "hasheaders": 1,
     "useaddmultisig": 0,
