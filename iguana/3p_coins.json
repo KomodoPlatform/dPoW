@@ -247,7 +247,7 @@
   },
   {
     "txfee": 0.0001,
-    "conf": "powerblockcoin.conf",
+    "conf": "smartusd.conf",
     "path": "",
     "startpend": 68,
     "endpend": 68,
@@ -258,34 +258,34 @@
     "poll": 10,
     "active": 1,
     "maxpeers": 128,
-    "newcoin": "PBC",
-    "name": "Powerblockcoin",
+    "newcoin": "SFUSD",
+    "name": "SMARTUSD",
     "hasheaders": 1,
     "useaddmultisig": 0,
     "netmagic": "ca3330da",
     "p2p": 47777,
     "rpc": 47776,
-    "pubval": 60,
+    "pubval": 63,
     "p2shval": 85,
     "wifval": 188,
     "txfee_satoshis": "10000",
     "minoutput": 10000,
     "minconfirms": 2,
-    "genesishash": "00000000a9eab671c3f2753a9d21e449b3c12a1fd62b3a9c388e580617e5a363",
+    "genesishash": "00000000c36f0406d516605e0a2d2702085d565ec0c1283883002127dfcd52b7",
     "genesis": {
       "version": 1,
-      "timestamp": 1595448103,
+      "timestamp": 1615075200,
       "nBits": "1d00ffff",
-      "nonce": 1689053639,
-      "merkle_root": "684e583fc7780c5225fe4b968c29e536b005228e557c622a8d8940585401740b"
+      "nonce": 2899793692,
+      "merkle_root": "7aec6215dcca9a09df51d0bab4cf9f43f52f0fbe680f26aeaa3dd45b188ef745"
     },
     "alertpubkey": "0x0",
     "protover": 110015,
     "isPoS": 0,
     "git": {
-      "repo": "https://github.com/pbcllc/powerblockcoin-core",
+      "repo": "https://github.com/pbcllc/sfusd-core",
       "branch": "",
-      "commit": "51f456a",
+      "commit": "7c4f40b",
       "tag": ""
     }
   }

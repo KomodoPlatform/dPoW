@@ -1,3 +1,12 @@
+### 0.4.1
+
+- removes PBC (3P)
+- adds SFUSD (3P)
+
+### 0.4.0
+
+- transition from BTC to LTC
+
 ### 0.3.9
 
 - deletes the previously declared GLEEC coin and restarts it with new parameters on main node
