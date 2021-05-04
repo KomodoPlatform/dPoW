@@ -17,7 +17,7 @@ powerblockcoin-cli stop
 Optional: Delete the PBC data directory
 
 ```
-rm ~/.powerblockcoin/
+rm -rf ~/.powerblockcoin/
 ```
 
 ####  Clone and Build `sfusd-core` in your 3p node. Checkout to the commit `7c4f40b`
@@ -121,7 +121,8 @@ chmod 600 ~/.smartusd/smartusd.conf
 - Run the following command to start the daemon
 
 ```bash
-smartusdd &
+cd ~/sfusd-core/src
+./smartusdd &
 ```
 
 - monitor the sync process by tailing the debug.log file in another terminal window
@@ -144,7 +145,9 @@ Wait for the sync and rescan(if any) to finish
 
 ```bash
 source ~/komodo/src/pubkey.txt
-smartusdd -pubkey=$pubkey
+cd ~/sfusd-core/src
+./smartusd-cli stop
+./smartusdd -pubkey=$pubkey
 ```
 
 #### Step 8: Open p2p port, split coins
