@@ -128,7 +128,7 @@ case "$1" in
     coins/vrsc_7779
     coins/aya_7779
     coins/gleec_7779
-    coins/pbc_7779
+    coins/sfusd_7779
 
     sleep 30
 
@@ -138,7 +138,7 @@ case "$1" in
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"VRSC\",\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"AYA\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"GLEEC\",\"pubkey\":\"$pubkey\"}"
-    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"PBC\",\"pubkey\":\"$pubkey\"}"
+    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"SFUSD\",\"pubkey\":\"$pubkey\"}"
 
   ;;
 
