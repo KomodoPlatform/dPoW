@@ -105,7 +105,6 @@ daemon=1
 txindex=1
 rpcuser=user
 rpcpassword=password
-bind=127.0.0.1
 rpcbind=127.0.0.1
 rpcallowip=127.0.0.1
 ```
