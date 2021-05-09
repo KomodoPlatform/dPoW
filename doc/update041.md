@@ -2,7 +2,7 @@
 
 - Stop dPoW operation for the PBC chain and start dPoW for the SMARTUSD (also called SFUSD) chain.
 - Install and sync `SFUSD` on your 3P node. Clone repo https://github.com/pbcllc/sfusd-core and checkout to the commit `7c4f40b1759a5d0d67539462c255473c0a01b3c1`
-- Follow installation instructions as outlined in [sfusd-core/build-unix.md](https://github.com/pbcllc/sfusd-core/blob/master/doc/build-unix.md)
+- Follow installation instructions (below is a script to use) or as outlined in [sfusd-core/build-unix.md](https://github.com/pbcllc/sfusd-core/blob/master/doc/build-unix.md)
 - Sync SFUSD daemon 
 - Update iguana to 0.4.1 and restart dPoW operations on your 3P NN
 
