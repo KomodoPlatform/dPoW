@@ -256,13 +256,27 @@ To determine relative participation notary scoring, refer to the following:
 
 - KMD -> LTC Notarisation: 0.0325 
 - Smartchain -> KMD notarisation: 0.8698/(number of main server chains*, not including KMD/LTC)
-- 3rd Party chain -> KMD notarisation: 0.0977/(number of active 3rd party server chains*, not including KMD) 
+- 3rd Party chain -> KMD notarisation: 0.0977/(number of active 3rd party server chains*, not including KMD)
+- MM2 Seed Node -> 0.2 per hour uptime with correct version
 
 Notarisation counts to be determined from decoded notarisation transaction OP_RETURN data on KMD block chain.
 
 \* As listed in 
 - https://github.com/KomodoPlatform/dPoW/blob/master/README.md
 - https://github.com/KomodoPlatform/dPoW/blob/master/doc/scoring_epochs.json
+
+
+### Leveraging the Notary Node Network to decentralize MM2 seed nodes
+
+Komodo Platform's [AtomicDEX-API](https://github.com/KomodoPlatform/atomicDEX-API) is an open-source atomic-swap protocol for trading seamlessly between essentially any blockchain asset in existence. Seed nodes play an essential part in orderbook propagation and relaying information about peers within the network and the status of swaps in progress.
+
+With the start of the 5th Komodo Notary Node Season, operators will be encouraged to run a seed node on their third party (3P) server to further decentralize the network. This expands the current number of seed nodes from half a dozen to potentially over 60 nodes, distributed geographically across the planet, and maintained by a diverse group of respected people within the Komodo community with great expertise in KMD related technologies and the ability to rapidly deploy updates and assist each other with troubleshooting as required.
+
+Operators with the best metrics in terms of uptime and responsiveness to updates will also be rewarded with bonus points towards their Season 5 score, and the chance to win automatic re-election.
+
+For each hour of uptime with the correct version, Notary Nodes will receive 0.2 points to their season score.
+
+Simple scripts to assist operators in setting up their seed node and keeping it up to date whenever update announcements are broadcast will be provided prior to the start of Season 5.
 
 
 ### Developer Nodes:
