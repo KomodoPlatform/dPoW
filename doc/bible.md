@@ -1,24 +1,23 @@
-# Notary Node Bible v1
+# Notary Node Bible v1.1
 
 
-
-<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. The NN bible comes into effect by the start of NN Season 5, which will be on June 14th, 2021. Election related rules apply for the Season 5 elections, with immediate effect. Please read carefully. 
+<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. This iteration of the NN bible comes into effect at the start of NN Season 6 (June 14th 2021). Please read carefully. 
 
 #
 
-### Table of content
+### Table of Contents
 
 1. [What is a Notary Node?](https://github.com/KomodoPlatform/dPoW/new/dev/doc#what-is-a-notary-node)
 2. [How to become a Notary Node operator](#how-to-become-a-notary-node-operator)
 3. [The Notary Node election process](#the-notary-node-election-process)
-4. [Responsibilities of a NN](#responsibilities-rights-and-duties-of-a-nn)
+4. [Responsibilities of a NN](#responsibilities-rights-and-duties-of-a-notary-node-operator)
 5. [Notary Node regions](#notary-node-regions)
-6. [Guideline, general infos and policies](#guideline-general-infos-and-policies)
+6. [Guidelines, general information and policies](#guidelines-general-information-and-policies)
 7. [Code of Conduct](#code-of-conduct)
 
 #
 
-<br>
+
 
 ## What is a Notary Node?
 
@@ -36,30 +35,47 @@ Komodo’s Notary Nodes take block hashes like the one above and write them onto
  
 Notary nodes don’t actually need to transfer funds when they execute a notarization transaction. Instead, they execute an “empty transaction,” meaning that they pay the blockchain’s transaction fee but don’t actually move any coins. This fee is paid for the privilege of storing data on that blockchain’s ledger.
  
-Komodo’s globally distributed network of 64 Notary Nodes carry out these cross-chain notarizations every ten minutes, every hour of every day, 365 days a year. This process is essential for Komodo’s delayed proof of work security mechanism, Komodo’s Blockchain Security Service, and Komodo’s Multi-Chain Syncing scalability features.
+Komodo’s globally distributed network of 64 Notary Nodes carry out these cross-chain  notarizations approximately every ten minutes, every hour of every day, 365 days a year. This process is essential for Komodo’s delayed proof of work security mechanism, Komodo’s Blockchain Security Service, and Komodo’s Multi-Chain Syncing scalability features.
  
-In exchange for performing these duties, Notary Node Operators are rewarded with the ability to mine one block with an easy difficulty level roughly every 90 minutes. This allows each Notary Node Operator to easily mine 16 or 17 blocks per day. As KMD block rewards are 3 KMD per block, this adds up to about 50 KMD per day, or around 1500 KMD per month.
+In exchange for performing these duties, Notary Node Operators are rewarded with the ability to mine one block with an easy difficulty level roughly every 90 minutes. This allows each Notary Node to mine around 16 or 17 blocks per day on average. As KMD block rewards are 3 KMD per block, this adds up to about 50 KMD per day, or around 1500 KMD per month.
  
 Finally, it’s important to emphasize some of the things that Notary Nodes cannot do.
  
-Notary Nodes are not masternodes.
-Notary Nodes cannot withhold or censor transactions or blocks for any blockchain.
-Notary Nodes cannot mine blocks with an easy difficulty on any chain except the Komodo blockchain.
-Notary Nodes cannot solely determine the validity of a block; an entire decentralized network must come to a consensus before any transactions or blocks are verified.
+- Notary Nodes are not masternodes. The mining rewards offered in exchange for performing Notary Node duties should not be viewed as passive income. Operators should be on standby at all times to swiftly react to update announcements to maintain the security of the network, and failing to do so may result being disqualified from running in future elections.
+- Notary Nodes cannot withhold or censor transactions or blocks for any blockchain.
+- Notary Nodes cannot mine blocks with an easy difficulty on any chain except the Komodo blockchain.
+- Notary Nodes cannot solely determine the validity of a block; an entire decentralized network must come to a consensus before any transactions or blocks are verified.
+
  
-Notary Nodes simply take publicly-available data that has been established by a blockchain’s network (a block hash) and save it onto the ledger of a different blockchain. This is accomplished by executing an empty transaction, which any ordinary user can do.  
+Notary Nodes simply take publicly-available data that has been established by a blockchain’s network (a block hash) and save it onto the ledger of a different blockchain. This is accomplished by executing an empty transaction, which any ordinary user can do, though Notary Nodes dPoW’s “Iguana” software to coordinate these transactions.
+
+Where consensus is reached by 13 of the 64 Notary Nodes, this results in a transaction such as https://litecoinblockexplorer.net/tx/1bf1a710f6f9a37a91b25a4200efca701506d5133f273fe3926dae317f41a75c with 13 notary node addresses as inputs to the transaction, and sent to a notarisation address as output, along with the OP_RETURN which can be viewed as an output in the transaction’s raw data. 
+
+In the raw data of the transaction above, we can see the OP_RETURN string as being `82546a4e6860681046b972e4d64ee2314f9280bd2192bc059e3c57c7f8326f0dd06f24004b4d4400`
+
+This can in turn be [decoded](http://stats.kmd.io/tools/decode_opret/?OP_RETURN=82546a4e6860681046b972e4d64ee2314f9280bd2192bc059e3c57c7f8326f0dd06f24004b4d4400), resulting in the following information:
+
+Notarised Chain: KMD
+
+Notarised Block: 2387920
+
+Notarised Blockhash: 0d6f32f8c7573c9e05bc9221bd80924f31e24ed6e472b946106860684e6a5482
  
+Reviewing the Notarised Blockhash on the Notarised Chain’s explorer yields - https://komodod.com/b/0d6f32f8c7573c9e05bc9221bd80924f31e24ed6e472b946106860684e6a5482
+
 While the notarization process is critical to the security, blockchain interoperability, and scalability of the Komodo ecosystem, Notary Nodes don’t have any special powers over any blockchain. It is a fully decentralized mechanism for cross-chain notarizations.
 
 <br>
 
-## How to become a Notary Node operator?
+
+
+## How to become a Notary Node Operator?
 
 Anyone with the required hardware and technical knowledge can become a Notary Node Operator. Please note that dPoW currently only operates on Linux, so an advanced understanding of Linux is implicitly required.
  
 <b>The hardware requirements for the main NN server are as follows:</b>
  
-- OS: Ubuntu 18.x or Debian 10.x is recommended.
+- OS: Ubuntu 18.x or Debian 10.x is recommended.  
 - CPU: A High-Performance CPU (e.g. Xeon, i7/i9, Ryzen, EPYC, etc.)
 - RAM: 64 GB or more
 - Disk: 1 TB SSD or greater
@@ -73,6 +89,7 @@ Anyone with the required hardware and technical knowledge can become a Notary No
 - Disk: 500 GB SSD or greater
 - Bandwidth: 100 Mbps or higher
 
+The server should be bare metal, housed in a Tier 3 datacenter or better. Cloud instances or home connections are not sufficient to ensure bandwith and uptime.
 
 Apart from these hardware specifications and the technical know-how, there are no requirements to become a Notary Node Operator. 
  
@@ -82,24 +99,34 @@ For more information about becoming a Notary Node Operator, please see this guid
  
 To gain exposure and inform the Komodo community about one’s candidacy, as well as the motivations for that candidacy, it’s essential to submit a written proposal to the Komodo community. 
  
-<b>If you plan to run in the upcoming election, you have to submit your proposal to the Notary Node repository on [Github](https://github.com/KomodoPlatform/NotaryNodes/tree/master/season5/candidates) before April 17th, 2021. </b>
+<b>If you plan to run in an upcoming election, you need to submit your proposal to the Notary Node repository on [Github](https://github.com/KomodoPlatform/NotaryNodes/tree/master/season5/candidates) prior to the proposal deadline for the next election. </b>
  
-At a minimum, every candidate must announce the region in which they are running and post the address to which KMD holders may send their VOTE tokens. 
- 
-In general, the Komodo community elects Notary Node Operators who are committed to the development of the ecosystem. If your primary motivation is personal financial gain, you may find it difficult to garner support, even if you have proven your technical skills on Komodo’s test net.
+At a minimum, every candidate Proposal must include:
+- The region in which they are running and post the address to which KMD holders may send VOTE tokens to support their candidacy.
+- Contact details (such as Discord, Keybase, Telegram and/or  Email) for ensuring open communications about what to do after the election.
+- If running as part of a team or on behalf of a project / company, additional details about the project / company and other team members.
+Participation in the pre-election Testnet is highly recommended for any candidates who have not previously run a Notary Node.
+
+Generally the Komodo community elects Notary Node Operators who are committed to the development of the ecosystem, as demonstrated by making contributions to code or community projects. If your primary motivation is personal financial gain, you may find it difficult to garner support, even if you have proven your technical skills during the pre-election Testnet.
 
 Conversely, even if you are an ardent supporter of the Komodo ecosystem, you may fail to win a seat if your technical skills are unproven. A balance of both attributes — dedication to the Komodo ecosystem and strong technical abilities — is the ideal combination.
 
-For more information on joining the preseason testnet check out the [testnet README](https://github.com/KomodoPlatform/dPoW/blob/2021-testnet/README.md)
+For more information about the pre-election Testnet check out the [testnet README](https://github.com/KomodoPlatform/dPoW/blob/2021-testnet/README.md)
 <br>
 
-## The Notary Node election process
- 
-There are four Notary Node regions: Europe (EU), Asia-Russia (AR), North America (NA), and the Southern Hemisphere (SH). Each region contains at least 13 notary nodes, boosting the physical distribution and security of Komodo’s Notary Node network. In 2021, each region will have an even 14 Notary Nodes.
- 
-Those running for election must declare in which region they intend to operate their Notary Node. If anyone is discovered to be running a node in a region other than the one for which they were elected, this operator will be immediately disqualified and the NN spot gets assigned to the next candidate in the election result list. This keeps things fair, as different geographic locations offer Internet connections at varying costs and speeds.
 
-New candidates are eligible to submit a candidacy for a single notary node in any of the four regions in their first election. Participation in the pre-season testnet is <b>highly recommended</b> to learn the basics and demonstrate capability.
+
+## The Notary Node Election Process
+ 
+There are four Notary Node regions: Europe (EU), Asia-Russia (AR), North America (NA), and the Southern Hemisphere (SH). Each region contains 14 notary nodes, boosting the physical distribution and security of Komodo’s Notary Node network. 
+
+11 of the nodes in each region are open for election candidates to win, with 3 reserved for the prior season’s top performing nodes who are automatically re-elected.
+
+An additional 8 nodes are reserved as “Dev nodes”, and assigned by the Komodo Team to proven operators for use in various tasks relating to testing and development.
+ 
+Winning Notary Node operators must run their node in the region declared in their proposal, and face disqualification if discovered to be non compliant, with their NN spot being assigned to the next candidate in line in the election results. This keeps things fair, as different geographic locations offer Internet connections at varying costs and speeds.
+
+New candidates are eligible to submit a candidacy for a single notary node in any of the four regions in their first election. Participation in the pre-season Testnet is <b>highly recommended</b> to learn the basics and demonstrate capability.
 
 Notary nodes achieving a regional top 3 ranking at the ranking snapshot date are automatically re-elected to operate that node in the next season. 
 
@@ -111,66 +138,75 @@ Notary nodes who are not in their regional top 5 at the end of the season can re
 
 The Komodo Notary Node Elections are stake weighted, meaning that those who hold more KMD have more voting power in the election. The process works as follows.
  
-A special voting token — let’s call it VOTE2021 — will be airdropped to KMD holders at a 1:1 ratio. If you have 1000 KMD, you will receive 1000 VOTE2021 tokens.
+A special voting token — let’s call it VOTE — will be airdropped to KMD holders at a 1:1 ratio. If you have 1000 KMD, you will receive 1000 VOTE tokens.
 
-A snapshot for the airdrop will be taken at the same time as the Notary Node ranking snapshot on April 2nd, 2021. Auto-elected Notary Nodes (top 3 in each region) will be announced and VOTE2021 tokens will be airdroped on April 9th, 2021.
+The current supply of KMD is around 125 Million, so roughly 125 Million VOTE tokens will be airdropped.
+ 
+It’s important to note that you must hold you private keys in order to receive your VOTE tokens. If you hold your KMD on a centralized exchange, then you do not hold your private keys and you will not receive any VOTE tokens.
 
-The current supply of KMD is around 125 Million, so roughly 125 Million VOTE2021 tokens will be airdropped.
+CEX (wallets) are excluded from voting and users are advised to vote only from wallets whose private keys they fully control. VOTE token transactions from CEX wallets are not counted.
  
-It’s important to note that you must hold you private keys in order to receive your VOTE2021 tokens. If you hold your KMD on a centralized exchange, then you do not hold your private keys and you will not receive any VOTE2021 tokens.
+Once you’ve received your VOTE tokens, you may cast your ballot by sending them to the candidate(s) of your choice. All candidates will publicly post an address and the community votes by sending the tokens to the candidate(s) they wish to see elected.
  
-Once you’ve received your VOTE2021 tokens, you may cast your ballot by sending them to the candidate(s) of your choice. All candidates will publicly post an address and the community votes by sending the tokens to the candidate(s) they wish to see elected.
- 
-The only rule for voting is that any redistribution or sale of VOTE2021 tokens is strictly prohibited. Anyone caught selling VOTE2021 tokens will be disqualified from participating in the election.
+The only rule for voting is that any redistribution or sale of VOTE tokens is strictly prohibited. Anyone caught selling VOTE tokens will be disqualified from participating in the election.
 
 It is also strictly prohibited to offer NN revenue shares (mining revenue share) to voters.
-
-CEX (wallets) are excluded from voting and users are advised to vote only from wallets whose private keys they fully control. VOTE2021 token transactions from CEX wallets are not counted.
  
-Apart from that, community members may vote for any candidates in any region. VOTE2021 tokens can be sent in any amount so there is no requirement to cast votes in any set percentages for any number of candidates in any region.
+Apart from that, community members may vote for any candidates in any region. VOTE tokens can be sent in any amount so there is no requirement to cast votes in any set percentages for any number of candidates in any region.
  
-For instance, if you want to send 100% of your VOTE2021 tokens to a single candidate, you may do so. If you want to send 20% of your votes to five different candidates in a single region, you may do that, too. If you want to send an equal 25% of your votes to one candidate in each of the four regions, that’s also an option. There are no rules dictating how you cast your ballot.
- 
-Voting will be open for around two weeks, until April 23rd, 2021. It is highly recommended that each community member read through the proposals of all the candidates before casting their vote. The proposals contain important information about how each candidate intends to help the Komodo ecosystem.
- 
-All of the candidates' proposals, along with other useful information, will be posted on this new Komodo Notary Node Election GitHub repo.
-
-<b>The top 12 NNs who will be auto-elected will be announced on April 9th. 44 Notary Node spots are available in the 2021 election. Starting with season 4 the automatic re-elections were reduced to 3 spots per region.
-
-The elections start on April 9th with the airdrop of the VOTE2021 tokens and end on April 23rd, 2021. The Komodo Core update is planned for April 30th, 2021 and the hardfork activation for June 14th, 2021. </b>
+For instance, if you want to send 100% of your VOTE tokens to a single candidate, you may do so. If you want to send 20% of your votes to five different candidates in a single region, you may do that, too. If you want to send an equal 25% of your votes to one candidate in each of the four regions, that’s also an option. There are no rules dictating how you cast your ballot.
 
 
-<br>
 
-## Responsibilities (“rights and duties”) of a NN
+# Timeline
 
-Operating a Notary Node comes with various responsibilities but also grants you certain privileges for securing the Komodo network with dPoW.
+Each year around the start of April, a `Ranking Snapshot` will be taken and in the week following, Notary Node scores are validated before an official announcement is made to name the auto-elected nodes, and those eligible for expanding into additional spots in the coming election. 
+
+Around the same time, a snapshot of the KMD chain is done, to determine the allocation of VOTE tokens for each address, and then airdropped to holders after the previous season’s winners are announced. 
+
+While the above is underway, candidate proposals can be submitted via a Pull Request (PR) to the Notary Nodes repository on Github (some modifications may be required based on Ranking announcement results). 
+
+The voting period typically runs for around two weeks, with the time and date of the ballots closing being announced in advance. The election officially ends with the first notarised block confirmed after this date / time, with all votes within this block and those prior included in the count.
+
+The voting data is then validated, with any votes originating from a CEX wallet or being cast to a disqualified candidate being excluded, before an official announcement of winners is released.
+
+It is highly recommended that each community member read through the proposals of all the candidates before casting their vote. The proposals contain important information about how each candidate intends to help the Komodo ecosystem. All candidates' proposals, along with other useful dates and information, will be posted within the Komodo Notary Node Election GitHub repository.
+
+Exact dates and times for each of the events above will be posted within this document and announced before the start of April.
+
+## Responsibilities, Rights and Duties of a Notary Node Operator
+
+Operating a Notary Node comes with various responsibilities but also grants you certain privileges for securing the Komodo network with dPoW. Operators who fail to adequately perform the required duties will face disqualification and loss of their node. Notary Nodes are responsible for  protecting over a billion (fiat) dollars in assets, and must remain vigilant and respond quickly to any update announcements posted in Discord and the dPoW repository, along with ensuring that their node is secure and performing as expected at all times.
+
 
 
 ### NN Duties:
 
 - <b>i.</b> Keep your Notary Node up to date (daily maintenance, update and upgrade check) and secured (according to the industry's best practices).
-- <b>ii.</b> Notarize all active dPoW assets and participating in all expected notarization rounds without any interruptions (this will be checked daily). 
-- <b>iii.</b> Mine Komodo blocks with your NN pubkey.
-- <b>iv.</b> Subscribe to https://github.com/KomodoPlatform/dpow and react in a timely manner (<24h) to notifications and update announcements (do not run for a NN position unless you can guarantee daily maintenance).
-- <b>v.</b> Help other NN Operators in need and keep an eye on your geo-regional statistics. The most reliable regions will receive additional benefits and bounties. 
+- <b>ii.</b> Notarize all active dPoW assets and participate in all expected notarization rounds without any interruptions (this will be checked daily). Some allowances are made for  brief downtimes to allow required maintainence. 
+- <b>iii.</b> Mine Komodo blocks with your NN pubkey (minimum 15 blocks a day on average).
+- <b>iv.</b> Subscribe to [the dPoW repository](https://github.com/KomodoPlatform/dpow) and react in a timely manner (<24h) to notifications and update announcements (do not run for a NN position unless you can guarantee daily maintenance).
+- <b>v.</b> Help other NN Operators in need and keep an eye on your geo-regional statistics. The most reliable regions may receive additional benefits and bounties. 
 - <b>vi.</b> Report any violation that you notice ASAP to the Komodo team through security@komodoplatform.com.
-- <b>vii.</b> Participate in discussions and publish your improvement proposals on https://github.com/KomodoPlatform/dpow. (exempt from enforcement)
+- <b>vii.</b> Participate in discussions and publish your improvement proposals on [the dPoW repository](https://github.com/KomodoPlatform/dpow). (exempt from enforcement)
 - <b>viii.</b> Physically separate your main and 3rd party NN operations by using different servers.
 - <b>ix.</b> Use ONLY the original dPoW and Komodo Core codebases. Any core or protocol modification, non-public optimization, or similar code changes, will lead to immediate loss of the spot and disqualification.
 - <b>x.</b> Operate your NN in the assigned region. Using hosting providers with DCs in other regions and obfuscating this by using IPs from other regions will lead to immediate disqualification. 
 - <b>xi.</b> Selling a NN spot is prohibited. This rule applies to all forms of disposition (giveaway, renting,...).
 - <b>xii.</b> Notarization funds, deposited on your NN keys by the Komodo team, are reserved for dPoW operations - it is strictly prohibited to transfer these funds or to use these for anything other than notarizations. At the end of the NN season or if you lose your spot, all NN funds must be returned to the Komodo team. Notaries are responsible for ensuring sufficient KMD is sent from main node to third party node for use in notarisation (funding for other chains will be provided by the Komodo Team).
+- <b>xiii.</b> Maintain respectful and civil communications with fellow Notary Node operators, and members of the Komodo Community.
+
+
 
 ### NN Rights:
 
-- <b>i.</b> Mining KMD blocks with a minimum diff (= guaranteed mining revenue).
+- <b>i.</b> Mining KMD blocks with a minimum diff (guaranteed easy mining revenue).
 - <b>ii.</b> Making dPoW and NN improvement proposals and requesting votes/polls for these proposals.
-- <b>iii.</b> Having the opportunity to get automatically re-elected upon reaching a specific ranking.
+- <b>iii.</b> Having the opportunity to achieve automatic re-election upon reaching a Top 3 regional ranking, or the chance at expansion into additional nodes if ranked 4th or 5th.
 - <b>iv.</b> Accessing the private NN Discord community chat, as long as a mature and respectful basis of discussion is given. 
 - <b>v.</b> Having the chance to become the NN guru for your region if you are ranked #1 NN in that region for a minimum of 1 full month. 
 
-<br>
+
 
 ## Notary Node regions
 
@@ -181,60 +217,70 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 
 ![NN Regions](https://github.com/komodoplatform/dpow/blob/master/doc/img/NN_regions.jpeg)
 
-<br>
-
-## Guideline, general infos and policies 
 
 
-### Important dates for Season 5:
+## Guidelines, General Information and Policies 
 
-- KMD snapshot: April 2nd 2021, 12pm UTC (for both VOTE2021 allocations and Regional Top 3 Notary Node scoring)
-- Vote2021 airdrop: April 9th 2021, 12pm UTC
-- Season 5 Election start: April 9nd 2021, 12pm UTC
-- Regional Top 3 Autoelection announcement: April 9th 2021
-- Proposal deadline: April 17th 2021, 12pm UTC
-- Season 5 Election end: April 23rd 2021, 12pm UTC
-- Public Komodo update announcement: April 30th, 2021
-- dPoW season 5 start: June 14th, 2021
+### Important Dates for Season 5:
 
-### Komodo Core and AC hardfork activation:
-
-- Komodo core hardfork activation: KMD block `2.437.000` (Monday, June 14th, 2021)
+- Komodo core hardfork activation: KMD block `2,437,300` (Monday, June 14th, 2021)
 - SmartChain hardfork activation: Timestamp `1623682800` (Monday, June 14th, 2021 03:00:00 PM UTC)
 
-### The Komodo Mining ecosystem:
+### Important Dates for Season 6:
 
-The Komodo mining ecosystem is exceptional in that a large part of the mining revenue (~75%) is reserved for the Notary Nodes, as they provide the network with the dPoW service and basically maintain the BTC security level. Thus the regular PoW miners on the Komodo network are eligible for approximately 25% of the mining revenue. 
+- KMD snapshot: TBA (for both VOTE2021 allocations and Regional Top 3 Notary Node scoring)
+- Vote2022 airdrop: TBA
+- Season 6 Election start: TBA
+- Regional Top 3 Autoelection announcement: TBA
+- Proposal deadline: TBA
+- Season 6 Election end: TBA
+- Public Komodo Season 6 update announcement: TBA
+- dPoW season 6 start: TBA
+- Komodo core hardfork activation: TBA
+- SmartChain hardfork activation: TBA
 
-### Automatic reelection:
+
+### The Komodo Mining Ecosystem:
+
+The Komodo mining ecosystem is exceptional in that a large part of the mining revenue (~75%) is reserved for the Notary Nodes, as they provide the network with the dPoW service and basically maintain the security of the network and all dPoW notarised chains. Thus the regular PoW miners on the Komodo network are eligible for approximately 25% of the mining revenue. 
+
+
+### Automatic Re-election:
 
 The top 12 NNs get automatically re-elected. Only top 3 spots per region are eligible for the auto-reelection. The other 44 public NN spots are claimable through the annual NN elections.
 
-### Notary scoring:
+
+### Notary Scoring:
 
 To determine relative participation notary scoring, refer to the following:
 
-- KMD -> BTC Notarisation: 0.0325 
-- Smartchain -> KMD notarisation: 0.8698/(number of main server chains*, not including KMD/BTC)
+- KMD -> LTC Notarisation: 0.0325 
+- Smartchain -> KMD notarisation: 0.8698/(number of main server chains*, not including KMD/LTC)
 - 3rd Party chain -> KMD notarisation: 0.0977/(number of active 3rd party server chains*, not including KMD) 
 
 Notarisation counts to be determined from decoded notarisation transaction OP_RETURN data on KMD block chain.
 
-\* *As listed in https://github.com/KomodoPlatform/dPoW/blob/master/README.md*
+\* As listed in 
+- https://github.com/KomodoPlatform/dPoW/blob/master/README.md
+- https://github.com/KomodoPlatform/dPoW/blob/master/doc/scoring_epochs.json
+
 
 ### Developer Nodes:
 
 Eight Nodes are reserved for the Komodo team for mining and experimental, debugging, or research operations, which include the usage of custom and experimental core code.
 
-### Hunting unclaimed rewards:
 
-The consensus rules allow every network participant to hunt the so-called “unclaimed reward blocks” which do contain additional mining-rewards.
+### Hunting Unclaimed Rewards:
 
-### Mine Komodo blocks with your NN pubkey:
+The consensus rules allow every network participant to hunt the so-called “unclaimed reward blocks” which contain additional mining-rewards.
+
+
+### Mining Komodo Blocks with Your NN Pubkey:
 
 In the event a NN opts to hunt, as above, that NN must find some way to contribute block production to the network similar to the result of "traditional NN mining". This contribution shall be no less than 75% of the blocks produced by the region's leading block producing NN and in any event not below 15 blocks per day on average over the course of a calendar month. The contribution may be through means of only hunting part time, employing "external" hashrate full-time, or some combination of the two. This contribution shall <b>not</b> include mining several blocks in a short time with "external" hashrate and then abandoning the chain for a time, such an action does not produce a "similar result".
 
-### NN gurus:
+
+### NN Gurus:
 
 During the removal of the “NN master” role, the decision was made to create a new “NN guru” role, which does not have any authoritative power.
 
@@ -242,37 +288,39 @@ The NN gurus are the top NN operators of each region (ranked #1). These NN opera
 
 NN gurus have additional duties and rights. They are “responsible” for their geo-region and should do their best to motivate, support, and push “weak” NN Operators to boost their region’s notarization statistics. NN gurus also support the Komodo team during the elections, initial setups, etc. In exchange the Komodo team will assign these NN gurus additional bounties and bonuses.
 
-### NN judge:
 
-A Komodo team-member that is not involved in the NN/dpow operations nor in the NN community gets the role of a NN judge assigned which will make a final decisions ref. rule violation and ban. The NN judge will be announced prior to the start of season 5. 
+### NN Arbiter:
 
-### NN tribunal:
+A Komodo team-member that is not involved in the NN/dpow operations nor in the NN community will server in the role of a NN Arbiter assigned which will make a final decisions with reference to rule violations, disqualifications and bans on the basis and merits of evidence submitted by NN Gurus and the NN Tribunal. The NN Arbiter will be appointed on an as-needed basis.
 
-Two additional team-members form together with the NN judge a NN tribunal which ensures an objective decision finding process in case of unclear situations and controversial debates related to a rule violation. The NN tribunal gets announced prior to the start of season 5.
+### NN Tribunal:
 
-#### The current NN gurus are:
+Two Komodo team-members form together alongside two (non-team) NN Gurus to ensure an objective decision finding process in case of unclear situations and controversial debates related to a rule violation. The NN tribunal will be formed on an as-needed basis.
+
+#### The current NN Gurus are:
 
 CHMEX (@CHMEX#0686 on discord): EU region <br>
 Shossain (@SHossain#0007 on discord): AR and NA region <br>
 Strob (@Strob#3417): SH region <br>
 
-### Rules and their enforcement - historic information for transparency:
+### Rules and Enforcement - historic information for transparency:
 
 In the previous Notary Node seasons, there were no protocolled rules or policies, which lead to certain confusion in the sense of the Latin phrase “nullum crimen, nulla poena sine lege,” which means someone cannot be punished for something that is not prohibited by law. 
 
-We reconsidered this part and decided to author and publish these transparent guidelines which we call the “Notary Node Bible”. The Komodo team also decided that a violation of any of the above [rules](#responsibilities-rights-and-duties-of-a-nn) will lead to immediate loss of the NN spot. In the event that a single individual has a second violation in the following season, it would lead to disqualification from all future elections and seasons. 
+We reconsidered this part and decided to author and publish these transparent guidelines which we call the “Notary Node Bible”. The Komodo team also decided that a violation of any of the above [rules](#responsibilities-rights-and-duties-of-a-nn) may result in immediate loss of the NN spot, disqualification from election or other sanctions as deemed appropriate by the NN Arbiter. In the event that a single individual has additional violations in subsequent seasons, it could lead to disqualification from all future elections and seasons. 
 
-A "grace period" at the beginning of Season 4 will apply until September 1st 2020, to allow for adjustment to rules based on the framework established in this document, and to give new notaries time to make mistakes, learn and tweak their servers. During this time, minor infractions may lead to "probationary status" with Gurus and the NN community assisting non-conforming operators achieve stable and productive participation. Major infractions (i.e. grossly negligent or malicious activity) will be suject to harsher penalty up to and including spot-loss / disqualification.
+A "grace period" at the beginning of each season will apply until September 1st 2020 for first time notaries, to allow for adjustment to rules based on the framework established in this document, and to give new notaries time to make mistakes, learn and tweak their servers. During this time, minor infractions may lead to "probationary status" with Gurus and the NN community assisting non-conforming operators achieve stable and productive participation. Major infractions (i.e. grossly negligent or malicious activity) will be subject to harsher penalty up to and including spot-loss / disqualification.
 
 In case of such a spot-loss or disqualification, the next candidate from the election results will be eligible for the spot and the pubkey would be replaced with the next scheduled hardfork update. 
 
-### NN season
+### NN Season
 
 A NN season may not equal 12 months - it will cover mininmum 75%, 3 quarters (9 months) of a year but could also last longer than a year under specific circumstances. 
 
-### Notary Node setup:
+### Notary Node Setup:
 
-You find all essential infos and setup instructions on https://github.com/KomodoPlatform/dPoW
+You find all essential infos and setup instructions on [the dPoW repository](https://github.com/KomodoPlatform/dpow)
+Operators are also encouraged to ask questions relating to setup and operation in Discord or via direct messaging with NN Gurus.
 
 #### Recommended min hardware setup for main NN: 
  
@@ -290,12 +338,13 @@ You find all essential infos and setup instructions on https://github.com/Komodo
 - Disk: 500 GB SSD or greater
 - Bandwidth: 100 Mbps or higher
 
-### Polls and voting:
+### Polls and Voting:
 
-Polls are executed on github in form of an issue ticket and voting takes place by posting a signed message with your selection. A poll stays up for 30 days. Use the NN 3P KMD key for the sig. 
+Polls are executed on Github in form of an issue ticket and voting takes place by posting a signed message with your selection. A poll will remain open for a minimum of 30 days before being subject to closing. The Third Party KMD key it to be used for the signing your vote.
 
+Poll outcomes will be ratified and enacted if a majority of signatures supports the poll, provided there is participation of > 43 nodes (67%)
 
-We reserve the right to amend this guideline (governing the participation in the dPoW operations) at any time. Modifications are transparently published on github. 
+The Komodo team reserves the right to amend this guideline (governing participation in the dPoW operations) at any time. Modifications are transparently published on Github. 
 
 <br>
 
@@ -312,8 +361,7 @@ Examples of unacceptable behavior by participants include:
 * Personal attacks
 * Trolling or insulting/derogatory comments
 * Public or private harassment
-* Publishing other's private information, such as physical or electronic
-  addresses, without explicit permission
+* Publishing other's private information, such as physical or electronic addresses, without explicit permission
 * Other unethical or unprofessional conduct
 
 Project maintainers have the right and responsibility to remove, edit, or reject comments, posts, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful. Note that contributors may be volunteers who do not represent Komodo Platform. They are free to express their own opinions so long as they adhere to these guidelines.
@@ -356,9 +404,6 @@ https://github.com/komodoplatform
 
 #### Emergency contact for vuln reports:
 security@komodoplatform.com 
-
-
-
 
 
 Please feel free to provide your feedback, objections and suggestions. 
