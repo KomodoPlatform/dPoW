@@ -872,7 +872,7 @@ char *iguana_walletscan(struct supernet_info *myinfo,struct iguana_info *coin,in
     jadd(retjson,"result",iguana_walletiterate(myinfo,coin,repairflag,cJSON_CreateArray(),&good,&bad,errors));
     jaddnum(retjson,"good",good);
     jaddnum(retjson,"bad",bad);
-    for (i=0; i<sizeof(errors)/sizeof(errors); i++)
+    for (i=0; i<sizeof(errors)/sizeof(errors[0]); i++)
     {
         if ( errors[i] != 0 )
             jaddnum(retjson,walleterrstr[i],errors[i]);
