@@ -1,3 +1,7 @@
+### 0.4.2
+
+- update SFUSD (3P)
+
 ### 0.4.1
 
 - removes PBC (3P)
