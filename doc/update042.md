@@ -1,34 +1,39 @@
-### dPoW 0.4.1 update instructions
+### dPoW 0.4.2 update instructions
 
-- Stop dPoW operation for the PBC chain and start dPoW for the SMARTUSD (also called SFUSD) chain.
-- Install and sync `SFUSD` on your 3P node. Clone repo https://github.com/pbcllc/sfusd-core and checkout to the commit `7c4f40b1759a5d0d67539462c255473c0a01b3c1`
+- Stop SMARTUSD (also called SFUSD) daemon and clear data folder, except your wallet.dat and .conf file.
+- Update, rebuild and sync from scratch `SFUSD` on your 3P node. Clone repo https://github.com/pbcllc/sfusd-core and checkout to the commit `d96497cbcec0dcf185cc149f1b3988a5964e5112`
 - Follow installation instructions (below is a script to use) or as outlined in [sfusd-core/build-unix.md](https://github.com/pbcllc/sfusd-core/blob/master/doc/build-unix.md)
 - Sync SFUSD daemon 
-- Update iguana to 0.4.1 and restart dPoW operations on your 3P NN
+- Update iguana to 0.4.2 and restart dPoW operations on your 3P NN
 
 #### Instructions:
 
-#### Step 0: Stop the PBC daemon.
+#### Step 0: Delete everything in $HOME/.smartusd folder, except your .conf and wallet.dat
 
 ```
-powerblockcoin-cli stop
+cd $HOME/sfusd-core
+./src/smartusd-cli stop
 ```
 
-Optional: Delete the PBC data directory
+Mandatory: Delete everything inside SmartUSD data directory, except your .conf and wallet.dat
 
 ```
-rm -rf ~/.powerblockcoin/
+cd $HOME/.smartusd
+rm -rf chainstate
+rm -rf blocks
+rm -rf database
+rm debug.log peers.dat smartusdd.pid notarizations fee_estimates.dat mempool.dat banlist.dat .walletlock db.log .lock
 ```
 
-####  Clone and Build `sfusd-core` in your 3p node. Checkout to the commit `7c4f40b`
+####  Update and Re-build `sfusd-core` in your 3p node. Checkout to the commit `d96497c`
 
-##### Step 1: Clone sfusd-core source
+##### Step 1: Update sfusd-core source
 
 ```bash
-cd ~
-git clone https://github.com/pbcllc/sfusd-core
-cd ~/sfusd-core
-git checkout 7c4f40b
+cd $HOME/sfusd-core
+git checkout master
+git pull
+git checkout d96497c
 ```
 
 #### Step 2: Build
@@ -89,33 +94,7 @@ chmod +x build.sh
 
 - Supply your `sudo` password when asked, so that the daemon and cli can be symlinked to your `/usr/local/bin` directory
 
-#### Step 4: Create smartusd data dir, smartusd.conf file and restrict access to it
-
-```bash
-cd ~
-mkdir .smartusd
-nano ~/.smartusd/smartusd.conf
-```
-
-Insert the following contents inside the smartusd.conf file and save it. (change the rpcuser and rpcpassword values)
-
-```bash
-server=1
-daemon=1
-txindex=1
-rpcuser=user
-rpcpassword=password
-rpcbind=127.0.0.1
-rpcallowip=127.0.0.1
-```
-
-Restrict access to the sfusd.conf file
-
-```bash
-chmod 600 ~/.smartusd/smartusd.conf
-```
-
-#### Step 5: Start the daemon, let it sync and monitor the debug.log
+#### Step 4: Start the daemon, let it sync and monitor the debug.log
 
 - Run the following command to start the daemon
 
@@ -130,15 +109,7 @@ cd ~/sfusd-core/src
 tail -f ~/.smartusd/debug.log
 ```
 
-#### Step 6: Import the privkey for sfusd corresponding to your 3p server
-
-sfusd's address format is different from KMD. But, the wif format is the same as KMD. You can import your 3p KMD node's wif into the sfusd daemon directly using the `importprivkey` command.
-
-sfusd's rpc calls are similar to BTC's after version `v0.16`. So instead of `getinfo`, use other rpc like `getblockchaininfo`, `getnetworkinfo`, `getwalletinfo`, `getmininginfo` for the appropriate fields.
-
-Wait for the sync and rescan(if any) to finish
-
-#### Step 7: Start the daemon with -pubkey
+#### Step 5: Start the daemon with -pubkey
 
 - Stop the sfusd daemon and start it with the `-pubkey` parameter
 
@@ -149,17 +120,7 @@ cd ~/sfusd-core/src
 ./smartusdd -pubkey=$pubkey
 ```
 
-#### Step 8: Open p2p port, split coins
-
-- Allow the p2p port of sfusd through ufw
-
-```bash
-sudo ufw allow 47777/tcp
-```
-
-- Split the available balance into utxos needed by iguana (size: 0.0001) for notarization
-
-#### Step 9: Update the dPoW folder and restart iguana
+#### Step 6: Update the dPoW folder and restart iguana
 
 - Update
 
@@ -176,8 +137,3 @@ cd ~/dPoW/iguana
 ./m_notary_build
 ./m_notary_3rdparty
 ```
-
-
-
-
-

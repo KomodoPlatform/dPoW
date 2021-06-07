@@ -280,12 +280,12 @@
       "merkle_root": "7aec6215dcca9a09df51d0bab4cf9f43f52f0fbe680f26aeaa3dd45b188ef745"
     },
     "alertpubkey": "0x0",
-    "protover": 110015,
+    "protover": 110016,
     "isPoS": 0,
     "git": {
       "repo": "https://github.com/pbcllc/sfusd-core",
       "branch": "",
-      "commit": "7c4f40b",
+      "commit": "d96497c",
       "tag": ""
     }
   }

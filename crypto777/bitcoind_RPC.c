@@ -452,7 +452,7 @@ try_again:
             count2++;
             elapsedsum2 += (OS_milliseconds() - starttime);
             if ( (count2 % 10000) == 0)
-                printf("%d: ave %9.6f | elapsed %.3f millis | NXT calls.(%s) cmd.(%s)\n",count2,elapsedsum2/count2,(double)(OS_milliseconds() - starttime),url,command);
+                printf("%d: ave %9.6f | elapsed %.3f millis | NXT calls.(%s)\n",count2,elapsedsum2/count2,(double)(OS_milliseconds() - starttime),url);
             return(retstr);
         }
     }

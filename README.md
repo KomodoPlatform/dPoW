@@ -7,6 +7,7 @@ Integration | Status
 CI build - Ubuntu (16.04, 18.04) | [![Build Status](https://github.com/komodoplatform/dpow/workflows/CI/badge.svg?maxAge=60)](https://github.com/KomodoPlatform/dPoW/actions)
 Codefactor analysis | [![Grade](https://img.shields.io/codefactor/grade/github/komodoplatform/dpow)](https://www.codefactor.io/repository/github/komodoplatform/dpow)
 Version | [![Version](https://img.shields.io/github/v/release/komodoplatform/dPoW)](https://github.com/KomodoPlatform/dPoW/releases)
+Network Statistics | https://stats.kmd.io/
 
 ---
 
@@ -81,7 +82,7 @@ PANGEA | [komodo](https://github.com/komodoplatform/komodo) | [e159b4e](https://
 PIRATE | [komodo](https://github.com/komodoplatform/komodo) | [e159b4e](https://github.com/KomodoPlatform/komodo/tree/e159b4e7a40d3886519401c4074e957a1f9d42ba) | [![dPOW Status](https://badges.komodo.live/svg/PIRATE_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 REVS | [komodo](https://github.com/komodoplatform/komodo) | [e159b4e](https://github.com/KomodoPlatform/komodo/tree/e159b4e7a40d3886519401c4074e957a1f9d42ba) | [![dPOW Status](https://badges.komodo.live/svg/REVS_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 RICK | [komodo](https://github.com/komodoplatform/komodo) | [e159b4e](https://github.com/KomodoPlatform/komodo/tree/e159b4e7a40d3886519401c4074e957a1f9d42ba) | [![dPOW Status](https://badges.komodo.live/svg/RICK_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
-SFUSD | [sfusd](https://github.com/pbcllc/sfusd-core) | [7c4f40b](https://github.com/pbcllc/sfusd-core/commit/7c4f40b1759a5d0d67539462c255473c0a01b3c1) | [![dPOW Status](https://badges.komodo.live/svg/SFUSD_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
+SFUSD | [sfusd](https://github.com/pbcllc/sfusd-core) | [d96497c](https://github.com/pbcllc/sfusd-core/commit/d96497cbcec0dcf185cc149f1b3988a5964e5112) | [![dPOW Status](https://badges.komodo.live/svg/SFUSD_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-3P
 SUPERNET | [komodo](https://github.com/komodoplatform/komodo) | [e159b4e](https://github.com/KomodoPlatform/komodo/tree/e159b4e7a40d3886519401c4074e957a1f9d42ba) | [![dPOW Status](https://badges.komodo.live/svg/SUPERNET_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 THC | [komodo](https://github.com/komodoplatform/komodo) | [e159b4e](https://github.com/KomodoPlatform/komodo/tree/e159b4e7a40d3886519401c4074e957a1f9d42ba) | [![dPOW Status](https://badges.komodo.live/svg/THC_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 VOTE2021 | [komodo](https://github.com/komodoplatform/komodo) | [e159b4e](https://github.com/KomodoPlatform/komodo/tree/e159b4e7a40d3886519401c4074e957a1f9d42ba) | [![dPOW Status](https://badges.komodo.live/svg/VOTE2021_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
