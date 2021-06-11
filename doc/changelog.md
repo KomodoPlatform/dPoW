@@ -1,3 +1,7 @@
+### 0.4.3
+
+- update VRSC (3P)
+
 ### 0.4.2
 
 - update SFUSD (3P)
