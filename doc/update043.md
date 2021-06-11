@@ -31,7 +31,7 @@ git checkout a664ae7
 ./build.sh
 ```
 
-Build script (build.sh) available from (update032)[./update032.md]
+Build script (build.sh) available from [update032](./update032.md)
 
 - Restart it
 
