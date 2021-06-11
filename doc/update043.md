@@ -38,6 +38,7 @@ Build script (build.sh) available from [update032](./update032.md)
 ```bash
 cd ~/GleecBTC-FullNode-Win-Mac-Linux/src
 ./gleecbtc-cli stop
+source ~/dPoW/iguana/pubkey.txt
 ./gleecbtcd -pubkey=$pubkey &
 ```
 
