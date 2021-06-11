@@ -83,7 +83,7 @@
     "git": {
       "repo": "https://github.com/KomodoPlatform/GleecBTC-FullNode-Win-Mac-Linux",
       "branch": "",
-      "commit": "b4ffcc9",
+      "commit": "a664ae7",
       "tag": ""
     }
   },
