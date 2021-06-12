@@ -2,6 +2,7 @@
 
 - update VRSC (3P)
 - update GleecBTC (3P)
+- update EMC2 (3P)
 
 ### 0.4.2
 
