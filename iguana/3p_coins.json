@@ -83,7 +83,7 @@
     "git": {
       "repo": "https://github.com/KomodoPlatform/GleecBTC-FullNode-Win-Mac-Linux",
       "branch": "",
-      "commit": "b4ffcc9",
+      "commit": "3c486d4",
       "tag": ""
     }
   },
@@ -127,7 +127,7 @@
     "git": {
       "repo": "https://github.com/emc2foundation/einsteinium.git",
       "branch": "master",
-      "commit": "70d7dc2",
+      "commit": "a716ae8",
       "tag": ""
     }
   },
@@ -152,9 +152,9 @@
     "p2shval": 85,
     "wifval": 188,
     "git": {
-      "repo": "https://github.com/jl777/chips3.git",
+      "repo": "https://github.com/chips-blockchain/chips.git",
       "branch": "master",
-      "commit": "31d59f9",
+      "commit": "70362d",
       "tag": ""
     }
   },
@@ -197,8 +197,8 @@
     "git": {
       "repo": "https://github.com/VerusCoin/VerusCoin",
       "branch": "master",
-      "commit": "d3cffbe",
-      "tag": "v0.7.2-8"
+      "commit": "7a740d2",
+      "tag": "v0.7.3-6"
     }
   },
   {
