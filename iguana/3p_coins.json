@@ -152,9 +152,9 @@
     "p2shval": 85,
     "wifval": 188,
     "git": {
-      "repo": "https://github.com/jl777/chips3.git",
+      "repo": "https://github.com/chips-blockchain/chips.git",
       "branch": "master",
-      "commit": "31d59f9",
+      "commit": "70362d",
       "tag": ""
     }
   },
