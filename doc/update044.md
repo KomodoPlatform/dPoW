@@ -17,7 +17,7 @@ git checkout 2412d5f
 cd ~/Marmara-v.1.0/src/
 ./komodo-cli -ac_name=MCL stop
 source ~/dPoW/iguana/pubkey.txt
-./komodod -pubkey=$pubkey &
+./komodod -ac_name=MCL -pubkey=$pubkey &
 ```
 
 #### dPoW
