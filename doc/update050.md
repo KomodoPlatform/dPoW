@@ -1,4 +1,4 @@
-### dPoW 0.4.4 update information
+### dPoW 0.5.0 update information
 
 - Update your MCL Coin's codebase to [2412d5f](https://github.com/marmarachain/marmara/tree/2412d5f5434a6b31f86da934d53df1729956654b), build it and then restart it
 - Please update iguana and ensure your NN infrastructure is ready for S5 (Both main and 3P).
