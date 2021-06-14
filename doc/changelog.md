@@ -2,6 +2,7 @@
 
 - update MCL (3P)
 - removes Coqui, AXO and BTCH (main)
+- update iguana and dPoW repo for S5 (main and 3P)
 
 ### 0.4.3
 
