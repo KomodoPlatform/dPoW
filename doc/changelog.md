@@ -1,7 +1,6 @@
 ### 0.4.4
 
 - update MCL (3P)
-- update AYA (3P)
 
 ### 0.4.3
 
