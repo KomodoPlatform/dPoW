@@ -38,7 +38,7 @@ cd ~/dPoW/iguana
 ./m_notary_build
 ```
 
-Then launch with `./m_notary_3rdparty` or `./m_notary_KMD` based on the server
+Then launch with `./m_notary_3rdparty` or `./m_notary_LTC` based on the server
 
 
 Please note that iguana ports were changed to 13337 for main and 13334 3rd party networks
@@ -49,4 +49,3 @@ After `git pull` restart your iguana and adjust your firewall settings according
 sudo ufw allow 13337/tcp comment 'iguana mainnet p2p'
 sudo ufw allow 13334/tcp comment 'iguana 3rd p2p'
 ```
-
