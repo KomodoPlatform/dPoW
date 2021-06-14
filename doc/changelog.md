@@ -1,4 +1,4 @@
-### 0.4.4
+### 0.5.0
 
 - update MCL (3P)
 - removes Coqui, AXO and BTCH (main)
