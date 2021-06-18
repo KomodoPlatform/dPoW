@@ -1,31 +1,43 @@
-Due to emerging situation with VRSC, notary node ops have been asked to cease dPoW operations for VRSC ASAP.
-Please be on standby to update once available.
+### dPoW 0.5.1 update information
 
-1. Stop the daemon and make the coin non-launch:
-```
-pkill -9 iguana
-VerusCoin/src/verus stop
-```
+- Update your Verus Coin's codebase to [2fcb26a](https://github.com/VerusCoin/VerusCoin/commit/2fcb26ab2c232b052fc147e38ddbc6d2bdcf4dad), build it and then restart it
 
-2. Restart dPoW operations:
-```
-cd ~/dPoW
-git checkout dev
+```bash
+cd ~/VerusCoin/src
+verus stop
 git pull
-cd iguana
+git checkout 2fcb26a
+../zcutil/build.sh -j$(expr $(nproc) - 1)
+```
+
+- Restart it
+
+```bash
+./verus stop
+source ~/dPoW/iguana/pubkey.txt
+verusd -pubkey=$pubkey &
+```
+
+- Update your dPoW repo
+
+```bash
+cd ~/dPoW/iguana
+git checkout master
 ./m_notary_build
 ./m_notary_3rdparty
 ```
 
-If using nntools, @webworker01 has released an update
+Make sure your iguana is running properly.
 
+Note: You will either need to clear blocks and chainstate in ~/.komodo/VRSC and resync, or invalidate block 1568000. 
+Ask for help in Discord if you have problems.
+
+
+- Shut down OOT, COQUICASH, AXO & BTCH daemons on Main server. These chains have been removed from dPoW assets.
+
+```bash
+komodo-cli -ac_name=AXO stop
+komodo-cli -ac_name=BTCH stop
+komodo-cli -ac_name=COQUICASH stop
+komodo-cli -ac_name=OOT stop
 ```
-cd ~/nntools
-git pull
-startnotary
-```
-
-
-Confirm via checkmark at https://discord.com/channels/412898016371015680/456828345871761408/855252269100433438
-
-Thanks
