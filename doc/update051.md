@@ -7,7 +7,7 @@ cd ~/VerusCoin/src
 verus stop
 git pull
 git checkout 2fcb26a
-./zcutil/build.sh -j$(expr $(nproc) - 1)
+../zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
 - Restart it
