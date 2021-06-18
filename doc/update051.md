@@ -3,17 +3,16 @@
 - Update your Verus Coin's codebase to [2fcb26a](https://github.com/VerusCoin/VerusCoin/commit/2fcb26ab2c232b052fc147e38ddbc6d2bdcf4dad), build it and then restart it
 
 ```bash
+cd ~/VerusCoin/src
 verus stop
 git pull
 git checkout 2fcb26a
-cd ~/VerusCoin/src
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
 - Restart it
 
 ```bash
-cd ~/VerusCoin/src
 ./verus stop
 source ~/dPoW/iguana/pubkey.txt
 verusd -pubkey=$pubkey &
