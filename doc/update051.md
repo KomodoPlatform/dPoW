@@ -31,3 +31,13 @@ Make sure your iguana is running properly.
 
 Note: You will either need to clear blocks and chainstate in ~/.komodo/VRSC and resync, or invalidate block 1568000. 
 Ask for help in Discord if you have problems.
+
+
+- Shut down OOT, COQUICASH, AXO & BTCH daemons on Main server. These chains have been removed from dPoW assets.
+
+```bash
+komodo-cli -ac_name=AXO stop
+komodo-cli -ac_name=BTCH stop
+komodo-cli -ac_name=COQUICASH stop
+komodo-cli -ac_name=OOT stop
+```
