@@ -20,8 +20,6 @@ cd iguana
 If using nntools, @webworker01 has released an update
 
 ```
-pkill -9 iguana
-VerusCoin/src/verus stop
 cd ~/nntools
 git pull
 startnotary
