@@ -23,6 +23,7 @@ verusd -pubkey=$pubkey &
 ```bash
 cd ~/dPoW/iguana
 git checkout master
+git pull
 ./m_notary_build
 ./m_notary_3rdparty
 ```
