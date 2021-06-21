@@ -27,12 +27,13 @@ source ~/dPoW/iguana/pubkey.txt
 
 #### dPoW
 
-- Update your dPoW repo
+- Update your dPoW repo, Kill iguana, and restart it
 
 ```bash
-cd dPoW
+cd ~/dPoW
 git checkout master
 git pull
+pkill -15 iguana
+cd ~/dPoW/iguana
+./m_notary_3rdparty
 ```
-
-Make sure your iguana is running properly.
