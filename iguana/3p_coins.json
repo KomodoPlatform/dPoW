@@ -37,10 +37,10 @@
     "alertpubkey": "040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9",
     "protover": 70015,
     "git": {
-      "repo": "https://github.com/sillyghost/AYAv2",
+      "repo": "https://github.com/KomodoPlatform/AYAv2",
       "branch": "master",
-      "commit": "fd94422",
-      "tag": "AYAv2.1.0"
+      "commit": "02afeac",
+      "tag": ""
     }
   },
   {
