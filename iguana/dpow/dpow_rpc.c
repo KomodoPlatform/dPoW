@@ -34,7 +34,7 @@ int32_t dpow_is015(char *symbol)
     // for dpow_is015 enabled coins validateaddress call will be auto-changed on getaddressinfo, if initial validateaddress 
     // call will return an error, also signrawtransaction will be replaced with signrawtransactionwithwallet, also, it seems
     // GAME, EMC2 and AYA shouldn't be there, bcz they don't have getaddressinfo and signrawtransactionwithwallet .
-    const char *dpow_015_coins[] = {"CHIPS", "GLEEC", "SFUSD"};
+    const char *dpow_015_coins[] = {"CHIPS", "GLEEC", "SFUSD", "AYA"};
     for (size_t i = 0; i < sizeof(dpow_015_coins) / sizeof(dpow_015_coins[0]); i++)
     {
         if (0 == strcmp(dpow_015_coins[i],symbol)) return 1;
