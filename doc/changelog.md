@@ -1,3 +1,12 @@
+### 0.5.2
+
+- enable AYA on 3P server for S5
+
+### 0.5.1
+
+- update Verus Coin's codebase to [2fcb26a](https://github.com/VerusCoin/VerusCoin/commit/2fcb26ab2c232b052fc147e38ddbc6d2bdcf4dad)
+- shut down OOT, COQUICASH, AXO & BTCH daemons on Main server. These chains have been removed from dPoW
+
 ### 0.5.0
 
 - update MCL (3P)
