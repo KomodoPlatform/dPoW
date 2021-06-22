@@ -3,11 +3,10 @@
 - Update your Verus Coin's codebase to [942b01b](https://github.com/VerusCoin/VerusCoin/tree/942b01b87b96239102ecf57aecff838c6d2913a0), build it and then restart it on 3P nodes.
 
 ```bash
-cd ~/VerusCoin/src
-verus stop
+cd ~/VerusCoin
 git pull
 git checkout 942b01b
-../zcutil/build.sh -j$(expr $(nproc) - 1)
+./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
 - Restart it
