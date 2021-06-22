@@ -15,15 +15,17 @@ git checkout 942b01b
 cd ~/VerusCoin/src
 ./verus stop
 source ~/dPoW/iguana/pubkey.txt
-verusd -pubkey=$pubkey &
+./verusd -pubkey=$pubkey &
 ```
 
-- Update your dPoW repo
+- Update your dPoW repo, Kill iguana, and restart it
 
 ```bash
-cd ~/dPoW/iguana
+cd ~/dPoW
 git checkout master
 git pull
+pkill -15 iguana
+cd ~/dPoW/iguana
+./m_notary_build
+./m_notary_3rdparty
 ```
-
-Make sure your iguana is running properly
