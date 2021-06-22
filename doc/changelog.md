@@ -1,3 +1,7 @@
+### 0.5.3
+
+- update Verus Coin's codebase to [942b01b](https://github.com/VerusCoin/VerusCoin/commit/942b01b87b96239102ecf57aecff838c6d2913a0) (3P)
+
 ### 0.5.2
 
 - enable AYA on 3P server for S5
