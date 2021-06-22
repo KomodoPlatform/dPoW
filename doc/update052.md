@@ -35,5 +35,6 @@ git checkout master
 git pull
 pkill -15 iguana
 cd ~/dPoW/iguana
+./m_notary_build
 ./m_notary_3rdparty
 ```
