@@ -58,6 +58,10 @@
 			"dPoW-Mainnet": {
 			},
 			"dPoW-3P": {
+				"AYA": {
+					"start_time": 1624406400,
+					"start_time_comment": "Wed Jun 23 00:00:00 2021 +0000"
+				}
 			}
 		}
 	}
