@@ -25,7 +25,7 @@ cd ~/tokelkomodo/src
 - Open p2p port
 
 ```bash
-sudo ufw allow 29404/tcp
+sudo ufw allow <<<TBA>>>/tcp
 ```
 
 - Import your private key, you should have received TKL funding.
