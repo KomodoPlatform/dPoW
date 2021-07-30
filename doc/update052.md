@@ -1,4 +1,4 @@
-### dPoW 0.5.1 update information
+### dPoW 0.5.2 update information
 
 - Update your AYA Coin's codebase to [02afeac](https://github.com/KomodoPlatform/AYAv2/tree/02afeacdc0702bd160abef603f03167381f39097), build it and then restart it
 
