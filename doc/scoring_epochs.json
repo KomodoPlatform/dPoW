@@ -61,6 +61,10 @@
 				"AYA": {
 					"start_time": 1624406400,
 					"start_time_comment": "Wed Jun 23 00:00:00 2021 +0000"
+				},
+				"TOKEL": {
+					"start_time": 1627802396,
+					"start_time_comment": "Sat Aug 1 09:19:56 2021 +0200 commit adcea90a19b0b4ef51cc27b221e2079248f093bc +24hrs"
 				}
 			}
 		}
