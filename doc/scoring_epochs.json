@@ -48,5 +48,25 @@
 				}
 			}
 		}
+	},
+	"Season_5": {
+		"season_start": 1623682800,
+		"season_start_comment": "https://github.com/KomodoPlatform/komodo/blob/master/src/komodo_globals.h#L47",
+		"season_end": 1751328000,
+		"season_end_comment": "https://github.com/KomodoPlatform/komodo/blob/master/src/komodo_defs.h#L61",
+		"Servers": {
+			"dPoW-Mainnet": {
+			},
+			"dPoW-3P": {
+				"AYA": {
+					"start_time": 1624406400,
+					"start_time_comment": "Wed Jun 23 00:00:00 2021 +0000"
+				},
+				"TOKEL": {
+					"start_time": 1627802396,
+					"start_time_comment": "Sat Aug 1 09:19:56 2021 +0200 commit adcea90a19b0b4ef51cc27b221e2079248f093bc +24hrs"
+				}
+			}
+		}
 	}
 }
