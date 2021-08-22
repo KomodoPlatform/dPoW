@@ -15,7 +15,7 @@ git checkout 77424d8
 cd ~/VerusCoin/src
 ./verus stop
 source ~/dPoW/iguana/pubkey.txt
-verusd -pubkey=$pubkey &
+./verusd -pubkey=$pubkey &
 ```
 
 - Update your dPoW repo
