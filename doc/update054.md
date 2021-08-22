@@ -1,6 +1,6 @@
 ### dPoW 0.5.4 update information
 
-- Build and Sync the `tokel` branch of the komodo repository (https://github.com/KomodoPlatform/komodo/tree/tokel) and rename it to a tokel specific folder.
+- On your 3P node, build and Sync the `tokel` branch of the komodo repository (https://github.com/KomodoPlatform/komodo/tree/tokel) and rename it to a tokel specific folder.
 
 ```bash
 git clone https://github.com/komodoplatform/komodo -b tokel tokelkomodo

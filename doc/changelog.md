@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.5
+
+- updates VRSC on 3P node to `v0.7.4`
+
 ## 0.5.4
 
 - adds TOKEL (3P)
