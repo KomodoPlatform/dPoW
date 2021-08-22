@@ -265,6 +265,7 @@ Notarisation counts to be determined from decoded notarisation transaction OP_RE
 - https://github.com/KomodoPlatform/dPoW/blob/master/README.md
 - https://github.com/KomodoPlatform/dPoW/blob/master/doc/scoring_epochs.json
 
+Scoring starts for newly added coins 24hrs after a commit is merged, and ends when a coin removal commit is merged to the master branch (or at the official start/end times of the season for existing coins).
 
 ### Leveraging the Notary Node Network to decentralize MM2 seed nodes
 

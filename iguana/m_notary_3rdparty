@@ -32,7 +32,6 @@ curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"ad
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"77.75.121.139\"}"
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"51.161.50.203\"}"
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"192.99.233.45\"}"
-curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"77.74.197.114\"}"
  
 
 
