@@ -2,7 +2,7 @@
 
 ## 0.5.6
 
-- updates KMD on both main and 3P nodes to `0.7.1` [Hydra]
+- updates `komodod` on both main and 3P nodes to `0.7.1` [Hydra]
 
 ## 0.5.5
 
