@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.6
+
+- updates KMD on both main and 3P nodes to `0.7.1` [Hydra]
+
 ## 0.5.5
 
 - updates VRSC on 3P node to `v0.7.4`
