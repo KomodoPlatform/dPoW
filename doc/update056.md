@@ -1,10 +1,10 @@
-### dPoW 0.5.6 update information
+# dPoW 0.5.6 update information
 
 - On your Main node and 3P node, update your Komodo Coin's codebase to [7df102f](https://github.com/KomodoPlatform/komodo/tree/7df102f42fa3c1672d5a7b57733378fd36a172da), build it and then restart the Komodo coin's daemon.
 
 - On your Main node, restart all Smartchain daemons. If you still have OOT, COQUICASH, AXO or BTCH running on your main node, you may shut them down.
 
-#### Instructions for 3P node
+## Instructions for 3P node
 
 ```bash
 cd ~/komodo
@@ -32,7 +32,7 @@ git pull
 
 Make sure your iguana is running properly.
 
-#### Instructions for Main node
+## Instructions for Main node
 
 - Update your dPoW repo
 
