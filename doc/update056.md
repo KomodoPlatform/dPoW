@@ -1,6 +1,6 @@
 # dPoW 0.5.6 update information
 
-- On your Main node and 3P node, update your Komodo Coin's codebase to [7df102f](https://github.com/KomodoPlatform/komodo/tree/7df102f42fa3c1672d5a7b57733378fd36a172da), build it and then restart the Komodo coin's daemon.
+- On your Main node and 3P node, update your Komodo Coin's codebase to [d7edae2](https://github.com/KomodoPlatform/komodo/tree/d7edae28b8f49de5c4ae6f7ab24b29fc5ab14320), build it and then restart the Komodo coin's daemon.
 
 - On your Main node, restart all Smartchain daemons. If you still have OOT, COQUICASH, AXO or BTCH running on your main node, you may shut them down.
 
@@ -9,7 +9,7 @@
 ```bash
 cd ~/komodo
 git pull
-git checkout 7df102f
+git checkout d7edae2
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
@@ -47,7 +47,7 @@ git pull
 ```bash
 cd ~/komodo
 git pull
-git checkout 7df102f
+git checkout d7edae2
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
