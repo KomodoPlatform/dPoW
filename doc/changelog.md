@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.7
+
+- updates VRSC on 3P node to `v0.9.0`
+
 ## 0.5.6
 
 - updates `komodod` on both main and 3P nodes to `0.7.1` [Hydra]
