@@ -52,7 +52,7 @@ Build it based on instructions here: [https://docs.komodoplatform.com/notary/set
 cd ~/chips/src
 ./chips-cli stop
 source ~/dPoW/iguana/pubkey.txt
-chipsd -pubkey=$pubkey &
+./chipsd -pubkey=$pubkey &
 ```
 
 - Update your dPoW repo
