@@ -154,7 +154,7 @@
     "git": {
       "repo": "https://github.com/chips-blockchain/chips.git",
       "branch": "master",
-      "commit": "a2a33eb",
+      "commit": "70362d5",
       "tag": ""
     }
   },
