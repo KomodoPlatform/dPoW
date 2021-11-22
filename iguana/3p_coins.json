@@ -154,7 +154,7 @@
     "git": {
       "repo": "https://github.com/chips-blockchain/chips.git",
       "branch": "master",
-      "commit": "70362d",
+      "commit": "a2a33eb",
       "tag": ""
     }
   },
@@ -329,7 +329,7 @@
     "git": {
       "repo": "https://github.com/komodoplatform/komodo",
       "branch": "tokel",
-      "commit": "0accf37",
+      "commit": "4302bb3",
       "tag": ""
     }
   }

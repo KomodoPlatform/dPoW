@@ -3,6 +3,8 @@
 ## 0.5.7
 
 - updates VRSC on 3P node to `v0.9.0`
+- updates TOKEL on 3p node to [4302bb3](https://github.com/KomodoPlatform/komodo/tree/4302bb3cf803f5835d875630f7795d744a0f8253)
+- updates CHIPS on 3p node to [a2a33eb](https://github.com/chips-blockchain/chips/tree/a2a33ebcda8b2d5746b9622b34ecd99ec1505f31)
 
 ## 0.5.6
 
