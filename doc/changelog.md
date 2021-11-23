@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.7
+
+- updates VRSC on 3P node to `v0.9.0`
+- updates TOKEL on 3p node to [4302bb3](https://github.com/KomodoPlatform/komodo/tree/4302bb3cf803f5835d875630f7795d744a0f8253)
+
 ## 0.5.6
 
 - updates `komodod` on both main and 3P nodes to `0.7.1` [Hydra]
