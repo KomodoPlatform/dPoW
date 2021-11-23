@@ -197,7 +197,7 @@
     "git": {
       "repo": "https://github.com/VerusCoin/VerusCoin",
       "branch": "master",
-      "commit": "4302bb3",
+      "commit": "d0aecf8",
       "tag": "v0.9.0-1"
     }
   },
