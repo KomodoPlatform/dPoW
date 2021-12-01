@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.8
+
+- updates VRSC on 3P node to `v0.9.0-1`
+
 ## 0.5.7
 
 - updates VRSC on 3P node to `v0.9.0`
