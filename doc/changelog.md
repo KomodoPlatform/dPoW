@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.9
+
+- updates TOKEL on 3P node to [f39a088](https://github.com/KomodoPlatform/komodo/tree/f39a0881a5d672f7c1131e5ae6d390e8cdccb037)
+
 ## 0.5.8
 
 - updates VRSC on 3P node to `v0.9.0-1`
