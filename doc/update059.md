@@ -1,6 +1,7 @@
 ### dPoW 0.5.9 update information
 
 - On your 3P node, update your Tokel Coin's codebase to [f39a088](https://github.com/KomodoPlatform/komodo/tree/f39a0881a5d672f7c1131e5ae6d390e8cdccb037), build it and then restart it
+- This update includes code that hardforks the TOKEL network on February 24th, 2022
 
 ```bash
 cd ~/tokelkomodo
