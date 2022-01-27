@@ -9,7 +9,7 @@ git checkout b288dfd
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
-After successful build, run the following commands to restart Tokel with the new changes:
+After successful build, run the following commands to restart MCL with the new changes:
 
 ```bash
 cd ~/marmara/src
