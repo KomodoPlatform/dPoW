@@ -239,9 +239,9 @@
     "sapling": 1,
     "notarypay": 0,
     "git": {
-      "repo": "https://github.com/marmarachain/Marmara-v.1.0",
+      "repo": "https://github.com/marmarachain/marmara",
       "branch": "master",
-      "commit": "2412d5f",
+      "commit": "b288dfd",
       "tag": ""
     }
   },

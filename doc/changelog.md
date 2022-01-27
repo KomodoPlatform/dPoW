@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.10
+
+- updates MCL on 3P node to [b288dfd](https://github.com/marmarachain/marmara/tree/b288dfd66e2761e40af717362f75e4d5319c4f7f)
+
 ## 0.5.9
 
 - updates TOKEL on 3P node to [f39a088](https://github.com/KomodoPlatform/komodo/tree/f39a0881a5d672f7c1131e5ae6d390e8cdccb037)
