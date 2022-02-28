@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.11
+
+- removes GLEEC on main node
+- adds CLC on main node
+
 ## 0.5.10
 
 - updates MCL on 3P node to [b288dfd](https://github.com/marmarachain/marmara/tree/b288dfd66e2761e40af717362f75e4d5319c4f7f)
