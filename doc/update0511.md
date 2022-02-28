@@ -3,7 +3,7 @@
 - On your main node, delete the GLEEC coin and stop dPoW operations for it
 - On your main node, sync the CLC coin and start dPoW operations for it
 
-#### Stop the `GLEEC` coin
+#### Stop the `GLEEC` chain on your main node
 
 ```bash
 cd ~/komodo/src
@@ -35,7 +35,7 @@ cd ~/komodo/src
 
 - Open `tcp/20931` for incoming p2p connections:
 
-```
+```bash
 sudo ufw allow 20931/tcp comment 'CLC p2p port'
 ```
 
