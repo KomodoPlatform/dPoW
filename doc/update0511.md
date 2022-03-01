@@ -3,7 +3,7 @@
 - On your 3P node, delete the GleecBTC coin and stop dPoW operations for it
 - On your main node, sync the CLC coin and start dPoW operations for it
 
-#### Stop the `GleecBTC` chain on your main node
+#### Stop the `GleecBTC` chain on your 3P node
 
 ```bash
 cd ~/GleecBTC-FullNode-Win-Mac-Linux
@@ -18,7 +18,7 @@ rm -rf ~/.gleecbtc
 
 - Remove GleecBTC from to your autosplit script(s) and remove its p2p port (`6703/tcp`) from the allow list in your firewall
 
-#### Launch the `CLC` chain on your main node with the new parameters
+#### Launch the `CLC` chain on your main node
 
 ```bash
 cd ~/komodo/src
@@ -56,7 +56,7 @@ pkill -15 iguana
 ```
 
 - Make sure your iguana is running properly
-- Split CLC UTXO's once Iguana is running
+- Split CLC UTXO's once iguana is running
 
 #### On 3P node
 
@@ -73,4 +73,3 @@ pkill -15 iguana
 ```
 
 - Make sure your iguana is running properly
-- Split CLC UTXO's once Iguana is running
