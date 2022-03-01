@@ -3,7 +3,9 @@
 - On your 3P node, delete the GleecBTC coin and stop dPoW operations for it
 - On your main node, sync the CLC coin and start dPoW operations for it
 
-#### Stop the `GleecBTC` chain on your 3P node
+#### On 3P node
+
+##### Stop the `GleecBTC` chain on your 3P node
 
 ```bash
 cd ~/GleecBTC-FullNode-Win-Mac-Linux
@@ -16,9 +18,25 @@ cd ~/GleecBTC-FullNode-Win-Mac-Linux
 rm -rf ~/.gleecbtc
 ```
 
-- Remove GleecBTC from to your autosplit script(s) and remove its p2p port (`6703/tcp`) from the allow list in your firewall
+- Remove GleecBTC from your autosplit script(s) and remove its p2p port (`6703/tcp`) from the allow list in your firewall
 
-#### Launch the `CLC` chain on your main node
+- Update your dPoW repo, rebuild and restart iguana
+
+```bash
+cd ~/dPoW
+git checkout master
+git pull
+cd ~/dPoW/iguana
+./m_notary_build
+pkill -15 iguana
+./m_notary_3rdparty # start notarization
+```
+
+- Make sure your iguana is running properly
+
+#### On Main node
+
+##### Launch the `CLC` chain on your main node
 
 ```bash
 cd ~/komodo/src
@@ -40,9 +58,6 @@ sudo ufw allow 20931/tcp comment 'CLC p2p port'
 ```
 
 - Add CLC to your autosplit script(s)
-
-#### On Main node
-
 - Update your dPoW repo, rebuild and restart iguana
 
 ```bash
@@ -57,19 +72,3 @@ pkill -15 iguana
 
 - Make sure your iguana is running properly
 - Split CLC UTXO's once iguana is running
-
-#### On 3P node
-
-- Update your dPoW repo, rebuild and restart iguana
-
-```bash
-cd ~/dPoW
-git checkout master
-git pull
-cd ~/dPoW/iguana
-./m_notary_build
-pkill -15 iguana
-./m_notary_3rdparty # start notarization
-```
-
-- Make sure your iguana is running properly
