@@ -8,7 +8,7 @@
 ##### Stop the `GleecBTC` chain on your 3P node
 
 ```bash
-cd ~/GleecBTC-FullNode-Win-Mac-Linux
+cd ~/GleecBTC-FullNode-Win-Mac-Linux/src
 ./gleecbtc-cli stop
 ```
 
