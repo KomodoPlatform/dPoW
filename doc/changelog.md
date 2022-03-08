@@ -3,6 +3,7 @@
 ## 0.5.11
 
 - removes GleecBTC on 3P node
+- adds MIL on 3P node
 - adds CLC on main node
 
 ## 0.5.10

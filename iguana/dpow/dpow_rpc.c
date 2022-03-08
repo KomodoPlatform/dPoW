@@ -17,14 +17,14 @@
 
 uint64_t dpow_utxosize(char *symbol)
 {
-    if ( strcmp(symbol,"GAME") == 0 || strcmp(symbol,"EMC2") == 0 || strcmp(symbol,"AYA") == 0)
+    if ( strcmp(symbol,"GAME") == 0 || strcmp(symbol,"EMC2") == 0 || strcmp(symbol,"AYA") == 0 || strcmp(symbol,"MIL") == 0)
         return(100000);
     else return(10000);
 }
 
 int32_t dpow_smallopreturn(char *symbol)
 {
-    if ( strcmp(symbol,"GAME") == 0 || strcmp(symbol,"GIN") == 0 || strcmp(symbol,"EMC2") == 0 || strcmp(symbol,"ZECTEST") == 0 || strcmp(symbol,"AYA") == 0 || strcmp(symbol,"SFUSD") == 0)
+    if ( strcmp(symbol,"GAME") == 0 || strcmp(symbol,"GIN") == 0 || strcmp(symbol,"EMC2") == 0 || strcmp(symbol,"ZECTEST") == 0 || strcmp(symbol,"AYA") == 0 || strcmp(symbol,"SFUSD") == 0 || strcmp(symbol,"MIL") == 0)
         return(1);
     else return(0);
 }
