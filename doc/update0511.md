@@ -150,7 +150,7 @@ cd ~/mil-1/src
 
 - Open p2p port, split coins
 
-Allow the p2p port of sfusd through ufw
+Allow the p2p port of MIL through ufw
 
 ```bash
 sudo ufw allow 41888/tcp
