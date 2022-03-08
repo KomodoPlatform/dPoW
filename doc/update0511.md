@@ -156,7 +156,7 @@ Allow the p2p port of sfusd through ufw
 sudo ufw allow 41888/tcp
 ```
 
-- Split the available balance into utxos needed by iguana (size: 0.0001) for notarization
+- Split the available balance into utxos needed by iguana (size: 0.001) for notarization
 
 - Update your dPoW repo, rebuild and restart iguana
 
