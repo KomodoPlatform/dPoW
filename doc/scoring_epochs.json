@@ -56,6 +56,10 @@
 		"season_end_comment": "https://github.com/KomodoPlatform/komodo/blob/master/src/komodo_defs.h#L61",
 		"Servers": {
 			"dPoW-Mainnet": {
+				"CLC": {
+					"end_time": 1652209510,
+					"start_time_comment": "DATE / TIME TBA"
+				}
 			},
 			"dPoW-3P": {
 				"AYA": {
@@ -65,6 +69,14 @@
 				"TOKEL": {
 					"start_time": 1627802396,
 					"start_time_comment": "Sat Aug 1 09:19:56 2021 +0200 commit adcea90a19b0b4ef51cc27b221e2079248f093bc +24hrs"
+				},
+				"MIL": {
+					"start_time": 1652209510,
+					"start_time_comment": "DATE / TIME TBA"
+				},
+				"GLEEC-OLD": {
+					"end_time": 1652209510,
+					"start_time_comment": "DATE / TIME TBA"
 				}
 			}
 		}
