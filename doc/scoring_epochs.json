@@ -57,7 +57,7 @@
 		"Servers": {
 			"dPoW-Mainnet": {
 				"CLC": {
-					"end_time": 1652209510,
+					"start_time": 1652209510,
 					"start_time_comment": "DATE / TIME TBA"
 				}
 			},
@@ -76,7 +76,7 @@
 				},
 				"GLEEC-OLD": {
 					"end_time": 1652209510,
-					"start_time_comment": "DATE / TIME TBA"
+					"end_time_comment": "DATE / TIME TBA"
 				}
 			}
 		}
