@@ -27,7 +27,7 @@ rm -rf ~/.gleecbtc
 cd ~
 git clone https://github.com/KomodoPlatform/mil-1
 cd ~/mil-1
-git checkout aacdaee
+git checkout 4fb0389
 ```
 
 - Create a file named `build-nn.sh` in the `~/mil-1` directory and copy the contents of the following code block into it
