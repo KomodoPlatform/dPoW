@@ -57,8 +57,8 @@
 		"Servers": {
 			"dPoW-Mainnet": {
 				"CLC": {
-					"start_time": 1652209510,
-					"start_time_comment": "DATE / TIME TBA"
+					"start_time": 1647207139,
+					"start_time_comment": "Sat Mar 12 22:32:19 2022 +0100 commit 54dedb77cabe859fe2793a5817e9e8ce9c0ebd5f +24hrs"
 				}
 			},
 			"dPoW-3P": {
@@ -71,12 +71,12 @@
 					"start_time_comment": "Sat Aug 1 09:19:56 2021 +0200 commit adcea90a19b0b4ef51cc27b221e2079248f093bc +24hrs"
 				},
 				"MIL": {
-					"start_time": 1652209510,
-					"start_time_comment": "DATE / TIME TBA"
+					"start_time": 1647207139,
+					"start_time_comment": "Sat Mar 12 22:32:19 2022 +0100 commit 54dedb77cabe859fe2793a5817e9e8ce9c0ebd5f +24hrs"
 				},
 				"GLEEC-OLD": {
-					"end_time": 1652209510,
-					"end_time_comment": "DATE / TIME TBA"
+					"end_time": 1647120739,
+					"end_time_comment": "Sat Mar 12 22:32:19 2022 +0100 commit 54dedb77cabe859fe2793a5817e9e8ce9c0ebd5f"
 				}
 			}
 		}
