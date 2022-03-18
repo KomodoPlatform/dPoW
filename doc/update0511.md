@@ -27,7 +27,7 @@ rm -rf ~/.gleecbtc
 cd ~
 git clone https://github.com/KomodoPlatform/mil-1
 cd ~/mil-1
-git checkout aacdaee
+git checkout 4fb0389
 ```
 
 - Create a file named `build-nn.sh` in the `~/mil-1` directory and copy the contents of the following code block into it
@@ -133,7 +133,6 @@ MIL's address and privkey(wif) formats are different from KMD. You can import yo
 
 To get wif for MIL, see https://github.com/DeckerSU/komodo_scripts/blob/master/genkomodo.txt and https://github.com/DeckerSU/komodo_scripts/blob/master/genkomodo.php
 
-MIL's rpc calls are similar to BTC's after version `v0.16`. So instead of `getinfo`, use other rpc like `getblockchaininfo`, `getnetworkinfo`, `getwalletinfo`, `getmininginfo` for the appropriate fields.
 
 Wait for the sync and rescan(if any) to finish
 
