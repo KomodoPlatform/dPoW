@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.12
+
+- updates VRSC on 3P node to `v0.9.1-1`
+
 ## 0.5.11
 
 - removes GleecBTC on 3P node
