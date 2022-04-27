@@ -224,7 +224,7 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 
 ### Important Dates for Season 6:
 
-- KMD snapshot: 4th May 2022, 0000hrs GMT (for both VOTE2021 allocations and Regional Top 3 Notary Node scoring)
+- KMD snapshot: 4th May 2022 (for both VOTE2021 allocations and Regional Top 3 Notary Node scoring)
 - Season 5 scoring ends: 4th May 2022, 0000hrs GMT
 - Regional Top 3 Autoelection announcement: 7th May 2022
 - VOTE2022 airdrop: 11th May 2022
