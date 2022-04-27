@@ -56,6 +56,10 @@
 		"season_end_comment": "https://github.com/KomodoPlatform/komodo/blob/master/src/komodo_defs.h#L61",
 		"Servers": {
 			"dPoW-Mainnet": {
+				"OOT": {
+					"end_time": 1624004471,
+					"end_time_comment": "Fri Jun 18 10:21:11 2021 +0200 commit 1ec2f61f602036bf658e954251ac961e5c7f40a8"
+				},
 				"CLC": {
 					"start_time": 1647207139,
 					"start_time_comment": "Sat Mar 12 22:32:19 2022 +0100 commit 54dedb77cabe859fe2793a5817e9e8ce9c0ebd5f +24hrs"
