@@ -1,7 +1,7 @@
-# Notary Node Bible v1.1
+# Notary Node Bible v1.2
 
 
-<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. This iteration of the NN bible comes into effect at the start of NN Season 6 (June 14th 2021). Please read carefully. 
+<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. This iteration of the NN bible comes into effect at the start of NN Season 6. Please read carefully.
 
 #
 
@@ -89,7 +89,7 @@ Anyone with the required hardware and technical knowledge can become a Notary No
 - Disk: 500 GB SSD or greater
 - Bandwidth: 100 Mbps or higher
 
-The server should be bare metal, housed in a Tier 3 datacenter or better. Cloud instances or home connections are not sufficient to ensure bandwith and uptime.
+*The server should be bare metal, housed in a Tier 3 datacenter or better. Cloud instances or home connections are not sufficient to ensure bandwith and uptime.*
 
 Apart from these hardware specifications and the technical know-how, there are no requirements to become a Notary Node Operator. 
  
@@ -99,7 +99,7 @@ For more information about becoming a Notary Node Operator, please see this guid
  
 To gain exposure and inform the Komodo community about one’s candidacy, as well as the motivations for that candidacy, it’s essential to submit a written proposal to the Komodo community. 
  
-<b>If you plan to run in an upcoming election, you need to submit your proposal to the Notary Node repository on [Github](https://github.com/KomodoPlatform/NotaryNodes/tree/master/season5/candidates) prior to the proposal deadline for the next election. </b>
+<b>If you plan to run in an upcoming election, you need to submit your proposal to the Notary Node repository on [Github](https://github.com/KomodoPlatform/NotaryNodes/tree/master/season6/candidates) prior to the proposal deadline for the next election. </b>
  
 At a minimum, every candidate Proposal must include:
 - The region in which they are running and post the address to which KMD holders may send VOTE tokens to support their candidacy.
@@ -172,7 +172,7 @@ The voting data is then validated, with any votes originating from a CEX wallet 
 
 It is highly recommended that each community member read through the proposals of all the candidates before casting their vote. The proposals contain important information about how each candidate intends to help the Komodo ecosystem. All candidates' proposals, along with other useful dates and information, will be posted within the Komodo Notary Node Election GitHub repository.
 
-Exact dates and times for each of the events above will be posted within this document and announced before the start of April.
+Exact dates and times for each of the events above will be posted within this document and announced before the start of May.
 
 ## Responsibilities, Rights and Duties of a Notary Node Operator
 
@@ -221,24 +221,20 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 
 ## Guidelines, General Information and Policies 
 
-### Important Dates for Season 5:
-
-- Komodo core hardfork activation: KMD block `2,437,300` (Monday, June 14th, 2021)
-- SmartChain hardfork activation: Timestamp `1623682800` (Monday, June 14th, 2021 03:00:00 PM UTC)
 
 ### Important Dates for Season 6:
 
-- KMD snapshot: TBA (for both VOTE2021 allocations and Regional Top 3 Notary Node scoring)
-- Vote2022 airdrop: TBA
-- Season 6 Election start: TBA
-- Regional Top 3 Autoelection announcement: TBA
-- Proposal deadline: TBA
-- Season 6 Election end: TBA
+- KMD snapshot: 4th May 2022, 0000hrs GMT (for both VOTE2021 allocations and Regional Top 3 Notary Node scoring)
+- Season 5 scoring ends: 4th May 2022, 0000hrs GMT
+- Regional Top 3 Autoelection announcement: 7th May 2022
+- VOTE2022 airdrop: 11th May 2022
+- Season 6 Election start: 11th May 2022
+- Proposal deadline: 11th May 2022, 0000hrs GMT
+- Season 6 Election end: 25th May 2022, 0000hrs GMT
 - Public Komodo Season 6 update announcement: TBA
 - dPoW season 6 start: TBA
 - Komodo core hardfork activation: TBA
 - SmartChain hardfork activation: TBA
-
 
 ### The Komodo Mining Ecosystem:
 
@@ -247,7 +243,7 @@ The Komodo mining ecosystem is exceptional in that a large part of the mining re
 
 ### Automatic Re-election:
 
-The top 12 NNs get automatically re-elected. Only top 3 spots per region are eligible for the auto-reelection. The other 44 public NN spots are claimable through the annual NN elections.
+The top 3 NNs for each region are automatically re-elected. The other 44 public NN spots are claimable through the annual NN elections. 
 
 
 ### Notary Scoring:
@@ -271,13 +267,13 @@ Scoring starts for newly added coins 24hrs after a commit is merged, and ends wh
 
 Komodo Platform's [AtomicDEX-API](https://github.com/KomodoPlatform/atomicDEX-API) is an open-source atomic-swap protocol for trading seamlessly between essentially any blockchain asset in existence. Seed nodes play an essential part in orderbook propagation and relaying information about peers within the network and the status of swaps in progress.
 
-With the start of the 5th Komodo Notary Node Season, operators will be encouraged to run a seed node on their third party (3P) server to further decentralize the network. This expands the current number of seed nodes from half a dozen to potentially over 60 nodes, distributed geographically across the planet, and maintained by a diverse group of respected people within the Komodo community with great expertise in KMD related technologies and the ability to rapidly deploy updates and assist each other with troubleshooting as required.
+With the start of the 6th Komodo Notary Node Season, operators will be encouraged to run a seed node on their third party (3P) server to further decentralize the network. This expands the current number of seed nodes from half a dozen to potentially over 60 nodes, distributed geographically across the planet, and maintained by a diverse group of respected people within the Komodo community with great expertise in KMD related technologies and the ability to rapidly deploy updates and assist each other with troubleshooting as required.
 
-Operators with the best metrics in terms of uptime and responsiveness to updates will also be rewarded with bonus points towards their Season 5 score, and the chance to win automatic re-election.
+Operators with the best metrics in terms of uptime and responsiveness to updates will also be rewarded with bonus points towards their Season 6 score, and the chance to win automatic re-election.
 
 For each hour of uptime with the correct version, Notary Nodes will receive 0.2 points to their season score.
 
-Simple scripts to assist operators in setting up their seed node and keeping it up to date whenever update announcements are broadcast will be provided prior to the start of Season 5.
+Simple scripts to assist operators in setting up their seed node and keeping it up to date whenever update announcements are broadcast will be provided prior to the start of Season 6.
 
 
 ### Developer Nodes:
@@ -324,7 +320,7 @@ In the previous Notary Node seasons, there were no protocolled rules or policies
 
 We reconsidered this part and decided to author and publish these transparent guidelines which we call the “Notary Node Bible”. The Komodo team also decided that a violation of any of the above [rules](#responsibilities-rights-and-duties-of-a-nn) may result in immediate loss of the NN spot, disqualification from election or other sanctions as deemed appropriate by the NN Arbiter. In the event that a single individual has additional violations in subsequent seasons, it could lead to disqualification from all future elections and seasons. 
 
-A "grace period" at the beginning of each season will apply until September 1st 2020 for first time notaries, to allow for adjustment to rules based on the framework established in this document, and to give new notaries time to make mistakes, learn and tweak their servers. During this time, minor infractions may lead to "probationary status" with Gurus and the NN community assisting non-conforming operators achieve stable and productive participation. Major infractions (i.e. grossly negligent or malicious activity) will be subject to harsher penalty up to and including spot-loss / disqualification.
+A "grace period" at the beginning of each season will apply until September 1st for first time notaries, to allow for adjustment to rules based on the framework established in this document, and to give new notaries time to make mistakes, learn and tweak their servers. During this time, minor infractions may lead to "probationary status" with Gurus and the NN community assisting non-conforming operators achieve stable and productive participation. Major infractions (i.e. grossly negligent or malicious activity) will be subject to harsher penalty up to and including spot-loss / disqualification.
 
 In case of such a spot-loss or disqualification, the next candidate from the election results will be eligible for the spot and the pubkey would be replaced with the next scheduled hardfork update. 
 
