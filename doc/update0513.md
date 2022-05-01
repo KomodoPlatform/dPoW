@@ -35,7 +35,7 @@ git pull
 cd ~/dPoW/iguana
 ./m_notary_build
 pkill -15 iguana
-./m_notary_KMD # start notarization
+./m_notary_LTC # start notarization
 ```
 
 - Make sure your iguana is running properly
