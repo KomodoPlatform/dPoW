@@ -3,8 +3,8 @@
 # unlock any locked utxos. This will unlock utxos for both pubkeys, need a filter for address to only unlock the pubkey you need to restart. 
 komodo-cli lockunspent true `komodo-cli listlockunspent | jq -c .` 
 
-wget -qO testnet2021 https://raw.githubusercontent.com/KomodoPlatform/dPoW/2021-testnet/iguana/testnet.json
-stdbuf -oL $1 ../agents/iguana testnet2021 & #> iguana.log 2> error.log  &
+wget -qO testnet2022 https://raw.githubusercontent.com/KomodoPlatform/dPoW/2022-testnet/iguana/testnet.json
+stdbuf -oL $1 ../agents/iguana testnet2022 & #> iguana.log 2> error.log  &
 
 myip=`curl -s4 checkip.amazonaws.com`
 source pubkey.txt
