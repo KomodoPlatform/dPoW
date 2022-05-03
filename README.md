@@ -91,6 +91,9 @@ pkill -9 iguana
 ./m_notary_testnet_2022
 ```
 
+To get some RICK / MORTY funds for notarisation, [use the faucet](http://stats.kmd.io/faucet/)
+You will also need some KMD (1 is more than enough). If you don't have any join the Komodo Platform Discord channel and ask.
+
 **If you have any problems or questions, join the [Komodo Discord](https://discord.gg/3MhJCFH3H6) and ask for help!**
 
 ## Example Chain Launch Script:
