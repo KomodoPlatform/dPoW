@@ -16,6 +16,7 @@ sleep 3
 
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"195.201.137.5\"}"   # Alright
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"195.201.20.230\"}"   # Alright
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"116.203.120.163\"}"   # Dragonhound
 
 
 # add KMD
