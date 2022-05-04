@@ -41,3 +41,4 @@ pkill -15 iguana
 - Make sure your iguana is running properly
 - Split `VOTE2022` UTXO's once iguana is running
 - An explorer for the chain: [https://vote.kmdexplorer.io/](https://vote.kmdexplorer.io/)
+- Each notary address has received 77.77777777 VOTE2022 tokens. Stake them using the following command: `./komodo-cli -ac_name=VOTE2022 setgenerate true 0`
