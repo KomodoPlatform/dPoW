@@ -134,6 +134,13 @@
     "addnode": ["157.230.45.184", "165.22.52.123"]
   },
   {
+    "ac_name": "VOTE2022",
+    "ac_public": "1",
+    "ac_supply": "141331546",
+    "ac_staked":"10",
+    "addnode": ["77.74.197.115"]
+  },
+  {
     "ac_name": "ZILLA",
     "ac_supply": "11000000",
     "ac_sapling": "5000000",
