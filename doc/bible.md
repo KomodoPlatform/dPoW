@@ -134,6 +134,8 @@ Notary nodes achieving a regional top 5 ranking are eligible to submit a candida
 
 Notary nodes who are not in their regional top 5 at the end of the season can reapply for a single node for each of the region(s) they served in during the previous season.
 
+Notary Node veterans who have served in at least two prior seasons, but did not acheive ranking or compete in the previou season are eligible to apply for an additional node (veteran benefit).
+
 <b>No notary can hold more than 2 nodes in a single region, or more than 6 nodes in total.</b>
 
 The Komodo Notary Node Elections are stake weighted, meaning that those who hold more KMD have more voting power in the election. The process works as follows.
