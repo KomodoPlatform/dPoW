@@ -1,13 +1,13 @@
 # Notary Node Bible v1.1
 
 
-<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. This iteration of the NN bible comes into effect at the start of NN Season 6 (June 14th 2021). Please read carefully. 
+<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. This iteration of the NN bible comes into effect at the start of NN Season 6 (date TBA). Please read carefully. 
 
 #
 
 ### Table of Contents
 
-1. [What is a Notary Node?](https://github.com/KomodoPlatform/dPoW/new/dev/doc#what-is-a-notary-node)
+1. [What is a Notary Node?](#what-is-a-notary-node)
 2. [How to become a Notary Node operator](#how-to-become-a-notary-node-operator)
 3. [The Notary Node election process](#the-notary-node-election-process)
 4. [Responsibilities of a NN](#responsibilities-rights-and-duties-of-a-notary-node-operator)
@@ -99,7 +99,7 @@ For more information about becoming a Notary Node Operator, please see this guid
  
 To gain exposure and inform the Komodo community about one’s candidacy, as well as the motivations for that candidacy, it’s essential to submit a written proposal to the Komodo community. 
  
-<b>If you plan to run in an upcoming election, you need to submit your proposal to the Notary Node repository on [Github](https://github.com/KomodoPlatform/NotaryNodes/tree/master/season5/candidates) prior to the proposal deadline for the next election. </b>
+<b>If you plan to run in an upcoming election, you need to submit your proposal to the Notary Node repository on [Github](https://github.com/KomodoPlatform/NotaryNodes/tree/master/season6/candidates) prior to the proposal deadline for the next election. </b>
  
 At a minimum, every candidate Proposal must include:
 - The region in which they are running and post the address to which KMD holders may send VOTE tokens to support their candidacy.
@@ -111,7 +111,7 @@ Generally the Komodo community elects Notary Node Operators who are committed to
 
 Conversely, even if you are an ardent supporter of the Komodo ecosystem, you may fail to win a seat if your technical skills are unproven. A balance of both attributes — dedication to the Komodo ecosystem and strong technical abilities — is the ideal combination.
 
-For more information about the pre-election Testnet check out the [testnet README](https://github.com/KomodoPlatform/dPoW/blob/2021-testnet/README.md)
+For more information about the pre-election Testnet check out the [testnet README](https://github.com/KomodoPlatform/dPoW/blob/2022-testnet/README.md)
 <br>
 
 
@@ -133,6 +133,8 @@ Notary nodes achieving a regional top 3 ranking at the ranking snapshot date are
 Notary nodes achieving a regional top 5 ranking are eligible to submit a candidacy for an additional notary node for each region they held a top 5 position in at the ranking snapshot date.
 
 Notary nodes who are not in their regional top 5 at the end of the season can reapply for a single node for each of the region(s) they served in during the previous season.
+
+Notary Node veterans who have served in at least two prior seasons are eligible to apply for an additional node (veteran benefit).
 
 <b>No notary can hold more than 2 nodes in a single region, or more than 6 nodes in total.</b>
 
