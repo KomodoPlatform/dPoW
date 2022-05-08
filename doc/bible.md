@@ -134,7 +134,7 @@ Notary nodes achieving a regional top 5 ranking are eligible to submit a candida
 
 Notary nodes who are not in their regional top 5 at the end of the season can reapply for a single node for each of the region(s) they served in during the previous season.
 
-Notary Node veterans who have served in at least two prior seasons, but did not acheive ranking or compete in the previous season are eligible to apply for an additional node (veteran benefit).
+Notary Node veterans who have served in at least two prior seasons are eligible to apply for an additional node (veteran benefit).
 
 <b>No notary can hold more than 2 nodes in a single region, or more than 6 nodes in total.</b>
 
