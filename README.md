@@ -75,7 +75,7 @@ Set daemon pubkey
 ```
 source ~/dPoW/iguana/pubkey.txt
 komodo-cli setpubkey $pubkey
-komodo-cli -ac_nameMORTY setpubkey $pubkey
+komodo-cli -ac_name=MORTY setpubkey $pubkey
 komodo-cli -ac_name=RICK setpubkey $pubkey
 ```
 *See the example launch script below to see how to launch with pubkey*
