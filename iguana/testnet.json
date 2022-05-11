@@ -10,7 +10,7 @@
     	"163.172.221.109",
     	"95.179.169.219",
     	"65.108.253.48",
-    "127.0.0.1",
+    	"92.53.65.4",
     "127.0.0.1",
     "127.0.0.1"
 ],
@@ -22,5 +22,6 @@
     {"gcharang": "03aabfdfbd09d997d8921e025a55de50a9dd681f04e67e0bb425091df4229c16eb"},
     {"Artist": "0330b2fafebdb99eed48f2a30a3175a5a7bb8256b360e9f979e5cf78d3de758799"},
     {"Dimxy": "02aa104373478f67b00ef19e6170e7d96fe53bf3e65025b9941f7e190e2088aa16"},
+    {"fediakash": "0256dca38eff68a214f4d62fed1f674d1eadf088c863dd011478ac2b930bbd48ca"},
     {"Fatswallop": "0255ca1b0b0bc3fd3d0f6bdb9e2f0e120b80321d71bc66805357c5459dba9afbd7"}
 ]}
