@@ -227,12 +227,12 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 ### Important Dates for Season 6:
 
 - KMD snapshot: 4th May 2022 (for both VOTE2021 allocations and Regional Top 3 Notary Node scoring)
-- Season 5 scoring ends: 4th May 2022, 0000hrs GMT
+- Season 5 scoring ends: 4th May 2022, 23:59:59 UTC
 - Regional Top 3 Autoelection announcement: 7th May 2022
 - VOTE2022 airdrop: 11th May 2022
 - Season 6 Election start: 11th May 2022
-- Proposal deadline: 11th May 2022, 0000hrs GMT
-- Season 6 Election end: 25th May 2022, 0000hrs GMT
+- Proposal deadline: 11th May 2022, 23:59:59 UTC
+- Season 6 Election end: 25th May 2022, 23:59:59 UTC
 - Public Komodo Season 6 update announcement: TBA
 - dPoW season 6 start: TBA
 - Komodo core hardfork activation: TBA
