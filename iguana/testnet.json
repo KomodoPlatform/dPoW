@@ -1,7 +1,7 @@
 {
 "port": 17778,
 "BTCminsigs": 13,
-"minsigs": 3,
+"minsigs": 4,
 "seeds": [
 	"195.201.20.230",
 	"195.201.137.5",
@@ -10,18 +10,28 @@
     	"163.172.221.109",
     	"95.179.169.219",
     	"65.108.253.48",
-    	"92.53.65.4",
+    	"46.161.52.180",
+    "135.125.239.62",
+    "127.0.0.1",
+    "127.0.0.1",
     "127.0.0.1",
     "127.0.0.1"
 ],
 "notaries": [
     {"Alright0": "02a67a4da7504fefaf1e7362da9b24b66a023cae853964cd53d19a83094d575321"},
     {"Alright1": "027d4b25be212946f7939ff98512ef3472d8cfc3f70d8d609d20bdab569ec4bb79"},
+    {"Arnomad": "03069e5271e0abd0d7b8daf66c017d0ab5edf7ca3f4286b3be6d3342378d05e865"},	
     {"Dragonhound": "0378b7ceaa5d8370543f14f125df44cb2bd77c490931524da884270f69eedff40d"},
+    {"Chmex": "0365b4430a3a23cde8eda0be93ad8d367306054d36133a2342b05d2dd6bb0024d6"},
+    {"Marmara": "024a245a9fbb5c9582acba3969150e16c0c80c816843e08443a3acd896d3cec538"},
     {"Strob": "03cd7d3f5d7bd1c2bde405aa2916c91c3320c854b1b558d5e43aeed1a7a526ec83"},
     {"gcharang": "03aabfdfbd09d997d8921e025a55de50a9dd681f04e67e0bb425091df4229c16eb"},
     {"Artist": "0330b2fafebdb99eed48f2a30a3175a5a7bb8256b360e9f979e5cf78d3de758799"},
     {"Dimxy": "02aa104373478f67b00ef19e6170e7d96fe53bf3e65025b9941f7e190e2088aa16"},
+    {"bitbybit": "026e2051c60ed1784834e7901a370f9c105505998c1f7519550a3cfcc8e8a1d595"},
+    {"kmdude": "0305a92278c7f826797732d1eecc8777b69b7eb96fcffc3598b36d4ba5eeb0595e"},
+    {"dennis": "03c782bdbae7d6eb9d4578da7b46f5e9413b48c8e209c9e42992c3c8c25f1b0d7f"},
+    {"decker": "020fd2dc2c8de2f6d136005e26a142ad7bfcf1d6b8bd682b105fab3055dac83b4e"},	
     {"fediakash": "0256dca38eff68a214f4d62fed1f674d1eadf088c863dd011478ac2b930bbd48ca"},
     {"Fatswallop": "0255ca1b0b0bc3fd3d0f6bdb9e2f0e120b80321d71bc66805357c5459dba9afbd7"}
 ]}
