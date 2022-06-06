@@ -64,11 +64,6 @@
     "addnode": ["3.0.32.10"]
   },
   {
-    "ac_name": "MESH",
-    "ac_supply": "1000007",
-    "ac_ccactivate": "320000"
-  },
-  {
     "ac_name": "MGW",
     "ac_supply": "999999"
   },
@@ -132,18 +127,5 @@
     "ac_sapling": "1",
     "earlytxid": "7e4a76259e99c9379551389e9f757fc5f46c33ae922a8644dc2b187af2a6adc1",
     "addnode": ["157.230.45.184", "165.22.52.123"]
-  },
-  {
-    "ac_name": "VOTE2022",
-    "ac_public": "1",
-    "ac_supply": "141331546",
-    "ac_staked":"10",
-    "addnode": ["77.74.197.115"]
-  },
-  {
-    "ac_name": "ZILLA",
-    "ac_supply": "11000000",
-    "ac_sapling": "5000000",
-    "addnode": ["51.68.215.104"]
   }
 ]
