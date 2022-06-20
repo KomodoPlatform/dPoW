@@ -1,11 +1,13 @@
 [
   {
     "ac_name": "BET",
-    "ac_supply": "999999"
+    "ac_supply": "999999",
+    "addnode": ["na.smk.dog", "3p.smk.dog"]
   },
   {
     "ac_name": "BOTS",
-    "ac_supply": "999999"
+    "ac_supply": "999999",
+    "addnode": ["na.smk.dog", "3p.smk.dog"]
   },
   {
     "ac_name": "CCL",
@@ -14,7 +16,7 @@
     "ac_cc": "2",
     "addressindex": "1",
     "spentindex": "1",
-    "addnode": ["142.93.136.89", "195.201.22.89"]
+    "addnode": ["na.smk.dog", "3p.smk.dog", "142.93.136.89", "195.201.22.89"]
   },
   {
     "ac_name": "CLC",
@@ -27,45 +29,50 @@
     "ac_snapshot":"1440",
     "ac_pubkey":"02df9bda7bfe2bcaa938b29a399fb0ba58cfb6cc3ddc0001062a600f60a8237ad9",
     "ac_adaptivepow":"6",
-    "addnode": ["node.cryptocollider.com"]
+    "addnode": ["na.smk.dog", "3p.smk.dog", "node.cryptocollider.com"]
   },
   {
     "ac_name": "CRYPTO",
-    "ac_supply": "999999"
+    "ac_supply": "999999",
+    "addnode": ["na.smk.dog", "3p.smk.dog"]
   },
   {
     "ac_name": "DEX",
-    "ac_supply": "999999"
+    "ac_supply": "999999",
+    "addnode": ["na.smk.dog", "3p.smk.dog"]
   },
   {
     "ac_name": "GLEEC",
     "ac_supply": "210000000",
     "ac_public": "1",
     "ac_staked": "100",
-    "addnode":["95.217.161.126"]
+    "addnode": ["na.smk.dog", "3p.smk.dog", "95.217.161.126"]
   },
   {
     "ac_name": "HODL",
-    "ac_supply": "9999999"
+    "ac_supply": "9999999",
+    "addnode": ["na.smk.dog", "3p.smk.dog"]
   },
   {
     "ac_name": "ILN",
     "ac_supply": "10000000000",
     "ac_cc": "2",
-    "addnode": ["51.75.122.83"]
+    "addnode": ["na.smk.dog", "3p.smk.dog", "51.75.122.83"]
   },
   {
     "ac_name": "JUMBLR",
-    "ac_supply": "999999"
+    "ac_supply": "999999",
+    "addnode": ["na.smk.dog", "3p.smk.dog"]
   },
   {
     "ac_name": "KOIN",
     "ac_supply": "125000000",
-    "addnode": ["3.0.32.10"]
+    "addnode": ["na.smk.dog", "3p.smk.dog", "3.0.32.10"]
   },
   {
     "ac_name": "MGW",
-    "ac_supply": "999999"
+    "ac_supply": "999999",
+    "addnode": ["na.smk.dog", "3p.smk.dog"]
   },
   {
     "ac_name": "MORTY",
@@ -73,19 +80,22 @@
     "ac_reward": "100000000",
     "ac_cc": "3",
     "ac_staked": "10",
-    "addnode": ["138.201.136.145", "95.217.44.58"]
+    "addnode": ["na.smk.dog", "3p.smk.dog", "138.201.136.145", "95.217.44.58"]
   },
   {
     "ac_name": "MSHARK",
-    "ac_supply": "1400000"
+    "ac_supply": "1400000",
+    "addnode": ["na.smk.dog", "3p.smk.dog"]
   },
   {
     "ac_name": "NINJA",
-    "ac_supply": "100000000"
+    "ac_supply": "100000000",
+    "addnode": ["na.smk.dog", "3p.smk.dog"]
   },
   {
     "ac_name": "PANGEA",
-    "ac_supply": "999999"
+    "ac_supply": "999999",
+    "addnode": ["na.smk.dog", "3p.smk.dog"]
   },
   {
     "ac_name": "PIRATE",
@@ -93,11 +103,12 @@
     "ac_reward": "25600000000",
     "ac_halving": "77777",
     "ac_private": "1",
-    "addnode": ["88.99.212.81"]
+    "addnode": ["na.smk.dog", "3p.smk.dog", "88.99.212.81"]
   },
   {
     "ac_name": "REVS",
-    "ac_supply": "1300000"
+    "ac_supply": "1300000",
+    "addnode": ["na.smk.dog", "3p.smk.dog"]
   },
   {
     "ac_name": "RICK",
@@ -105,11 +116,12 @@
     "ac_reward": "100000000",
     "ac_cc": "3",
     "ac_staked": "10",
-    "addnode": ["138.201.136.145", "95.217.44.58"]
+    "addnode": ["na.smk.dog", "3p.smk.dog", "138.201.136.145", "95.217.44.58"]
   },
   {
     "ac_name": "SUPERNET",
-    "ac_supply": "816061"
+    "ac_supply": "816061",
+    "addnode": ["na.smk.dog", "3p.smk.dog"]
   },
   {
     "ac_name": "THC",
@@ -126,6 +138,6 @@
     "ac_cbmaturity": "1",
     "ac_sapling": "1",
     "earlytxid": "7e4a76259e99c9379551389e9f757fc5f46c33ae922a8644dc2b187af2a6adc1",
-    "addnode": ["157.230.45.184", "165.22.52.123"]
+    "addnode": ["na.smk.dog", "3p.smk.dog", "157.230.45.184", "165.22.52.123"]
   }
 ]
