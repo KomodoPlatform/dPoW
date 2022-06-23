@@ -1,6 +1,6 @@
 {
 "port": 14441,
-"rpc_port":7171,
+"rpcport":7171,
 "BTCminsigs": 13,
 "minsigs": 13,
 "seeds": [
