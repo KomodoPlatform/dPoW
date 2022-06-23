@@ -13,10 +13,14 @@ sleep 4
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"SuperNET\",\"method\":\"myipaddr\",\"ipaddr\":\"$myip\"}"
 sleep 3
 
-# Season 5 3P peers
+# Season 6 3P peers
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"na_3p.smk.dog\"}" 
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"dev_3p.smk.dog\"}"
- 
+curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"77.75.121.139\"}"
+curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"77.74.197.116\"}"
+curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"77.74.197.118\"}"
+curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"158.69.18.122\"}"
+curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"167.114.197.250\"}"
 
 
 # add KMD
