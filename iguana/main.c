@@ -23,7 +23,7 @@
 #define HAVE_STRUCT_TIMESPEC
 #include "../pnacl_main.h"
 #include "iguana777.h"
-
+extern uint16_t Notaries_rpcport;
 
 struct iguana_jsonitem { struct queueitem DL; struct supernet_info *myinfo; uint32_t fallback,expired,allocsize; char *retjsonstr; char remoteaddr[64]; uint16_t port; char jsonstr[]; };
 
@@ -942,10 +942,10 @@ cJSON *SuperNET_rosettajson(struct supernet_info *myinfo,bits256 privkey,int32_t
     {
         if ( coin != 0 && coin->symbol[0] != 0 )
         {
-			if (strcmp(coin->chain->symbol, "ZECTEST") == 0)
-				paddr = bitcoin_address_ex(coin->chain->symbol, addr, 0x1c, coin->chain->pubtype, pub, 33);
-			else
-				paddr = bitcoin_address(addr, coin->chain->pubtype, pub, 33);
+            if (strcmp(coin->chain->symbol, "ZECTEST") == 0)
+                paddr = bitcoin_address_ex(coin->chain->symbol, addr, 0x1c, coin->chain->pubtype, pub, 33);
+            else
+                paddr = bitcoin_address(addr, coin->chain->pubtype, pub, 33);
 
             if ( paddr != 0 )
             {
@@ -2195,7 +2195,12 @@ void komodo_REVS_merge(char *str,char *str2)
 }
 
 int32_t komodo_initjson(char *fname);
-extern uint16_t Notaries_RPCport;
+
+void display_help(const char* bin_name)
+{
+    printf("Syntax: %s [OStests|stats|-port=nn|notary|filename|JSON]\nNote that these parameters are exclusive. Only 1 can be used\n   OStests - performs OS tests and then exits\n   stats - retrieves notary statistics and then exits\n   -port=[nn] - override RPC port\n   notary - specifiy that you are a notary\n   [filename] - specify the filename that contains JSON-formatted elected notary details (defaults to \"iguana.conf\")\n   JSON - actual JSON to use instead of reading it from a file\n", bin_name);
+    exit(0);
+}
 
 void iguana_main(void *arg)
 {
@@ -2251,16 +2256,24 @@ void iguana_main(void *arg)
             printf("OVERRIDE IGUANA port <- %u\n",myinfo->rpcport);
         }
         else if ( strncmp((char *)arg,"notary",strlen("notary")) == 0 ) // must be second to last
-        {
-            myinfo->rpcport = IGUANA_NOTARYPORT;
+        {   /* mainnet */
+            if (Notaries_rpcport != 0) {
+                myinfo->rpcport = Notaries_rpcport;
+                printf("OVERRIDE IGUANA mainnet rpc port <- %u\n",myinfo->rpcport); // if Notaries_rpcport ("rpcport") in json defined -> override
+            } else
+                myinfo->rpcport = IGUANA_NOTARYPORT;
             myinfo->nosplit = 1;
             myinfo->IAMNOTARY = 1;
             myinfo->DEXEXPLORER = 0;//1; disable as SPV is used now
         }
         else
         {
-            // this means that an elected file was specified for 3rd party network, so use diffrent RPC port. 
-            myinfo->rpcport = IGUANA_NOTARYPORT2;
+            /* 3rdparty */
+            if (Notaries_rpcport != 0) {
+                myinfo->rpcport = Notaries_rpcport;
+                printf("OVERRIDE IGUANA 3rdparty rpc port <- %u\n",myinfo->rpcport); // if Notaries_rpcport ("rpcport") in json defined -> override
+            } else
+                myinfo->rpcport = IGUANA_NOTARYPORT2;
             myinfo->IAMNOTARY = 1;
             myinfo->DEXEXPLORER = 0;//1; disable as SPV is used now
             elected = (char *)arg;
@@ -2271,11 +2284,7 @@ void iguana_main(void *arg)
     {
         printf("didnt find any elected notaries JSON in (%s)\n",elected);
         exit(-1);
-    } else
-    {
-        myinfo->rpcport = Notaries_RPCport;
     }
-
     dex_init(myinfo);
 #ifdef IGUANA_OSTESTS
     do_OStests = 1;
