@@ -2275,7 +2275,6 @@ void iguana_main(void *arg)
     {
         myinfo->rpcport = Notaries_RPCport;
     }
-                printf("REALITY %s %d\n", __func__, myinfo->rpcport);
 
     dex_init(myinfo);
 #ifdef IGUANA_OSTESTS
