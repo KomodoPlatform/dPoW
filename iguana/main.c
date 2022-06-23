@@ -2196,12 +2196,6 @@ void komodo_REVS_merge(char *str,char *str2)
 
 int32_t komodo_initjson(char *fname);
 
-void display_help(const char* bin_name)
-{
-    printf("Syntax: %s [OStests|stats|-port=nn|notary|filename|JSON]\nNote that these parameters are exclusive. Only 1 can be used\n   OStests - performs OS tests and then exits\n   stats - retrieves notary statistics and then exits\n   -port=[nn] - override RPC port\n   notary - specifiy that you are a notary\n   [filename] - specify the filename that contains JSON-formatted elected notary details (defaults to \"iguana.conf\")\n   JSON - actual JSON to use instead of reading it from a file\n", bin_name);
-    exit(0);
-}
-
 void iguana_main(void *arg)
 {
     int32_t usessl = 0,ismainnet = 1, do_OStests = 0; struct supernet_info *myinfo; char *elected = "elected";
