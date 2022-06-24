@@ -4,7 +4,7 @@ CFLAGS=-g -Wno-deprecated -O2 -DISNOTARYNODE=1
 CFLAGS_NO_OPTIMIZATION=-Wno-deprecated -c -DISNOTARYNODE=1
 LDFLAGS=-g -lnanomsg -lcurl -lssl -lcrypto -lpthread -lz -lm -lsodium
 
-all: agents ../agents/iguana
+all: ../agents ../agents/iguana
 
 clean:
 	$(RM) ../agents/iguana
