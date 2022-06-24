@@ -117,17 +117,20 @@ int32_t Notaries_numseeds;// = (int32_t)(sizeof(seeds)/sizeof(*seeds))
 int32_t Notaries_num,Notaries_BTCminsigs = DPOW_MINSIGS;
 int32_t Notaries_minsigs = DPOW_MIN_ASSETCHAIN_SIGS;
 uint16_t Notaries_port = DPOW_SOCKPORT;
+uint16_t Notaries_rpcport = 0;
 char *Notaries_seeds[65];
 
 int32_t komodo_initjson(char *fname)
 {
-    char *fstr,*field,*hexstr; cJSON *argjson,*array,*item; long fsize; uint16_t port; int32_t i,n,num,retval = -1;
+    char *fstr,*field,*hexstr; cJSON *argjson,*array,*item; long fsize; uint16_t port, rpcport; int32_t i,n,num,retval = -1;
     if ( (fstr= OS_filestr(&fsize,fname)) != 0 )
     {
         if ( (argjson= cJSON_Parse(fstr)) != 0 )
         {
             if ( (port= juint(argjson,"port")) != 0 )
                 Notaries_port = port;
+            if ( (rpcport= juint(argjson,"rpcport")) != 0 )
+                Notaries_rpcport = rpcport;
             if ( (num= juint(argjson,"BTCminsigs")) > Notaries_BTCminsigs )
                 Notaries_BTCminsigs = num;
             Notaries_minsigs = juint(argjson,"minsigs");
@@ -715,8 +718,8 @@ char *dpow_signrawtransaction(struct supernet_info *myinfo,struct iguana_info *c
         }
         //printf("%s signrawtransaction.(%s) params.(%s)\n",coin->symbol,retstr,paramstr);
 
-	/*if (coin->sapling != 0)
-		printf("[Decker] %s dpow_signrawtransaction.(%s) params.(%s)\n", coin->symbol, retstr, paramstr);*/
+    /*if (coin->sapling != 0)
+        printf("[Decker] %s dpow_signrawtransaction.(%s) params.(%s)\n", coin->symbol, retstr, paramstr);*/
         free(paramstr);
         usleep(1000);
         return(retstr);
@@ -1045,15 +1048,15 @@ int32_t dpow_haveutxo(struct supernet_info *myinfo,struct iguana_info *coin,bits
                 i = r % n;
                 printf("[%s] : chosen = %d  out of %d loop.(%d)\n",coin->symbol,i,n,j);
                 if ( (item= jitem(unspents,i)) == 0 )
-		{
-		    j++;
-		    continue;
-		}
+        {
+            j++;
+            continue;
+        }
                 if ( is_cJSON_False(jobj(item,"spendable")) != 0 )
-		{
-		    j++;
-		    continue;
-		}
+        {
+            j++;
+            continue;
+        }
                 if ( (satoshis= SATOSHIDEN * jdouble(item,"amount")) == 0 )
                     satoshis= SATOSHIDEN * jdouble(item,"value");
                 if ( satoshis == DPOW_UTXOSIZE && (address= jstr(item,"address")) != 0 && strcmp(address,coinaddr) == 0 )
@@ -1073,7 +1076,7 @@ int32_t dpow_haveutxo(struct supernet_info *myinfo,struct iguana_info *coin,bits
                         }
                     }
                 }
-		j++;
+        j++;
             }
             if ( haveutxo == 0 )
               printf("no (%s -> %s) utxo: need to fund address.(%s) or wait for splitfund to confirm\n",srccoin,coin->symbol,coinaddr);

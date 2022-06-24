@@ -653,12 +653,24 @@ PSMainFunc_t PSUserMainGet()
 
 #else
 
+#include <string.h>
+
+void display_help(const char* bin_name);
+
+/****
+ * @brief The main entry method
+ */
 int main(int argc, const char * argv[])
 {
     char *jsonstr;
     if ( argc < 2 )
         jsonstr = 0;
-    else jsonstr = (char *)argv[1];
+    else
+    {
+        jsonstr = (char *)argv[1];
+        if (strncmp("-help", jsonstr, 5) == 0)
+            display_help(argv[0]);
+    }
     MAIN_initflag = 1;
     OS_init();
     printf("%s main\n",CHROMEAPP_STR);

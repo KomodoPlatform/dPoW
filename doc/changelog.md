@@ -1,4 +1,8 @@
 # Changelog
+## 0.6.0
+
+- removes `VOTE2022`, `MESH`, `ZILLA`, `GLEEC-OLD`
+- update iguana and dPoW repo for S6 (main and 3P)
 
 ## 0.5.13
 
