@@ -1,7 +1,7 @@
 dPoW 0.6.0 update information
 
 
-Please update iguana and ensure your NN infrastructure is ready for S5.
+Please update iguana and ensure your NN infrastructure is ready for Season 6.
 ```
 cd ~/dPoW
 git checkout master
