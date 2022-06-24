@@ -39,7 +39,7 @@
     "git": {
       "repo": "https://github.com/KomodoPlatform/AYAv2",
       "branch": "master",
-      "commit": "02afeac",
+      "commit": "94e6bc0",
       "tag": ""
     }
   },
@@ -81,9 +81,9 @@
     "alertpubkey": "040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9",
     "protover": 70015,
     "git": {
-      "repo": "https://github.com/emc2foundation/einsteinium.git",
+      "repo": "https://github.com/emc2foundation/einsteinium",
       "branch": "master",
-      "commit": "a716ae8",
+      "commit": "c329ae6",
       "tag": ""
     }
   },
@@ -108,9 +108,9 @@
     "p2shval": 85,
     "wifval": 188,
     "git": {
-      "repo": "https://github.com/chips-blockchain/chips.git",
+      "repo": "https://github.com/chips-blockchain/chips",
       "branch": "master",
-      "commit": "70362d5",
+      "commit": "6e7560a",
       "tag": ""
     }
   },
@@ -197,7 +197,7 @@
     "git": {
       "repo": "https://github.com/marmarachain/marmara",
       "branch": "master",
-      "commit": "b288dfd",
+      "commit": "a92d834",
       "tag": ""
     }
   },
@@ -241,7 +241,7 @@
     "git": {
       "repo": "https://github.com/pbcllc/sfusd-core",
       "branch": "",
-      "commit": "d96497c",
+      "commit": "4e79e1b",
       "tag": ""
     }
   },
@@ -283,9 +283,9 @@
     "sapling": 1,
     "notarypay": 0,
     "git": {
-      "repo": "https://github.com/komodoplatform/komodo",
+      "repo": "https://github.com/TokelPlatform/tokel",
       "branch": "tokel",
-      "commit": "f39a088",
+      "commit": "65d50d0",
       "tag": ""
     }
   },
@@ -327,9 +327,9 @@
     "protover": 70015,
     "isPoS": 0,
     "git": {
-      "repo": "https://github.com/KomodoPlatform/mil-1",
+      "repo": "https://github.com/emc2foundation/mil",
       "branch": "",
-      "commit": "4fb0389",
+      "commit": "578bed7",
       "tag": ""
     }
   }
