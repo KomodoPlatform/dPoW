@@ -25,8 +25,6 @@ secp256k1/secp256k1.a:
 optimized.a: \
 		../gecko/gecko.o \
 		../datachain/datachain.o \
-		cards777.o \
-		groestl.o \
 		iguana_accept.o \
 		iguana_bitmap.o \
 		iguana_blocks.o \
@@ -56,11 +54,8 @@ optimized.a: \
 		iguana_unspents.o \
 		iguana_volatiles.o \
 		iguana_wallet.o \
-		keccak.o \
 		mini-gmp.o \
-		poker.o \
 		ramchain_api.o \
-		segwit_addr.o \
 		SuperNET_keys.o
 	$(AR) -r $@ $^
 
