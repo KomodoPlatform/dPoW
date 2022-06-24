@@ -1,5 +1,6 @@
 x64
 *.o
+*.a
 agents/iguana.exe
 Debug/*
 

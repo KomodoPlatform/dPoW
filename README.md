@@ -22,7 +22,7 @@ General [Setup instructions](https://docs.komodoplatform.com/notary/setup-Komodo
 `cd iguana`
 
 #### Build iguana for notary operations
-`./m_notary_build`
+`make`
 
 #### Start main-net notarizations:
 `./m_notary_main`

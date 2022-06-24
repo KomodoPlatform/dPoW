@@ -24,4 +24,4 @@ jobs:
         sudo make install
         sudo ldconfig
     - name: Build dpow client "iguana"
-      run: cd iguana && ./m_notary_build
+      run: cd iguana && make

@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-./m_notary_build
+make clean
+make
 ./m_notary_main
