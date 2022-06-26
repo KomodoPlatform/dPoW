@@ -29,10 +29,21 @@ curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"ad
 curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"51.77.117.29\"}" 
 curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"188.124.46.33\"}"
 curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"95.213.238.99\"}"
-curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"77.75.121.139\"}"
 curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"51.161.50.203\"}"
 curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"192.99.233.45\"}"
- 
+curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"77.75.121.139\"}"
+curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"77.74.197.116\"}"
+curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"77.74.197.118\"}"
+curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"158.69.18.122\"}"
+curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"167.114.197.250\"}"
+curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"15.235.82.132\"}"
+curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"52.129.44.138\"}"
+curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"176.9.8.187\"}"
+curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"162.55.5.83\"}"
+curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"2.56.153.182\"}"
+curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"177.54.147.50\"}"
+curl --url "http://127.0.0.1:7171" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"177.54.156.52 \"}"
+
 
 
 # add KMD
