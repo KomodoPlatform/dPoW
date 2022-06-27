@@ -32,7 +32,7 @@ struct signed_nnpacket
 
 void dex_init(struct supernet_info *myinfo)
 {
-    int32_t i,j,mask = 0; 
+    int32_t i,j,mask = 0;
     OS_randombytes((void *)&i,sizeof(i));
     srand(i);
     for (i=0; i<sizeof(myinfo->dexseed_ipaddrs)/sizeof(*myinfo->dexseed_ipaddrs); i++)
@@ -1238,7 +1238,7 @@ int32_t dex_crc32find(struct supernet_info *myinfo,uint32_t crc32)
 
 int32_t dex_packetcheck(struct supernet_info *myinfo,struct dex_nanomsghdr *dexp,int32_t size)
 {
-    uint32_t crc32; //int32_t firstz=-1; 
+    uint32_t crc32; //int32_t firstz=-1;
     if ( dexp->version0 == (DEX_VERSION & 0xff) && dexp->version1 == ((DEX_VERSION >> 8) & 0xff) )
     {
         if ( dexp->datalen == (size - sizeof(*dexp)) )
@@ -1562,7 +1562,7 @@ void dpow_nanomsginit(struct supernet_info *myinfo,char *ipaddr)
         nn_setsockopt(dpowsock,NN_SOL_SOCKET,NN_RCVTIMEO,&timeout,sizeof(timeout));
         maxsize = 1024 * 1024;
         printf("%s RCVBUF.%d\n",bindpoint,nn_setsockopt(dpowsock,NN_SOL_SOCKET,NN_RCVBUF,&maxsize,sizeof(maxsize)));
-        
+
         myinfo->nanoinit = (uint32_t)time(NULL);
     } //else printf("error creating nanosocket\n");
     if ( myinfo->dpowsock != dpowsock )
@@ -2016,7 +2016,7 @@ void dpow_notarize_update(struct supernet_info *myinfo,struct dpow_info *dp,stru
             bp->recvmask |= (1LL << senderind) | (1LL << bp->myind);
             bp->bestmask = dpow_maskmin(bp->recvmask,bp,&bp->bestk);
         }
-        
+
         dpow_bestconsensus(dp,bp);
         if ( bp->bestk >= 0 )
             bp->notaries[bp->myind].bestk = bp->bestk;
@@ -2083,7 +2083,7 @@ void dpow_notarize_update(struct supernet_info *myinfo,struct dpow_info *dp,stru
             }
             if ( 0 && strcmp("LABSTH",dp->symbol) == 0 && bp->myind == 0 )
                 printf("%s recv.%llx best.(%d %llx) m.%d p.%d:%d b.%d state.%d minsigs.%d pend.%d\n",dp->symbol,(long long)bp->recvmask,bp->bestk,(long long)bp->bestmask,matches,paxmatches,paxbestmatches,bestmatches,bp->state,bp->minsigs,bp->pendingbestk);
-            
+
             if ( bestmatches == bp->minsigs && paxbestmatches == bp->minsigs && bp->bestk >= 0 && bp->bestmask != 0 )
             {
                 if ( bp->pendingbestk < 0 )//bp->pendingbestk != bp->bestk || bp->pendingbestmask != bp->bestmask )
@@ -2126,7 +2126,7 @@ void dpow_notarize_update(struct supernet_info *myinfo,struct dpow_info *dp,stru
         }
         char str[65];
         if ( (rand() % 130) == 0 )
-            printf("%x ht.%d [%d] ips.%d %s NOTARIZE.%d matches.%d paxmatches.%d bestmatches.%d bestk.%d:%d %llx recv.%llx sigmasks.(%llx %llx) senderind.%d state.%x (%x %x %x) MoM.%s [%d]\n",bp->paxwdcrc,bp->height,bp->myind,dp->numipbits,dp->symbol,bp->minsigs,matches,paxmatches,bestmatches,bp->bestk,bp->pendingbestk,(long long)bp->bestmask,(long long)bp->recvmask,(long long)(bp->bestk>=0?bp->destsigsmasks[bp->bestk]:0),(long long)(bp->bestk>=0?bp->srcsigsmasks[bp->bestk]:0),senderind,bp->state,bp->hashmsg.uints[0],bp->desttxid.uints[0],bp->srctxid.uints[0],bits256_str(str,bp->MoM),bp->MoMdepth);
+            printf("[%s] %x ht.%d [%d] ips.%d %s NOTARIZE.%d matches.%d paxmatches.%d bestmatches.%d bestk.%d:%d %llx recv.%llx sigmasks.(%llx %llx) senderind.%d state.%x (%x %x %x) MoM.%s [%d]\n",dp->symbol,bp->paxwdcrc,bp->height,bp->myind,dp->numipbits,dp->symbol,bp->minsigs,matches,paxmatches,bestmatches,bp->bestk,bp->pendingbestk,(long long)bp->bestmask,(long long)bp->recvmask,(long long)(bp->bestk>=0?bp->destsigsmasks[bp->bestk]:0),(long long)(bp->bestk>=0?bp->srcsigsmasks[bp->bestk]:0),senderind,bp->state,bp->hashmsg.uints[0],bp->desttxid.uints[0],bp->srctxid.uints[0],bits256_str(str,bp->MoM),bp->MoMdepth);
     }
 }
 
@@ -2335,7 +2335,7 @@ int32_t dpow_nanomsg_update(struct supernet_info *myinfo)
                             if ( i == myinfo->numdpows )
                                 printf("received nnpacket for (%s)\n",np->symbol);
                             else
-                            {                             
+                            {
                                 dpow_ipbitsadd(myinfo,dp,np->ipbits,np->numipbits,sizeof(np->ipbits)/sizeof(*np->ipbits),np->senderind,np->myipbits);
                                 if ( (bp= dpow_heightfind(myinfo,dp,np->height)) != 0 && bp->state != 0xffffffff && bp->myind >= 0 )
                                 {

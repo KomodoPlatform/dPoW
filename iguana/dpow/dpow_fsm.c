@@ -267,7 +267,7 @@ void dpow_statemachinestart(void *ptr)
     int32_t i,j,ht,extralen,destprevvout0,srcprevvout0,src_or_dest,numratified=0,kmdheight,myind = -1,blockindex=0; uint8_t extras[10000],pubkeys[64][33]; cJSON *ratified=0,*item; struct iguana_info *src,*dest; char *jsonstr,*handle,*hexstr,str[65],str2[65],srcaddr[64],destaddr[64]; bits256 zero,MoM,merkleroot,srchash,destprevtxid0,srcprevtxid0; struct dpow_block *bp; struct dpow_entry *ep = 0; uint32_t MoMdepth,duration,minsigs,starttime,srctime;
     char *destlockunspent=0,*srclockunspent=0,*destunlockunspent=0,*srcunlockunspent=0;
     memset(&zero,0,sizeof(zero));
-    static portable_mutex_t dpowT_mutex; 
+    static portable_mutex_t dpowT_mutex;
     portable_mutex_init(&dpowT_mutex);
     MoM = zero;
     srcprevtxid0 = destprevtxid0 = zero;
@@ -615,7 +615,7 @@ void dpow_statemachinestart(void *ptr)
         extralen = dpow_paxpending(myinfo,extras,sizeof(extras),&bp->paxwdcrc,bp->MoM,bp->MoMdepth,bp->CCid,src_or_dest,bp);
         bp->notaries[bp->myind].paxwdcrc = bp->paxwdcrc;
     }
-    printf("PAXWDCRC.%x myind.%d isratify.%d DPOW.%s statemachine checkpoint.%d %s start.%u+dur.%d vs %ld MoM[%d] %s\n",bp->paxwdcrc,bp->myind,bp->isratify,src->symbol,checkpoint.blockhash.height,bits256_str(str,checkpoint.blockhash.hash),starttime,bp->duration,time(NULL),bp->MoMdepth,bits256_str(str2,bp->MoM));
+    printf("[%s] PAXWDCRC.%x myind.%d isratify.%d DPOW.%s statemachine checkpoint.%d %s start.%u+dur.%d vs %ld MoM[%d] %s\n",src->symbol,bp->paxwdcrc,bp->myind,bp->isratify,src->symbol,checkpoint.blockhash.height,bits256_str(str,checkpoint.blockhash.hash),starttime,bp->duration,time(NULL),bp->MoMdepth,bits256_str(str2,bp->MoM));
     for (i=0; i<sizeof(srchash); i++)
         srchash.bytes[i] = dp->minerkey33[i+1];
     //printf("start utxosync start.%u %u\n",starttime,(uint32_t)time(NULL));
@@ -634,7 +634,7 @@ void dpow_statemachinestart(void *ptr)
                 src_or_dest = 0;
             else src_or_dest = 1;
             extralen = dpow_paxpending(myinfo,extras,sizeof(extras),&bp->paxwdcrc,bp->MoM,bp->MoMdepth,bp->CCid,src_or_dest,bp);
-            // This is no longer be needed... It can stop notarizations dead if they have not happened for 1440 blocks. 
+            // This is no longer be needed... It can stop notarizations dead if they have not happened for 1440 blocks.
             //if ( extralen == -1 )
             //    break;
             bp->notaries[bp->myind].paxwdcrc = bp->paxwdcrc;
@@ -679,7 +679,7 @@ void dpow_statemachinestart(void *ptr)
         }
         sleep(30);
     }
-    printf("END isratify.%d:%d bestk.%d %llx sigs.%llx state.%x machine ht.%d completed state.%x %s.%s %s.%s recvmask.%llx paxwdcrc.%x %p %p\n",bp->isratify,dp->ratifying,bp->bestk,(long long)bp->bestmask,(long long)(bp->bestk>=0?bp->destsigsmasks[bp->bestk]:0),bp->state,bp->height,bp->state,dp->dest,bits256_str(str,bp->desttxid),dp->symbol,bits256_str(str2,bp->srctxid),(long long)bp->recvmask,bp->paxwdcrc,src,dest);
+    printf("[%s] END isratify.%d:%d bestk.%d %llx sigs.%llx state.%x machine ht.%d completed state.%x %s.%s %s.%s recvmask.%llx paxwdcrc.%x %p %p\n",dp->symbol,bp->isratify,dp->ratifying,bp->bestk,(long long)bp->bestmask,(long long)(bp->bestk>=0?bp->destsigsmasks[bp->bestk]:0),bp->state,bp->height,bp->state,dp->dest,bits256_str(str,bp->desttxid),dp->symbol,bits256_str(str2,bp->srctxid),(long long)bp->recvmask,bp->paxwdcrc,src,dest);
     dp->lastrecvmask = bp->recvmask;
     dp->ratifying -= bp->isratify;
 #if STAKEDTEST
@@ -697,13 +697,13 @@ void dpow_statemachinestart(void *ptr)
         int8_t send_dest = 0, send_src = 0; char rettx[32768] = {0};
         if ( firstloop == 0 )
         {
-            sleep((rand() % (120 - 60)) + 60); 
+            sleep((rand() % (120 - 60)) + 60);
             firstloop = 1;
         }
-        // random sleep here so all nodes are checking/rebroadcasting at diffrent times. 
+        // random sleep here so all nodes are checking/rebroadcasting at diffrent times.
         sleep((rand() % (77 - 33)) + 33);
-        
-        // get the confirms for desttxid 
+
+        // get the confirms for desttxid
         if ( destnotarized == 0 )
         {
             if ( (dest_confs= dpow_txconfirms(myinfo, bp->destcoin, bp->desttxid, rettx)) != -1 )
@@ -726,7 +726,7 @@ void dpow_statemachinestart(void *ptr)
                     if ( desttx[0] != 0 )
                         send_dest = 1;
                 }
-            } 
+            }
             else if ( desttx[0] != 0 ) // we have the tranxation hex saved, and the tx is not in the local mempool or a block, so resend it.
             {
                 fprintf(stderr, "[%s] Cant find tx.%s rebroadcasting...\n", dp->dest, bits256_str(str,bp->desttxid));
@@ -736,9 +736,9 @@ void dpow_statemachinestart(void *ptr)
             {
                 char *tmpstr = dpow_sendrawtransaction(myinfo, bp->destcoin, desttx);
                 free(tmpstr);
-            }    
+            }
         }
-        
+
         // get the confirms for srctxid
         memset(rettx,0,sizeof(rettx)); // zero out rettx!
         if ( srcnotarized == 0 )
