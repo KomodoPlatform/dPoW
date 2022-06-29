@@ -8,5 +8,5 @@ git pull
 git checkout d2e98de9d1ac6e26c20d540d5a8d7a493e2cf5fd
 make -j4
 source ~/komodo/src/pubkey.txt
-~/tokel/src/tokeld -reindex -addnode=65.21.77.109 -addnode=147.135.105.85 -addnode=na.smk.dog -addnode=dev.smk.dog &
+~/tokel/src/tokeld -reindex -addnode=65.21.77.109 -addnode=147.135.105.85 -addnode=na.smk.dog -addnode=dev.smk.dog -pubkey=$pubkey &
 ```
