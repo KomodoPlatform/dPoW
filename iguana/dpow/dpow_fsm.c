@@ -331,7 +331,7 @@ void dpow_statemachinestart(void *ptr)
         }
         portable_mutex_unlock(&dpowT_mutex);
 
-        fprintf(stderr, "[---] State: sym.%s, dest.%s, blocks.%d/%d (size.%zu)\n", dp->symbol, dp->dest, busy_blocks, dp->maxblocks, sizeof(*bp));
+        fprintf(stderr, "[%s] State: sym.%s, dest.%s, blocks.%d/%d (size.%zu)\n", dp->symbol, dp->symbol, dp->dest, busy_blocks, dp->maxblocks, sizeof(*bp));
     }
 
     //if ( (bp= dpow_heightfind(myinfo,dp, checkpoint.blockhash.height)) == 0 )
@@ -349,7 +349,7 @@ void dpow_statemachinestart(void *ptr)
         bp = calloc(1,sizeof(*bp));
         dp->blocks[blockindex] = bp;
         portable_mutex_unlock(&dpowT_mutex);
-        printf("blockindex.%i allocate bp for %s ht.%d -> %s\n",blockindex,src->symbol,checkpoint.blockhash.height,dest->symbol);
+        printf("[%s] blockindex.%i allocate bp for %s ht.%d -> %s\n",src->symbol,blockindex,src->symbol,checkpoint.blockhash.height,dest->symbol);
         bp->MoM = MoM;
         bp->MoMdepth = MoMdepth;
         bp->CCid = dp->fullCCid & 0xffff;
@@ -512,7 +512,7 @@ void dpow_statemachinestart(void *ptr)
         return;
     }
     bp->myind = myind;
-    printf("[%d] notarize %s->%s %s ht.%d minsigs.%d duration.%d start.%u MoM[%d] %s CCid.%u\n",bp->myind,dp->symbol,dp->dest,bits256_str(str,checkpoint.blockhash.hash),checkpoint.blockhash.height,minsigs,duration,checkpoint.timestamp,bp->MoMdepth,bits256_str(str2,bp->MoM),bp->CCid);
+    printf("[%s] [%d] notarize %s->%s %s ht.%d minsigs.%d duration.%d start.%u MoM[%d] %s CCid.%u\n",dp->symbol,bp->myind,dp->symbol,dp->dest,bits256_str(str,checkpoint.blockhash.hash),checkpoint.blockhash.height,minsigs,duration,checkpoint.timestamp,bp->MoMdepth,bits256_str(str2,bp->MoM),bp->CCid);
     if ( bp->isratify != 0 && memcmp(bp->notaries[0].pubkey,bp->ratified_pubkeys[0],33) != 0 )
     {
         for (i=0; i<33; i++)
@@ -551,9 +551,9 @@ void dpow_statemachinestart(void *ptr)
             {
                 // lock the dest utxo if destination coin is KMD.
                 if (dpow_lockunspent(myinfo,bp->destcoin,destaddr,bits256_str(str2,ep->dest.prev_hash),ep->dest.prev_vout) != 0)
-                    printf(">>>> LOCKED %s UTXO.(%s) vout.(%d)\n",dest->symbol,bits256_str(str2,ep->dest.prev_hash),ep->dest.prev_vout);
+                    printf("[%s] >>>> LOCKED %s UTXO.(%s) vout.(%d)\n",src->symbol,dest->symbol,bits256_str(str2,ep->dest.prev_hash),ep->dest.prev_vout);
                 else
-                    printf("<<<< FAILED TO LOCK %s UTXO.(%s) vout.(%d)\n",dest->symbol,bits256_str(str2,ep->dest.prev_hash),ep->dest.prev_vout);
+                    printf("[%s] <<<< FAILED TO LOCK %s UTXO.(%s) vout.(%d)\n",src->symbol,dest->symbol,bits256_str(str2,ep->dest.prev_hash),ep->dest.prev_vout);
              }
         }
         if ( dpow_haveutxo(myinfo,bp->srccoin,&ep->src.prev_hash,&ep->src.prev_vout,srcaddr,"") > 0 )
@@ -562,9 +562,9 @@ void dpow_statemachinestart(void *ptr)
             {
                 // lock the src coin selected utxo if the source coin is KMD.
                 if (dpow_lockunspent(myinfo,bp->srccoin,srcaddr,bits256_str(str2,ep->src.prev_hash),ep->src.prev_vout) != 0)
-                    printf(">>>> LOCKED %s UTXO.(%s) vout.(%d)\n",src->symbol,bits256_str(str2,ep->src.prev_hash),ep->src.prev_vout);
+                    printf("[%s] >>>> LOCKED %s UTXO.(%s) vout.(%d)\n",dest->symbol,src->symbol,bits256_str(str2,ep->src.prev_hash),ep->src.prev_vout);
                 else
-                    printf("<<<< FAILED TO LOCK %s UTXO.(%s) vout.(%d)\n",src->symbol,bits256_str(str2,ep->src.prev_hash),ep->src.prev_vout);
+                    printf("[%s] <<<< FAILED TO LOCK %s UTXO.(%s) vout.(%d)\n",dest->symbol,src->symbol,bits256_str(str2,ep->src.prev_hash),ep->src.prev_vout);
             }
         }
         if ( bp->isratify != 0 )
@@ -779,13 +779,13 @@ end:
     if ( ep != 0 && strcmp("KMD",dest->symbol) == 0  && ep->dest.prev_vout != -1 )
     {
       if ( dpow_unlockunspent(myinfo,bp->destcoin,destaddr,bits256_str(str2,ep->dest.prev_hash),ep->dest.prev_vout) != 0 )
-        printf(">>>> UNLOCKED %s UTXO.(%s) vout.(%d)\n",dest->symbol,bits256_str(str2,ep->dest.prev_hash),ep->dest.prev_vout);
+        printf("[%s] >>>> UNLOCKED %s UTXO.(%s) vout.(%d)\n",src->symbol,dest->symbol,bits256_str(str2,ep->dest.prev_hash),ep->dest.prev_vout);
     }
     // unlock the src selected utxo on KMD.
     if ( ep != 0 && strcmp("KMD",src->symbol) == 0  && ep->src.prev_vout != -1 )
     {
       if ( dpow_unlockunspent(myinfo,bp->srccoin,srcaddr,bits256_str(str2,ep->src.prev_hash),ep->src.prev_vout) != 0)
-        printf(">>>> UNLOCKED %s UTXO.(%s) vout.(%d)\n",src->symbol,bits256_str(str2,ep->src.prev_hash),ep->src.prev_vout);
+        printf("[%s] >>>> UNLOCKED %s UTXO.(%s) vout.(%d)\n",dest->symbol,src->symbol,bits256_str(str2,ep->src.prev_hash),ep->src.prev_vout);
     }
     portable_mutex_lock(&dpowT_mutex);
     dp->blocks[blockindex] = 0;

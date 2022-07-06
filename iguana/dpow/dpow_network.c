@@ -2088,7 +2088,7 @@ void dpow_notarize_update(struct supernet_info *myinfo,struct dpow_info *dp,stru
             {
                 if ( bp->pendingbestk < 0 )//bp->pendingbestk != bp->bestk || bp->pendingbestmask != bp->bestmask )
                 {
-                    printf("new PENDING BESTK (%d %llx) state.%d\n",bp->bestk,(long long)bp->bestmask,bp->state);
+                    printf("[%s] new PENDING BESTK (%d %llx) state.%d\n",dp->symbol,bp->bestk,(long long)bp->bestmask,bp->state);
                     bp->pendingbestk = bp->bestk;
                     bp->pendingbestmask = bp->bestmask;
                     dpow_signedtxgen(myinfo,dp,bp->destcoin,bp,bp->pendingbestk,bp->pendingbestmask,bp->myind,DPOW_SIGBTCCHANNEL,1,0);
@@ -2096,7 +2096,7 @@ void dpow_notarize_update(struct supernet_info *myinfo,struct dpow_info *dp,stru
                 }
                 if ( (bp->pendingbestmask & (1LL << bp->myind)) != 0 && bits256_nonz(bp->desttxid) != 0 && bp->srcsigsmasks[bp->pendingbestk] == 0 )
                 {
-                    printf("generate sigs for bestk.%d %llx\n",bp->pendingbestk,(long long)bp->pendingbestmask);
+                    printf("[%s] generate sigs for bestk.%d %llx\n",dp->symbol,bp->pendingbestk,(long long)bp->pendingbestmask);
                     dpow_signedtxgen(myinfo,dp,bp->srccoin,bp,bp->pendingbestk,bp->pendingbestmask,bp->myind,DPOW_SIGCHANNEL,0,0);
                 }
                 if ( bp->destsigsmasks[bp->pendingbestk] == bp->pendingbestmask ) // have all sigs
