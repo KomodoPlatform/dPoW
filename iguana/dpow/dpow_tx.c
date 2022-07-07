@@ -673,7 +673,7 @@ void dpow_sigscheck(struct supernet_info *myinfo,struct dpow_info *dp,struct dpo
                         {
                             bp->state = state;
                             dpow_send(myinfo,dp,bp,txid,bp->hashmsg,(src_or_dest != 0) ? DPOW_BTCTXIDCHANNEL : DPOW_TXIDCHANNEL,bp->height,txdata,len+32);
-                            printf("[%s] complete statemachine.%s ht.%d state.%d (%x %x)\n",coin->symbol,coin->symbol,bp->height,bp->state,bp->hashmsg.uints[0],txid.uints[0]);
+                            printf("[%s] complete statemachine.%s ht.%d state.%d (%x %x)\n",dp->symbol,coin->symbol,bp->height,bp->state,bp->hashmsg.uints[0],txid.uints[0]);
                         }
                     } else printf("sendtxid mismatch got %s instead of %s\n",bits256_str(str,txid),bits256_str(str2,signedtxid));
                 }
