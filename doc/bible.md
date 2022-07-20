@@ -178,8 +178,7 @@ Exact dates and times for each of the events above will be posted within this do
 
 ## Responsibilities, Rights and Duties of a Notary Node Operator
 
-Operating a Notary Node comes with various responsibilities but also grants you certain privileges for securing the Komodo network with dPoW. Operators who fail to adequately perform the required duties will face disqualification and loss of their node. Notary Nodes are responsible for  protecting over a billion (fiat) dollars in assets, and must remain vigilant and respond quickly to any update announcements posted in Discord and the dPoW repository, along with ensuring that their node is secure and performing as expected at all times.
-
+Operating a Notary Node comes with various responsibilities but also grants you certain privileges for securing the Komodo network with dPoW. Operators who fail to adequately perform the required duties will face disqualification and loss of their node. Notary Nodes are responsible for protecting over a billion (fiat) dollars in assets, and must remain vigilant and respond quickly to any update announcements posted in Discord and the dPoW repository, along with ensuring that their node is secure and performing as expected at all times.
 
 
 ### NN Duties:
@@ -198,6 +197,7 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 - <b>xii.</b> Notarization funds, deposited on your NN keys by the Komodo team, are reserved for dPoW operations - it is strictly prohibited to transfer these funds or to use these for anything other than notarizations. At the end of the NN season or if you lose your spot, all NN funds must be returned to the Komodo team. Notaries are responsible for ensuring sufficient KMD is sent from main node to third party node for use in notarisation (funding for other chains will be provided by the Komodo Team).
 - <b>xiii.</b> Maintain respectful and civil communications with fellow Notary Node operators, and members of the Komodo Community.
 
+**Note:** _In some circumstances, non-DEV nodes could be assigned to participate in developer or security related tasks. Selection of these nodes will be based on operator experience, skillset and task specific requirements. With respect to ensuring dPoW remains operational, there is a limit of 4 nodes eligible for this assignment. Participation is voluntary. Operators who consent will receive no benefit to their score for their involvement, and accept the risk of losing potential end of season top 5 rank benefits if their scores suffers as a result of participating._
 
 
 ### NN Rights:
@@ -326,6 +326,9 @@ A "grace period" at the beginning of each season will apply until September 1st 
 
 In case of such a spot-loss or disqualification, the next candidate from the election results will be eligible for the spot and the pubkey would be replaced with the next scheduled hardfork update. 
 
+
+
+
 ### NN Season
 
 A NN season may not equal 12 months - it will cover mininmum 75%, 3 quarters (9 months) of a year but could also last longer than a year under specific circumstances. 
@@ -389,7 +392,7 @@ You may send reports to developer@komodoplatform.com.
 
 If you wish to contact specific maintainers directly, the following have made themselves available for conduct issues:
 
-- smk762 (smk762 at komodoplatform.com)
+- smk (smk at komodoplatform.com)
 - TonyL (alysakov at komodoplatform.com)
 - gcharang (gcharang at komodoplatform.com)
 - ca333 (ca333 at komodoplatform.com)
@@ -403,7 +406,7 @@ https://www.contributor-covenant.org
 #### E-mail:
 
 - alysakov@komodoplatform.com
-- smk762@komodoplatform.com
+- smk@komodoplatform.com
 - alright@komodoplatform.com
 - kolo@komodoplatform.com 
 - dpow@komodoplatform.com
