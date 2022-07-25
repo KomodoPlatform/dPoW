@@ -204,7 +204,7 @@
   {
     "txfee": 0.0001,
     "conf": "smartusd.conf",
-    "path": "",
+    "path": "${HOME#'/'}/.smartusd",
     "startpend": 68,
     "endpend": 68,
     "services": 129,
