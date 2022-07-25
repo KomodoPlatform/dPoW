@@ -94,12 +94,12 @@
 			"dPoW-Mainnet": {},
 			"dPoW-3P": {
 				"MIL": {
-					"start_time": 1658646427,
-					"start_time_comment": "Sat July 24 07:07:07 2022 +0000 commit TBA, timestamp may change"
+					"start_time": 1658992027,
+					"start_time_comment": "Sat July 28 07:07:07 2022 +0000 commit TBA, timestamp may change"
 				},
 				"CHIPS": {
-					"start_time": 1658646427,
-					"start_time_comment": "Sat July 24 07:07:07 2022 +0000 commit TBA, timestamp may change"
+					"start_time": 1658992027,
+					"start_time_comment": "Sat July 28 07:07:07 2022 +0000 commit TBA, timestamp may change"
 				},
 			}
 		}
