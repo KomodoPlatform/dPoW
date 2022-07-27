@@ -1,4 +1,15 @@
 # Changelog
+## 0.6.2
+
+- Move `CHIPS` and `MIL` from S5 to S6 network on 3P node
+- Update contact details, add note to bible
+- Update seednode version to `ce32ab8da`
+- Update scoring epochs
+
+## 0.6.1
+
+- update `TOKEL` on 3P node
+
 ## 0.6.0
 
 - removes `VOTE2022`, `MESH`, `ZILLA`, `GLEEC-OLD`
