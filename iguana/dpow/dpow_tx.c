@@ -545,7 +545,9 @@ void dpow_rawtxsign(struct supernet_info *myinfo,struct dpow_info *dp,struct igu
                                     char *txinfo = jprint(item,0);
                                     snprintf(colour, sizeof(colour), strcmp((src_or_dest != 0) ? bp->destcoin->symbol : bp->srccoin->symbol, "KMD") == 0 ? GREEN : YELLOW);
                                     printf("%s[%s] "RESET,colour,(src_or_dest != 0) ? bp->destcoin->symbol : bp->srccoin->symbol);
-                                    printf("height.%d bestk.%d %llx mod.%d VINI.%d myid.%d MINE.(%s) j.%d\n"RESET,bp->height,bestk,(long long)bestmask,DPOW_MODIND(bp,0),j,myind,txinfo,j);
+                                    printf("height.%d bestk.%d %llx mod.%d vin.%d myid.%d "RESET,bp->height,bestk,(long long)bestmask,DPOW_MODIND(bp,0),j,myind);
+                                    snprintf(colour2, sizeof(colour2), BRIGHTBLUE);
+                                    printf("%sMINE.(%s)\n"RESET,colour2,txinfo);
                                     free(txinfo);
                                     cp->siglens[bestk] = (int32_t)strlen(sigstr) >> 1;
                                     if ( src_or_dest != 0 )

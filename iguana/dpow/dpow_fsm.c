@@ -354,7 +354,7 @@ void dpow_statemachinestart(void *ptr)
         portable_mutex_unlock(&dpowT_mutex);
         snprintf(colour, sizeof(colour), strcmp(src->symbol, "KMD") == 0 ? GREEN : YELLOW);
         snprintf(colour2, sizeof(colour2), strcmp(dest->symbol, "KMD") == 0 ? GREEN : YELLOW);
-        printf("%s[-%s-] "RESET,colour,src->symbol);
+        printf("%s[%s] "RESET,colour,src->symbol);
         printf("State: allocate bp: blockindex.%i ht.%d ->"RESET,blockindex,checkpoint.blockhash.height);
         printf("%s%s\n"RESET,colour2,dest->symbol);
         bp->MoM = MoM;
@@ -521,7 +521,7 @@ void dpow_statemachinestart(void *ptr)
     bp->myind = myind;
     snprintf(colour, sizeof(colour), strcmp(dp->symbol, "KMD") == 0 ? GREEN : YELLOW);
     snprintf(colour2, sizeof(colour2), strcmp(dp->dest, "KMD") == 0 ? GREEN : YELLOW);
-    printf("%s[-%s-] "RESET,colour,dp->symbol);
+    printf("%s[%s] "RESET,colour,dp->symbol);
     printf("Notarize: destination.%s%s "RESET,colour2,dp->dest);
     printf("bhash.%s ht.%d minsigs.%d duration.%d start.%u MoM[%d] %s CCid.%u myid.%d\n"RESET,bits256_str(str,checkpoint.blockhash.hash),checkpoint.blockhash.height,minsigs,duration,checkpoint.timestamp,bp->MoMdepth,bits256_str(str2,bp->MoM),bp->CCid,bp->myind);
     if ( bp->isratify != 0 && memcmp(bp->notaries[0].pubkey,bp->ratified_pubkeys[0],33) != 0 )
@@ -698,7 +698,7 @@ void dpow_statemachinestart(void *ptr)
     }
     snprintf(colour, sizeof(colour), strcmp(dp->symbol, "KMD") == 0 ? GREEN : YELLOW);
     printf("%s[%s] "RESET,colour,dp->symbol);
-    printf("State: completed %x paxwdcrc.%x isratify.%d:%d bestk.%d %llx sigs.%llx ht.%d recvmask.%llx %p %p txhashes: %s.%s %s.%s\n"RESET,bp->state,bp->paxwdcrc,bp->isratify,dp->ratifying,bp->bestk,(long long)bp->bestmask,(long long)(bp->bestk>=0?bp->destsigsmasks[bp->bestk]:0),bp->height,(long long)bp->recvmask,src,dest,dp->symbol,bits256_str(str2,bp->srctxid),dp->dest,bits256_str(str,bp->desttxid));
+    printf("State: completed %x paxwdcrc.%x isratify.%d:%d bestk.%d %llx sig.%llx ht.%d recmask.%llx %p %p txhashes: %s.%s %s.%s\n"RESET,bp->state,bp->paxwdcrc,bp->isratify,dp->ratifying,bp->bestk,(long long)bp->bestmask,(long long)(bp->bestk>=0?bp->destsigsmasks[bp->bestk]:0),bp->height,(long long)bp->recvmask,src,dest,dp->symbol,bits256_str(str2,bp->srctxid),dp->dest,bits256_str(str,bp->desttxid));
     dp->lastrecvmask = bp->recvmask;
     dp->ratifying -= bp->isratify;
 #if STAKEDTEST

@@ -817,10 +817,10 @@ char *dpow_sendrawtransaction(struct supernet_info *myinfo,struct iguana_info *c
         retstr = bitcoind_passthru(coin->symbol,coin->chain->serverport,coin->chain->userpass,"sendrawtransaction",paramstr);
         if (mine != 0) {
             snprintf(colour, sizeof(colour),GREEN);
-            printf("%s[%s] Participant in this round. >>>>> tx:%s\n"RESET,colour,coin->symbol,retstr);
+            printf("%s[-%s-] Participant in this round. >>>>> tx:%s\n"RESET,colour,coin->symbol,retstr);
         } else {
             snprintf(colour, sizeof(colour),RED);
-            printf("%s[%s] Nonparticipant in this round. >> tx:%s\n"RESET,colour,coin->symbol,retstr);
+            printf("%s[-%s-] Nonparticipant in this round. >> tx:%s\n"RESET,colour,coin->symbol,retstr);
         }
         free(paramstr);
         return(retstr);
