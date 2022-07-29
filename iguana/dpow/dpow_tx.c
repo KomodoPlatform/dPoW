@@ -543,7 +543,9 @@ void dpow_rawtxsign(struct supernet_info *myinfo,struct dpow_info *dp,struct igu
                                 if ( valid != 0 )
                                 {
                                     char *txinfo = jprint(item,0);
-                                    printf("bestk.%d %llx %s height.%d mod.%d VINI.%d myind.%d MINE.(%s) j.%d\n",bestk,(long long)bestmask,(src_or_dest != 0) ? bp->destcoin->symbol : bp->srccoin->symbol,bp->height,DPOW_MODIND(bp,0),j,myind,txinfo,j);
+                                    snprintf(colour, sizeof(colour), strcmp((src_or_dest != 0) ? bp->destcoin->symbol : bp->srccoin->symbol, "KMD") == 0 ? GREEN : YELLOW);
+                                    printf("%s[%s] "RESET,colour,(src_or_dest != 0) ? bp->destcoin->symbol : bp->srccoin->symbol);
+                                    printf("height.%d bestk.%d %llx mod.%d VINI.%d myid.%d MINE.(%s) j.%d\n"RESET,bp->height,bestk,(long long)bestmask,DPOW_MODIND(bp,0),j,myind,txinfo,j);
                                     free(txinfo);
                                     cp->siglens[bestk] = (int32_t)strlen(sigstr) >> 1;
                                     if ( src_or_dest != 0 )
@@ -673,7 +675,9 @@ void dpow_sigscheck(struct supernet_info *myinfo,struct dpow_info *dp,struct dpo
                         {
                             bp->state = state;
                             dpow_send(myinfo,dp,bp,txid,bp->hashmsg,(src_or_dest != 0) ? DPOW_BTCTXIDCHANNEL : DPOW_TXIDCHANNEL,bp->height,txdata,len+32);
-                            printf("complete statemachine.%s ht.%d state.%d (%x %x)\n",coin->symbol,bp->height,bp->state,bp->hashmsg.uints[0],txid.uints[0]);
+                            snprintf(colour, sizeof(colour), strcmp(coin->symbol, "KMD") == 0 ? GREEN : YELLOW);
+                            printf("%s[%s] "RESET,colour,coin->symbol);
+                            printf("State: fsm complete ht.%d state.%d (%x %x)\n"RESET,bp->height,bp->state,bp->hashmsg.uints[0],txid.uints[0]);
                         }
                     } else printf("sendtxid mismatch got %s instead of %s\n",bits256_str(str,txid),bits256_str(str2,signedtxid));
                 }

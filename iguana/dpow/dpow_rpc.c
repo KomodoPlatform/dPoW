@@ -815,9 +815,13 @@ char *dpow_sendrawtransaction(struct supernet_info *myinfo,struct iguana_info *c
         jaddistr(array,signedtx);
         paramstr = jprint(array,1);
         retstr = bitcoind_passthru(coin->symbol,coin->chain->serverport,coin->chain->userpass,"sendrawtransaction",paramstr);
-        char colour[16];
-        snprintf(colour, sizeof(colour), mine != 0 ? GREEN : RED);
-        fprintf(stderr,"%s>>>>>>>>>>> %s dpow_sendrawtransaction (%s)\n"RESET,colour,coin->symbol,retstr);
+        if (mine != 0) {
+            snprintf(colour, sizeof(colour),GREEN);
+            printf("%s[%s] Participant in this round. >>>>> tx:%s\n"RESET,colour,coin->symbol,retstr);
+        } else {
+            snprintf(colour, sizeof(colour),RED);
+            printf("%s[%s] Nonparticipant in this round. >> tx:%s\n"RESET,colour,coin->symbol,retstr);
+        }
         free(paramstr);
         return(retstr);
     }
@@ -1046,7 +1050,9 @@ int32_t dpow_haveutxo(struct supernet_info *myinfo,struct iguana_info *coin,bits
                 }
                 OS_randombytes((uint8_t *)&r,sizeof(r));
                 i = r % n;
-                printf("[%s] : chosen = %d  out of %d loop.(%d)\n",coin->symbol,i,n,j);
+                snprintf(colour, sizeof(colour), strcmp(coin->symbol, "KMD") == 0 ? GREEN : YELLOW);
+                printf("%s[-%s-] "RESET,colour,coin->symbol);
+                printf(": chosen = %d  out of %d loop.(%d)\n"RESET,i,n,j);
                 if ( (item= jitem(unspents,i)) == 0 )
         {
             j++;
