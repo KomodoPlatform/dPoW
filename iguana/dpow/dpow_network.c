@@ -2127,7 +2127,7 @@ void dpow_notarize_update(struct supernet_info *myinfo,struct dpow_info *dp,stru
                 printf("mypaxcrc.%x\n",bp->paxwdcrc);
         }
         char str[65];
-        if ( (rand() % 130) == 0 ) {
+        if ( (rand() % 130) == 0 && matches >10 && bp->bestk > 0) {
             snprintf(colour, sizeof(colour), strcmp(dp->symbol, "KMD") == 0 ? GREEN : YELLOW);
             printf("%s[%s] "RESET,colour,dp->symbol);
             printf("State: NOTARIZE paxwdcrc.%x ht.%d minsig.%d peers.%d matches.%d paxmatches.%d bestmatches.%d bestk.%d:%d %llx recv.%llx sigmasks.(%llx %llx) senderid.%d myid.%d state.%x (%x %x %x) MoM.%s [%d]\n"RESET,bp->paxwdcrc,bp->height,bp->minsigs,dp->numipbits,matches,paxmatches,bestmatches,bp->bestk,bp->pendingbestk,(long long)bp->bestmask,(long long)bp->recvmask,(long long)(bp->bestk>=0?bp->destsigsmasks[bp->bestk]:0),(long long)(bp->bestk>=0?bp->srcsigsmasks[bp->bestk]:0),senderind,bp->myind,bp->state,bp->hashmsg.uints[0],bp->desttxid.uints[0],bp->srctxid.uints[0],bits256_str(str,bp->MoM),bp->MoMdepth);
