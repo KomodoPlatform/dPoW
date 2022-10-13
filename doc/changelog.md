@@ -1,4 +1,10 @@
 # Changelog
+## 0.6.3
+
+- Update VRSC (Season 5 overtime Ops only)
+- Update seednode version to `0f6c72615`
+- Update seednode scoring epochs
+
 ## 0.6.2
 
 - Move `CHIPS` and `MIL` from S5 to S6 network on 3P node
