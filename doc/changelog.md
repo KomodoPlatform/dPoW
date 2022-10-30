@@ -2,8 +2,6 @@
 ## 0.6.3
 
 - Update VRSC (Season 5 overtime Ops only)
-- Update seednode version to `0f6c72615`
-- Update seednode scoring epochs
 
 ## 0.6.2
 
