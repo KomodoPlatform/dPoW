@@ -92,7 +92,16 @@
 		"season_end_comment": "not yet defined, using far in future",
 		"Servers": {
 			"dPoW-Mainnet": {},
-			"dPoW-3P": {}
+			"dPoW-3P": {
+				"MIL": {
+					"start_time": 1658992027,
+					"start_time_comment": "Sat July 28 07:07:07 2022 +0000 commit TBA, timestamp may change"
+				},
+				"CHIPS": {
+					"start_time": 1658992027,
+					"start_time_comment": "Sat July 28 07:07:07 2022 +0000 commit TBA, timestamp may change"
+				},
+			}
 		}
 	}
 }

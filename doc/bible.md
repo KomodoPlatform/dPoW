@@ -1,9 +1,9 @@
 # Notary Node Bible v1.2
 
-
 <b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. This iteration of the NN bible comes into effect at the start of NN Season 6 (date TBA). Please read carefully.
 
 #
+
 
 ### Table of Contents
 
@@ -16,7 +16,6 @@
 7. [Code of Conduct](#code-of-conduct)
 
 #
-
 
 
 ## What is a Notary Node?
@@ -46,7 +45,6 @@ Finally, it’s important to emphasize some of the things that Notary Nodes cann
 - Notary Nodes cannot mine blocks with an easy difficulty on any chain except the Komodo blockchain.
 - Notary Nodes cannot solely determine the validity of a block; an entire decentralized network must come to a consensus before any transactions or blocks are verified.
 
- 
 Notary Nodes simply take publicly-available data that has been established by a blockchain’s network (a block hash) and save it onto the ledger of a different blockchain. This is accomplished by executing an empty transaction, which any ordinary user can do, though Notary Nodes dPoW’s “Iguana” software to coordinate these transactions.
 
 Where consensus is reached by 13 of the 64 Notary Nodes, this results in a transaction such as https://litecoinblockexplorer.net/tx/1bf1a710f6f9a37a91b25a4200efca701506d5133f273fe3926dae317f41a75c with 13 notary node addresses as inputs to the transaction, and sent to a notarisation address as output, along with the OP_RETURN which can be viewed as an output in the transaction’s raw data. 
@@ -66,7 +64,6 @@ Reviewing the Notarised Blockhash on the Notarised Chain’s explorer yields - h
 While the notarization process is critical to the security, blockchain interoperability, and scalability of the Komodo ecosystem, Notary Nodes don’t have any special powers over any blockchain. It is a fully decentralized mechanism for cross-chain notarizations.
 
 <br>
-
 
 
 ## How to become a Notary Node Operator?
@@ -115,7 +112,6 @@ For more information about the pre-election Testnet check out the [testnet READM
 <br>
 
 
-
 ## The Notary Node Election Process
  
 There are four Notary Node regions: Europe (EU), Asia-Russia (AR), North America (NA), and the Southern Hemisphere (SH). Each region contains 14 notary nodes, boosting the physical distribution and security of Komodo’s Notary Node network. 
@@ -159,7 +155,6 @@ Apart from that, community members may vote for any candidates in any region. VO
 For instance, if you want to send 100% of your VOTE tokens to a single candidate, you may do so. If you want to send 20% of your votes to five different candidates in a single region, you may do that, too. If you want to send an equal 25% of your votes to one candidate in each of the four regions, that’s also an option. There are no rules dictating how you cast your ballot.
 
 
-
 # Timeline
 
 Each year around the start of April, a `Ranking Snapshot` will be taken and in the week following, Notary Node scores are validated before an official announcement is made to name the auto-elected nodes, and those eligible for expanding into additional spots in the coming election. 
@@ -178,8 +173,7 @@ Exact dates and times for each of the events above will be posted within this do
 
 ## Responsibilities, Rights and Duties of a Notary Node Operator
 
-Operating a Notary Node comes with various responsibilities but also grants you certain privileges for securing the Komodo network with dPoW. Operators who fail to adequately perform the required duties will face disqualification and loss of their node. Notary Nodes are responsible for  protecting over a billion (fiat) dollars in assets, and must remain vigilant and respond quickly to any update announcements posted in Discord and the dPoW repository, along with ensuring that their node is secure and performing as expected at all times.
-
+Operating a Notary Node comes with various responsibilities but also grants you certain privileges for securing the Komodo network with dPoW. Operators who fail to adequately perform the required duties will face disqualification and loss of their node. Notary Nodes are responsible for protecting over a billion (fiat) dollars in assets, and must remain vigilant and respond quickly to any update announcements posted in Discord and the dPoW repository, along with ensuring that their node is secure and performing as expected at all times.
 
 
 ### NN Duties:
@@ -198,6 +192,7 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 - <b>xii.</b> Notarization funds, deposited on your NN keys by the Komodo team, are reserved for dPoW operations - it is strictly prohibited to transfer these funds or to use these for anything other than notarizations. At the end of the NN season or if you lose your spot, all NN funds must be returned to the Komodo team. Notaries are responsible for ensuring sufficient KMD is sent from main node to third party node for use in notarisation (funding for other chains will be provided by the Komodo Team).
 - <b>xiii.</b> Maintain respectful and civil communications with fellow Notary Node operators, and members of the Komodo Community.
 
+**Note:** _In some circumstances, non-DEV nodes could be assigned to participate in developer or security related tasks. Selection of these nodes will be based on operator experience, skillset and task specific requirements. With respect to ensuring dPoW remains operational, there is a limit of 4 nodes eligible for this assignment. Participation is voluntary. Operators who consent will receive no benefit to their score for their involvement, and accept the risk of losing potential end of season top 5 rank benefits if their score suffers as a result of participating._
 
 
 ### NN Rights:
@@ -207,7 +202,6 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 - <b>iii.</b> Having the opportunity to achieve automatic re-election upon reaching a Top 3 regional ranking, or the chance at expansion into additional nodes if ranked 4th or 5th.
 - <b>iv.</b> Accessing the private NN Discord community chat, as long as a mature and respectful basis of discussion is given. 
 - <b>v.</b> Having the chance to become the NN guru for your region if you are ranked #1 NN in that region for a minimum of 1 full month. 
-
 
 
 ## Notary Node regions
@@ -220,9 +214,7 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 ![NN Regions](https://github.com/komodoplatform/dpow/blob/master/doc/img/NN_regions.jpeg)
 
 
-
 ## Guidelines, General Information and Policies 
-
 
 ### Important Dates for Season 6:
 
@@ -237,6 +229,7 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 - dPoW season 6 start: TBA
 - Komodo core hardfork activation: TBA
 - SmartChain hardfork activation: TBA
+
 
 ### The Komodo Mining Ecosystem:
 
@@ -306,15 +299,18 @@ NN gurus have additional duties and rights. They are “responsible” for their
 
 A Komodo team-member that is not involved in the NN/dpow operations nor in the NN community will server in the role of a NN Arbiter assigned which will make a final decisions with reference to rule violations, disqualifications and bans on the basis and merits of evidence submitted by NN Gurus and the NN Tribunal. The NN Arbiter will be appointed on an as-needed basis.
 
+
 ### NN Tribunal:
 
 Two Komodo team-members form together alongside two (non-team) NN Gurus to ensure an objective decision finding process in case of unclear situations and controversial debates related to a rule violation. The NN tribunal will be formed on an as-needed basis.
+
 
 #### The current NN Gurus are:
 
 CHMEX (@CHMEX#0686 on discord): EU region <br>
 Shossain (@SHossain#0007 on discord): AR and NA region <br>
 Strob (@Strob#3417): SH region <br>
+
 
 ### Rules and Enforcement - historic information for transparency:
 
@@ -326,14 +322,17 @@ A "grace period" at the beginning of each season will apply until September 1st 
 
 In case of such a spot-loss or disqualification, the next candidate from the election results will be eligible for the spot and the pubkey would be replaced with the next scheduled hardfork update. 
 
+
 ### NN Season
 
 A NN season may not equal 12 months - it will cover mininmum 75%, 3 quarters (9 months) of a year but could also last longer than a year under specific circumstances. 
+
 
 ### Notary Node Setup:
 
 You find all essential infos and setup instructions on [the dPoW repository](https://github.com/KomodoPlatform/dpow)
 Operators are also encouraged to ask questions relating to setup and operation in Discord or via direct messaging with NN Gurus.
+
 
 #### Recommended min hardware setup for main NN: 
  
@@ -343,6 +342,7 @@ Operators are also encouraged to ask questions relating to setup and operation i
 - Disk: 1 TB SSD or greater
 - Bandwidth: 100 Mbps or higher
 
+
 #### Recommended min hardware setup for 3P NN: 
  
 - OS: Ubuntu 18.x or Debian 10.x is recommended.
@@ -350,6 +350,7 @@ Operators are also encouraged to ask questions relating to setup and operation i
 - RAM: 32 GB or more
 - Disk: 500 GB SSD or greater
 - Bandwidth: 100 Mbps or higher
+
 
 ### Polls and Voting:
 
@@ -360,6 +361,7 @@ Poll outcomes will be ratified and enacted if a majority of signatures supports 
 The Komodo team reserves the right to amend this guideline (governing participation in the dPoW operations) at any time. Modifications are transparently published on Github. 
 
 <br>
+
 
 ## Code of Conduct
 
@@ -389,7 +391,7 @@ You may send reports to developer@komodoplatform.com.
 
 If you wish to contact specific maintainers directly, the following have made themselves available for conduct issues:
 
-- smk762 (smk762 at komodoplatform.com)
+- smk (smk at komodoplatform.com)
 - TonyL (alysakov at komodoplatform.com)
 - gcharang (gcharang at komodoplatform.com)
 - ca333 (ca333 at komodoplatform.com)
@@ -397,23 +399,26 @@ If you wish to contact specific maintainers directly, the following have made th
 This Code of Conduct is adapted from https://www.contributor-covenant.org/version/1/3/0/ 
 https://www.contributor-covenant.org 
 
-### Contact Info:
 
+### Contact Info:
 
 #### E-mail:
 
 - alysakov@komodoplatform.com
-- smk762@komodoplatform.com
+- smk@komodoplatform.com
 - alright@komodoplatform.com
 - kolo@komodoplatform.com 
 - dpow@komodoplatform.com
 - ca333@komodoplatform.com
 
+
 #### Discord:
 http://www.komodoplatform.com/discord
 
+
 #### Github:
 https://github.com/komodoplatform 
+
 
 #### Emergency contact for vuln reports:
 security@komodoplatform.com 
