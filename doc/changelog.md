@@ -1,4 +1,9 @@
 # Changelog
+
+## 0.6.3
+
+- Update VRSC to `0.9.5-2` for S6 pubkeys
+
 ## 0.6.3
 
 - Update VRSC (Season 5 overtime Ops only)

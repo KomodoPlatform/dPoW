@@ -101,6 +101,10 @@
 					"start_time": 1658992027,
 					"start_time_comment": "Sat July 28 07:07:07 2022 +0000 commit TBA, timestamp may change"
 				},
+				"VRSC": {
+					"start_time": 1668898800,
+					"start_time_comment": "Sat Nov 19 23:00 2022 +0000 S6 pubkey update"
+				}
 			}
 		}
 	}
