@@ -38,7 +38,7 @@ curl --url "http://127.0.0.1:7779" --data "{\"coin\":\"VRSC\",\"agent\":\"iguana
 
 Make sure chain is running smoothly and notarisations are progressing.
 
-** S5 Ops - thank you for your service! Don't forget to update any split scripts etc which may still be referencing the holdover port. Hardfork is at block 2291830, please wait until then to update/restart iguana. **
+** S5 Ops - thank you for your service! Don't forget to update any split scripts etc which may still be referencing the holdover port. Hardfork is at block 2291830, please wait until then to update/restart iguana. Until then, continue to use `./m_notary_verusholdover` **
 
 #### Update Seednode
 
