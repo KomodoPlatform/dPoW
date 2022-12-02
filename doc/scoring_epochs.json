@@ -104,6 +104,14 @@
 				"VRSC": {
 					"start_time": 1668898800,
 					"start_time_comment": "Sat Nov 19 23:00 2022 +0000 S6 pubkey update"
+				},
+				"NATURE": {
+					"start_time": 1671000000,
+					"start_time_comment": "TBA"
+				},
+				"SIXCOIN": {
+					"start_time": 1671000000,
+					"start_time_comment": "TBA"
 				}
 			}
 		}

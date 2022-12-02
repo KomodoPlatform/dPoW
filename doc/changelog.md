@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.5
+
+- Adds `SIXCOIN` & `NATURE`
+
 ## 0.6.4
 
 - Updates VRSC to [0.9.5-2](https://github.com/VerusCoin/VerusCoin/releases/tag/v0.9.5-2), hardfork to include Season 6 pubkeys :tada: 
