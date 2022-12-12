@@ -86,7 +86,7 @@ Anyone with the required hardware and technical knowledge can become a Notary No
 - Disk: 500 GB SSD or greater
 - Bandwidth: 100 Mbps or higher
 
-*The server should be bare metal, housed in a Tier 3 datacenter or better. Cloud instances or home connections are not sufficient to ensure bandwith and uptime.*
+*The server should be bare metal, housed in a Tier 3 datacenter or better. Cloud instances or home connections are not sufficient to ensure bandwidth and uptime.*
 
 Apart from these hardware specifications and the technical know-how, there are no requirements to become a Notary Node Operator. 
  
