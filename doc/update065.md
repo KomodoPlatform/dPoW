@@ -17,7 +17,6 @@ cd ~/VerusCoin/src
 ./verus stop
 source ~/dPoW/iguana/pubkey.txt
 ./verusd -pubkey=$pubkey &
-./verus-cli importprivkey ${YOUR_PRIVATE_KEY}
 
 # Check sync status
 tail -f ~/.komodo/VRSC/debug.log
