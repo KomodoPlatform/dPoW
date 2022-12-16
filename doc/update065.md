@@ -8,9 +8,7 @@
 cd ~/VerusCoin/
 git pull
 git checkout 7f971ed3d4c5e1ec45737f374b9467b1a24d2679
-make -j4
-source ~/komodo/src/pubkey.txt
-./verusd -pubkey=$pubkey &
+./zcutil/build.sh -j4
 
 # (re)start VRSC
 cd ~/VerusCoin/src
