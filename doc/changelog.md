@@ -1,8 +1,12 @@
 # Changelog
 
+## 0.6.5
+
+- Updates VRSC to [7f971ed](https://github.com/VerusCoin/VerusCoin/tree/7f971ed3d4c5e1ec45737f374b9467b1a24d2679)
+
 ## 0.6.4
 
-- Updates VRSC to [0.9.5-2](https://github.com/VerusCoin/VerusCoin/releases/tag/v0.9.5-2), hardfork to include Season 6 pubkeys :tada: 
+- Updates VRSC to [0.9.5-2](https://github.com/VerusCoin/VerusCoin/releases/tag/v0.9.5-2), hardfork to include Season 6 pubkeys :tada:
 - Updates seednodes to [beta-2.1.8741](https://github.com/KomodoPlatform/atomicDEX-API/releases/tag/beta-2.1.8741)
 
 ## 0.6.3
