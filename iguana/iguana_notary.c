@@ -300,6 +300,59 @@ void iguana_dPoWupdate(struct supernet_info *myinfo,struct dpow_info *dp)
     } else printf("iguana_dPoWupdate missing src.(%s) %p or dest.(%s) %p\n",dp->symbol,src,dp->dest,dest);
 }
 
+int32_t iguana_BN_dPoWupdate(struct supernet_info *myinfo,struct dpow_info *dp)
+{
+    /*
+    Used with the following. Just change KMD to the coin name being dpowd and put this in the conf file.
+    blocknotify=curl -s --url "http://127.0.0.1:7776" --data "{\"agent\":\"dpow\",\"method\":\"updatechaintip\",\"blockhash\":\"%s\",\"symbol\":\"KMD\"}"
+    */
+
+    int32_t height,flag=0; uint32_t blocktime; bits256 blockhash,merkleroot; struct iguana_info *src,*dest;
+    src = iguana_coinfind(dp->symbol);
+    dest = iguana_coinfind(dp->dest);
+    if ( src != 0 && dest != 0 )
+    {
+        dp->numdesttx = sizeof(dp->desttx)/sizeof(*dp->desttx);
+        if ( (height= dpow_getchaintip(myinfo,&merkleroot,&blockhash,&blocktime,dp->desttx,&dp->numdesttx,dest)) != dp->destchaintip.blockhash.height && height >= 0 )
+        {
+            char str[65];
+            //printf("[%s] %s height.%d vs last.%d\n",dp->dest,bits256_str(str,blockhash),height,dp->destchaintip.blockhash.height);
+            if ( height <= dp->destchaintip.blockhash.height )
+            {
+                printf("iguana_BN_dPoWupdate dest.%s reorg detected %d vs %d\n",dp->dest,height,dp->destchaintip.blockhash.height);
+                if ( height == dp->destchaintip.blockhash.height && bits256_cmp(blockhash,dp->destchaintip.blockhash.hash) != 0 )
+                    printf("UNEXPECTED ILLEGAL BLOCK in dest chaintip\n");
+                flag++;
+            } else dpow_destupdate(myinfo,dp,height,blockhash,(uint32_t)time(NULL),blocktime);
+        } //else printf("error getchaintip for %s\n",dp->dest);
+        dp->numsrctx = sizeof(dp->srctx)/sizeof(*dp->srctx);
+        if ( (height= dpow_getchaintip(myinfo,&merkleroot,&blockhash,&blocktime,dp->srctx,&dp->numsrctx,src)) != dp->last.blockhash.height && height > 0 )
+        {
+            if ( dp->lastheight == 0 )
+                dp->lastheight = height-1;
+            dp->SRCHEIGHT = height;
+            if ( height < dp->last.blockhash.height )
+            {
+                printf("iguana_BN_dPoWupdate src.%s reorg detected %d vs %d approved.%d notarized.%d\n",dp->symbol,height,dp->last.blockhash.height,dp->approved[0].height,dp->notarized[0].height);
+                if ( height <= dp->approved[0].height )
+                {
+                    if ( bits256_cmp(blockhash,dp->last.blockhash.hash) != 0 )
+                        printf("UNEXPECTED ILLEGAL BLOCK in src chaintip\n");
+                }
+            }
+            else
+            {
+                char str[65];
+                printf("[%s] %s height.%d vs last.%d\n",dp->symbol,bits256_str(str,blockhash),height,dp->lastheight);
+                dpow_srcupdate(myinfo,dp,height,blockhash,(uint32_t)time(NULL),blocktime);
+                dp->lastheight = height;
+                flag++;
+            }
+        } //else printf("error getchaintip for %s\n",dp->symbol);
+    } else printf("iguana_BN_dPoWupdate missing src.(%s) %p or dest.(%s) %p\n",dp->symbol,src,dp->dest,dest);
+    return(flag);
+}
+
 void dpow_addresses()
 {
     int32_t i; char coinaddr[64]; uint8_t pubkey[33];
@@ -459,6 +512,7 @@ THREE_STRINGS_AND_DOUBLE(iguana,dpow,symbol,dest,pubkey,freq)
     for (i=0; i<33; i++)
         printf("%02x",dp->minerkey33[i]);
     printf(" DPOW with pubkey.(%s) %s.valid%d %s -> %s %s.valid%d, num.%d freq.%d minsigs.%d CCid.%u\n",tmp,srcaddr,srcvalid,dp->symbol,dp->dest,destaddr,destvalid,myinfo->numdpows,dp->freq,dp->minsigs,dp->fullCCid);
+    iguana_BN_dPoWupdate(myinfo,dp);
     return(clonestr("{\"result\":\"success\"}"));
 }
 
@@ -543,6 +597,32 @@ STRING_ARG(dpow,bindaddr,ipaddr)
             return(clonestr("{\"result\":\"success\"}"));
         } else return(clonestr("{\"error\":\"invalid bind ipaddr\"}"));
     } else return(clonestr("{\"error\":\"no bind ipaddr\"}"));
+}
+
+HASH_AND_STRING(dpow,updatechaintip,blockhash,symbol)
+{
+    char str[65],buf[1024]; struct dpow_info *dp; int32_t i;
+
+    if ( strlen(symbol) > 10 )
+        return(clonestr("error in updatechaintip, symbol length"));
+
+    for (i=0; i<myinfo->numdpows; i++)
+    {
+        if ( strcmp(symbol,myinfo->DPOWS[i]->symbol) == 0 )
+        {
+            dp = myinfo->DPOWS[i];
+            break;
+        }
+    }
+    if ( dp != 0 )
+    {
+        if ( iguana_BN_dPoWupdate(myinfo,dp) != 0 )
+            sprintf(buf,"[%s] %s", symbol, bits256_str(str,blockhash));
+        else
+            sprintf(buf,"[%s] update failed for block %s",symbol, bits256_str(str,blockhash));
+    }
+    else sprintf(buf,"[%s] cannot update non-active or non dpowed coin", symbol);
+    return(clonestr(buf));
 }
 
 STRING_ARG(iguana,addnotary,ipaddr)
