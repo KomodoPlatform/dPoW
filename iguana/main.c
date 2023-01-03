@@ -781,32 +781,18 @@ void jumblr_loop(void *ptr)
 void dpow_loop(void *arg)
 {
     RenameThread("dpow_loop");
-    struct supernet_info *myinfo = arg; double startmilli,endmilli; 
-    int32_t counter = 0;
+    struct supernet_info *myinfo = arg;
     printf("start dpow loop\n");
     while ( 1 )
     {
-        counter++;
-        startmilli = OS_milliseconds();
-        endmilli = startmilli + 1000;
         if ( myinfo->IAMNOTARY != 0 )
         {
-            if ( myinfo->numdpows == 1 )
+            if ( myinfo->numdpows > 0 )
             {
-                iguana_dPoWupdate(myinfo,myinfo->DPOWS[0]);
-                endmilli = startmilli + 100;
-            }
-            else if ( myinfo->numdpows > 1 )
-            {
-                iguana_dPoWupdate(myinfo,myinfo->DPOWS[counter % myinfo->numdpows]);
-                endmilli = startmilli + 20;
-                iguana_dPoWupdate(myinfo,myinfo->DPOWS[0]);
+                dpow_nanomsg_update(myinfo);
             }
         }
-        while ( OS_milliseconds() < endmilli )
-            usleep(1000);
-        if ( counter > myinfo->numdpows+1 )
-            counter = 0;
+        usleep(250000);
     }
 }
 
