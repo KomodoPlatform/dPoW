@@ -314,14 +314,14 @@ int32_t iguana_BN_dPoWupdate(struct supernet_info *myinfo,struct dpow_info *dp)
         {
             char str[65];
             //printf("[%s] %s height.%d vs last.%d\n",dp->dest,bits256_str(str,blockhash),height,dp->destchaintip.blockhash.height);
-            if ( height <= dp->destchaintip.blockhash.height )
+            printf("iguana_BN_dPoWupdate dest.%s reorg detected %d vs %d\n",dp->dest,height,dp->destchaintip.blockhash.height);
+            if ( height == dp->destchaintip.blockhash.height && bits256_cmp(blockhash,dp->destchaintip.blockhash.hash) != 0 )
             {
-                printf("iguana_BN_dPoWupdate dest.%s reorg detected %d vs %d\n",dp->dest,height,dp->destchaintip.blockhash.height);
-                if ( height == dp->destchaintip.blockhash.height && bits256_cmp(blockhash,dp->destchaintip.blockhash.hash) != 0 )
-                    printf("UNEXPECTED ILLEGAL BLOCK in dest chaintip\n");
+                printf("UNEXPECTED ILLEGAL BLOCK in dest chaintip\n");
                 flag++;
-            } else dpow_destupdate(myinfo,dp,height,blockhash,(uint32_t)time(NULL),blocktime);
-        } //else printf("error getchaintip for %s\n",dp->dest);
+            } else 
+                dpow_destupdate(myinfo,dp,height,blockhash,(uint32_t)time(NULL),blocktime);
+        } 
         dp->numsrctx = sizeof(dp->srctx)/sizeof(*dp->srctx);
         if ( (height= dpow_getchaintip(myinfo,&merkleroot,&blockhash,&blocktime,dp->srctx,&dp->numsrctx,src)) != dp->last.blockhash.height && height > 0 )
         {
