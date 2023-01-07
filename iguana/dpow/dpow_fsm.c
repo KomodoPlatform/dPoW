@@ -412,7 +412,6 @@ void dpow_statemachinestart(void *ptr)
                 {
                     fprintf(stderr,"cant ratify more than 64 notaries ratified has %d\n",numratified);
                     dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
-                    free(ptr);
                     return;
                 }
                 for (i=0; i<numratified; i++)
@@ -473,7 +472,6 @@ void dpow_statemachinestart(void *ptr)
     {
         printf("skip notarization ht.%d when ratifying\n",bp->height);
         dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
-        free(ptr);
         return;
     }
     dp->ratifying += bp->isratify;
@@ -524,7 +522,6 @@ void dpow_statemachinestart(void *ptr)
             printf(" statemachinestart this node %s %s is not official notary numnotaries.%d kmdht.%d bpht.%d\n",srcaddr,destaddr,bp->numnotaries,kmdheight,bp->height);
             dp->ratifying -= bp->isratify;
             dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
-            free(ptr);
             return;
         }
         //printf("myind.%d\n",myind);
@@ -534,7 +531,6 @@ void dpow_statemachinestart(void *ptr)
         printf("statemachinestart no kmdheight.%d\n",kmdheight);
         dp->ratifying -= bp->isratify;
         dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
-        free(ptr);
         return;
     }
     bp->myind = myind;
@@ -549,7 +545,6 @@ void dpow_statemachinestart(void *ptr)
         printf(" new, cant change notary0\n");
         dp->ratifying -= bp->isratify;
         dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
-        free(ptr);
         return;
     }
     //printf(" myind.%d myaddr.(%s %s)\n",myind,srcaddr,destaddr);
@@ -624,7 +619,6 @@ void dpow_statemachinestart(void *ptr)
             //printf("abort %s ht.%d due to new checkpoint.%d\n",dp->symbol,checkpoint.blockhash.height,dp->checkpoint.blockhash.height);
             dp->ratifying -= bp->isratify;
             dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
-            free(ptr);
         }
         sleep(1);
     }
@@ -719,5 +713,4 @@ void dpow_statemachinestart(void *ptr)
     }
     portable_mutex_lock(&dpowT_mutex);
     dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
-    free(ptr);
 }
