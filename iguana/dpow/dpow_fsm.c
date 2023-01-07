@@ -13,33 +13,6 @@
  *                                                                            *
  ******************************************************************************/
 
-uint64_t dpow_newthread(struct supernet_info *myinfo,struct dpow_info *dp)
-{
-    uint64_t i;
-    for (i = 0; i < DPOW_MAX_BLOCKS; i++) 
-    {
-        if ( dp->threads[i].allocated == 0 )
-            return(i);
-    }
-    return(-1);
-}
-
-void dpow_clearfinishedthreads(struct supernet_info *myinfo,struct dpow_info *dp)
-{
-    int32_t i;
-    for (i = 0; i < DPOW_MAX_BLOCKS; i++) 
-    {
-        if ( dp->threads[i].allocated != 0 && dp->threads[i].finished != 0 )
-        {
-            free(dp->threads[i].ptrs);
-            dp->threads[i].ptrs = 0;
-            dp->threads[i].allocated = 0;
-            dp->threads[i].finished = 0;
-            printf(YELLOW"[%s] removed thread %i...\n"RESET, dp->symbol, i);
-        }
-    }
-}
-
 struct dpow_entry *dpow_notaryfind(struct supernet_info *myinfo,struct dpow_block *bp,int32_t height,int32_t *senderindp,uint8_t *senderpub)
 {
     int32_t i;
@@ -287,25 +260,11 @@ bits256 dpow_calcMoM(uint32_t *MoMdepthp,struct supernet_info *myinfo,struct igu
     return(MoM);
 }
 
-
-void dpow_clearbp(struct supernet_info *myinfo, struct dpow_info *dp, struct dpow_block *bp, int32_t blockindex, portable_mutex_t *dpowT_mutex)
-{
-    portable_mutex_lock(&dp->dpmutex);
-    dp->threads[bp->threadind].finished = 1;
-    dp->ratifying -= bp->isratify;
-    dp->blocks[blockindex] = 0;
-    portable_mutex_unlock(&dp->dpmutex);
-    portable_mutex_lock(dpowT_mutex);
-    bp->state = 0xffffffff;
-    free(bp);
-    portable_mutex_unlock(dpowT_mutex);
-}
-
 void dpow_statemachinestart(void *ptr)
 {
     void **ptrs = ptr;
     struct supernet_info *myinfo; struct dpow_info *dp; struct dpow_checkpoint checkpoint;
-    int32_t threadind,i,j,ht,extralen,destprevvout0,srcprevvout0,src_or_dest,numratified=0,kmdheight,myind = -1,blockindex=0; uint8_t extras[10000],pubkeys[64][33]; cJSON *ratified=0,*item; struct iguana_info *src,*dest; char *jsonstr,*handle,*hexstr,str[65],str2[65],srcaddr[64],destaddr[64]; bits256 zero,MoM,merkleroot,srchash,destprevtxid0,srcprevtxid0; struct dpow_block *bp; struct dpow_entry *ep = 0; uint32_t MoMdepth,duration,minsigs,starttime,srctime;
+    int32_t i,j,ht,extralen,destprevvout0,srcprevvout0,src_or_dest,numratified=0,kmdheight,myind = -1,blockindex=0; uint8_t extras[10000],pubkeys[64][33]; cJSON *ratified=0,*item; struct iguana_info *src,*dest; char *jsonstr,*handle,*hexstr,str[65],str2[65],srcaddr[64],destaddr[64]; bits256 zero,MoM,merkleroot,srchash,destprevtxid0,srcprevtxid0; struct dpow_block *bp; struct dpow_entry *ep = 0; uint32_t MoMdepth,duration,minsigs,starttime,srctime;
     char *destlockunspent=0,*srclockunspent=0,*destunlockunspent=0,*srcunlockunspent=0;
     memset(&zero,0,sizeof(zero));
     static portable_mutex_t dpowT_mutex; 
@@ -320,7 +279,6 @@ void dpow_statemachinestart(void *ptr)
     memset(smname, 0, sizeof(smname));
     snprintf(smname, sizeof(smname)-1, "dpowsm_%s",dp->symbol);
     RenameThread(smname);
-    threadind = (uint32_t)(long)ptrs[4];
 
     minsigs = (uint32_t)(long)ptrs[2];
     duration = (uint32_t)(long)ptrs[3];
@@ -358,7 +316,6 @@ void dpow_statemachinestart(void *ptr)
         // rewrite of dp->blocks[i] in other threads at the moment of search
 
         portable_mutex_lock(&dpowT_mutex);
-        bp->threadind = threadind;
         for (int32_t i = 0; i < dp->maxblocks; i++)
         {
             if ( dp->blocks[i] != 0 ) {
@@ -411,7 +368,13 @@ void dpow_statemachinestart(void *ptr)
             {
                 if ( numratified > 64 )
                 {
-                    dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
+                    fprintf(stderr,"cant ratify more than 64 notaries ratified has %d\n",numratified);
+                    portable_mutex_lock(&dpowT_mutex);
+                    dp->blocks[blockindex] = 0;
+                    bp->state = 0xffffffff;
+                    free(bp);
+                    portable_mutex_unlock(&dpowT_mutex);
+                    free(ptr);
                     return;
                 }
                 for (i=0; i<numratified; i++)
@@ -471,7 +434,12 @@ void dpow_statemachinestart(void *ptr)
     if ( dp->ratifying != 0 && bp->isratify == 0 )
     {
         printf("skip notarization ht.%d when ratifying\n",bp->height);
-        dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
+        portable_mutex_lock(&dpowT_mutex);
+        dp->blocks[blockindex] = 0;
+        bp->state = 0xffffffff;
+        free(bp);
+        portable_mutex_unlock(&dpowT_mutex);
+        free(ptr);
         return;
     }
     dp->ratifying += bp->isratify;
@@ -521,7 +489,12 @@ void dpow_statemachinestart(void *ptr)
                 printf("%02x",dp->minerkey33[i]);
             printf(" statemachinestart this node %s %s is not official notary numnotaries.%d kmdht.%d bpht.%d\n",srcaddr,destaddr,bp->numnotaries,kmdheight,bp->height);
             dp->ratifying -= bp->isratify;
-            dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
+            portable_mutex_lock(&dpowT_mutex);
+            dp->blocks[blockindex] = 0;
+            bp->state = 0xffffffff;
+            free(bp);
+            portable_mutex_unlock(&dpowT_mutex);
+            free(ptr);
             return;
         }
         //printf("myind.%d\n",myind);
@@ -529,7 +502,13 @@ void dpow_statemachinestart(void *ptr)
     else
     {
         printf("statemachinestart no kmdheight.%d\n",kmdheight);
-        dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
+        dp->ratifying -= bp->isratify;
+        portable_mutex_lock(&dpowT_mutex);
+        dp->blocks[blockindex] = 0;
+        bp->state = 0xffffffff;
+        free(bp);
+        portable_mutex_unlock(&dpowT_mutex);
+        free(ptr);
         return;
     }
     bp->myind = myind;
@@ -543,7 +522,12 @@ void dpow_statemachinestart(void *ptr)
             printf("%02x",bp->ratified_pubkeys[0][i]);
         printf(" new, cant change notary0\n");
         dp->ratifying -= bp->isratify;
-        dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);;
+        portable_mutex_lock(&dpowT_mutex);
+        dp->blocks[blockindex] = 0;
+        bp->state = 0xffffffff;
+        free(bp);
+        portable_mutex_unlock(&dpowT_mutex);
+        free(ptr);
         return;
     }
     //printf(" myind.%d myaddr.(%s %s)\n",myind,srcaddr,destaddr);
@@ -617,7 +601,7 @@ void dpow_statemachinestart(void *ptr)
         {
             //printf("abort %s ht.%d due to new checkpoint.%d\n",dp->symbol,checkpoint.blockhash.height,dp->checkpoint.blockhash.height);
             dp->ratifying -= bp->isratify;
-            dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
+            goto end;
         }
         sleep(1);
     }
@@ -698,7 +682,99 @@ void dpow_statemachinestart(void *ptr)
     printf("END isratify.%d:%d bestk.%d %llx sigs.%llx state.%x machine ht.%d completed state.%x %s.%s %s.%s recvmask.%llx paxwdcrc.%x %p %p\n",bp->isratify,dp->ratifying,bp->bestk,(long long)bp->bestmask,(long long)(bp->bestk>=0?bp->destsigsmasks[bp->bestk]:0),bp->state,bp->height,bp->state,dp->dest,bits256_str(str,bp->desttxid),dp->symbol,bits256_str(str2,bp->srctxid),(long long)bp->recvmask,bp->paxwdcrc,src,dest);
     dp->lastrecvmask = bp->recvmask;
     dp->ratifying -= bp->isratify;
-
+#if STAKEDTEST
+    // We need to wait for notarized confirm here. If the notarization is reorged for any reason we need to rebroadcast it,
+    // because the mempool is stupid after the sapling update, or Alright might be playing silly games.
+    int8_t dest_confs = 0, src_confs = 0, destnotarized = 0, srcnotarized = 0, firstloop = 0;
+    char desttx[32768] = {0}, srctx[32768] = {0};
+    while ( destnotarized == 0 || srcnotarized == 0 )
+    {
+        // If the round was sucessful and both notarization transactions were created successfully we will make sure they are in the chain.
+        if ( bits256_cmp(bp->desttxid,zero) == 0 )
+            break;
+        if ( bits256_cmp(bp->srctxid,zero) == 0 )
+            break;
+        int8_t send_dest = 0, send_src = 0; char rettx[32768] = {0};
+        if ( firstloop == 0 )
+        {
+            sleep((rand() % (120 - 60)) + 60); 
+            firstloop = 1;
+        }
+        // random sleep here so all nodes are checking/rebroadcasting at diffrent times. 
+        sleep((rand() % (77 - 33)) + 33);
+        
+        // get the confirms for desttxid 
+        if ( destnotarized == 0 )
+        {
+            if ( (dest_confs= dpow_txconfirms(myinfo, bp->destcoin, bp->desttxid, rettx)) != -1 )
+            {
+                if ( desttx[0] == 0 && rettx[0] != 0 )
+                {
+                    // save the transaction once we fetch it once, as its possible we wil not be able to always see it.
+                    memcpy(desttx, rettx, strlen(rettx)+1);
+                }
+                if ( dest_confs > 2 )
+                {
+                    // tx is notarized. or it has 100+ raw confirms. Its now final and cannot be lost, no longer need to check.
+                    fprintf(stderr, "[dest.%s] txid.%s is notarized. confirms.%d srcnotarized.%i\n",dp->dest, bits256_str(str,bp->desttxid), dest_confs, srcnotarized);
+                    destnotarized = 1;
+                }
+                else if ( dest_confs == 0 )
+                {
+                    // not confirmed, rebroadcast it.
+                    fprintf(stderr, "[%s] txid.%s is not confirmed rebroadcasting....\n",dp->dest, bits256_str(str,bp->desttxid));
+                    if ( desttx[0] != 0 )
+                        send_dest = 1;
+                }
+            } 
+            else if ( desttx[0] != 0 ) // we have the tranxation hex saved, and the tx is not in the local mempool or a block, so resend it.
+            {
+                fprintf(stderr, "[%s] Cant find tx.%s rebroadcasting...\n", dp->dest, bits256_str(str,bp->desttxid));
+                send_dest = 1;
+            } else fprintf(stderr, "[%s] get raw transaction error\n", dp->dest);
+            if ( send_src == 1 )
+            {
+                char *tmpstr = dpow_sendrawtransaction(myinfo, bp->destcoin, desttx);
+                free(tmpstr);
+            }    
+        }
+        
+        // get the confirms for srctxid
+        memset(rettx,0,sizeof(rettx)); // zero out rettx!
+        if ( srcnotarized == 0 )
+        {
+            if ( (src_confs= dpow_txconfirms(myinfo, bp->srccoin, bp->srctxid, rettx)) != -1 )
+            {
+                if ( srctx[0] == 0 && rettx[0] != 0 )
+                {
+                    memcpy(srctx, rettx, strlen(rettx)+1);
+                }
+                if ( src_confs > 2 )
+                {
+                    fprintf(stderr, "[src.%s] txid.%s is notarized. confirms.%i destnotarized.%i\n", dp->symbol, bits256_str(str,bp->srctxid), src_confs, destnotarized);
+                    srcnotarized = 1;
+                }
+                else if ( src_confs == 0 )
+                {
+                    fprintf(stderr, "[%s] txid.%s is not confirmed rebroadcasting....\n", dp->symbol, bits256_str(str,bp->srctxid));
+                    if ( srctx[0] != 0 )
+                        send_src = 1;
+                }
+            }
+            else if ( srctx[0] != 0 )
+            {
+                fprintf(stderr, "[%s] Cant find tx.%s rebroadcasting...\n", dp->symbol, bits256_str(str,bp->srctxid));
+                send_src = 1;
+            } else fprintf(stderr, "[%s] get raw transaction error\n", dp->symbol);
+            if ( send_src == 1 )
+            {
+                char *tmpstr = dpow_sendrawtransaction(myinfo, bp->srccoin, srctx);
+                free(tmpstr);
+            }
+        }
+    }
+#endif
+end:
     // unlock the dest utxo on KMD.
     if ( ep != 0 && strcmp("KMD",dest->symbol) == 0  && ep->dest.prev_vout != -1 )
     {
@@ -711,5 +787,10 @@ void dpow_statemachinestart(void *ptr)
       if ( dpow_unlockunspent(myinfo,bp->srccoin,srcaddr,bits256_str(str2,ep->src.prev_hash),ep->src.prev_vout) != 0)
         printf(">>>> UNLOCKED %s UTXO.(%s) vout.(%d)\n",src->symbol,bits256_str(str2,ep->src.prev_hash),ep->src.prev_vout);
     }
-    dpow_clearbp(myinfo, dp, bp, blockindex, &dpowT_mutex);
+    portable_mutex_lock(&dpowT_mutex);
+    dp->blocks[blockindex] = 0;
+    bp->state = 0xffffffff;
+    free(bp);
+    portable_mutex_unlock(&dpowT_mutex);
+    free(ptr);
 }
