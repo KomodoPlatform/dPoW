@@ -28,18 +28,15 @@ Make sure chain is running smoothly and notarisations are progressing.
 cd ~/sfusd-core/src
 ./smartusd-cli sendtoaddress SVpijx2FxX67ny8LAtC4ogrvpSWzwkda5x $(./smartusd-cli getbalance) "" "" true
 
-# Stop SFUSD and delete source code
+# Stop SFUSD
 ./smartusd-cli stop
-cd ~/
-rm -rf ~/sfusd-core
 
-# Delete SFUSD user data
-rm -rf ~/.smartusd
-
-# Update dPoW repo and restart Iguana
+# Update dPoW repo
 cd ~/dPoW
 git checkout master
 git pull
+
+# Restart Iguana
 pkill -9 iguana
 cd iguana
 ./m_notary_build
