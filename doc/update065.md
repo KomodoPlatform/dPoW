@@ -1,6 +1,6 @@
 ### dPoW 0.6.5 update information
 
-- On your 3P node, update your VRSC Coin's codebase to [1b02282](https://github.com/VerusCoin/VerusCoin/commit/1b022820ac1f4a539c0eed60584cac29715c34f1), build it and then restart it
+- On your 3P node, update your VRSC Coin's codebase to [1b02282](https://github.com/VerusCoin/VerusCoin/commit/1b022820ac1f4a539c0eed60584cac29715c34f1), build it and then restart it.
 
 ```bash
 # Build VRSC
@@ -21,3 +21,28 @@ tail -f ~/.komodo/VRSC/debug.log
 ```
 
 Make sure chain is running smoothly and notarisations are progressing.
+
+- Remove SFUSD.
+```bash
+# Return remaining SFUSD funds
+cd ~/sfusd-core/src
+./smartusd-cli sendtoaddress SVpijx2FxX67ny8LAtC4ogrvpSWzwkda5x $(./smartusd-cli getbalance) "" "" true
+
+# Stop SFUSD and delete source code
+./smartusd-cli stop
+cd ~/
+rm -rf ~/sfusd-core
+
+# Delete SFUSD user data
+rm -rf ~/.smartusd
+
+# Update dPoW repo and restart Iguana
+cd ~/dPoW
+git checkout master
+git pull
+pkill -9 iguana
+cd iguana
+./m_notary_build
+./m_notary_3rdparty
+
+```
