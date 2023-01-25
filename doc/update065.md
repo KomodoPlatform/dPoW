@@ -1,13 +1,13 @@
 ### dPoW 0.6.5 update information
 
-- On your 3P node, update your VRSC Coin's codebase to [7f971ed](https://github.com/VerusCoin/VerusCoin/tree/7f971ed3d4c5e1ec45737f374b9467b1a24d2679), build it and then restart it
+- On your 3P node, update your VRSC Coin's codebase to [1b02282](https://github.com/VerusCoin/VerusCoin/commit/1b022820ac1f4a539c0eed60584cac29715c34f1), build it and then restart it
 
 ```bash
 # Build VRSC
 
 cd ~/VerusCoin/
 git pull
-git checkout 7f971ed3d4c5e1ec45737f374b9467b1a24d2679
+git checkout 1b022820ac1f4a539c0eed60584cac29715c34f1
 ./zcutil/build.sh -j4
 
 # (re)start VRSC

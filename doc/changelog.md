@@ -2,7 +2,7 @@
 
 ## 0.6.5
 
-- Updates VRSC to [7f971ed](https://github.com/VerusCoin/VerusCoin/tree/7f971ed3d4c5e1ec45737f374b9467b1a24d2679)
+- Updates VRSC to [0.9.6-1](https://github.com/VerusCoin/VerusCoin/releases/tag/v0.9.6-1)
 
 ## 0.6.4
 
