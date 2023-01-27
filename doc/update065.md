@@ -24,13 +24,6 @@ Make sure chain is running smoothly and notarisations are progressing.
 
 - Remove SFUSD.
 ```bash
-# Return remaining SFUSD funds
-cd ~/sfusd-core/src
-./smartusd-cli sendtoaddress SVpijx2FxX67ny8LAtC4ogrvpSWzwkda5x $(./smartusd-cli getbalance) "" "" true
-
-# Stop SFUSD
-./smartusd-cli stop
-
 # Update dPoW repo
 cd ~/dPoW
 git checkout master
@@ -42,4 +35,10 @@ cd iguana
 ./m_notary_build
 ./m_notary_3rdparty
 
+# Return remaining SFUSD funds
+cd ~/sfusd-core/src
+./smartusd-cli sendtoaddress SVpijx2FxX67ny8LAtC4ogrvpSWzwkda5x $(./smartusd-cli getbalance) "" "" true
+
+# Stop SFUSD
+./smartusd-cli stop
 ```
