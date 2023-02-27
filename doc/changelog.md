@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.6
+
+- Adds KIP00001
+
 ## 0.6.5
 
 - Updates VRSC to [0.9.6-1](https://github.com/VerusCoin/VerusCoin/releases/tag/v0.9.6-1)
