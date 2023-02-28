@@ -12,7 +12,7 @@ source ~/dPoW/iguana/pubkey.txt
 ./komodo-cli -ac_name=KIP0001 importprivkey $privkey
 
 # Start Staking
-./komodo-cli -ac_name=VOTE2022 setgenerate true 0
+./komodo-cli -ac_name=KIP0001 setgenerate true 0
 
 # Open P2P Port
 sudo ufw allow 46855/tcp comment 'KIP0001 p2p port'
