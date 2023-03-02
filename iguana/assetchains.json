@@ -70,6 +70,13 @@
     "addnode": ["na.smk.dog", "3p.smk.dog", "3.0.32.10"]
   },
   {
+    "ac_name": "KIP0001",
+    "ac_public": "1",
+    "ac_staked": "10",
+    "ac_supply": "139419284",
+    "addnode": ["178.159.2.6", "116.203.120.163"]
+  },
+  {
     "ac_name": "MGW",
     "ac_supply": "999999",
     "addnode": ["na.smk.dog", "3p.smk.dog"]

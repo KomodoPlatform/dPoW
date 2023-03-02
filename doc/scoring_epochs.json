@@ -91,7 +91,12 @@
 		"season_end": 1951328000,
 		"season_end_comment": "not yet defined, using far in future",
 		"Servers": {
-			"dPoW-Mainnet": {},
+			"dPoW-Mainnet": {
+				"KIP0001": {
+					"start_time": 1677888000,
+					"start_time_comment": "Saturday, 4 March 2023 00:00:00 commit TBA, timestamp may change"
+				}
+			},
 			"dPoW-3P": {
 				"MIL": {
 					"start_time": 1658992027,
