@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.7
+
+- Updates VRSC to [TBA](https://github.com/VerusCoin/VerusCoin/releases/tag/vTBA)
+
 ## 0.6.6
 
 - Adds KIP0001
