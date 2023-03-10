@@ -2,7 +2,7 @@
 
 ## 0.6.7
 
-- Updates VRSC to [TBA](https://github.com/VerusCoin/VerusCoin/releases/tag/vTBA)
+- Updates VRSC to [`c7bb569`](https://github.com/VerusCoin/VerusCoin/tree/c7bb569d664c1ed1a5e680df1acac1b64cad5597)
 
 ## 0.6.6
 
