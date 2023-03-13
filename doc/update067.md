@@ -21,7 +21,7 @@ source ~/dPoW/iguana/pubkey.txt
 - Update your dPoW repo
 
 ```bash
-cd dPoW
+cd ~/dPoW
 git checkout master
 git pull
 ```

@@ -102,7 +102,8 @@ At a minimum, every candidate Proposal must include:
 - The region in which they are running and post the address to which KMD holders may send VOTE tokens to support their candidacy.
 - Contact details (such as Discord, Keybase, Telegram and/or  Email) for ensuring open communications about what to do after the election.
 - If running as part of a team or on behalf of a project / company, additional details about the project / company and other team members.
-Participation in the pre-election Testnet is highly recommended for any candidates who have not previously run a Notary Node.
+
+Proposals failing to meet these requirements before the deadline may be rejected. Participation in the pre-election Testnet is highly recommended for any candidates who have not previously run a Notary Node.
 
 Generally the Komodo community elects Notary Node Operators who are committed to the development of the ecosystem, as demonstrated by making contributions to code or community projects. If your primary motivation is personal financial gain, you may find it difficult to garner support, even if you have proven your technical skills during the pre-election Testnet.
 
@@ -122,6 +123,17 @@ An additional 8 nodes are reserved as “Dev nodes”, and assigned by the Komod
  
 Winning Notary Node operators must run their node in the region declared in their proposal, and face disqualification if discovered to be non compliant, with their NN spot being assigned to the next candidate in line in the election results. This keeps things fair, as different geographic locations offer Internet connections at varying costs and speeds.
 
+
+| Region     | Season 6 Winners | VOTE2023 Winners  | Total  |
+|------------|------------------|-------------------|--------|
+| AR         | 3                | 11                | 14     |
+| EU         | 3                | 11                | 14     |
+| NA         | 3                | 11                | 14     |
+| SH         | 3                | 11                | 14     |
+| Dev        | -                | -                 | 8      |
+| **Total**  |                  |                   | **64** |
+
+
 New candidates are eligible to submit a candidacy for a single notary node in any of the four regions in their first election. Participation in the pre-season Testnet is <b>highly recommended</b> to learn the basics and demonstrate capability.
 
 Notary nodes achieving a regional top 3 ranking at the ranking snapshot date are automatically re-elected to operate that node in the next season. 
@@ -131,6 +143,16 @@ Notary nodes achieving a regional top 5 ranking are eligible to submit a candida
 Notary nodes who are not in their regional top 5 at the end of the season can reapply for a single node for each of the region(s) they served in during the previous season.
 
 Notary Node veterans who have served in at least two prior seasons are eligible to apply for an additional node (veteran benefit).
+
+
+| Category           | Auto re-elected  | Proposal eligibility   | Max nodes  |
+|--------------------|------------------|------------------------|------------|
+| Regional Top 3     | 1 per region     | 2 per top 5 node       | 6          |
+| Regional Top 5     | 0                | 2 per top 5 node       | 6          |
+| Other S6 Notaries  | 0                | 1 per prior region + 1 | 5          |
+| Returning veterans | 0                | 2                      | 2          |
+| New Candidates     | 0                | 1                      | 1          |
+
 
 <b>No notary can hold more than 2 nodes in a single region, or more than 6 nodes in total.</b>
 
@@ -169,7 +191,7 @@ The voting data is then validated, with any votes originating from a CEX wallet 
 
 It is highly recommended that each community member read through the proposals of all the candidates before casting their vote. The proposals contain important information about how each candidate intends to help the Komodo ecosystem. All candidates' proposals, along with other useful dates and information, will be posted within the Komodo Notary Node Election GitHub repository.
 
-Exact dates and times for each of the events above will be posted within this document and announced before the start of May.
+Exact dates and times for each of the events above will be posted within this document and announced before the start of the annual notary node election.
 
 ## Responsibilities, Rights and Duties of a Notary Node Operator
 
@@ -216,19 +238,23 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 
 ## Guidelines, General Information and Policies 
 
-### Important Dates for Season 6:
+### Important Dates for Season 7:
 
-- KMD snapshot: 4th May 2022 (for both VOTE2021 allocations and Regional Top 3 Notary Node scoring)
-- Season 5 scoring ends: 4th May 2022, 23:59:59 UTC
-- Regional Top 3 Autoelection announcement: 7th May 2022
-- VOTE2022 airdrop: 11th May 2022
-- Season 6 Election start: 11th May 2022
-- Proposal deadline: 11th May 2022, 23:59:59 UTC
-- Season 6 Election end: 25th May 2022, 23:59:59 UTC
-- Public Komodo Season 6 update announcement: TBA
-- dPoW season 6 start: TBA
-- Komodo core hardfork activation: TBA
-- SmartChain hardfork activation: TBA
+| Event                                      | Date                           |
+-------------------------------------------------------------------------------
+| KMD snapshot for VOTE2023                  | 7th April 2023                 |
+| Season 6 scoring ends                      | 7th April 2023, 23:59:59 UTC   |
+| Season 6 Auto re-elected winners announced | 14th April 2023                |
+| VOTE2023 airdrop                           | 14th April 2023                |
+| Season 7 Candidate proposals recieved      | 1st-21st April 2023            |
+| Season 7 Election start                    | 14th April 2023                |
+| Season 7 Election end                      | 30th April 2023, 23:59:59 UTC* |
+| Season 7 Election Winners announced        | 7th May 2023                   |
+| Komodo deamon Season 7 update released     | 31st May 2023                  |
+| Hardfork / dPoW season 7 start             | 30th June 2023                 |
+
+* Votes cast in the election are valid until the first notarised block (inclusive) after 30th April 2023, 23:59:59 UTC.
+
 
 
 ### The Komodo Mining Ecosystem:
@@ -268,12 +294,12 @@ Operators with the best metrics in terms of uptime and responsiveness to updates
 
 For each hour of uptime with the correct version, Notary Nodes will receive 0.2 points to their season score.
 
-Simple scripts to assist operators in setting up their seed node and keeping it up to date whenever update announcements are broadcast will be provided prior to the start of Season 6.
+Simple scripts to assist operators in setting up their seed node and keeping it up to date whenever update announcements are available at https://github.com/smk762/nn_mm2_seed
 
 
 ### Developer Nodes:
 
-Eight Nodes are reserved for the Komodo team for mining and experimental, debugging, or research operations, which include the usage of custom and experimental core code.
+Eight Nodes are reserved for the Komodo team for mining and experimental, debugging, or research operations, which include the usage of custom and experimental core code. In some circumstances, non-DEV nodes could be assigned to participate in developer or security related tasks. Selection of these nodes will be based on operator experience, skillset and task specific requirements. With respect to ensuring dPoW remains operational, there is a limit of 4 nodes eligible for this assignment. Participation is voluntary. Operators who consent will receive no benefit to their score for their involvement, and accept the risk of losing potential end of season top 5 rank benefits if their score suffers as a result of participating.
 
 
 ### Hunting Unclaimed Rewards:
@@ -336,7 +362,7 @@ Operators are also encouraged to ask questions relating to setup and operation i
 
 #### Recommended min hardware setup for main NN: 
  
-- OS: Ubuntu 18.x or Debian 10.x is recommended.
+- OS: Ubuntu 20.x or Debian 11.x is recommended.
 - CPU: A High-Performance CPU (e.g. Xeon, i7/i9, Ryzen, EPYC, etc.)
 - RAM: 64 GB or more
 - Disk: 1 TB SSD or greater
@@ -345,7 +371,7 @@ Operators are also encouraged to ask questions relating to setup and operation i
 
 #### Recommended min hardware setup for 3P NN: 
  
-- OS: Ubuntu 18.x or Debian 10.x is recommended.
+- OS: Ubuntu 20.x or Debian 11.x is recommended.
 - CPU: A High-Performance CPU (e.g. Xeon, i7/i9, Ryzen, EPYC, etc.)
 - RAM: 32 GB or more
 - Disk: 500 GB SSD or greater
