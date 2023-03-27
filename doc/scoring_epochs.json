@@ -88,31 +88,33 @@
 	"Season_6": {
 		"season_start": 1656077853,
 		"season_start_comment": "https://github.com/KomodoPlatform/komodo/blob/master/src/komodo_globals.h#L54",
-		"season_end": 1951328000,
+		"season_end": 1680911999,
 		"season_end_comment": "not yet defined, using far in future",
+		"season_overtime_end": 1688169599,
+		"season_overtime_end_comment": "TBA: Hardfork est. June 30th 2023",
 		"Servers": {
 			"dPoW-Mainnet": {
 				"KIP0001": {
-					"start_time": 1677888000,
-					"start_time_comment": "Saturday, 4 March 2023 00:00:00 commit TBA, timestamp may change"
+					"start_time": 1677725103,
+					"start_time_comment": "Thu Mar 2 20:45:03 2023 +0800 5185ce701af3ebb52399671ff0847ff9f978220b"
 				}
 			},
 			"dPoW-3P": {
 				"MIL": {
-					"start_time": 1658992027,
-					"start_time_comment": "Sat July 28 07:07:07 2022 +0000 commit TBA, timestamp may change"
+					"start_time": 1658901193,
+					"start_time_comment": "Wed Jul 27 07:53:13 2022 +0200 ea24937c177c00444000131c6b77f0b94c4f3d15"
 				},
 				"CHIPS": {
-					"start_time": 1658992027,
-					"start_time_comment": "Sat July 28 07:07:07 2022 +0000 commit TBA, timestamp may change"
+					"start_time": 1658901193,
+					"start_time_comment": "Wed Jul 27 07:53:13 2022 +0200 ea24937c177c00444000131c6b77f0b94c4f3d15"
 				},
 				"VRSC": {
-					"start_time": 1668898800,
-					"start_time_comment": "Sat Nov 19 23:00 2022 +0000 S6 pubkey update"
+					"start_time": 1667152088,
+					"start_time_comment": "Sun Oct 30 17:48:08 2022 +0800 a26bebeec921fce5b9c039a086166b927a74dd55"
 				},
 				"SFUSD": {
-					"end_time": 1674821500,
-					"end_time_comment": "Fri Jan 27 20:11:40 2023 +0000 commit TBA, timestamp may change"
+					"end_time": 1674838170,
+					"end_time_comment": "Fri Jan 27 16:49:30 2023 +0800 f1ae27513df1cff2eeab7e50f873dfb1dd82e27c"
 				}
 			}
 		}
