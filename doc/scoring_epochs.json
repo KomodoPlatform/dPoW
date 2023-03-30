@@ -89,9 +89,9 @@
 		"season_start": 1656077853,
 		"season_start_comment": "https://github.com/KomodoPlatform/komodo/blob/master/src/komodo_globals.h#L54",
 		"season_end": 1680911999,
-		"season_end_comment": "not yet defined, using far in future",
+		"season_end_comment": "14th April 2023 at 23:59:59",
 		"season_overtime_end": 1688169599,
-		"season_overtime_end_comment": "TBA: Hardfork est. June 30th 2023",
+		"season_overtime_end_comment": "30th June 2023 (estimated)",
 		"Servers": {
 			"dPoW-Mainnet": {
 				"KIP0001": {
@@ -117,6 +117,18 @@
 					"end_time_comment": "Fri Jan 27 16:49:30 2023 +0800 f1ae27513df1cff2eeab7e50f873dfb1dd82e27c"
 				}
 			}
+		}
+	},
+	"Season_7": {
+		"season_start": 1688169599,
+		"season_start_comment": "estimated, https://github.com/KomodoPlatform/komodo/blob/master/src/komodo_globals.h#L54",
+		"season_end": 1999999999,
+		"season_end_comment": "not yet defined, using far in future",
+		"season_overtime_end": 1999999999,
+		"season_overtime_end_comment": "TBA: Hardfork est. June 30th 2024",
+		"Servers": {
+			"dPoW-Mainnet": {},
+			"dPoW-3P": {}
 		}
 	}
 }
