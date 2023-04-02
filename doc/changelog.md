@@ -2,7 +2,9 @@
 
 ## 0.6.8
 
+- Removes KIP0001
 - Adds VOTE2023
+- Updates seednode version to v1.0.1-beta `6bb79b3d8`
 
 ## 0.6.7
 
