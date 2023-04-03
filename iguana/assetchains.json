@@ -70,13 +70,6 @@
     "addnode": ["na.smk.dog", "3p.smk.dog", "3.0.32.10"]
   },
   {
-    "ac_name": "KIP0001",
-    "ac_public": "1",
-    "ac_staked": "10",
-    "ac_supply": "139419284",
-    "addnode": ["178.159.2.6", "116.203.120.163"]
-  },
-  {
     "ac_name": "MGW",
     "ac_supply": "999999",
     "addnode": ["na.smk.dog", "3p.smk.dog"]
@@ -146,5 +139,12 @@
     "ac_sapling": "1",
     "earlytxid": "7e4a76259e99c9379551389e9f757fc5f46c33ae922a8644dc2b187af2a6adc1",
     "addnode": ["na.smk.dog", "3p.smk.dog", "157.230.45.184", "165.22.52.123"]
+  },
+  {
+    "ac_name": "VOTE2023",
+    "ac_public": "1",
+    "ac_staked": "10",
+    "ac_supply": "139706361",
+    "addnode": ["178.159.2.6", "185.220.204.44", "116.203.120.163"]
   }
 ]

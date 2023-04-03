@@ -240,18 +240,18 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 
 ### Important Dates for Season 7:
 
-| Event                                      | Date                           |
--------------------------------------------------------------------------------
-| KMD snapshot for VOTE2023                  | 7th April 2023                 |
-| Season 6 scoring ends                      | 7th April 2023, 23:59:59 UTC   |
-| Season 6 Auto re-elected winners announced | 14th April 2023                |
-| VOTE2023 airdrop                           | 14th April 2023                |
-| Season 7 Candidate proposals recieved      | 1st-21st April 2023            |
-| Season 7 Election start                    | 14th April 2023                |
-| Season 7 Election end                      | 30th April 2023, 23:59:59 UTC* |
-| Season 7 Election Winners announced        | 7th May 2023                   |
-| Komodo deamon Season 7 update released     | 31st May 2023                  |
-| Hardfork / dPoW season 7 start             | 30th June 2023                 |
+| Event                                      | Date                           | Timestamp   |
+---------------------------------------------------------------------------------------------
+| KMD snapshot for VOTE2023                  | 7th April 2023                 | 1680911999  |
+| Season 6 scoring ends                      | 7th April 2023, 23:59:59 UTC   | 1680911999  |
+| Season 6 Auto re-elected winners announced | 14th April 2023                | 1681516799  |
+| VOTE2023 airdrop                           | 14th April 2023                | 1681516799  |
+| Season 7 Candidate proposals recieved      | 1st-21st April 2023            | 1682121599  |
+| Season 7 Election start                    | 14th April 2023                | 1681516799  |
+| Season 7 Election end                      | 30th April 2023, 23:59:59 UTC* | 1682899199  |
+| Season 7 Election Winners announced        | 7th May 2023                   | 1683503999  |
+| Komodo deamon Season 7 update released     | 31st May 2023                  | 1685577599  |
+| Hardfork / dPoW season 7 start             | 30th June 2023                 | 1688169599  |
 
 * Votes cast in the election are valid until the first notarised block (inclusive) after 30th April 2023, 23:59:59 UTC.
 
