@@ -46,6 +46,9 @@ Make sure chain is running smoothly.
 # Stop KIP0001
 cd ~/komodo/src
 ./komodo-cli -ac_name=KIP0001 stop
+
+# Close p2p port
+sudo ufw delete allow 46855/tcp comment 'KIP0001 p2p port'
 ```
 
 #### Update and restart Iguana
