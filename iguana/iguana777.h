@@ -81,12 +81,12 @@
 #include "../crypto777/nanosrc/reqrep.h"
 #include "../crypto777/nanosrc/tcp.h"
 #else
-#include "/usr/local/include/nanomsg/nn.h"
-#include "/usr/local/include/nanomsg/bus.h"
-#include "/usr/local/include/nanomsg/pubsub.h"
-#include "/usr/local/include/nanomsg/pipeline.h"
-#include "/usr/local/include/nanomsg/reqrep.h"
-#include "/usr/local/include/nanomsg/tcp.h"
+#include <nanomsg/nn.h>
+#include <nanomsg/bus.h>
+#include <nanomsg/pubsub.h>
+#include <nanomsg/pipeline.h>
+#include <nanomsg/reqrep.h>
+#include <nanomsg/tcp.h>
 #endif
 
 struct supernet_info;
