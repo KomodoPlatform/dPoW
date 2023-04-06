@@ -626,8 +626,8 @@ void dpow_statemachinestart(void *ptr)
         extralen = dpow_paxpending(myinfo,extras,sizeof(extras),&bp->paxwdcrc,bp->MoM,bp->MoMdepth,bp->CCid,src_or_dest,bp);
         bp->notaries[bp->myind].paxwdcrc = bp->paxwdcrc;
     }
-	snprintf(colour, sizeof(colour), strcmp(src->symbol, "KMD") == 0 ? GREEN : YELLOW);
-	printf("%s[%s] "RESET,colour,src->symbol);
+    snprintf(colour, sizeof(colour), strcmp(src->symbol, "KMD") == 0 ? GREEN : YELLOW);
+    printf("%s[%s] "RESET,colour,src->symbol);
     printf(" State: checkpoint.%d paxwdcrc.%x isratify.%d %s start.%u+dur.%d vs %ld MoM[%d] %s myid.%d\n"RESET,checkpoint.blockhash.height,bp->paxwdcrc,bp->isratify,bits256_str(str,checkpoint.blockhash.hash),starttime,bp->duration,time(NULL),bp->MoMdepth,bits256_str(str2,bp->MoM),bp->myind);
     for (i=0; i<sizeof(srchash); i++)
         srchash.bytes[i] = dp->minerkey33[i+1];
