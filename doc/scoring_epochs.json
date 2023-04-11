@@ -97,10 +97,6 @@
 				"KIP0001": {
 					"start_time": 1677725103,
 					"start_time_comment": "Thu Mar 2 20:45:03 2023 +0800 5185ce701af3ebb52399671ff0847ff9f978220b"
-				},
-				"VOTE2023": {
-					"start_time": 1680566399,
-					"start_time_comment": "TBA, Est. April 3 2023"
 				}
 			},
 			"dPoW-3P": {
@@ -119,10 +115,6 @@
 				"SFUSD": {
 					"end_time": 1674838170,
 					"end_time_comment": "Fri Jan 27 16:49:30 2023 +0800 f1ae27513df1cff2eeab7e50f873dfb1dd82e27c"
-				},
-				"KIP0001": {
-					"end_time": 1680566399,
-					"end_time_comment": "TBA, Est. April 3 2023"
 				}
 			}
 		}
