@@ -2257,7 +2257,7 @@ void iguana_main(void *arg)
         }
         else if ( strncmp((char *)arg,"notary",strlen("notary")) == 0 ) // must be second to last
         {   /* mainnet */
-            myinfo->rpcport = IGUANA_NOTARYPORT;
+            myinfo->rpcport = IGUANA_NOTARYPORTTESTNET;
             myinfo->nosplit = 1;
             myinfo->IAMNOTARY = 1;
             myinfo->DEXEXPLORER = 0;//1; disable as SPV is used now
