@@ -239,9 +239,8 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 ## Guidelines, General Information and Policies 
 
 ### Important Dates for Season 7:
-
-| Event                                      | Date                           | Timestamp   |
----------------------------------------------------------------------------------------------
+| Event | Date | Timestamp |
+| --- | --- | --- |
 | KMD snapshot for VOTE2023                  | 7th April 2023                 | 1680911999  |
 | Season 6 scoring ends                      | 7th April 2023, 23:59:59 UTC   | 1680911999  |
 | Season 6 Auto re-elected winners announced | 14th April 2023                | 1681516799  |
