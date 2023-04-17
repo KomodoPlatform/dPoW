@@ -135,7 +135,7 @@ struct pax_transaction
     char symbol[16],coinaddr[64]; uint8_t rmd160[20],shortflag;
 };
 
-#define DPOW_MAXIPBITS 512
+#define DPOW_MAXIPBITS 128
 
 struct dpow_info
 {
