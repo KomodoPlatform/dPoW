@@ -26,7 +26,7 @@ chmod +x ~/dPoW/iguana/wp_testnet
 `sudo ufw allow 17778 comment '2023 Testnet Iguana'`
 
 
-### Create symboloc links for the komodod & komodo-cli
+### Create symbolic links for the komodod & komodo-cli
 ```
 sudo ln -sf /home/$USER/komodo/src/komodo-cli /usr/local/bin/komodo-cli
 sudo ln -sf /home/$USER/komodo/src/komodod /usr/local/bin/komodod
@@ -110,6 +110,7 @@ Add the following entry: `0 * * * * /home/YOURUSERNAME/split_testnet.sh`
 
 This will check/replenish your UTXOs every hour
 
+Before beginning to notarize, your pubkey must be added to all nodes. Open a pull request to this branch adding your pubkey to the [testnet.json](https://github.com/KomodoPlatform/dPoW/blob/2023-testnet/iguana/testnet.json) file. Please ensure you include your discord username within this pull request. You will be pinged on discord when your pubkey is had been added and is ready to notarize.
 
 ### Start Iguana
 ```
