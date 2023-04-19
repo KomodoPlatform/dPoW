@@ -63,7 +63,7 @@ komodo-cli -ac_name=DOC importprivkey YOUR_PRIVATE_KEY
 komodo-cli -ac_name=MARTY importprivkey YOUR_PRIVATE_KEY
 ```
 
-Send some funds to your notary node chain addresses. If you need some RICK / DOC, ask Alright or Smk. If you need some KMD, post a DOC/MORTY meme in the Discord testnet channel with your address below and if its funny enough, charity may follow.
+Send some funds to your notary node chain addresses. If you need some DOC/MARTY, ask Alright or Smk. If you need some KMD, post a DOC/MARTY meme in the Discord testnet channel with your address below and if its funny enough, charity may follow.
 
 
 ### Create a splitfunds script
