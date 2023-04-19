@@ -1,4 +1,5 @@
-This guide assumes you have already completed the steps in the following two links:
+This guide assumes you have already completed the steps in the following links:
+- https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04
 - https://docs.komodoplatform.com/notary/setup-Komodo-Notary-Node.html#initial-server-setup
 - https://docs.komodoplatform.com/notary/setup-Komodo-Notary-Node.html#install-komodo-by-compiling-it-from-source
 
@@ -120,3 +121,10 @@ cd ~/dPoW/iguana
 ```
 
 Good luck! Don't be shy to ask questions and learn from the Vetern Notary Node Operators! 
+
+### Extra resources
+
+Example `systemd` service file for KMD deamon & smartchains - https://github.com/smk762/DragonhoundTools/blob/master/server/systemd/komodo-deamon.service
+Useful scrits and tools - https://github.com/webworker01/nntools
+
+
