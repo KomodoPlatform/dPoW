@@ -33,6 +33,27 @@ sudo ln -sf /home/$USER/komodo/src/komodo-cli /usr/local/bin/komodo-cli
 sudo ln -sf /home/$USER/komodo/src/komodod /usr/local/bin/komodod
 ```
 
+### Bootstrap KMD
+```
+# stop komodo
+komodo-cli stop
+
+# delete existing data
+cd ~/.komodo
+rm -rf blocks/ chainstate/ database/ db.log fee_estimates.dat komodo.pid komodostate .lock notarisations/ realtime signedmasks
+
+# download bootstrap
+wget https://eu.bootstrap.dexstats.info/KMD-bootstrap.tar.gz
+
+# wait 15 minutes to download then extract
+tar xvf KMD-bootstrap.tar.gz
+
+# restart komodod
+cd ~
+./launch_testnet_chains.sh
+```
+
+
 ### Start KMD, DOC and MARTY
 
 Create a file named `launch_testnet_chains.sh` and add the launch parameters.
