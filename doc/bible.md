@@ -401,22 +401,25 @@ Signed messages must conform to the following format to be considered valid:
 `{NOTARYNAME}_{REGION} S{SEASON_NUM} [supports|rejects] {DIP_NUM}`
 
 For example:
-Command: `komodo-cli signmessage RDragoNHdwovvsDLSLMiAEzEArAD3kq6FN "dragonhound_DEV S6 supports DIP0001"`
-Response: `IDETpoMoWojS/bXCcLdMWyCRas1aL7NRnideIns0ega4HQYwJWjOfIv3hKNfSsZADxT+ZbWM2govNxCFh+esOtI=`
+```
+$ komodo-cli signmessage RDragoNHdwovvsDLSLMiAEzEArAD3kq6FN "dragonhound_DEV S6 supports DIP0001"
+> IDETpoMoWojS/bXCcLdMWyCRas1aL7NRnideIns0ega4HQYwJWjOfIv3hKNfSsZADxT+ZbWM2govNxCFh+esOtI=
+```
 
 The vote is then cast in the relevant KIP thread as a comment as below:
-
+```
   Notary: dragonhound_DEV
   Season: S6
   Address: RDragoNHdwovvsDLSLMiAEzEArAD3kq6FN
   Message: "dragonhound_DEV S6 supports DIP0001"
   Signature: IDETpoMoWojS/bXCcLdMWyCRas1aL7NRnideIns0ega4HQYwJWjOfIv3hKNfSsZADxT+ZbWM2govNxCFh+esOtI=
+```
 
 It can then be validated with:
-
-  Command: `komodo-cli verifymessage RDragoNHdwovvsDLSLMiAEzEArAD3kq6FN "IDETpoMoWojS/bXCcLdMWyCRas1aL7NRnideIns0ega4HQYwJWjOfIv3hKNfSsZADxT+ZbWM2govNxCFh+esOtI=" "dragonhound_DEV S6 supports DIP0001"`
-  Response: `true`
-
+```
+$ komodo-cli verifymessage RDragoNHdwovvsDLSLMiAEzEArAD3kq6FN "IDETpoMoWojS/bXCcLdMWyCRas1aL7NRnideIns0ega4HQYwJWjOfIv3hKNfSsZADxT+ZbWM2govNxCFh+esOtI=" "dragonhound_DEV S6 supports DIP0001"`
+> true
+```
 
 ## Code of Conduct
 
