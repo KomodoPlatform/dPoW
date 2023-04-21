@@ -1,6 +1,6 @@
 # Notary Node Bible v1.2
 
-<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. This iteration of the NN bible comes into effect at the start of NN Season 6 (date TBA). Please read carefully.
+<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. This iteration of the NN bible comes into effect at the start of NN Season 7. Please read carefully.
 
 #
 
@@ -380,7 +380,7 @@ Operators are also encouraged to ask questions relating to setup and operation i
 - Bandwidth: 100 Mbps or higher
 
 
-## dPoW Improvement Proposals (DIPS)
+## dPoW Improvement Proposals
 
 The dPoW Improvement Proposals [DIPS](https://github.com/KomodoPlatform/dips/) repository serves as a platform to facilitate discussion, collaboration and the review of proposed changes to dPow and the notary node operations. We believe that having an open and transparent process helps foster good governance and trust between the Komodo community and our development teams.
 
