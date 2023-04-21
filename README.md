@@ -48,9 +48,6 @@ wget https://eu.bootstrap.dexstats.info/KMD-bootstrap.tar.gz
 # wait 15 minutes to download then extract
 tar xvf KMD-bootstrap.tar.gz
 
-# restart komodod
-cd ~
-./launch_testnet_chains.sh
 ```
 
 
