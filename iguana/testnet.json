@@ -1,7 +1,7 @@
 {
 "port": 17778,
 "BTCminsigs": 13,
-"minsigs": 7,
+"minsigs": 6,
 "seeds": [
 	"195.201.20.230",
 	"195.201.137.5",
@@ -26,5 +26,6 @@
     {"who-biz2": "032f9cc71426429c9958bb0a54313f3d42a0fc2b63cfd30193cc819de70b2a66cb"},
     {"emmanuel": "032833aadbf22a7ab67f6623a3a840a288d305e09915dc83c81fce6af0e31aa3b0"},
     {"canialon": "029c384e32cc3b5fca94cc04b48f9c0eb7a8017006a27f0872c80961b130dc14dc"},
-    {"kivqa": "03d7ecf6dd68f9c7a78c1021a834a87edf5e3099773c2771ac8ebcf6a82c79b257"}
+    {"kivqa": "03d7ecf6dd68f9c7a78c1021a834a87edf5e3099773c2771ac8ebcf6a82c79b257"},
+    {"ozkanonur": "02be4ac61cf534b0fb98568ec539ee9e34c5104088f94f21cee2945d37d88373da"}	
 ]}
