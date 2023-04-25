@@ -91,7 +91,7 @@ Create split script called `split_testnet.sh`. Use the following template as an 
 ```
 #!/bin/bash
 
-source ${HOME}/dPoW/iguana/pubkey.txt
+source /home/YOUR_USERNAME/dPoW/iguana/pubkey.txt
 
 chain="KMD"
 unspent=$(komodo-cli listunspent | jq '[.[] | select (.generated==false and .amount==0.0001 and .spendable==true and (.scriptPubKey == "'21${pubkey}ac'"))] | length')
