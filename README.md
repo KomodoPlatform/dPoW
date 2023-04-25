@@ -125,7 +125,7 @@ Make it executable with `chmod +x split_testnet.sh`
 Add a crontab entry for this script so it will ensure you have enough UTXOs when you are asleep.
 
 Open the cron job editor with `crontab -e`
-Add the following entry: `0 * * * * /home/YOURUSERNAME/split_testnet.sh`
+Add the following entry: `0 * * * * /home/YOURUSERNAME/split_testnet.sh > /home/YOURUSERNAME/testnet_splits.log`
 
 This will check/replenish your UTXOs every hour
 
