@@ -90,9 +90,11 @@ Create split script called `split_testnet.sh`. Use the following template as an 
 ```
 #!/bin/bash
 
+SHELL=/bin/sh PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+
 conf_dir="/home/YOUR_USERNAME/.komodo/"
 source /home/YOUR_USERNAME/dPoW/iguana/pubkey.txt
-PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+min_uxto=20
 split_num=50
 
 echo
@@ -103,7 +105,7 @@ echo
 chain="KMD"
 unspent=$(komodo-cli -conf=${conf_dir}/komodo.conf listunspent | jq '[.[] | select (.generated==false and .amount==0.0001 and .spendable==true and (.scriptPubKey == "'21${pubkey}ac'"))] | length')
 echo "${chain}: $unspent"
-  if [ $unspent -lt 50 ]; then
+  if [ $unspent -lt $min_uxto ]; then
     echo "Topping up ${chain}"
     curl --url "http://127.0.0.1:7779" --data "{\"coin\":\""${chain}"\",\"agent\":\"iguana\",\"method\":\"splitfunds\",\"satoshis\":\"10000\",\"sendflag\":1,\"duplicates\":"${split_num}"}"
 fi
@@ -112,7 +114,7 @@ for chain in "DOC" "MARTY"
 do
     unspent=$(komodo-cli -ac_name=${chain} -conf=${conf_dir}/${chain}/${chain}.conf listunspent | jq '[.[] | select (.generated==false and .amount==0.0001 and .spendable==true and (.scriptPubKey == "'21${pubkey}ac'"))] | length')
     echo "${chain}: $unspent"
-      if [ $unspent -lt 50 ]; then
+      if [ $unspent -lt $min_uxto ]; then
         echo "Topping up ${chain}"
         curl --url "http://127.0.0.1:7779" --data "{\"coin\":\""${chain}"\",\"agent\":\"iguana\",\"method\":\"splitfunds\",\"satoshis\":\"10000\",\"sendflag\":1,\"duplicates\":"${split_num}"}"
     fi
