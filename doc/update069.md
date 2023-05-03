@@ -1,7 +1,14 @@
 ### dPoW 0.6.9 update information
 
--On your 3P node, update your Verus Coin's codebase to [`f672ccf`](https://github.com/VerusCoin/VerusCoin/tree/f672ccfbc3e77205bc5715c6370d06ad4894399c), build it and then restart it
+- On your 3P node, update your Verus Coin's codebase to [`f672ccf`](https://github.com/VerusCoin/VerusCoin/tree/f672ccfbc3e77205bc5715c6370d06ad4894399c), build it and then restart it. 
 
+- Update apt packages (you may get a build error if they are too old)
+```
+sudo apt update
+sudo apt upgrade
+```
+
+- Build Verus Coin
 ```bash
 cd ~/VerusCoin
 git pull
@@ -19,6 +26,8 @@ source ~/dPoW/iguana/pubkey.txt
 ```
 
 #### Remove VOTE2023
+
+- On your Main node, stop VOTE2023 and close its p2p port
 
 ```bash
 # Stop VOTE2023
