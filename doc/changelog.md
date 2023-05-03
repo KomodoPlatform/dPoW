@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.9
+
+- Updates VRSC to [`f672ccf`](https://github.com/VerusCoin/VerusCoin/tree/f672ccfbc3e77205bc5715c6370d06ad4894399c)
+- Removes VOTE2023
+
 ## 0.6.8
 
 - Removes KIP0001

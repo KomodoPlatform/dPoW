@@ -4,8 +4,8 @@
 
 ```bash
 cd ~/VerusCoin
-git pull
 git checkout ad8fb8d
+git pull
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
