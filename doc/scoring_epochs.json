@@ -120,8 +120,8 @@
 		}
 	},
 	"Season_7": {
-		"season_start": 1688169599,
-		"season_start_comment": "estimated, https://github.com/KomodoPlatform/komodo/blob/master/src/komodo_globals.h#L54",
+		"season_start": 1688132253,
+		"season_start_comment": "Friday, 30 June 2023 13:37:33, https://github.com/KomodoPlatform/komodo/blob/b416d476cca1ec16d48e54cf18aeffc80424bf20/src/komodo_hardfork.cpp#L15",
 		"season_end": 1999999999,
 		"season_end_comment": "not yet defined, using far in future",
 		"season_overtime_end": 1999999999,
