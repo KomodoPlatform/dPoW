@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.0
+
+- Removes ``, ``, ``, ``
+- Updates iguana and dPoW repo for S7 (main and 3P)
+
 ## 0.6.11
 
 - Updates VRSC to [`3f0f435`](https://github.com/VerusCoin/VerusCoin/commit/3f0f4353f12e82e107144687e9e111c31134b9d4)
