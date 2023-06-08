@@ -1,5 +1,5 @@
 {
-	"port": 13344,
+	"port": 13345,
 	"BTCminsigs": 13,
 	"minsigs": 13,
 	"seeds": [
@@ -76,6 +76,6 @@
 		{"dragonhound_AR": "039bb16266b0216264e7d3ccae12633105e1c14bd5d0e144e8b9c2b6d298a6c545"},
 		{"dragonhound_EU": "0382d7e027bf5cda31264867f4e389a1a72f6671c7bd8818beb35b874d906e22d5"},
 		{"dragonhound_NA": "02b4bf90b57f7c8363043c7ea8b02c8c776301ef3c1abb2df1caa2e6947be1422b"},
-		{"dragonhound_DEV": "02a473e980bf0d198ece8ed11f1ecbe437edb688de6c83b82efa6f7de3a5d43c19"},
+		{"dragonhound_DEV": "02a473e980bf0d198ece8ed11f1ecbe437edb688de6c83b82efa6f7de3a5d43c19"}
 	]
 }
