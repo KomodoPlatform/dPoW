@@ -39,6 +39,8 @@ General [Setup instructions](https://docs.komodoplatform.com/notary/setup-Komodo
 
 #### [Notary Node metrics](http://stats.kmd.io/) - http://stats.kmd.io/
 
+#### [Notary Addresses](https://deckersu.github.io/notaries_addresses.html)
+
 [![dPOW Status](https://badges.komodo.live/svg/date_badge.svg?maxAge=60)](https://komodostats.com)
 * active - last notarization less than 2.5 hours ago
 * irregular - last notarization more than 2.5 and less than 24 hours ago
