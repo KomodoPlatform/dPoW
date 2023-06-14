@@ -22,7 +22,7 @@ source ~/dPoW/iguana/pubkey.txt
 ./komodod -gen -genproclimit=1 -pubkey=$pubkey -minrelaytxfee=0.000035 -opretmintxfee=0.004 -notary=".litecoin/litecoin.conf" &
 
 # On Third Party node
-./komodod -pubkey=$pubkey &
+./komodod -pubkey=$pubkey -notary &
 ```
 
 
