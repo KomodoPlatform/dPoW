@@ -1,6 +1,6 @@
 ### dPoW 0.6.12 update information
 
-- On your Main node, update your Komodo codebase to [`156dba6`](https://github.com/KomodoPlatform/komodo/tree/156dba60184c07d0781a57d5b5005b8f3dba0c98), build it and then restart it.
+- On your **Main and 3P nodes**, update your Komodo codebase to [`156dba6`](https://github.com/KomodoPlatform/komodo/tree/156dba60184c07d0781a57d5b5005b8f3dba0c98), build it and then restart it.
 
 - Build the daemon
 
