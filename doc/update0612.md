@@ -17,7 +17,12 @@ git checkout 156dba6
 cd ~/komodo/src
 ./komodo-cli stop
 source ~/dPoW/iguana/pubkey.txt
+
+# On Main node
 ./komodod -gen -genproclimit=1 -pubkey=$pubkey -minrelaytxfee=0.000035 -opretmintxfee=0.004 -notary=".litecoin/litecoin.conf" &
+
+# On Third Party node
+./komodod -pubkey=$pubkey &
 ```
 
 
