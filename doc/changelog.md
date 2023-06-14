@@ -2,6 +2,7 @@
 
 ## 0.6.12
 
+- Updates KMD to [`156dba6`](https://github.com/KomodoPlatform/komodo/tree/156dba60184c07d0781a57d5b5005b8f3dba0c98)
 - Updates VRSC to [`4beede9`](https://github.com/VerusCoin/VerusCoin/tree/4beede91ab5562d866a90cc5b2d203acbe2bd22c)
 
 ## 0.6.11
