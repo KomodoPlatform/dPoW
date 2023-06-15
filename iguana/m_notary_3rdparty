@@ -14,8 +14,7 @@ curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"SuperNET\",\"method\":\"
 sleep 3
 
 # Season 7 3P peers
-curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"104.238.221.61\"}"
-curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"199.127.60.142\"}"
+curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"15.235.204.174\"}" # Dragonhound_AR
 
 # Season 6 peer IPs TODO: Remove once more are sourced
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"199.127.60.142\"}"
