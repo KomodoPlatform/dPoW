@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.13
+
+- Updates VRSC to [`8446534`](https://github.com/VerusCoin/Verus-Desktop/tree/8446534533b6dc96b20814562970443ad0c9209d)
+
 ## 0.6.12
 
 - Updates KMD to [`156dba6`](https://github.com/KomodoPlatform/komodo/tree/156dba60184c07d0781a57d5b5005b8f3dba0c98)
