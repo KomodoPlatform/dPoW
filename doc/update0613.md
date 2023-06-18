@@ -1,14 +1,13 @@
 ### dPoW 0.6.13 update information
 
-
-- On your 3P node, update your Verus Coin's codebase to [`8446534`](https://github.com/VerusCoin/Verus-Desktop/tree/8446534533b6dc96b20814562970443ad0c9209d), build it and then restart it.
+- On your 3P node, update your Verus Coin's codebase to [`04a675e`](https://github.com/VerusCoin/VerusCoin/tree/04a675e1bbd8c91e1d27ada962d9c9b208476c4e), build it and then restart it.
 
 - Build Verus Coin
 
 ```bash
 cd ~/VerusCoin
 git pull
-git checkout 8446534
+git checkout 04a675e
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 

@@ -2,7 +2,7 @@
 
 ## 0.6.13
 
-- Updates VRSC to [`8446534`](https://github.com/VerusCoin/Verus-Desktop/tree/8446534533b6dc96b20814562970443ad0c9209d)
+- Updates VRSC to [`04a675e`](https://github.com/VerusCoin/VerusCoin/tree/04a675e1bbd8c91e1d27ada962d9c9b208476c4e)
 
 ## 0.6.12
 
