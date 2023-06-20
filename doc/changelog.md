@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.14
+
+- Updates VRSC to [`185d1a5`](https://github.com/VerusCoin/VerusCoin/tree/185d1a54b8d890c95fd2ce5dd622f099a99aae6e)
+
 ## 0.6.13
 
 - Updates VRSC to [`caa1107`](https://github.com/VerusCoin/VerusCoin/tree/caa1107fea7bda7ac27af559b8676ddf1dfb3f55)
