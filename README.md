@@ -14,7 +14,7 @@ Network Statistics | https://stats.kmd.io/
 
 ## Installation 
 
-General [Setup instructions](https://docs.komodoplatform.com/notary/setup-Komodo-Notary-Node.html#setup-komodo-notary-node)
+General [Setup instructions](https://github.com/KomodoPlatform/Documentation/blob/nn_docs_update/docs/notary/setup-Komodo-Notary-Node.md)
 
 ### Build instructions for NN operations:
 `cd iguana`
