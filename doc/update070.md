@@ -27,4 +27,9 @@ After git pull restart your iguana and adjust your firewall settings accordingly
 - `sudo ufw allow 13348/tcp comment 'iguana s7 mainnet p2p'`
 - `sudo ufw allow 13345/tcp comment 'iguana s7 3rd p2p' `
 
+If you are a returning Notary Node operator, don't forget to close the Season 6 Iguana ports and the ports for removed coins once Season 7 begins. Follow the instructions in [https://www.cyberciti.biz/faq/how-to-delete-a-ufw-firewall-rule-on-ubuntu-debian-linux/](https://www.cyberciti.biz/faq/how-to-delete-a-ufw-firewall-rule-on-ubuntu-debian-linux/).
+
+
+#### Would you like to know more?
+
 Full Setup Instructions at [https://github.com/KomodoPlatform/Documentation/blob/nn_docs_update/docs/notary/setup-Komodo-Notary-Node.md](https://github.com/KomodoPlatform/Documentation/blob/nn_docs_update/docs/notary/setup-Komodo-Notary-Node.md)
