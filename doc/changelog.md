@@ -1,9 +1,11 @@
 # Changelog
 
+## 0.7.0
 
-- Removes ``, ``, ``, ``
-- Updates iguana and dPoW repo for S7 (main and 3P)
-- 
+- Removes `BET`, `BOTS`, `CRYPTO`, `DEX`, `HOLD`, `JUMBLR`, `MGW`, `MORTY`, `MSHARK`, `PANGEA`, `REVS`, `RICK`
+- Adds `DOC`, `MARTY`
+- Updates iguana and dPoW repo for S7 (main, 3P and dokerised 3P)
+
 ## 0.6.14
 
 - Updates VRSC to [`185d1a5`](https://github.com/VerusCoin/VerusCoin/tree/185d1a54b8d890c95fd2ce5dd622f099a99aae6e)
