@@ -23,6 +23,8 @@ curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"ad
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"148.113.8.6\"}" # gcharang_DEV
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"144.76.80.75\"}" # Alright_DEV
 curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"65.21.77.109\"}" # Alright_EU
+curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"89.19.26.211\"}" # Marmara1
+curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"addnotary\",\"ipaddr\":\"89.19.26.212\"}" # Marmara2
 
 
 
