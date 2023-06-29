@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Marketmaker 1.0 bug report
+about: Report a bug with Iguana
 
 ---
 
