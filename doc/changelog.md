@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.1
+
+- Updates VRSC to [`66e16e7`](https://github.com/VerusCoin/VerusCoin/tree/66e16e79c8c3f60279952b2b36a8b06d4d7a81de)
+
 ## 0.7.0
 
 - Removes `BET`, `BOTS`, `CRYPTO`, `DEX`, `HOLD`, `JUMBLR`, `MGW`, `MORTY`, `MSHARK`, `PANGEA`, `REVS`, `RICK`
