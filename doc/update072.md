@@ -7,7 +7,8 @@
 ```bash
 cd notary_docker_3p
 git pull
-./update vrsc
+./update vrsc #supply sudo password when asked
+./start vrsc
 ```
 
 #### If custom setup
