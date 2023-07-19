@@ -407,7 +407,7 @@ $ komodo-cli signmessage RDragoNHdwovvsDLSLMiAEzEArAD3kq6FN "dragonhound_DEV S6 
 > IDETpoMoWojS/bXCcLdMWyCRas1aL7NRnideIns0ega4HQYwJWjOfIv3hKNfSsZADxT+ZbWM2govNxCFh+esOtI=
 ```
 
-The vote is then cast in the relevant KIP thread as a comment as below:
+The vote is then cast in the relevant DIP thread as a comment as below:
 ```
   Notary: dragonhound_DEV
   Season: S6
