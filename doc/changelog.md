@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.4
+
+- Updates VRSC to [`9573cef`](https://github.com/VerusCoin/VerusCoin/tree/9573cef05bc56a23df486748307c5bc7961186c8)
+
 ## 0.7.3
 
 - Updates VRSC to [`f1c6d40`](https://github.com/VerusCoin/VerusCoin/tree/f1c6d40a71acd597bac039aac0cf1b4745106933)
