@@ -2,6 +2,18 @@
 
 - On your 3P node, update your Verus Coin's codebase to [`2d32721`](https://github.com/VerusCoin/VerusCoin/tree/2d327210fddc245c693d00c9a025bd81f5f079eb), build it and then restart it.
 
+
+#### If using smk's docker setup
+
+```bash
+cd notary_docker_3p
+git pull
+./update vrsc # supply sudo password when asked
+./start vrsc
+```
+
+#### If custom setup
+
 - Build Verus Coin
 
 ```bash
@@ -20,7 +32,7 @@ source ~/dPoW/iguana/pubkey.txt
 ./verusd -pubkey=$pubkey &
 ```
 
-- Update your dPoW repo
+#### Update your dPoW repo
 
 ```bash
 cd ~/dPoW
@@ -28,4 +40,4 @@ git checkout master
 git pull
 ```
 
-Make sure your iguana is running properly.
+Make sure your 3P iguana is running properly.
