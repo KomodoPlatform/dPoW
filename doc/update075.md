@@ -1,4 +1,4 @@
-### dPoW 0.7.3 update information
+### dPoW 0.7.5 update information
 
 - On your 3P node, update your Verus Coin's codebase to [`2d32721`](https://github.com/VerusCoin/VerusCoin/tree/2d327210fddc245c693d00c9a025bd81f5f079eb), build it and then restart it.
 
