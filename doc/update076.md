@@ -1,6 +1,6 @@
 ### dPoW 0.7.6 update information
 
-- On your 3P node, update your Verus Coin's codebase to [`2eb2238`](https://github.com/VerusCoin/VerusCoin/tree/2eb2238dbbbda7aba610fa439d69306e8f62b9ae), build it and then restart it.
+- On your 3P node, update your Verus Coin's codebase to [`25f82df`](https://github.com/VerusCoin/VerusCoin/tree/25f82df12aee24c64681ca69ddd21ae19528fe25), build it and then restart it.
 
 #### If using smk's docker setup
 
@@ -18,7 +18,7 @@ git pull
 ```bash
 cd ~/VerusCoin
 git pull
-git checkout 2eb2238
+git checkout 25f82df
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
