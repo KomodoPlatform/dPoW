@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.7
+
+- Updates VRSC to [``](https://github.com/VerusCoin/VerusCoin/tree/)
+- Updates Seednodes API version to [``]()
+
 ## 0.7.6
 
 - Updates VRSC to [`25f82df`](https://github.com/VerusCoin/VerusCoin/tree/25f82df12aee24c64681ca69ddd21ae19528fe25)
