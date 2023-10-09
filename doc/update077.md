@@ -55,3 +55,10 @@ git pull
 
 Make sure your 3P iguana is running properly and notarising.
 Confirm your MM2 node is running, your certificates are up to date, and your node is finding peers on netID 8762.
+```bash
+sudo apt install snapd
+sudo snap install certbot --classic
+sudo certbot certonly -d ${DOMAIN}
+# or, if certs exist already
+sudo certbot renew
+```
