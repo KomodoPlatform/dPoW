@@ -9,6 +9,8 @@ cd notary_docker_3p
 git pull
 ./update vrsc # supply sudo password when asked
 ./start vrsc
+./update mm2 # supply sudo password when asked
+./start mm2
 ```
 
 #### If custom setup
@@ -32,6 +34,17 @@ source ~/dPoW/iguana/pubkey.txt
 ./verusd -pubkey=$pubkey &
 ```
 
+- Update your seednode
+
+```bash
+cd ~/nn_mm2_seed
+git pull
+./update_mm2.sh
+./update_conf.py
+./run_mm2.sh && tail -f mm2.log
+```
+
+
 #### Update your dPoW repo
 
 ```bash
@@ -40,4 +53,5 @@ git checkout master
 git pull
 ```
 
-Make sure your 3P iguana is running properly.
+Make sure your 3P iguana is running properly and notarising.
+Confirm your MM2 node is running and finding peers on netID 8762.
