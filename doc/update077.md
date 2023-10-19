@@ -1,6 +1,6 @@
 ### dPoW 0.7.7 update information
 
-- On your 3P node, update your Verus Coin's codebase to [``](https://github.com/VerusCoin/VerusCoin/tree/), build it and then restart it.
+- On your 3P node, update your Verus Coin's codebase to [`bdcad5e`](https://github.com/VerusCoin/VerusCoin/tree/bdcad5eba2f26e6b78a0831fc1656ce8eadb156c), build it and then restart it.
 
 #### If using smk's docker setup
 
@@ -18,7 +18,7 @@ git pull
 - Build Verus Coin
 
 ```bash
-vrsc_commit=''
+vrsc_commit='bdcad5e'
 cd ~/VerusCoin
 git pull
 git checkout ${vrsc_commit}
@@ -44,7 +44,6 @@ git pull
 ./run_mm2.sh && tail -f mm2.log
 ```
 
-
 #### Update your dPoW repo
 
 ```bash
@@ -55,6 +54,7 @@ git pull
 
 Make sure your 3P iguana is running properly and notarising.
 Confirm your MM2 node is running, your certificates are up to date, and your node is finding peers on netID 8762.
+
 ```bash
 sudo apt install snapd
 sudo snap install certbot --classic
