@@ -72,3 +72,12 @@ git pull
 - Once complete, check the mm2 logs to confirm it is running correctly.
 - Run `./version.sh` to confirm the version is `v1.0.7-beta`
 
+### Update Dragon Node
+
+If using https://github.com/smk762/dragon_node repo, update it to align with the latest seed node version:
+
+```bash
+cd ~/dragon_node
+git pull
+./stats
+```
