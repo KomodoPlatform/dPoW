@@ -78,6 +78,7 @@ If using https://github.com/smk762/dragon_node repo, update it to align with the
 
 ```bash
 cd ~/dragon_node
+git checkout season-seven
 git pull
 ./stats
 ```
