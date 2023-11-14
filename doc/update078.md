@@ -43,7 +43,16 @@ git checkout ${kmd_commit}
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 ```
 
-- Restart it
+- Restart komodo (main)
+
+```bash
+cd ~/komodo/src
+./komodo-cli stop
+source ~/dPoW/iguana/pubkey.txt
+./komodod  -gen -genproclimit=1 -minrelaytxfee=0.000035 -opretmintxfee=0.004 -notary=.litecoin/litecoin.conf -pubkey=$pubkey &
+```
+
+- Restart komodo (3p)
 
 ```bash
 cd ~/komodo/src
