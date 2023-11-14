@@ -2,15 +2,15 @@
 
 - On your 3P node, update your Verus Coin's codebase to [`54e0cf2`](https://github.com/VerusCoin/VerusCoin/tree/54e0cf27af6cc1f0204830f7009e10d9a05d040b), build it and then restart it.
 
-### Update VSRC
+### Update VSRC & KMD
 
 #### Using docker setup
 
 ```bash
 cd notary_docker_3p
 git pull
-./update vrsc # supply sudo password when asked
-./start vrsc
+./update
+./start
 ```
 
 #### Using other setup
@@ -33,6 +33,24 @@ cd ~/VerusCoin/src
 source ~/dPoW/iguana/pubkey.txt
 ./verusd -pubkey=$pubkey &
 ```
+- Build Komodod
+
+```bash
+kmd_commit='d9144d0'
+cd ~/komodo
+git pull
+git checkout ${kmd_commit}
+./zcutil/build.sh -j$(expr $(nproc) - 1)
+```
+
+- Restart it
+
+```bash
+cd ~/komodo/src
+./komodo-cli stop
+source ~/dPoW/iguana/pubkey.txt
+./komodod -minrelaytxfee=0.000035 -opretmintxfee=0.004 -notary -pubkey=$pubkey &
+```
 
 #### Update your dPoW repo
 
@@ -47,7 +65,7 @@ Once complete, monitor your node to ensure it is running correctly and notarisat
 
 ### Update your seed node.
 
-Update your MM2 seed node codebase to the [latest release](https://github.com/KomodoPlatform/komodo-defi-framework/releases/tag/v1.0.7-beta)  [`79f6205 `](https://github.com/KomodoPlatform/komodo-defi-framework/tree/79f620559a635704959d3e88067f7ffe5ee30f1f)
+Update your MM2 seed node codebase to the [latest release](https://github.com/KomodoPlatform/komodo-defi-framework/releases/tag/v1.0.7-beta)  [`79f6205`](https://github.com/KomodoPlatform/komodo-defi-framework/tree/79f620559a635704959d3e88067f7ffe5ee30f1f)
 
 - If using the https://github.com/smk762/nn_mm2_seed repo, update it and restart:
 
