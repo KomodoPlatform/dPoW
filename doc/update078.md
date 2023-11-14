@@ -33,7 +33,7 @@ cd ~/VerusCoin/src
 source ~/dPoW/iguana/pubkey.txt
 ./verusd -pubkey=$pubkey &
 ```
-- Build Komodod
+- Build Komodod (main and 3p)
 
 ```bash
 kmd_commit='d9144d0'
