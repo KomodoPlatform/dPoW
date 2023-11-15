@@ -3,6 +3,8 @@
 ## 0.7.8
 
 - Updates VRSC to [`54e0cf2`](https://github.com/VerusCoin/VerusCoin/tree/54e0cf27af6cc1f0204830f7009e10d9a05d040b)
+- Updates komodod to [`d9144d0`](https://github.com/KomodoPlatform/komodo/tree/d9144d0f44f3a4b6d103aaff3c13264387de7702)
+- Updates mm2 to v1.0.7-beta
 
 ## 0.7.7
 
