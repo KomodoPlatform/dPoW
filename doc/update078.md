@@ -33,6 +33,7 @@ cd ~/VerusCoin/src
 source ~/dPoW/iguana/pubkey.txt
 ./verusd -pubkey=$pubkey &
 ```
+
 - Build Komodod (main and 3p)
 
 ```bash
@@ -71,12 +72,11 @@ git pull
 
 Once complete, monitor your node to ensure it is running correctly and notarisations are progressing.
 
-
-### Update your seed node.
+### Update your seed node
 
 Update your MM2 seed node codebase to the [latest release](https://github.com/KomodoPlatform/komodo-defi-framework/releases/tag/v1.0.7-beta)  [`79f6205`](https://github.com/KomodoPlatform/komodo-defi-framework/tree/79f620559a635704959d3e88067f7ffe5ee30f1f)
 
-- If using the https://github.com/smk762/nn_mm2_seed repo, update it and restart:
+#### If using the https://github.com/smk762/nn_mm2_seed repo, update it and restart
 
 ```bash
 cd ~/nn_mm2_seed
@@ -87,7 +87,10 @@ git pull
 ./run_mm2.sh
 ```
 
-- If using the https://github.com/smk762/notary_docker_3p repo, update it and restart:
+- Run `./version.sh` to confirm the version is `v1.0.7-beta`
+- Once complete, check the mm2 logs to confirm it is running correctly.
+
+#### If using the https://github.com/smk762/notary_docker_3p repo, update it and restart
 
 ```bash
 cd ~/notary_docker_3p
@@ -97,7 +100,7 @@ git pull
 ```
 
 - Once complete, check the mm2 logs to confirm it is running correctly.
-- Run `./version.sh` to confirm the version is `v1.0.7-beta`
+- Run `cd mm2 && ./version` to confirm the version is `v1.0.7-beta`
 
 ### Update Dragon Node
 
