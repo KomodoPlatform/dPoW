@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.9
+
+- Updates VRSC to [`81e7a80`](https://github.com/VerusCoin/VerusCoin/tree/81e7a80271e230a132afb44967ea26f781439995)
+- Updates komodod to [`41265fb`](https://github.com/KomodoPlatform/komodo/tree/41265fb26d51e4f629b3dadcc92aa19e6867a76e)
+
 ## 0.7.8
 
 - Updates VRSC to [`54e0cf2`](https://github.com/VerusCoin/VerusCoin/tree/54e0cf27af6cc1f0204830f7009e10d9a05d040b)
