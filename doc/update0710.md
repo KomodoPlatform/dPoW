@@ -1,9 +1,11 @@
 ## dPoW 0.7.10 update information
 
-- On your 3P node, update your Verus Coin's codebase to [`f9abd80`](https://github.com/VerusCoin/VerusCoin/tree/f9abd801e22232d69e1ae4bf486e99264910e639), build it and then restart it.
-- On your 3P node, update your Tokel codebase to [`28939c1`](https://github.com/VerusCoin/VerusCoin/tree/f9abd801e22232d69e1ae4bf486e99264910e639), build it and then restart it.
+On your 3P node:
+- update your Verus Coin's codebase to [`f9abd80`](https://github.com/VerusCoin/VerusCoin/tree/f9abd801e22232d69e1ae4bf486e99264910e639), build it and then restart it.
+- update your Tokel codebase to [`28939c1`](https://github.com/VerusCoin/VerusCoin/tree/f9abd801e22232d69e1ae4bf486e99264910e639), build it and then restart it.
+- update your Marmara codebase to [`4b73b24`](https://github.com/marmarachain/marmara/tree/4b73b246552723d1dec60be33636323239ba395d), build it and then restart it.
 
-### Update VSRC & TKL
+### Update VSRC, TKL & MCL
 
 #### Using docker setup
 
@@ -49,9 +51,28 @@ git checkout ${tkl_commit}
 
 ```bash
 cd ~/tokel/src
-./tokeld stop
+./komodo-cli -ac_name=TOKEL stop
 source ~/dPoW/iguana/pubkey.txt
 ./tokeld -pubkey=$pubkey &
+```
+
+- Build Marmara
+
+```bash
+mcl_commit='4b73b24'
+cd ~/marmara
+git pull
+git checkout ${mcl_commit}
+./zcutil/build.sh -j$(expr $(nproc) - 1)
+```
+
+- Restart it
+
+```bash
+cd ~/marmara/src
+./komodo-cli -ac_name=MCL stop
+source ~/dPoW/iguana/pubkey.txt
+./mamarad -pubkey=$pubkey &
 ```
 
 
