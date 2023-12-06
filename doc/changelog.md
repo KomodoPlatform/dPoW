@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.10
+
+- Updates VRSC to [`f9abd80`](https://github.com/VerusCoin/VerusCoin/tree/f9abd801e22232d69e1ae4bf486e99264910e639)
+- Updates MCL to [`4b73b24`](https://github.com/marmarachain/marmara/tree/4b73b246552723d1dec60be33636323239ba395d)
+- Updates TKL to [`28939c1`](https://github.com/TokelPlatform/tokel/tree/28939c11a574c9a98e35240890c64be0688c4f85)
+
 ## 0.7.9
 
 - Updates VRSC to [`81e7a80`](https://github.com/VerusCoin/VerusCoin/tree/81e7a80271e230a132afb44967ea26f781439995)
