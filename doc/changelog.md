@@ -2,7 +2,7 @@
 
 ## 0.7.11
 
-- Updates VRSC to [`f9abd80`](https://github.com/VerusCoin/VerusCoin/commit/8a060c63b5b1d8295b754080e0f07966b09776d3)
+- Updates VRSC to [`8a060c6`](https://github.com/VerusCoin/VerusCoin/commit/8a060c63b5b1d8295b754080e0f07966b09776d3)
 
 ## 0.7.10
 

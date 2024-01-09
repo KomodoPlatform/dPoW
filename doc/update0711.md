@@ -20,7 +20,7 @@ git pull
 - Build Verus Coin
 
 ```bash
-vrsc_commit='f9abd80'
+vrsc_commit='8a060c6'
 cd ~/VerusCoin
 git pull
 git checkout ${vrsc_commit}
