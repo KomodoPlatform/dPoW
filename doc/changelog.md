@@ -2,6 +2,7 @@
 
 ## 0.7.12
 
+- Updates VRSC to [`1121528`](https://github.com/VerusCoin/VerusCoin/commit/11215289254c490b2ed146612e1504376d0964eb)
 - Removes THC
 
 ## 0.7.11
