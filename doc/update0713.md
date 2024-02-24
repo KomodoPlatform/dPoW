@@ -17,6 +17,10 @@ komodo-cli -ac_name=THC -ac_supply=251253103 -ac_reward=360000000,300000000,2400
 cd ~/dPoW
 git checkout master
 git pull
+cd iguana
+make
+pkill -9 iguana
+./m_notary_main && ./m_notary_3rdparty (or via Docker: ./m_notary_3rdparty_docker)
 ```
 
 Restart dPoW operations and ensure that your iguana is running smoothly.
