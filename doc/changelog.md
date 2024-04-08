@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.13
+
+- Adds KIP0002, KIP0003, KIP0004
+
 ## 0.7.12
 
 - Updates VRSC to [`1121528`](https://github.com/VerusCoin/VerusCoin/commit/11215289254c490b2ed146612e1504376d0964eb)
