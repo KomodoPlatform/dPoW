@@ -97,18 +97,6 @@
 				"KIP0001": {
 					"start_time": 1677725103,
 					"start_time_comment": "Thu Mar 2 20:45:03 2023 +0800 5185ce701af3ebb52399671ff0847ff9f978220b"
-				},
-				"KIP0002": {
-					"start_time": "",
-					"start_time_comment": ""
-				},
-				"KIP0003": {
-					"start_time": "",
-					"start_time_comment": ""
-				},
-				"KIP0004": {
-					"start_time": "",
-					"start_time_comment": ""
 				}
 			},
 			"dPoW-3P": {
@@ -139,7 +127,20 @@
 		"season_overtime_end": 1999999999,
 		"season_overtime_end_comment": "TBA: Hardfork est. June 30th 2024",
 		"Servers": {
-			"dPoW-Mainnet": {},
+			"dPoW-Mainnet": {
+				"KIP0002": {
+					"start_time": "",
+					"start_time_comment": ""
+				},
+				"KIP0003": {
+					"start_time": "",
+					"start_time_comment": ""
+				},
+				"KIP0004": {
+					"start_time": "",
+					"start_time_comment": ""
+				}
+			},
 			"dPoW-3P": {}
 		}
 	}
