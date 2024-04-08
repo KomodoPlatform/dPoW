@@ -1,4 +1,4 @@
-### dPoW 0.7.13 update information
+### dPoW 0.7.14 update information
 
 On your main node, launch KIP0002, KIP0003, KIP0004 chains, import your private key and start staking
 

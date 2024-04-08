@@ -1,6 +1,6 @@
-## dPoW 0.7.11 update information
+### dPoW 0.7.12 update information
 
-On your 3P node:
+On your **3P node**:
 
 - update your Verus Coin's codebase to [`1121528`](https://github.com/VerusCoin/VerusCoin/commit/11215289254c490b2ed146612e1504376d0964eb), build it and then restart it.
 
@@ -36,6 +36,17 @@ source ~/dPoW/iguana/pubkey.txt
 ./verusd -pubkey=$pubkey &
 ```
 
+
+### Remove THC
+
+- Shut down the THC daemon on the **main server**. This coin has been removed from the dPoW assets.
+
+```bash
+komodo-cli -ac_name=THC stop
+```
+
+- Please remember to delete the remaining data folder located in `~/.komodo/THC` and close the THC p2p port (`36789`) in the firewall.
+
 ### Update your dPoW repo
 
 ```bash
@@ -44,4 +55,4 @@ git checkout master
 git pull
 ```
 
-Once complete, monitor your node to ensure it is running correctly and notarisations are progressing. Make sure any certs for your seednode are up to date and have no permssions issues, and that your wss connection is responding. If you have any issues, please contact us on Discord.
+Please restart dPoW operations and ensure that your iguana is running smoothly.
