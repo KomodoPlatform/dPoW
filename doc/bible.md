@@ -454,7 +454,6 @@ You may send reports to developer@komodoplatform.com.
 If you wish to contact specific maintainers directly, the following have made themselves available for conduct issues:
 
 - smk (smk at komodoplatform.com)
-- TonyL (alysakov at komodoplatform.com)
 - gcharang (gcharang at komodoplatform.com)
 - ca333 (ca333 at komodoplatform.com)
 
@@ -466,10 +465,8 @@ https://www.contributor-covenant.org
 
 #### E-mail:
 
-- alysakov@komodoplatform.com
 - smk@komodoplatform.com
 - alright@komodoplatform.com
-- kolo@komodoplatform.com 
 - dpow@komodoplatform.com
 - ca333@komodoplatform.com
 
