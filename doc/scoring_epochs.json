@@ -127,7 +127,20 @@
 		"season_overtime_end": 1999999999,
 		"season_overtime_end_comment": "TBA: Hardfork est. June 30th 2024",
 		"Servers": {
-			"dPoW-Mainnet": {},
+			"dPoW-Mainnet": {
+				"KIP0002": {
+					"start_time": "",
+					"start_time_comment": ""
+				},
+				"KIP0003": {
+					"start_time": "",
+					"start_time_comment": ""
+				},
+				"KIP0004": {
+					"start_time": "",
+					"start_time_comment": ""
+				}
+			},
 			"dPoW-3P": {}
 		}
 	}

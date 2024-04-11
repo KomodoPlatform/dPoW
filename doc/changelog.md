@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.14
+
+- Adds KIP0002, KIP0003, KIP0004
+- Updates VRSC to [dee30f3](https://github.com/VerusCoin/VerusCoin/commit/dee30f36c31aa60dfd6cfbd5b5ebf21cfafa2169)
+
 ## 0.7.13
 
 - Restores THC
