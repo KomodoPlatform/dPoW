@@ -56,4 +56,3 @@ git pull
 ```
 
 Please restart dPoW operations and ensure that your iguana is running smoothly.
-
