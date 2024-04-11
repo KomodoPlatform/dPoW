@@ -1,6 +1,6 @@
-### dPoW 0.7.14 update information
+# dPoW 0.7.14 update information
 
-On your main node, launch KIP0002, KIP0003, KIP0004 chains, import your private key and start staking
+## On your main node, launch KIP0002, KIP0003, KIP0004 chains, import your private key and start staking
 
 ```bash
 # Launch KIP0001
@@ -35,7 +35,43 @@ tail -f ~/.komodo/KIP0003/debug.log
 tail -f ~/.komodo/KIP0004/debug.log
 ```
 
-Make sure all the chains are running smoothly. Don't forget to add `KIP0002`,`KIP0003`,`KIP0004` to your utxo splitting scripts.
+## On your **3P node**
+
+- update your Verus Coin's codebase to [`dee30f3`](https://github.com/VerusCoin/VerusCoin/commit/dee30f36c31aa60dfd6cfbd5b5ebf21cfafa2169), build it and then restart it
+
+### Update VSRC
+
+#### Using docker setup
+
+```bash
+cd notary_docker_3p
+git pull
+./update
+./start
+```
+
+#### Using other setup
+
+- Build Verus Coin
+
+```bash
+vrsc_commit='dee30f3'
+cd ~/VerusCoin
+git pull
+git checkout ${vrsc_commit}
+./zcutil/build.sh -j$(expr $(nproc) - 1)
+```
+
+- Restart it
+
+```bash
+cd ~/VerusCoin/src
+./verus stop
+source ~/dPoW/iguana/pubkey.txt
+./verusd -pubkey=$pubkey &
+```
+
+## Make sure all the chains are running smoothly. Don't forget to add `KIP0002`,`KIP0003`,`KIP0004` to your utxo splitting scripts.
 
 ```bash
 # Update dPoW repo
@@ -48,6 +84,7 @@ pkill -9 iguana
 cd iguana
 ./m_notary_build
 ./m_notary_main
+./m_notary_3rdparty #(or via Docker: ./m_notary_3rdparty_docker)
 ```
 
 Make sure notarisations are progressing.
