@@ -267,6 +267,9 @@ The Komodo mining ecosystem is exceptional in that a large part of the mining re
 
 The top 3 NNs for each region are automatically re-elected. The other 44 public NN spots are claimable through the annual NN elections. 
 
+**S8 Change(s):** In the upcoming Season 8 (S8) Komodo notary node elections, a significant change will be implemented regarding the auto-re-election rule. Traditionally, notary nodes that ranked in the top 3 within their region at the snapshot date were automatically re-elected for the next season. However, due to the uneven advantage gained by some nodes in Season 7 (S7) through the application of a publicly released [patch](https://github.com/DeckerSU/dPoW/commit/6ae1b9a12c5350b4510f2a84110fb63385912693) by Decker - which significantly boosted notarisation performance - **this rule will be suspended for the S9 / 2025 elections**.
+
+The decision to suspend the auto-re-election rule is a direct response to the disparity created by the optional patch, ensuring a fair and level playing field for all candidates. This change highlights the Komodo community's commitment to equitable competition and governance, adjusting the election rules to maintain the integrity and security of the network.
 
 ### Notary Scoring:
 
@@ -451,7 +454,6 @@ You may send reports to developer@komodoplatform.com.
 If you wish to contact specific maintainers directly, the following have made themselves available for conduct issues:
 
 - smk (smk at komodoplatform.com)
-- TonyL (alysakov at komodoplatform.com)
 - gcharang (gcharang at komodoplatform.com)
 - ca333 (ca333 at komodoplatform.com)
 
@@ -463,10 +465,8 @@ https://www.contributor-covenant.org
 
 #### E-mail:
 
-- alysakov@komodoplatform.com
 - smk@komodoplatform.com
 - alright@komodoplatform.com
-- kolo@komodoplatform.com 
 - dpow@komodoplatform.com
 - ca333@komodoplatform.com
 
