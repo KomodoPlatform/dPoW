@@ -129,16 +129,16 @@
 		"Servers": {
 			"dPoW-Mainnet": {
 				"KIP0002": {
-					"start_time": "",
-					"start_time_comment": ""
+					"start_time": 1712952424,
+					"start_time_comment": "Fri Apr 11 20:07:04 2024, 4458849453f99f0661f6d608d4b4d0bd6ab9e1fc"
 				},
 				"KIP0003": {
-					"start_time": "",
-					"start_time_comment": ""
+					"start_time": 1712952424,
+					"start_time_comment": "Fri Apr 11 20:07:04 2024, 4458849453f99f0661f6d608d4b4d0bd6ab9e1fc"
 				},
 				"KIP0004": {
-					"start_time": "",
-					"start_time_comment": ""
+					"start_time": 1712952424,
+					"start_time_comment": "Fri Apr 11 20:07:04 2024, 4458849453f99f0661f6d608d4b4d0bd6ab9e1fc"
 				}
 			},
 			"dPoW-3P": {}
