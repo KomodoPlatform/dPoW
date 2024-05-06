@@ -247,17 +247,17 @@ Notary Nodes are responsible for protecting over a billion (fiat) dollars in ass
 ### Important Dates for Season 7:
 | Event | Date | Timestamp |
 | --- | --- | --- |
-| KMD snapshot for VOTE2024                  | 31st May 2024                 | 1680911999  |
-| Season 7 scoring ends                      | 31st May 2024, 23:59:59 UTC   | 1680911999  |
-| Season 7 Auto re-elected winners announced | 7th June 2024                 | 1681516799  |
-| VOTE2024 airdrop                           | 7th June 2024                 | 1681516799  |
-| Season 8 Candidate proposals open          | 1st-14th June 2024            | 1682121599  |
-| Season 8 Election start                    | 14th June 2024                | 1681516799  |
-| Season 8 Election end                      | 1st July 2024, 23:59:59 UTC*  | 1682899199  |
-| Season 8 Election Winners announced        | 7th July 2024                 | 1683503999  |
-| Season 8 Election Winners pubkey deadline  | 14th July 2024                | 1683503999  |
-| Komodo deamon Season 8 update released     | 1st August 2024 (estimated)   | 1685577599  |
-| Hardfork / dPoW season 8 start             | 31st August 2024 (estimated)  | 1688169599  |
+| KMD snapshot for VOTE2024                  | 31st May 2024                 | 1717199999  |
+| Season 7 scoring ends                      | 31st May 2024, 23:59:59 UTC   | 1717199999  |
+| Season 7 Auto re-elected winners announced | 7th June 2024                 | 1717804799  |
+| VOTE2024 airdrop                           | 7th June 2024                 | 1717804799  |
+| Season 8 Candidate proposals open          | 1st-14th June 2024            | 1718409599  |
+| Season 8 Election start                    | 14th June 2024                | 1718409599  |
+| Season 8 Election end                      | 1st July 2024, 23:59:59 UTC*  | 1719878399  |
+| Season 8 Election Winners announced        | 7th July 2024                 | 1720396799  |
+| Season 8 Election Winners pubkey deadline  | 14th July 2024                | 1721001599  |
+| Komodo deamon Season 8 update released     | 1st August 2024 (estimated)   | 1722556799  |
+| Hardfork / dPoW season 8 start             | 31st August 2024 (estimated)  | 1725148800  |
 
 * Votes cast in the election are valid until the first notarised block (inclusive) after 1st July 2024, 23:59:59 UTC.
 
