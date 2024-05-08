@@ -244,7 +244,7 @@ Notary Nodes are responsible for protecting over a billion (fiat) dollars in ass
 
 ## Guidelines, General Information and Policies 
 
-### Important Dates for Season 7:
+### Important Dates for 2024:
 | Event | Date | Timestamp |
 | --- | --- | --- |
 | KMD snapshot for VOTE2024                  | 31st May 2024                 | 1717199999  |
