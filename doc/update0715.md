@@ -6,9 +6,7 @@
 # Launch KIP0001
 cd ~/komodo/src/
 source ~/dPoW/iguana/pubkey.txt
-./komodod -ac_name=VOTE2024
-# chain params TBA
-#  -ac_public=1 -ac_supply=149687271 -ac_staked=10 -addnode=65.21.52.182 -pubkey=$pubkey &
+./komodod -ac_name=VOTE2024 -ac_public=1 -ac_supply=149826699 -ac_staked=10 -addnode=65.21.52.182 &
 
 
 # Import your private key
@@ -21,9 +19,7 @@ source ~/dPoW/iguana/pubkey.txt
 - Be aware that this may add to your utxo count, so make sure to consolidate periodically.
 
 # Open P2P Port
-sudo ufw allow 
-# Port TBA
-# 63160/tcp comment 'VOTE2024 p2p port'
+sudo ufw allow 60915/tcp comment 'VOTE2024 p2p port'
 
 
 # Check sync status
