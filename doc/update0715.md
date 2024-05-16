@@ -28,7 +28,7 @@ tail -f ~/.komodo/VOTE2024/debug.log
 
 ## On your **3P node**
 
-- update your Verus Coin's codebase to [`1d62f81`](https://github.com/VerusCoin/VerusCoin/commit/1d62f81ea1dbef637017cde9de66e3b64cce8051), build it and then restart it
+- update your Verus Coin's codebase to [`07ff18a`](https://github.com/VerusCoin/VerusCoin/commit/07ff18aa5a51be8bb1abbb4f9093e24b71e04109), build it and then restart it
 
 
 #### Using docker setup
@@ -45,7 +45,7 @@ git pull
 - Build Verus Coin
 
 ```bash
-vrsc_commit='1d62f81'
+vrsc_commit='07ff18a'
 cd ~/VerusCoin
 git pull
 git checkout ${vrsc_commit}
