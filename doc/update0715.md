@@ -6,7 +6,7 @@
 # Launch KIP0001
 cd ~/komodo/src/
 source ~/dPoW/iguana/pubkey.txt
-./komodod -ac_name=VOTE2024 -ac_public=1 -ac_supply=149826699 -ac_staked=10 -addnode=65.21.52.182 &
+./komodod -ac_name=VOTE2024 -ac_public=1 -ac_supply=149826699 -ac_staked=10 -addnode=65.21.52.182 -pubkey=$pubkey &
 
 
 # Import your private key
