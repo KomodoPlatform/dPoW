@@ -75,6 +75,15 @@
     ]
   },
   {
+    "ac_name": "VOTE2024",
+    "ac_public": "1",
+    "ac_staked": "10",
+    "ac_supply": "149826699",
+    "addnode": [
+      "65.21.52.182"
+    ]
+  },
+  {
     "ac_name": "MARTY",
     "ac_supply": "90000000000",
     "ac_reward": "100000000",
