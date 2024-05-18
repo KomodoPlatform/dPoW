@@ -3,7 +3,7 @@
 ## On your main node, launch VOTE2024 chain, import your private key and start staking
 
 ```bash
-# Launch KIP0001
+# Launch VOTE2024
 cd ~/komodo/src/
 source ~/dPoW/iguana/pubkey.txt
 ./komodod -ac_name=VOTE2024 -ac_public=1 -ac_supply=149826699 -ac_staked=10 -addnode=65.21.52.182 -pubkey=$pubkey &
@@ -26,6 +26,24 @@ sudo ufw allow 60915/tcp comment 'VOTE2024 p2p port'
 tail -f ~/.komodo/VOTE2024/debug.log
 ```
 
+
+## On your **Main node**
+
+- Remove KIP0002, KIP0003 and KIP0004
+
+```bash
+cd ~/komodo/src
+komodo-cli -ac_name=KIP0002 stop
+komodo-cli -ac_name=KIP0003 stop
+komodo-cli -ac_name=KIP0004 stop
+
+# Optionally, remove data
+rm -rf ~/.komodo/KIP0002
+rm -rf ~/.komodo/KIP0003
+rm -rf ~/.komodo/KIP0004
+```
+
+
 ## On your **3P node**
 
 - Remove VRSC
@@ -41,7 +59,7 @@ git pull
 
 #### Using other setup
 
-- Build Verus Coin
+- Stop Verus Coin
 
 ```bash
 cd ~/VerusCoin/src

@@ -3,7 +3,7 @@
 ## 0.7.15
 
 - Adds VOTE2024
-- Removes VRSC
+- Removes VRSC, KIP0002, KIP0003, KIP0004
 
 ## 0.7.14
 
