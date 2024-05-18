@@ -28,8 +28,7 @@ tail -f ~/.komodo/VOTE2024/debug.log
 
 ## On your **3P node**
 
-- update your Verus Coin's codebase to [`07ff18a`](https://github.com/VerusCoin/VerusCoin/commit/07ff18aa5a51be8bb1abbb4f9093e24b71e04109), build it and then restart it
-
+- Remove VRSC
 
 #### Using docker setup
 
@@ -45,20 +44,8 @@ git pull
 - Build Verus Coin
 
 ```bash
-vrsc_commit='07ff18a'
-cd ~/VerusCoin
-git pull
-git checkout ${vrsc_commit}
-./zcutil/build.sh -j$(expr $(nproc) - 1)
-```
-
-- Restart it
-
-```bash
 cd ~/VerusCoin/src
-./verus stop
-source ~/dPoW/iguana/pubkey.txt
-./verusd -pubkey=$pubkey &
+vrsc-cli stop
 ```
 
 ## Make sure all the chains are running smoothly. Don't forget to add `VOTE2024` to your utxo splitting scripts.

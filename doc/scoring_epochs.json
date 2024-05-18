@@ -141,7 +141,12 @@
 					"start_time_comment": "commit 0d39f6d614756fb055578f236f2ba38acfec99d3 +24hrs"
 				}
 			},
-			"dPoW-3P": {}
+			"dPoW-3P": {
+				"VRSC": {
+					"end_time": "1716039985",
+					"end_time_comment": "commit TBA +24hrs"
+				}
+			}
 		}
 	}
 }
