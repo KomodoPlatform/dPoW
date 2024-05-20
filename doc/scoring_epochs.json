@@ -122,26 +122,41 @@
 	"Season_7": {
 		"season_start": 1688132253,
 		"season_start_comment": "Friday, 30 June 2023 13:37:33, https://github.com/KomodoPlatform/komodo/blob/b416d476cca1ec16d48e54cf18aeffc80424bf20/src/komodo_hardfork.cpp#L15",
-		"season_end": 1999999999,
-		"season_end_comment": "not yet defined, using far in future",
-		"season_overtime_end": 1999999999,
-		"season_overtime_end_comment": "TBA: Hardfork est. June 30th 2024",
+		"season_end": 1717199999,
+		"season_end_comment": "31st May 2024, 23:59:59 UTC",
+		"season_overtime_end": 1725148799,
+		"season_overtime_end_comment": "31st August 2024 (estimated)",
 		"Servers": {
 			"dPoW-Mainnet": {
 				"KIP0002": {
-					"start_time": 1712952424,
-					"start_time_comment": "Fri Apr 11 20:07:04 2024, 4458849453f99f0661f6d608d4b4d0bd6ab9e1fc"
+					"start_time": "1712957751",
+					"start_time_comment": "commit 0d39f6d614756fb055578f236f2ba38acfec99d3 +24hrs",
+					"end_time": "1716039985",
+					"end_time_comment": "commit TBA +24hrs"
 				},
 				"KIP0003": {
-					"start_time": 1712952424,
-					"start_time_comment": "Fri Apr 11 20:07:04 2024, 4458849453f99f0661f6d608d4b4d0bd6ab9e1fc"
+					"start_time": "1712957751",
+					"start_time_comment": "commit 0d39f6d614756fb055578f236f2ba38acfec99d3 +24hrs",
+					"end_time": "1716039985",
+					"end_time_comment": "commit TBA +24hrs"
 				},
 				"KIP0004": {
-					"start_time": 1712952424,
-					"start_time_comment": "Fri Apr 11 20:07:04 2024, 4458849453f99f0661f6d608d4b4d0bd6ab9e1fc"
+					"start_time": "1712957751",
+					"start_time_comment": "commit 0d39f6d614756fb055578f236f2ba38acfec99d3 +24hrs",
+					"end_time": "1716039985",
+					"end_time_comment": "commit TBA +24hrs"
+				},
+				"VOTE2024": {
+					"start_time": "1716039985",
+					"start_time_comment": "commit TBA +24hrs"
 				}
 			},
-			"dPoW-3P": {}
+			"dPoW-3P": {
+				"VRSC": {
+					"end_time": "1716039985",
+					"end_time_comment": "commit TBA +24hrs"
+				}
+			}
 		}
 	}
 }
