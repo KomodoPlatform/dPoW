@@ -168,7 +168,7 @@ This will import without rescanning which is faster but will not display existin
 - `komodo-cli getbalance`
 - `komodo-cli -ac_name=DOC getbalance` (or `doc-cli getbalance` if running in docker) 
 - `komodo-cli -ac_name=MARTY getbalance` (or `marty-cli getbalance` if running in docker) 
-```
+
 If any of these returns a zero balance, make sure the chain is fully synced and that you have imported your private key correctly. If in doubt, ask for help in the #2024-testnet channel on Discord.
 
 
