@@ -37,6 +37,12 @@ There is also the chance to win some KMD! The top 3 participants will receive 10
 
 Sync'ing the KMD chain will take some time (over 24hrs), so you should start this process as soon as possible. Alternatively, you can use the [KMD testnet bootstrap](https://seed2.komodo.earth/boots/hfnet_blk_3940000.tar.gz) to speed up the process.
 
+**Note: As this is a testnet version of komodod, you will need to modify the komodo.conf file to use the following addnode IP addresses.**
+```
+addnode=65.21.52.182
+addnode=54.39.17.102
+```
+
 
 ### Step 2: Fund your nodes!
 
