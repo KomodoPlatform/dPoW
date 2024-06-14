@@ -1,0 +1,60 @@
+x-zcash-params-volume:
+  &zcash-params
+  type: bind
+  source: /home/USERNAME/.zcash-params
+  target: /home/komodian/.zcash-params
+
+services:
+  doc:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile.KMD
+      args:
+        - USER_ID=$USER_ID
+        - GROUP_ID=$GROUP_ID
+        - SERVICE_CLI="komodo-cli -ac_name=DOC"
+    ports:
+      - "127.0.0.1:62415:62415"
+      - "127.0.0.1:62416:62416"
+    volumes:
+      - <<: *zcash-params
+      - /home/USERNAME/.komodo/DOC:/home/komodian/.komodo/DOC
+    container_name: doc
+    shm_size: '2gb'
+    restart: always
+    stop_grace_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "10"
+    command: ["/run_DOC.sh"]
+
+  marty:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile.KMD
+      args:
+        - USER_ID=$USER_ID
+        - GROUP_ID=$GROUP_ID
+        - SERVICE_CLI="komodo-cli -ac_name=MARTY"
+    ports:
+      - "127.0.0.1:52592:52592"
+      - "127.0.0.1:52593:52593"
+    volumes:
+      - <<: *zcash-params
+      - /home/USERNAME/.komodo/MARTY:/home/komodian/.komodo/MARTY
+    container_name: marty
+    shm_size: '2gb'
+    restart: always
+    stop_grace_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "10"
+    command: ["/run_MARTY.sh"]

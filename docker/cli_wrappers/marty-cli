@@ -1,0 +1,2 @@
+#!/bin/bash
+docker exec -it marty komodo-cli -ac_name=MARTY "$@"

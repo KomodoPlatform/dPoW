@@ -38,36 +38,14 @@ There is also the chance to win some KMD! The top 3 participants will receive 10
 Sync'ing the KMD chain will take some time (over 24hrs), so you should start this process as soon as possible. Alternatively, you can use the [KMD testnet bootstrap](https://seed2.komodo.earth/boots/hfnet_blk_3940000.tar.gz) to speed up the process.
 
 
-### Step 2: Setup docker and launch the other chains
-During the testnet, we will notarise the DOC and MARTY test chains. We'll run these in [docker](https://www.docker.com/) containers - Follow the instructions below to install `docker` and `docker compose`.
-
- - [Docker](https://docs.docker.com/engine/install/ubuntu/) / [w/ convenience script](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)
- - [Docker Compose](https://docs.docker.com/compose/install/linux/#install-using-the-repository)
- - Docker linux post install steps: https://docs.docker.com/engine/install/linux-postinstall/ , Configure Docker to start on boot with systemd
- 
-_You can also run these chains natively if you prefer, but you will need to build the komodod binary from source again (using the `master` branch)._
-
-Now we can build and launch DOC & MARTY chains with the following commands:
-```
-cd ~/dPoW/docker
-docker compose build           # Build the docker images
-docker compose up -d           # Launch the chains in the background 
-docker compose logs -f -n 33   # Check the logs to confirm the chains are operational
-```
-
-Once these chains are running, you will need to [import the private key](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#importprivkey) you generated in step 1 into the wallets for these chains. 
-
-To speed up the sync process, bootstraps for DOC and MARTY are kindly supplied by CHMEX via https://dexstats.info/bootstrap.php 
-
-
-### Step 3: Fund your nodes!
+### Step 2: Fund your nodes!
 
 - For DOC and MARTY, you can use the faucet button in the [Komodo Wallet](https://app.komodoplatform.com/#/dex) app. **DO NOT import your notary private keys into any other wallet apps. It should only ever be on your notary node server.** You can use the faucet while logged into a different wallet, and then simply send the funds to your notary node address.
 
 - For KMD, ask in the #2024-testnet channel on Discord. As we are running `komodod` on a testnet branch, mainnet KMD will not work. 
 
 
-### Step 4: Register your pubkey
+### Step 3: Register your pubkey
 
 - Once you have your pubkey, post it in the #2024-testnet channel on Discord. You will be added to the testnet network within 24 hours, and will be able to start notarising.
 - Make sure you have have launched the daemons with the [`pubkey` runtime parameter](https://komodoplatform.com/en/docs/smart-chains/setup/common-runtime-parameters/#pubkey), with your registered pubkey. This is required for notarisation to work. You can also add this to your `komodo.conf` file if you prefer to make sure it is included at each launch. If the chain is already running you can also use the [setpubkey](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#setpubkey) method to set the pubkey.
@@ -75,7 +53,7 @@ To speed up the sync process, bootstraps for DOC and MARTY are kindly supplied b
 - Once your pubkey is merged into the testnet.json file, you can start notarising!
 
 
-### Step 5: Install dPoW
+### Step 4: Install dPoW
 
 - Make sure your chains are fully synced before you start notarising. You can check the status of your chains by using the [getinfo](https://komodoplatform.com/en/docs/smart-chains/api/control/#getinfo) method in the wallet API.
 - Clone dPoW and checkout the `2024-testnet` branch
@@ -92,64 +70,129 @@ curl --url "http://127.0.0.1:7762" --data "{\"method\":\"walletpassphrase\",\"pa
 - Open the Iguana P2P port with `sudo ufw allow 17762 comment '2024 Testnet Iguana'`
 
 
-`cd iguana`
+### Step 5: Setup docker and launch the other chains
+During the testnet, we will notarise the DOC and MARTY test chains. We'll run these in [docker](https://www.docker.com/) containers - Follow the instructions below to install `docker` and `docker compose`.
 
-#### Build iguana for notary operations
+ - [Docker](https://docs.docker.com/engine/install/ubuntu/) / [w/ convenience script](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)
+ - [Docker Compose](https://docs.docker.com/compose/install/linux/#install-using-the-repository)
+ - Docker linux post install steps: https://docs.docker.com/engine/install/linux-postinstall/ , Configure Docker to start on boot with systemd
+ 
+_You can also run these chains natively if you prefer, but you will need to build the komodod binary from source again (using the `master` branch)._
 
-`make`
-
-#### Start main-net notarizations:
-
-`./m_notary_main`
-
-#### Start 3rd party notarizations:
-
-`./m_notary_3rdparty`
-
-#### Start 3rd party notarizations (in Docker):
-
-`./m_notary_3rdparty_docker`
-
-
-### Step 6: Start the KMD, DOC and MARTY daemons
-
-Create a file named `launch_testnet_chains.sh` and add the launch parameters.
+Now we can build and launch DOC & MARTY chains with the following commands:
 ```
-#!/bin/bash
-
-source ~/dPoW/iguana/pubkey.txt
-
-komodod -pubkey=$pubkey &
-komodod -ac_name=MARTY -ac_supply=90000000000 -ac_reward=100000000 -ac_cc=3 -ac_staked=10 -addnode=65.21.77.109 -addnode=65.21.51.47 -pubkey=$pubkey &
-komodod -ac_name=DOC -ac_supply=90000000000 -ac_reward=100000000 -ac_cc=3 -ac_staked=10 -addnode=65.21.77.109 -addnode=65.21.51.47 -pubkey=$pubkey &
+cd ~/dPoW/docker
+./setup.sh                     # Setup misc configs
+# 
+docker compose build           # Build the docker images
+docker compose up -d           # Launch the chains in the background 
+docker compose logs -f -n 33   # Check the logs to confirm the chains are operational
 ```
 
-Make the script executable with `chmod +x launch_testnet_chains.sh`, then launch the chains with `./launch_testnet_chains.sh`
+Once these chains are running, you will need to [import the private key](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#importprivkey) you generated in step 1 into the wallets for these chains. 
 
-You can check the status of these chains with
+```
+doc-cli importprivkey YOUR_PRIVATE_KEY
+marty-cli importprivkey YOUR_PRIVATE_KEY
+```
+
+To speed up the sync process, bootstraps for DOC and MARTY are kindly supplied by CHMEX via https://dexstats.info/bootstrap.php 
+
+
+### Step 6: Build and start Iguana
+
+- Build iguana for notary operations
+```
+cd ~/dPoW/iguana
+make
+```
+
+Make sure KMD, DOC and MARTY daemons are running and sync'd , then start testnet notarizations with `./m_notary_testnet_2024`
+You will need to make sure you have split utxos in each chain to be able to notarize. Check below under the `Create a splitfunds script` section for a script to help you manage your utxos.
+
+For Komodo, as we are using a newer build of the daemon you can also try out a the [new rpc methods](https://github.com/DeckerSU/notaries-rpc-tools) for notary nodes!
+
+- Use `komodo-cli nn_getwalletinfo` to get a summary of your notary wallet:
+```
+{
+  "currentSeason": 9,
+  "nn_index": 1,
+  "nn_name": "nodename_1",
+  "pubkey": "027cc2dbc4652ec08589a557e1a01973a94186b587b140732de4589b36f95c7ac9",
+  "pubkey_address": "RHvMGxDces1zvLiD9hDgjV5mUjUK7kNs7z",
+  "ismine": true,
+  "transactions_count": 10,
+  "available_coins_count": 61,
+  "notaryvins_utxos_count": 59,
+  "others_utxos_count": 2
+}
+```
+- use `komodo-cli nn_split` to split utxos:
+```
+{
+  "tx": "18c3171362dd81a62b8e2ba568994569d7b878af098ffa6bdf7cc6df12e4ab99",
+  "input_utxos_value": 0.98900000,
+  "input_utxos_count": 1,
+  "out_notaryvins_count": 10,
+  "out_utxos_value": 0.98790000,
+  "out_utxos_count": 1,
+  "estimated_tx_size": 348,
+  "real_tx_size": 651
+}
+```
+_Note: As we are running a testnet, you wont see the returned txid on the mainnet KMD block explorer. Keep an eye out in the #2024-testnet channel for a link to the testnet block explorer once it is up and running_.
+
+**Good luck! Don't be shy to ask questions and learn from the Vetern Notary Node Operators in Discord!**
+
+
+## Bonus Tips
+
+#### Create symbolic links for the komodod & komodo-cli
+```
+sudo ln -sf /home/$USER/komodo/src/komodo-cli /usr/local/bin/komodo-cli
+sudo ln -sf /home/$USER/komodo/src/komodod /usr/local/bin/komodod
+```
+
+#### check the status of coin deamons
 ```
 tail -f ~/.komodo/debug.log
 tail -f ~/.komodo/DOC/debug.log
 tail -f ~/.komodo/MARTY/debug.log
 ```
 
-### Import your private key to all chains
-```
-komodo-cli importprivkey YOUR_PRIVATE_KEY "" true $(komodo-cli getblockcount) # This will import without rescanning which is faster but will not display existing balance.
-komodo-cli -ac_name=DOC importprivkey YOUR_PRIVATE_KEY
-komodo-cli -ac_name=MARTY importprivkey YOUR_PRIVATE_KEY
-```
+#### Import private key without rescanning
+This will import without rescanning which is faster but will not display existing balance.
+`komodo-cli importprivkey YOUR_PRIVATE_KEY "" true $(komodo-cli getblockcount)`
 
-### Check your balances
-```
-komodo-cli getbalance
-komodo-cli -ac_name=DOC getbalance
-komodo-cli -ac_name=MARTY getbalance
+#### Check your balances
+- `komodo-cli getbalance`
+- `komodo-cli -ac_name=DOC getbalance` (or `doc-cli getbalance` if running in docker) 
+- `komodo-cli -ac_name=MARTY getbalance` (or `marty-cli getbalance` if running in docker) 
 ```
 If any of these returns a zero balance, make sure the chain is fully synced and that you have imported your private key correctly. If in doubt, ask for help in the #2024-testnet channel on Discord.
 
 
-### Create a splitfunds script
+#### Bootstrap chain data
+
+- Make sure you stop the chain first with `komodo-cli stop` or `komodo-cli -ac_name=CHAINNAME stop`
+- Delete existing chain data in `~/.komodo` or `~/.komodo/CHAINNAME`
+```
+rm -rf blocks/ chainstate/ database/ db.log fee_estimates.dat komodo.pid komodostate .lock notarisations/ realtime signedmasks
+```
+- Download bootstrap file with `wget <URL TO BOOTSTRAP>`
+- Once the download is complete, extract the file with `tar -xvf <BOOTSTRAP FILE>`
+
+
+#### Wallet whitelist filter
+- To mitigate potential spam attacks, you can implement a whitelist filter which only allows funds incoming from certain addresses. This can be done by adding the following to your `komodo.conf` or `CHAINNAME.conf` files:
+```
+whitelistaddress=R9gWj7fzSxZtJZCSDMQz5G5J7x4rg6UmiQ # Test coin faucet address (leave this as is)
+whitelistaddress=YOUR_NODE_KMD_ADDRESS # Your registered KMD address (MUST be included, or else split utxos will not be available for notarisation)
+```
+Add any extra addresses like your [Komodo Wallet](https://app.komodoplatform.com/) address which you might be sending funds from. If funds are recieved from a non-whitelisted address, they will be ignored (though they may still be visible on the block explorer). There are ways to recover these hidden funds which will be revealed to participants during the testnet.
+
+
+#### Create a splitfunds script
 
 Create split script called `split_testnet.sh`. Use the following template as an example. 
 
@@ -201,47 +244,7 @@ Add the following entry: `0 * * * * /home/YOURUSERNAME/split_testnet.sh > /home/
 
 This will check/replenish your UTXOs every hour
 
-
-
-### Start Iguana
-```
-cd ~/dPoW/iguana
-./m_notary_build
-./m_notary_testnet_2023
-```
-
-**Good luck! Don't be shy to ask questions and learn from the Vetern Notary Node Operators in Discord!**
-
-
-## Bonus Tips
-
-### Create symbolic links for the komodod & komodo-cli
-```
-sudo ln -sf /home/$USER/komodo/src/komodo-cli /usr/local/bin/komodo-cli
-sudo ln -sf /home/$USER/komodo/src/komodod /usr/local/bin/komodod
-```
-
-### Bootstrap chain data
-
-- Make sure you stop the chain first with `komodo-cli stop` or `komodo-cli -ac_name=CHAINNAME stop`
-- Delete existing chain data in `~/.komodo` or `~/.komodo/CHAINNAME`
-```
-rm -rf blocks/ chainstate/ database/ db.log fee_estimates.dat komodo.pid komodostate .lock notarisations/ realtime signedmasks
-```
-- Download bootstrap file with `wget <URL TO BOOTSTRAP>`
-- Once the download is complete, extract the file with `tar -xvf <BOOTSTRAP FILE>`
-
-
-### Wallet whitelist filter
-- To mitigate potential spam attacks, you can implement a whitelist filter which only allows funds incoming from certain addresses. This can be done by adding the following to your `komodo.conf` or `CHAINNAME.conf` files:
-```
-whitelistaddress=R9gWj7fzSxZtJZCSDMQz5G5J7x4rg6UmiQ # Test coin faucet address (leave this as is)
-whitelistaddress=YOUR_NODE_KMD_ADDRESS # Your registered KMD address (MUST be included, or else split utxos will not be available for notarisation)
-```
-Add any extra addresses like your [Komodo Wallet](https://app.komodoplatform.com/) address which you might be sending funds from. If funds are recieved from a non-whitelisted address, they will be ignored (though they may still be visible on the block explorer). There are ways to recover these hidden funds which will be revealed to participants during the testnet.
-
-
-### Extra resources
+#### Extra resources
 
 - Example `systemd` service file for KMD deamon & smartchains - https://github.com/smk762/DragonhoundTools/blob/master/server/systemd/komodo-deamon.service
 - Webworker's scripts and tools https://github.com/webworker01/nntools
