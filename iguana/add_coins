@@ -9,7 +9,7 @@ coins/kmd_7776
 # external coins.
 coins/ltc_7776
 
-# Loop through assetchains.json and build the path to the approptiate coins file and run it.
+# Loop through assetchains.json and build the path to the appropriate coins file and run it.
 ./listassetchains | while read chain; do
     coin="coins/$(echo $chain | awk '{print tolower($0)}')_7776"
     $coin

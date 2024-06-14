@@ -135,7 +135,6 @@ case "$1" in
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"CHIPS\",\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"EMC2\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"MCL\",\"pubkey\":\"$pubkey\"}"
-    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"VRSC\",\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"AYA\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"TOKEL\",\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"MIL\",\"freq\":5,\"pubkey\":\"$pubkey\"}"

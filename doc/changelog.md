@@ -1,5 +1,106 @@
 # Changelog
 
+## 0.7.15
+
+- Adds VOTE2024
+- Removes VRSC, KIP0002, KIP0003, KIP0004
+
+## 0.7.14
+
+- Adds KIP0002, KIP0003, KIP0004
+- Updates VRSC to [dee30f3](https://github.com/VerusCoin/VerusCoin/commit/dee30f36c31aa60dfd6cfbd5b5ebf21cfafa2169)
+
+## 0.7.13
+
+- Restores THC
+
+## 0.7.12
+
+- Updates VRSC to [`1121528`](https://github.com/VerusCoin/VerusCoin/commit/11215289254c490b2ed146612e1504376d0964eb)
+- Removes THC
+
+## 0.7.11
+
+- Updates VRSC to [`8a060c6`](https://github.com/VerusCoin/VerusCoin/commit/8a060c63b5b1d8295b754080e0f07966b09776d3)
+- Updates mm2 to [`v2.0.0-beta`](https://github.com/KomodoPlatform/komodo-defi-framework/releases/tag/v2.0.0-beta)
+
+## 0.7.10
+
+- Updates VRSC to [`f9abd80`](https://github.com/VerusCoin/VerusCoin/tree/f9abd801e22232d69e1ae4bf486e99264910e639)
+- Updates MCL to [`4b73b24`](https://github.com/marmarachain/marmara/tree/4b73b246552723d1dec60be33636323239ba395d)
+- Updates TKL to [`28939c1`](https://github.com/TokelPlatform/tokel/tree/28939c11a574c9a98e35240890c64be0688c4f85)
+
+## 0.7.9
+
+- Updates VRSC to [`81e7a80`](https://github.com/VerusCoin/VerusCoin/tree/81e7a80271e230a132afb44967ea26f781439995)
+- Updates komodod to [`41265fb`](https://github.com/KomodoPlatform/komodo/tree/41265fb26d51e4f629b3dadcc92aa19e6867a76e)
+
+## 0.7.8
+
+- Updates VRSC to [`54e0cf2`](https://github.com/VerusCoin/VerusCoin/tree/54e0cf27af6cc1f0204830f7009e10d9a05d040b)
+- Updates komodod to [`d9144d0`](https://github.com/KomodoPlatform/komodo/tree/d9144d0f44f3a4b6d103aaff3c13264387de7702)
+- Updates mm2 to v1.0.7-beta
+
+## 0.7.7
+
+- Updates VRSC to [`bdcad5e`](https://github.com/VerusCoin/VerusCoin/tree/bdcad5eba2f26e6b78a0831fc1656ce8eadb156c)
+
+## 0.7.6
+
+- Updates VRSC to [`25f82df`](https://github.com/VerusCoin/VerusCoin/tree/25f82df12aee24c64681ca69ddd21ae19528fe25)
+
+## 0.7.5
+
+- Updates VRSC to [`2d32721`](https://github.com/VerusCoin/VerusCoin/tree/2d327210fddc245c693d00c9a025bd81f5f079eb)
+
+## 0.7.4
+
+- Updates VRSC to [`9573cef`](https://github.com/VerusCoin/VerusCoin/tree/9573cef05bc56a23df486748307c5bc7961186c8)
+
+## 0.7.3
+
+- Updates VRSC to [`f1c6d40`](https://github.com/VerusCoin/VerusCoin/tree/f1c6d40a71acd597bac039aac0cf1b4745106933)
+
+## 0.7.2
+
+- Updates VRSC to [`cd20298`](https://github.com/VerusCoin/VerusCoin/tree/cd2029890b5a101c60474d0517d955c166049dd0)
+
+## 0.7.1
+
+- Updates VRSC to [`66e16e7`](https://github.com/VerusCoin/VerusCoin/tree/66e16e79c8c3f60279952b2b36a8b06d4d7a81de)
+
+## 0.7.0
+
+- Removes `BET`, `BOTS`, `CRYPTO`, `DEX`, `HOLD`, `JUMBLR`, `MGW`, `MORTY`, `MSHARK`, `PANGEA`, `REVS`, `RICK`
+- Adds `DOC`, `MARTY`
+- Updates iguana and dPoW repo for S7 (main, 3P and dockerised 3P)
+
+## 0.6.14
+
+- Updates VRSC to [`185d1a5`](https://github.com/VerusCoin/VerusCoin/tree/185d1a54b8d890c95fd2ce5dd622f099a99aae6e)
+
+## 0.6.13
+
+- Updates VRSC to [`caa1107`](https://github.com/VerusCoin/VerusCoin/tree/caa1107fea7bda7ac27af559b8676ddf1dfb3f55)
+
+## 0.6.12
+
+- Updates KMD to [`156dba6`](https://github.com/KomodoPlatform/komodo/tree/156dba60184c07d0781a57d5b5005b8f3dba0c98)
+- Updates VRSC to [`4beede9`](https://github.com/VerusCoin/VerusCoin/tree/4beede91ab5562d866a90cc5b2d203acbe2bd22c)
+
+## 0.6.11
+
+- Updates VRSC to [`3f0f435`](https://github.com/VerusCoin/VerusCoin/commit/3f0f4353f12e82e107144687e9e111c31134b9d4)
+
+## 0.6.10
+
+- Updates VRSC to [`42e83aa`](https://github.com/VerusCoin/VerusCoin/commit/42e83aa08aa44d30bf9620d6da9ef0f68b85d530)
+
+## 0.6.9
+
+- Updates VRSC to [`f672ccf`](https://github.com/VerusCoin/VerusCoin/tree/f672ccfbc3e77205bc5715c6370d06ad4894399c)
+- Removes VOTE2023
+
 ## 0.6.8
 
 - Removes KIP0001

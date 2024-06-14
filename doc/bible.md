@@ -1,6 +1,6 @@
 # Notary Node Bible v1.2
 
-<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. This iteration of the NN bible comes into effect at the start of NN Season 6 (date TBA). Please read carefully.
+<b>Introduction:</b> This is the Komodo Platform Notary Node Bible, a compendium with essential information, instructions, rules, policies, election procedures for the Komodo Notary Node network, links to other important documents, and more. This iteration of the NN bible comes into effect at the start of NN Season 7. Please read carefully.
 
 #
 
@@ -13,7 +13,9 @@
 4. [Responsibilities of a NN](#responsibilities-rights-and-duties-of-a-notary-node-operator)
 5. [Notary Node regions](#notary-node-regions)
 6. [Guidelines, general information and policies](#guidelines-general-information-and-policies)
-7. [Code of Conduct](#code-of-conduct)
+7. [dPoW Inprovement Proposals](#dpow-improvement-proposals)
+8. [Code of Conduct](#code-of-conduct)
+
 
 #
 
@@ -36,7 +38,7 @@ Notary nodes don’t actually need to transfer funds when they execute a notariz
  
 Komodo’s globally distributed network of 64 Notary Nodes carry out these cross-chain  notarizations approximately every ten minutes, every hour of every day, 365 days a year. This process is essential for Komodo’s delayed proof of work security mechanism, Komodo’s Blockchain Security Service, and Komodo’s Multi-Chain Syncing scalability features.
  
-In exchange for performing these duties, Notary Node Operators are rewarded with the ability to mine one block with an easy difficulty level roughly every 90 minutes. This allows each Notary Node to mine around 16 or 17 blocks per day on average. As KMD block rewards are 3 KMD per block, this adds up to about 50 KMD per day, or around 1500 KMD per month.
+In exchange for performing these duties, Notary Node Operators are rewarded with the ability to mine one block with an easy difficulty level roughly every 90 minutes. This allows each Notary Node to mine around 16 or 17 blocks per day on average. As KMD block rewards are 1 KMD per block ([once KIP002 is enacted](https://vote.komodoplatform.com/kip0002/)), this adds up to about 17 KMD per day, or around 500 KMD per month.
  
 Finally, it’s important to emphasize some of the things that Notary Nodes cannot do.
  
@@ -59,7 +61,7 @@ Notarised Block: 2387920
 
 Notarised Blockhash: 0d6f32f8c7573c9e05bc9221bd80924f31e24ed6e472b946106860684e6a5482
  
-Reviewing the Notarised Blockhash on the Notarised Chain’s explorer yields - https://komodod.com/b/0d6f32f8c7573c9e05bc9221bd80924f31e24ed6e472b946106860684e6a5482
+Reviewing the Notarised Blockhash on the Notarised Chain’s explorer yields - https://kmd.explorer.dexstats.info/block/0d6f32f8c7573c9e05bc9221bd80924f31e24ed6e472b946106860684e6a5482
 
 While the notarization process is critical to the security, blockchain interoperability, and scalability of the Komodo ecosystem, Notary Nodes don’t have any special powers over any blockchain. It is a fully decentralized mechanism for cross-chain notarizations.
 
@@ -72,7 +74,7 @@ Anyone with the required hardware and technical knowledge can become a Notary No
  
 <b>The hardware requirements for the main NN server are as follows:</b>
  
-- OS: Ubuntu 18.x or Debian 10.x is recommended.  
+- OS: Ubuntu 20.x or Debian 10.x is recommended.  
 - CPU: A High-Performance CPU (e.g. Xeon, i7/i9, Ryzen, EPYC, etc.)
 - RAM: 64 GB or more
 - Disk: 1 TB SSD or greater
@@ -80,28 +82,30 @@ Anyone with the required hardware and technical knowledge can become a Notary No
 
 <b>The hardware requirements for the 3P NN server are as follows:</b>
 
-- OS: Ubuntu 18.x or Debian 10.x is recommended.
+- OS: Ubuntu 20.x or Debian 10.x is recommended.
 - CPU: A High-Performance CPU (e.g. Xeon, i7/i9, Ryzen, EPYC, etc.)
 - RAM: 32 GB or more
 - Disk: 500 GB SSD or greater
 - Bandwidth: 100 Mbps or higher
 
+Note: Starting in Season 7, to reduce server costs, the [3P coins can be run in a containerized environment](https://github.com/smk762/notary_docker_3p) within the main server, but make sure you increase HDD space enough to accomodate them.
+
 *The server should be bare metal, housed in a Tier 3 datacenter or better. Cloud instances or home connections are not sufficient to ensure bandwidth and uptime.*
 
 Apart from these hardware specifications and the technical know-how, there are no requirements to become a Notary Node Operator. 
  
-Candidates do not need to own a single KMD coin to run.  In fact, as pointed out in this article by veteran Komodo team member Satinder Grewal, candidates don’t need to be a current member of the KMD community or know anything about the inner workings of Komodo’s technology to become an NN Operator.
+Currently, candidates do not need to own a single KMD coin to run, though this may be changed in future seasons to ensure quality candidates. In fact, as pointed out in this article by veteran Komodo team member Satinder Grewal, candidates don’t need to be a current member of the KMD community or know anything about the inner workings of Komodo’s technology to become an NN Operator.
  
-For more information about becoming a Notary Node Operator, please see this guide.
+For more information about becoming a Notary Node Operator, please refer to the [Notary Node guide](https://komodoplatform.com/en/docs/notary/) within the Komodo Platform developer documentation website.
  
 To gain exposure and inform the Komodo community about one’s candidacy, as well as the motivations for that candidacy, it’s essential to submit a written proposal to the Komodo community. 
  
-<b>If you plan to run in an upcoming election, you need to submit your proposal to the Notary Node repository on [Github](https://github.com/KomodoPlatform/NotaryNodes/tree/master/season6/candidates) prior to the proposal deadline for the next election. </b>
+<b>If you plan to run in an upcoming election, you need to submit your proposal to the Notary Node repository on [Github](https://github.com/KomodoPlatform/NotaryNodes/tree/master/season8/candidates) prior to the proposal deadline for the next election. </b>
  
 At a minimum, every candidate Proposal must include:
 - The region in which they are running and post the address to which KMD holders may send VOTE tokens to support their candidacy.
 - Contact details (such as Discord, Keybase, Telegram and/or  Email) for ensuring open communications about what to do after the election.
-- If running as part of a team or on behalf of a project / company, additional details about the project / company and other team members.
+- If running as part of a team or on behalf of a project / company, additional details about the project / company and other team members as requested by the Komodo Team's candidacy reviewers.
 
 Proposals failing to meet these requirements before the deadline may be rejected. Participation in the pre-election Testnet is highly recommended for any candidates who have not previously run a Notary Node.
 
@@ -109,7 +113,7 @@ Generally the Komodo community elects Notary Node Operators who are committed to
 
 Conversely, even if you are an ardent supporter of the Komodo ecosystem, you may fail to win a seat if your technical skills are unproven. A balance of both attributes — dedication to the Komodo ecosystem and strong technical abilities — is the ideal combination.
 
-For more information about the pre-election Testnet check out the [testnet README](https://github.com/KomodoPlatform/dPoW/blob/2022-testnet/README.md)
+For more information about the pre-election Testnet check out the [testnet README](https://github.com/KomodoPlatform/dPoW/blob/2024-testnet/README.md) **Coming soon**
 <br>
 
 
@@ -124,7 +128,7 @@ An additional 8 nodes are reserved as “Dev nodes”, and assigned by the Komod
 Winning Notary Node operators must run their node in the region declared in their proposal, and face disqualification if discovered to be non compliant, with their NN spot being assigned to the next candidate in line in the election results. This keeps things fair, as different geographic locations offer Internet connections at varying costs and speeds.
 
 
-| Region     | Season 6 Winners | VOTE2023 Winners  | Total  |
+| Region     | Season 7 Winners | VOTE2024 Winners  | Total  |
 |------------|------------------|-------------------|--------|
 | AR         | 3                | 11                | 14     |
 | EU         | 3                | 11                | 14     |
@@ -160,7 +164,7 @@ The Komodo Notary Node Elections are stake weighted, meaning that those who hold
  
 A special voting token — let’s call it VOTE — will be airdropped to KMD holders at a 1:1 ratio. If you have 1000 KMD, you will receive 1000 VOTE tokens.
 
-The current supply of KMD is around 125 Million, so roughly 125 Million VOTE tokens will be airdropped.
+The current supply of KMD is around 140 Million, so roughly 140 Million VOTE tokens will be airdropped.
  
 It’s important to note that you must hold you private keys in order to receive your VOTE tokens. If you hold your KMD on a centralized exchange, then you do not hold your private keys and you will not receive any VOTE tokens.
 
@@ -179,11 +183,11 @@ For instance, if you want to send 100% of your VOTE tokens to a single candidate
 
 # Timeline
 
-Each year around the start of April, a `Ranking Snapshot` will be taken and in the week following, Notary Node scores are validated before an official announcement is made to name the auto-elected nodes, and those eligible for expanding into additional spots in the coming election. 
+Each year around May/June, a `Ranking Snapshot` will be taken and in the week following, Notary Node scores are validated before an official announcement is made to name the auto-elected nodes, and those eligible for expanding into additional spots in the coming election. 
 
 Around the same time, a snapshot of the KMD chain is done, to determine the allocation of VOTE tokens for each address, and then airdropped to holders after the previous season’s winners are announced. 
 
-While the above is underway, candidate proposals can be submitted via a Pull Request (PR) to the Notary Nodes repository on Github (some modifications may be required based on Ranking announcement results). 
+While the above is underway, candidate proposals can be submitted via a Pull Request (PR) to the [Notary Nodes repository](https://github.com/KomodoPlatform/NotaryNodes) on Github (some modifications may be required based on Ranking announcement results). 
 
 The voting period typically runs for around two weeks, with the time and date of the ballots closing being announced in advance. The election officially ends with the first notarised block confirmed after this date / time, with all votes within this block and those prior included in the count.
 
@@ -195,7 +199,9 @@ Exact dates and times for each of the events above will be posted within this do
 
 ## Responsibilities, Rights and Duties of a Notary Node Operator
 
-Operating a Notary Node comes with various responsibilities but also grants you certain privileges for securing the Komodo network with dPoW. Operators who fail to adequately perform the required duties will face disqualification and loss of their node. Notary Nodes are responsible for protecting over a billion (fiat) dollars in assets, and must remain vigilant and respond quickly to any update announcements posted in Discord and the dPoW repository, along with ensuring that their node is secure and performing as expected at all times.
+Operating a Notary Node comes with various responsibilities but also grants you certain privileges for securing the Komodo network with dPoW. Operators who fail to adequately perform the required duties will face disqualification and loss of their node.
+A disqualification will remove any rights to submitting a candidacy in the next election (and possibly future elections).
+Notary Nodes are responsible for protecting over a billion (fiat) dollars in assets, and must remain vigilant and respond quickly to any update announcements posted in Discord and the dPoW repository, along with ensuring that their node is secure and performing as expected at all times.
 
 
 ### NN Duties:
@@ -238,22 +244,22 @@ Operating a Notary Node comes with various responsibilities but also grants you 
 
 ## Guidelines, General Information and Policies 
 
-### Important Dates for Season 7:
+### Important Dates for 2024:
+| Event | Date | Timestamp |
+| --- | --- | --- |
+| KMD snapshot for VOTE2024                  | 31st May 2024                 | 1717199999  |
+| Season 7 scoring ends                      | 31st May 2024, 23:59:59 UTC   | 1717199999  |
+| Season 7 Auto re-elected winners announced | 7th June 2024                 | 1717804799  |
+| VOTE2024 airdrop                           | 7th June 2024                 | 1717804799  |
+| Season 8 Candidate proposals open          | 1st-14th June 2024            | 1718409599  |
+| Season 8 Election start                    | 14th June 2024                | 1718409599  |
+| Season 8 Election end                      | 1st July 2024, 23:59:59 UTC*  | 1719878399  |
+| Season 8 Election Winners announced        | 7th July 2024                 | 1720396799  |
+| Season 8 Election Winners pubkey deadline  | 14th July 2024                | 1721001599  |
+| Komodo daemon Season 8 update released     | 14th August 2024 (estimated)  | 1723679999  |
+| Hardfork / dPoW season 8 start             | 14th Sept 2024 (estimated)    | 1726358399  |
 
-| Event                                      | Date                           | Timestamp   |
----------------------------------------------------------------------------------------------
-| KMD snapshot for VOTE2023                  | 7th April 2023                 | 1680911999  |
-| Season 6 scoring ends                      | 7th April 2023, 23:59:59 UTC   | 1680911999  |
-| Season 6 Auto re-elected winners announced | 14th April 2023                | 1681516799  |
-| VOTE2023 airdrop                           | 14th April 2023                | 1681516799  |
-| Season 7 Candidate proposals recieved      | 1st-21st April 2023            | 1682121599  |
-| Season 7 Election start                    | 14th April 2023                | 1681516799  |
-| Season 7 Election end                      | 30th April 2023, 23:59:59 UTC* | 1682899199  |
-| Season 7 Election Winners announced        | 7th May 2023                   | 1683503999  |
-| Komodo deamon Season 7 update released     | 31st May 2023                  | 1685577599  |
-| Hardfork / dPoW season 7 start             | 30th June 2023                 | 1688169599  |
-
-* Votes cast in the election are valid until the first notarised block (inclusive) after 30th April 2023, 23:59:59 UTC.
+* Votes cast in the election are valid until the first notarised block (inclusive) after 1st July 2024, 23:59:59 UTC.
 
 
 
@@ -362,32 +368,69 @@ Operators are also encouraged to ask questions relating to setup and operation i
 
 #### Recommended min hardware setup for main NN: 
  
-- OS: Ubuntu 20.x or Debian 11.x is recommended.
+<b>The hardware requirements for the main NN server are as follows:</b>
+ 
+- OS: Ubuntu 20.x or Debian 10.x is recommended.  
 - CPU: A High-Performance CPU (e.g. Xeon, i7/i9, Ryzen, EPYC, etc.)
 - RAM: 64 GB or more
 - Disk: 1 TB SSD or greater
 - Bandwidth: 100 Mbps or higher
 
+<b>The hardware requirements for the 3P NN server are as follows:</b>
 
-#### Recommended min hardware setup for 3P NN: 
- 
-- OS: Ubuntu 20.x or Debian 11.x is recommended.
+- OS: Ubuntu 20.x or Debian 10.x is recommended.
 - CPU: A High-Performance CPU (e.g. Xeon, i7/i9, Ryzen, EPYC, etc.)
 - RAM: 32 GB or more
 - Disk: 500 GB SSD or greater
 - Bandwidth: 100 Mbps or higher
 
+Note: Starting in Season 7, to reduce server costs, the [3P coins can be run in a containerized environment](https://github.com/smk762/notary_docker_3p) within the main server, but make sure you increase HDD space enough to accomodate them.
 
-### Polls and Voting:
+*The server should be bare metal, housed in a Tier 3 datacenter or better. Cloud instances or home connections are not sufficient to ensure bandwidth and uptime.*
 
-Polls are executed on Github in form of an issue ticket and voting takes place by posting a signed message with your selection. A poll will remain open for a minimum of 30 days before being subject to closing. The Third Party KMD key it to be used for the signing your vote.
 
-Poll outcomes will be ratified and enacted if a majority of signatures supports the poll, provided there is participation of > 43 nodes (67%)
+## dPoW Improvement Proposals
 
-The Komodo team reserves the right to amend this guideline (governing participation in the dPoW operations) at any time. Modifications are transparently published on Github. 
+The dPoW Improvement Proposals [DIPS](https://github.com/KomodoPlatform/dips/) repository serves as a platform to facilitate discussion, collaboration and the review of proposed changes to dPow and the notary node operations. We believe that having an open and transparent process helps foster good governance and trust between the Komodo community and our development teams.
 
-<br>
+Any external collaborator pull requests to the dPoW repository should be accompanied by DIP to explain the proposed changes. DIPs can also be submitted to discuss rule changes to the Notary Node bible (this document).
 
+Once a pull request for a DIP has been merged into the `proposals` branch, it will be considered as an active proposal and will be open for discussion and voting by the notary node operators.
+ - There will be a minimum of 1 week for comments regarding a DIP to be given after which it may be closed, or may proceed to a vote in order to ratify or reject the proposal.
+ - If proceeding to a vote, the vote will be announced in the #notary-nodes Discord channel, the Komodo Platform `x.com` account, and the Komodo Platform blog & newsletter, at least of 1 week prior to the initiation of a vote.
+ - The voting period will run for one week, with any past or present notary node eligible to vote.
+ - Votes will be validated by the Komodo team, and the results will be announced in the #notary-nodes channel on the Komodo Discord server no later than one week after the voting period ends.
+ - Votes are allocated 1:1 for each address used to run a main server notary node, for each season it was in use.
+ - Votes are to be cast via a signed message, generated by the address used in a notary's main notary node, for each season in was in use.
+ - The vote schedule will be determined by a consensus of current DEV node notaries, with respect to the nature of the proposed changes and the time remaining until a hardfork.
+ - Proposals which only attract 20 votes or less will be considered invalid, and the proposal rejected. After 3 months, a proposal which was rendered invalid may be resumbitted.
+ - Votes which attract at least 21 votes, but less than 33 votes will require a 2/3rds majority be considered valid. If this threshold is not achieved, the proposal will be reset and a new vote scheduled within the next 6 months.
+
+
+Signed messages must conform to the following format to be considered valid:
+
+`{NOTARYNAME}_{REGION} S{SEASON_NUM} [supports|rejects|abstains] {DIP_NUM}`
+
+For example:
+```
+$ komodo-cli signmessage RDragoNHdwovvsDLSLMiAEzEArAD3kq6FN "dragonhound_DEV S6 supports DIP0001"
+> IDETpoMoWojS/bXCcLdMWyCRas1aL7NRnideIns0ega4HQYwJWjOfIv3hKNfSsZADxT+ZbWM2govNxCFh+esOtI=
+```
+
+The vote is then cast in the relevant DIP thread as a comment as below:
+```
+  Notary: dragonhound_DEV
+  Season: S6
+  Address: RDragoNHdwovvsDLSLMiAEzEArAD3kq6FN
+  Message: "dragonhound_DEV S6 supports DIP0001"
+  Signature: IDETpoMoWojS/bXCcLdMWyCRas1aL7NRnideIns0ega4HQYwJWjOfIv3hKNfSsZADxT+ZbWM2govNxCFh+esOtI=
+```
+
+It can then be validated with:
+```
+$ komodo-cli verifymessage RDragoNHdwovvsDLSLMiAEzEArAD3kq6FN "IDETpoMoWojS/bXCcLdMWyCRas1aL7NRnideIns0ega4HQYwJWjOfIv3hKNfSsZADxT+ZbWM2govNxCFh+esOtI=" "dragonhound_DEV S6 supports DIP0001"`
+> true
+```
 
 ## Code of Conduct
 
@@ -418,7 +461,6 @@ You may send reports to developer@komodoplatform.com.
 If you wish to contact specific maintainers directly, the following have made themselves available for conduct issues:
 
 - smk (smk at komodoplatform.com)
-- TonyL (alysakov at komodoplatform.com)
 - gcharang (gcharang at komodoplatform.com)
 - ca333 (ca333 at komodoplatform.com)
 
@@ -427,16 +469,6 @@ https://www.contributor-covenant.org
 
 
 ### Contact Info:
-
-#### E-mail:
-
-- alysakov@komodoplatform.com
-- smk@komodoplatform.com
-- alright@komodoplatform.com
-- kolo@komodoplatform.com 
-- dpow@komodoplatform.com
-- ca333@komodoplatform.com
-
 
 #### Discord:
 http://www.komodoplatform.com/discord
