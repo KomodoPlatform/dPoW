@@ -42,7 +42,7 @@ Sync'ing the KMD chain will take some time (over 24hrs), so you should start thi
 addnode=65.21.52.182
 addnode=54.39.17.102
 ```
-
+Remove any other pre-existing `addnode` entries from the `komodo.conf` file.
 
 ### Step 2: Fund your nodes!
 
