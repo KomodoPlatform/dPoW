@@ -16,7 +16,6 @@ Follow the instructions below to get started. If you have any questions, please 
 - Some basic linux experience, or a curious mind and the ability to follow instructions
 
 Initial setup will take around 2 hours, though much of this will be waiting for downloads and installations. Once you have everything set up, you can expect to spend around 30 minutes per day maintaining your node.
-
 You should also be prepared to spend some time troubleshooting if things don't go as planned, helping other participants, and monitoring the #2024-testnet discord channel for updates, events and advice.
 
 
@@ -29,11 +28,12 @@ There is also the chance to win some KMD! The top 3 participants will receive 10
 
 ## How to participate
 
-### Step 1: Build the HF Net Komodo Daemon, and create a keypair
+### Step 1: Build the HF Net Komodo Daemon, and request a keypair
 
 - Refer to https://github.com/KomodoPlatform/komodo/blob/master/README.md for instructions on how to build the Komodo daemon from source. Make sure you are on the ` patch-s8-prepare-hf-test` branch.
-- Once you have built the daemon, create a [new address](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#getnewaddress), then [validate it](https://komodoplatform.com/en/docs/smart-chains/api/util/#validateaddress) to get the pubkey. This pubkey will be used to register your node on the network.
-- You should also [export the private key](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#dumpprivkey) for this address, as you will need to import it into the other coins which will be notarised. Make sure to store this private key securely. If you lose it, you will lose the funds it secures, and you will not be able to notarise or ["easy mine"](https://github.com/KomodoPlatform/dPoW/blob/master/doc/bible.md#nn-rights) KMD.
+- Once you have built the daemon, contact @smk, @gcharang, or @decker in the #2024-testnet channel on Discord to request a keypair.
+- [Import your assigned private key](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#importprivkey) into the KMD daemon.
+- Use the [validateaddress](https://komodoplatform.com/en/docs/smart-chains/api/util/#validateaddress) method to confirm the import was successful, and the address / pubkey match what was expected. This pubkey will be used to register your node on the network.
 
 Sync'ing the KMD chain will take some time (over 24hrs), so you should start this process as soon as possible. Alternatively, you can use the [KMD testnet bootstrap](https://seed2.komodo.earth/boots/hfnet_blk_3940000.tar.gz) to speed up the process.
 
@@ -41,6 +41,9 @@ Sync'ing the KMD chain will take some time (over 24hrs), so you should start thi
 ```
 addnode=65.21.52.182
 addnode=54.39.17.102
+addnode=168.119.236.240
+addnode=168.119.236.243
+addnode=95.217.21.14
 ```
 Remove any other pre-existing `addnode` entries from the `komodo.conf` file.
 
@@ -51,12 +54,12 @@ Remove any other pre-existing `addnode` entries from the `komodo.conf` file.
 - For KMD, ask in the #2024-testnet channel on Discord. As we are running `komodod` on a testnet branch, mainnet KMD will not work. 
 
 
-### Step 3: Register your pubkey
+### Step 3: Confirm your pubkey registration
 
-- Once you have your pubkey, post it in the #2024-testnet channel on Discord. You will be added to the testnet network within 24 hours, and will be able to start notarising.
 - Make sure you have have launched the daemons with the [`pubkey` runtime parameter](https://komodoplatform.com/en/docs/smart-chains/setup/common-runtime-parameters/#pubkey), with your registered pubkey. This is required for notarisation to work. You can also add this to your `komodo.conf` file if you prefer to make sure it is included at each launch. If the chain is already running you can also use the [setpubkey](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#setpubkey) method to set the pubkey.
-- Open a pull request to this branch, adding your pubkey to the [testnet.json](https://github.com/KomodoPlatform/dPoW/blob/2023-testnet/iguana/testnet.json) file. Please ensure you include your Discord username within the pull request. New pubkeys will be added to the testnet network every 24 hours, and the update announced in the #2024-testnet channel on Discord. 
-- Once your pubkey is merged into the testnet.json file, you can start notarising!
+- Once you have your daemon running and pubkey set pubkey, post it in the #2024-testnet channel on Discord.
+- Your assigned pubkey will be added to the [testnet.json](https://github.com/KomodoPlatform/dPoW/blob/2023-testnet/iguana/testnet.json) file, along with your discord username.
+- Newly registered pubkeys will be added to the testnet network every 24 hours, and the update announced in the #2024-testnet channel on Discord. Once your pubkey is merged into the testnet.json file, you can start notarising!
 
 
 ### Step 4: Install dPoW
@@ -95,7 +98,7 @@ docker compose up -d           # Launch the chains in the background
 docker compose logs -f -n 33   # Check the logs to confirm the chains are operational
 ```
 
-Once these chains are running, you will need to [import the private key](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#importprivkey) you generated in step 1 into the wallets for these chains. 
+Once these chains are running, you will need to [import the private key](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#importprivkey) you were assigned into the wallets for these chains. 
 
 ```
 doc-cli importprivkey YOUR_PRIVATE_KEY
