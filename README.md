@@ -71,13 +71,14 @@ rpcworkqueue=256
 ```
 **Note: As this is a testnet version of komodod, you will need to make sure the komodo.conf file uses only the above addnode IP addresses.**
 
+- Once you have built the daemon, contact @smk, @gcharang, or @decker in the [#2024-testnet channel on Discord](https://komodoplatform.com/discord) to request a keypair. Use the pubkey you are assigned to launch komodod so it is registered as a notary.
+
 ```
 # launch komodod:
 cd ~/komodo/src
-./komodod -addnode=65.21.52.182 -addnode=54.39.17.102 -addnode=168.119.236.240 -addnode=168.119.236.243 -addnode=95.217.21.14 &
+./komodod -pubkey=YOUR_PUBKEY &
 ```
 
-- Once you have built the daemon and got it running, contact @smk, @gcharang, or @decker in the [#2024-testnet channel on Discord](https://komodoplatform.com/discord) to request a keypair.
 - [Import your assigned private key](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#importprivkey) into the KMD daemon.
 - Use the [validateaddress](https://komodoplatform.com/en/docs/smart-chains/api/util/#validateaddress) method to confirm the import was successful, and the address / pubkey matches what was expected. This pubkey will be used to register your node on the network.
 
@@ -183,7 +184,7 @@ _Note: As we are running a testnet, you wont see the returned txid on the mainne
 
 ### Step 6: Confirm your pubkey registration
 
-- Make sure you have have launched the daemons with the [`pubkey` runtime parameter](https://komodoplatform.com/en/docs/smart-chains/setup/common-runtime-parameters/#pubkey), with your registered pubkey. This is required for notarisation to work. You can also add this to your `komodo.conf` file if you prefer to make sure it is included at each launch. If the chain is already running you can also use the [setpubkey](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#setpubkey) method to set the pubkey.
+- Make sure you have have launched the daemons with the [`pubkey` runtime parameter](https://komodoplatform.com/en/docs/smart-chains/setup/common-runtime-parameters/#pubkey), with your registered pubkey. This is required for notarisation to work. You can also add this to your `komodo.conf` file if you prefer to make sure it is included at each launch. 
 - Once you have your daemon running, post it in the [#2024-testnet channel on Discord](https://komodoplatform.com/discord). Your assigned pubkey will be added to the [testnet.json](https://github.com/KomodoPlatform/dPoW/blob/2023-testnet/iguana/testnet.json) file, along with your discord username.
 - Newly registered pubkeys will be added to the testnet network every 24 hours, and the update announced in the [#2024-testnet channel on Discord](https://komodoplatform.com/discord). Once your pubkey is merged into the testnet.json file, you can start notarising!
 
