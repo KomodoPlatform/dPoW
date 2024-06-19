@@ -44,13 +44,13 @@ echo "" > /home/${USER}/.komodo/MARTY/debug.log
 rpcuser=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 16)
 rpcpassword=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 16)
 cp -f ${script_path}/conf_files/DOC.conf /home/${USER}/.komodo/DOC/DOC.conf
-echo "rpcpassword=${rpcuser}" >> /home/${USER}/.komodo/DOC/DOC.conf
+echo "rpcuser=${rpcuser}" >> /home/${USER}/.komodo/DOC/DOC.conf
 echo "rpcpassword=${rpcpassword}" >> /home/${USER}/.komodo/DOC/DOC.conf
 
 rpcuser=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 16)
 rpcpassword=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 16)
 cp -f ${script_path}/conf_files/MARTY.conf /home/${USER}/.komodo/MARTY/MARTY.conf
-echo "rpcpassword=${rpcuser}" >> /home/${USER}/.komodo/MARTY/MARTY.conf
+echo "rpcuser=${rpcuser}" >> /home/${USER}/.komodo/MARTY/MARTY.conf
 echo "rpcpassword=${rpcpassword}" >> /home/${USER}/.komodo/MARTY/MARTY.conf
 
 echo "Make sure you update the whitelist addresses in /home/${USER}/.komodo/MARTY/MARTY.conf and /home/${USER}/.komodo/DOC/DOC.conf files to include your own address before building the docker images!"
