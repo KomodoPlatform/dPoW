@@ -37,10 +37,11 @@ sudo apt update
 sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python3 python3-zmq zlib1g-dev wget libcurl4-gnutls-dev bsdmainutils automake curl libsodium-dev
 
 # Clone the testnet branch of the `komodo` repository
+cd ~
 git clone https://github.com/KomodoPlatform/komodo --branch patch-s8-prepare-hf-test --single-branch
 
 # Build komodod
-cd komodo
+cd ~/komodo
 ./zcutil/fetch-params.sh
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 
@@ -62,8 +63,7 @@ server=1
 daemon=1
 txindex=1
 port=7770
-rpcallowip=0.0.0.0/0
-rpcbind=0.0.0.0:7771
+rpcbind=127.0.0.1
 rpcuser=ENTER_YOUR_OWN_RPC_USERNAME_HERE
 rpcpassword=ENTER_YOUR_OWN_RPC_PASSWORD_HERE
 rpcport=7771
@@ -83,11 +83,10 @@ cd ~/komodo/src
 
 ### Step 2: Install dPoW
 
-- Make sure your chains are fully synced before you start notarising. You can check the status of your chains by using the [getinfo](https://komodoplatform.com/en/docs/smart-chains/api/control/#getinfo) method in the wallet API.
 - Clone dPoW and checkout the `2024-testnet` branch
 ```
-git clone https://github.com/KomodoPlatform/dPoW/
-git checkout 2024-testnet
+cd ~
+git clone https://github.com/KomodoPlatform/dPoW/ --branch 2024-testnet --single-branch
 ```
 - Create a `pubkey.txt` file in the `~/dPoW/iguana` directory, with your pubkey in the format `pubkey=<your pubkey>`
 - Create a `wp_testnet` file in the `~/dPoW/iguana` directory, with the following content:
@@ -142,8 +141,8 @@ cd ~/dPoW/iguana
 make
 ```
 
-Make sure KMD, DOC and MARTY daemons are running and sync'd , then start testnet notarizations with `./m_notary_testnet_2024`
-You will need to make sure you have split utxos in each chain to be able to notarize. Check below under the `Create a splitfunds script` section for a script to help you manage your utxos.
+Make sure your chains are fully synced before you start notarising. You can check the status of your chains by using the [getinfo](https://komodoplatform.com/en/docs/smart-chains/api/control/#getinfo) method in the wallet API.
+Once everything is ready, start testnet notarizations with `./m_notary_testnet_2024`
 
 For Komodo, as we are using a newer build of the daemon you can also try out a the [new rpc methods](https://github.com/DeckerSU/notaries-rpc-tools) for notary nodes!
 
@@ -175,7 +174,10 @@ For Komodo, as we are using a newer build of the daemon you can also try out a t
   "real_tx_size": 651
 }
 ```
+You will need to make sure you have split utxos in each chain to be able to notarize. Check below under the `Bonus tips` section for a script to help you manage your utxos.
+
 _Note: As we are running a testnet, you wont see the returned txid on the mainnet KMD block explorer. Keep an eye out in the #2024-testnet channel for a link to the testnet block explorer once it is up and running_.
+
 
 
 ### Step 6: Confirm your pubkey registration

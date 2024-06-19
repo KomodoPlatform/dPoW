@@ -16,7 +16,7 @@ mkdir -p /home/${USER}/.zcash-params
 
 echo "Setting up .env file..."
 USER_ID=$(id -u)
-GROUP_ID=$(id -g)
+GROUP_ID=$(id -u)
 echo "PUBKEY=${pubkey}" > .env
 echo "USER_ID=${USER_ID}" >> .env
 echo "GROUP_ID=${GROUP_ID}" >> .env
