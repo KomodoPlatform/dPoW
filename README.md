@@ -34,7 +34,7 @@ There is also the chance to win some KMD! The top 3 participants will receive 10
 ```
 # Install dependencies:
 sudo apt update
-sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python3 python3-zmq zlib1g-dev wget libcurl4-gnutls-dev bsdmainutils automake curl libsodium-dev
+sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python3 python3-zmq zlib1g-dev wget libcurl4-gnutls-dev bsdmainutils automake curl libsodium-dev jq libfmt-dev autotools-dev cmake clang htop libevent-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libssl-dev libnanomsg-dev -y
 
 # Clone the testnet branch of the `komodo` repository
 cd ~
@@ -91,7 +91,7 @@ git clone https://github.com/KomodoPlatform/dPoW/ --branch 2024-testnet --single
 - Create a `pubkey.txt` file in the `~/dPoW/iguana` directory, with your pubkey in the format `pubkey=<your pubkey>`
 - Create a `wp_testnet` file in the `~/dPoW/iguana` directory, with the following content:
 ```
-curl --url "http://127.0.0.1:7762" --data "{\"method\":\"walletpassphrase\",\"params\":[\"YOUR_SEED_OR_PRIVKEY_HERE\", 9999999]}"
+curl --url "http://127.0.0.1:7779" --data "{\"method\":\"walletpassphrase\",\"params\":[\"YOUR_SEED_OR_PRIVKEY_HERE\", 9999999]}"
 ```
 - Make it executable with `chmod +x ~/dPoW/iguana/wp_testnet`
 - Open the Iguana P2P port with `sudo ufw allow 17762 comment '2024 Testnet Iguana'`
@@ -249,7 +249,7 @@ SHELL=/bin/sh PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 conf_dir="/home/YOUR_USERNAME/.komodo/"
 source /home/YOUR_USERNAME/dPoW/iguana/pubkey.txt
 min_uxto=20
-split_num=50
+split_num=30
 
 echo
 echo $(date)
@@ -261,7 +261,7 @@ unspent=$(komodo-cli -conf=${conf_dir}/komodo.conf listunspent | jq '[.[] | sele
 echo "${chain}: $unspent"
   if [ $unspent -lt $min_uxto ]; then
     echo "Topping up ${chain}"
-    komodo-cli nn_split $split_num
+    komodo-cli nn_split
 fi
 
 for chain in "DOC" "MARTY"
@@ -270,7 +270,8 @@ do
     echo "${chain}: $unspent"
       if [ $unspent -lt $min_uxto ]; then
         echo "Topping up ${chain}"
-        komodo-cli -ac_name=${chain} nn_split $split_num
+        # DOC/MARTY are using older daemon, so we need to use iguana to split
+        curl --url "http://127.0.0.1:7779" --data "{\"coin\":\""${chain}"\",\"agent\":\"iguana\",\"method\":\"splitfunds\",\"satoshis\":\"10000\",\"sendflag\":1,\"duplicates\":"${split_num}"}"
     fi
 done
 
