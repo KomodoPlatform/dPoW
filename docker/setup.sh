@@ -30,10 +30,10 @@ ln -sf ${script_path}/cli_wrappers/doc-cli /home/$USER/.local/bin/doc-cli
 ln -sf ${script_path}/cli_wrappers/marty-cli /home/$USER/.local/bin/marty-cli
 
 echo "Setting up launch_files..."
-cp ${script_path}/launch_files/run_DOC.sh.template run_DOC.sh
-cp ${script_path}/launch_files/run_MARTY.sh.template run_MARTY.sh
-sed "s/USER_PUBKEY/${pubkey}/gi" -i run_DOC.sh
-sed "s/USER_PUBKEY/${pubkey}/gi" -i run_MARTY.sh
+cp ${script_path}/launch_files/run_DOC.sh.template ${script_path}/launch_files/run_DOC.sh
+cp ${script_path}/launch_files/run_MARTY.sh.template ${script_path}/launch_files/run_MARTY.sh
+sed "s/USER_PUBKEY/${pubkey}/gi" -i ${script_path}/launch_files/run_DOC.sh
+sed "s/USER_PUBKEY/${pubkey}/gi" -i ${script_path}/launch_files/run_MARTY.sh
 
 echo "Setting up conf files..."
 mkdir -p /home/${USER}/.komodo/DOC

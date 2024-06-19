@@ -110,7 +110,6 @@ Now we can build and launch DOC & MARTY chains with the following commands:
 ```
 cd ~/dPoW/docker
 ./setup.sh                     # Setup misc configs
-# 
 docker compose build           # Build the docker images
 docker compose up -d           # Launch the chains in the background 
 docker compose logs -f -n 33   # Check the logs to confirm the chains are operational
@@ -123,7 +122,9 @@ doc-cli importprivkey YOUR_PRIVATE_KEY
 marty-cli importprivkey YOUR_PRIVATE_KEY
 ```
 
-To speed up the sync process, bootstraps for DOC and MARTY are kindly supplied by CHMEX via https://dexstats.info/bootstrap.php 
+To speed up the sync process, bootstraps for DOC and MARTY are kindly supplied by CHMEX via https://eu.bootstrap.dexstats.info/DOC-bootstrap.tar.gz and https://eu.bootstrap.dexstats.info/MARTY-bootstrap.tar.gz
+To use the bootstrap, first stop DOC/MARTY with `doc-cli stop && marty-cli stop && docker compose stop` then download the bootstrap archive files and extract them into the `~/.komodo/DOC` and `~/.komodo/MARTY` directories.
+Once extracted, you can start the chains again with `docker compose up -d` and monitor the logs with `docker compose logs -f -n 33` to check the sync progress.
 
 
 ### Step 4: Fund your nodes!
