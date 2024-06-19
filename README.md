@@ -1,9 +1,9 @@
 ## dPoW Notary Node Testnet 2024
 
-The public testnet will run from June 19th to June 26th. Anyone is permitted to participate, even if you are not planning to run a mainnet node.
+The public testnet will run from June 19th until the 2024 notary election is complete. Anyone is permitted to participate, even if you are not planning to run a mainnet node.
 For participants who are running as candidates in the 2024 Notary Node elections, this is a great opportunity to test your setup and ensure everything is working as expected. It also provides voters with an opportunity to evaluate candidate participants to see how well they manage a node and how they interact with the community. You are encouraged to share tools and advice with other participants, and to ask questions if you are unsure about anything. 
 
-Follow the instructions below to get started. If you have any questions, please ask in the #2024-testnet channel on Discord. Once you have everything set up, ping @smk, @gcharang, or @decker in the #2024-testnet channel to add your pubkeys to the network. New participants / pubkeys will be added to the network every 24 hours, so to maximise your score, you should have everything ready to go before the 19th of June.
+Follow the instructions below to get started. If you have any questions, please ask in the [#2024-testnet channel on Discord](https://komodoplatform.com/discord). Once you have everything set up, ping @smk, @gcharang, or @decker in the #2024-testnet channel on Discord to add your pubkeys to the network. New participants / pubkeys will be added to the network every 24 hours, so to maximise your score, you should have everything ready to go before the 24th of June (when public scoring will begin).
 
 
 ### Requirements
@@ -16,7 +16,7 @@ Follow the instructions below to get started. If you have any questions, please 
 - Some basic linux experience, or a curious mind and the ability to follow instructions
 
 Initial setup will take around 2 hours, though much of this will be waiting for downloads and installations. Once you have everything set up, you can expect to spend around 30 minutes per day maintaining your node.
-You should also be prepared to spend some time troubleshooting if things don't go as planned, helping other participants, and monitoring the #2024-testnet discord channel for updates, events and advice.
+You should also be prepared to spend some time troubleshooting if things don't go as planned, helping other participants, and monitoring the [#2024-testnet discord channel](https://komodoplatform.com/discord) for updates, events and advice.
 
 
 ### Rewards
@@ -30,39 +30,58 @@ There is also the chance to win some KMD! The top 3 participants will receive 10
 
 ### Step 1: Build the HF Net Komodo Daemon, and request a keypair
 
-- Refer to https://github.com/KomodoPlatform/komodo/blob/master/README.md for instructions on how to build the Komodo daemon from source. Make sure you are on the ` patch-s8-prepare-hf-test` branch.
-- Once you have built the daemon, contact @smk, @gcharang, or @decker in the #2024-testnet channel on Discord to request a keypair.
-- [Import your assigned private key](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#importprivkey) into the KMD daemon.
-- Use the [validateaddress](https://komodoplatform.com/en/docs/smart-chains/api/util/#validateaddress) method to confirm the import was successful, and the address / pubkey match what was expected. This pubkey will be used to register your node on the network.
+- Refer to https://github.com/KomodoPlatform/komodo/blob/master/README.md for instructions on how to build the Komodo daemon from source. Make sure you are on the `patch-s8-prepare-hf-test` branch.
+```
+# Install dependencies:
+sudo apt update
+sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python3 python3-zmq zlib1g-dev wget libcurl4-gnutls-dev bsdmainutils automake curl libsodium-dev
 
-Sync'ing the KMD chain will take some time (over 24hrs), so you should start this process as soon as possible. Alternatively, you can use the [KMD testnet bootstrap](https://seed2.komodo.earth/boots/hfnet_blk_3940000.tar.gz) to speed up the process.
+# Clone the testnet branch of the `komodo` repository
+git clone https://github.com/KomodoPlatform/komodo --branch patch-s8-prepare-hf-test --single-branch
 
-**Note: As this is a testnet version of komodod, you will need to modify the komodo.conf file to use the following addnode IP addresses.**
+# Build komodod
+cd komodo
+./zcutil/fetch-params.sh
+./zcutil/build.sh -j$(expr $(nproc) - 1)
+
+# Download and extract the bootstrap archive
+cd ~/.komodo
+wget https://seed2.komodo.earth/boots/hfnet_blk_3940000.tar.gz
+tar xvf hfnet_blk_3940000.tar.gz
+rm hfnet_blk_3940000.tar.gz
+```
+
+- Set up the `~/.komodo/komodo.conf` file with the following contents:
 ```
 addnode=65.21.52.182
 addnode=54.39.17.102
 addnode=168.119.236.240
 addnode=168.119.236.243
 addnode=95.217.21.14
+server=1
+daemon=1
+txindex=1
+port=7770
+rpcallowip=0.0.0.0/0
+rpcbind=0.0.0.0:7771
+rpcuser=ENTER_YOUR_OWN_RPC_USERNAME_HERE
+rpcpassword=ENTER_YOUR_OWN_RPC_PASSWORD_HERE
+rpcport=7771
+rpcworkqueue=256
 ```
-Remove any other pre-existing `addnode` entries from the `komodo.conf` file.
+**Note: As this is a testnet version of komodod, you will need to make sure the komodo.conf file uses only the above addnode IP addresses.**
 
-### Step 2: Fund your nodes!
+```
+# launch komodod:
+cd ~/komodo/src
+./komodod -addnode=65.21.52.182 -addnode=54.39.17.102 -addnode=168.119.236.240 -addnode=168.119.236.243 -addnode=95.217.21.14 &
+```
 
-- For DOC and MARTY, you can use the faucet button in the [Komodo Wallet](https://app.komodoplatform.com/#/dex) app. **DO NOT import your notary private keys into any other wallet apps. It should only ever be on your notary node server.** You can use the faucet while logged into a different wallet, and then simply send the funds to your notary node address.
+- Once you have built the daemon and got it running, contact @smk, @gcharang, or @decker in the [#2024-testnet channel on Discord](https://komodoplatform.com/discord) to request a keypair.
+- [Import your assigned private key](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#importprivkey) into the KMD daemon.
+- Use the [validateaddress](https://komodoplatform.com/en/docs/smart-chains/api/util/#validateaddress) method to confirm the import was successful, and the address / pubkey matches what was expected. This pubkey will be used to register your node on the network.
 
-- For KMD, ask in the #2024-testnet channel on Discord. As we are running `komodod` on a testnet branch, mainnet KMD will not work. 
-
-
-### Step 3: Confirm your pubkey registration
-
-- Make sure you have have launched the daemons with the [`pubkey` runtime parameter](https://komodoplatform.com/en/docs/smart-chains/setup/common-runtime-parameters/#pubkey), with your registered pubkey. This is required for notarisation to work. You can also add this to your `komodo.conf` file if you prefer to make sure it is included at each launch. If the chain is already running you can also use the [setpubkey](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#setpubkey) method to set the pubkey.
-- Once you have your daemon running and pubkey set pubkey, post it in the #2024-testnet channel on Discord.
-- Your assigned pubkey will be added to the [testnet.json](https://github.com/KomodoPlatform/dPoW/blob/2023-testnet/iguana/testnet.json) file, along with your discord username.
-- Newly registered pubkeys will be added to the testnet network every 24 hours, and the update announced in the #2024-testnet channel on Discord. Once your pubkey is merged into the testnet.json file, you can start notarising!
-
-
-### Step 4: Install dPoW
+### Step 2: Install dPoW
 
 - Make sure your chains are fully synced before you start notarising. You can check the status of your chains by using the [getinfo](https://komodoplatform.com/en/docs/smart-chains/api/control/#getinfo) method in the wallet API.
 - Clone dPoW and checkout the `2024-testnet` branch
@@ -79,7 +98,7 @@ curl --url "http://127.0.0.1:7762" --data "{\"method\":\"walletpassphrase\",\"pa
 - Open the Iguana P2P port with `sudo ufw allow 17762 comment '2024 Testnet Iguana'`
 
 
-### Step 5: Setup docker and launch the other chains
+### Step 3: Setup docker and launch the other chains
 During the testnet, we will notarise the DOC and MARTY test chains. We'll run these in [docker](https://www.docker.com/) containers - Follow the instructions below to install `docker` and `docker compose`.
 
  - [Docker](https://docs.docker.com/engine/install/ubuntu/) / [w/ convenience script](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)
@@ -108,7 +127,14 @@ marty-cli importprivkey YOUR_PRIVATE_KEY
 To speed up the sync process, bootstraps for DOC and MARTY are kindly supplied by CHMEX via https://dexstats.info/bootstrap.php 
 
 
-### Step 6: Build and start Iguana
+### Step 4: Fund your nodes!
+
+- For DOC and MARTY, you can use the faucet button in the [Komodo Wallet](https://app.komodoplatform.com/#/dex) app. **DO NOT import your notary private keys into any other wallet apps. It should only ever be on your notary node server.** You can use the faucet while logged into a different wallet, and then simply send the funds to your notary node address.
+
+- For KMD, ask in the [#2024-testnet channel on Discord.](https://komodoplatform.com/discord) As we are running `komodod` on a testnet branch, mainnet KMD will not work. 
+
+
+### Step 5: Build and start Iguana
 
 - Build iguana for notary operations
 ```
@@ -151,6 +177,13 @@ For Komodo, as we are using a newer build of the daemon you can also try out a t
 ```
 _Note: As we are running a testnet, you wont see the returned txid on the mainnet KMD block explorer. Keep an eye out in the #2024-testnet channel for a link to the testnet block explorer once it is up and running_.
 
+
+### Step 6: Confirm your pubkey registration
+
+- Make sure you have have launched the daemons with the [`pubkey` runtime parameter](https://komodoplatform.com/en/docs/smart-chains/setup/common-runtime-parameters/#pubkey), with your registered pubkey. This is required for notarisation to work. You can also add this to your `komodo.conf` file if you prefer to make sure it is included at each launch. If the chain is already running you can also use the [setpubkey](https://komodoplatform.com/en/docs/smart-chains/api/wallet/#setpubkey) method to set the pubkey.
+- Once you have your daemon running, post it in the [#2024-testnet channel on Discord](https://komodoplatform.com/discord). Your assigned pubkey will be added to the [testnet.json](https://github.com/KomodoPlatform/dPoW/blob/2023-testnet/iguana/testnet.json) file, along with your discord username.
+- Newly registered pubkeys will be added to the testnet network every 24 hours, and the update announced in the [#2024-testnet channel on Discord](https://komodoplatform.com/discord). Once your pubkey is merged into the testnet.json file, you can start notarising!
+
 **Good luck! Don't be shy to ask questions and learn from the Vetern Notary Node Operators in Discord!**
 
 
@@ -178,7 +211,7 @@ This will import without rescanning which is faster but will not display existin
 - `komodo-cli -ac_name=DOC getbalance` (or `doc-cli getbalance` if running in docker) 
 - `komodo-cli -ac_name=MARTY getbalance` (or `marty-cli getbalance` if running in docker) 
 
-If any of these returns a zero balance, make sure the chain is fully synced and that you have imported your private key correctly. If in doubt, ask for help in the #2024-testnet channel on Discord.
+If any of these returns a zero balance, make sure the chain is fully synced and that you have imported your private key correctly. If in doubt, ask for help in the [#2024-testnet channel on Discord](https://komodoplatform.com/discord).
 
 
 #### Bootstrap chain data
@@ -225,7 +258,7 @@ unspent=$(komodo-cli -conf=${conf_dir}/komodo.conf listunspent | jq '[.[] | sele
 echo "${chain}: $unspent"
   if [ $unspent -lt $min_uxto ]; then
     echo "Topping up ${chain}"
-    curl --url "http://127.0.0.1:7779" --data "{\"coin\":\""${chain}"\",\"agent\":\"iguana\",\"method\":\"splitfunds\",\"satoshis\":\"10000\",\"sendflag\":1,\"duplicates\":"${split_num}"}"
+    komodo-cli nn_split $split_num
 fi
 
 for chain in "DOC" "MARTY"
@@ -234,14 +267,13 @@ do
     echo "${chain}: $unspent"
       if [ $unspent -lt $min_uxto ]; then
         echo "Topping up ${chain}"
-        curl --url "http://127.0.0.1:7779" --data "{\"coin\":\""${chain}"\",\"agent\":\"iguana\",\"method\":\"splitfunds\",\"satoshis\":\"10000\",\"sendflag\":1,\"duplicates\":"${split_num}"}"
+        komodo-cli -ac_name=${chain} nn_split $split_num
     fi
 done
 
 echo
 echo "Finished!"
 echo
-
 ```
 
 Make it executable with `chmod +x split_testnet.sh`
@@ -249,7 +281,7 @@ Make it executable with `chmod +x split_testnet.sh`
 Add a crontab entry for this script so it will ensure you have enough UTXOs when you are asleep.
 
 Open the cron job editor with `crontab -e`
-Add the following entry: `0 * * * * /home/YOURUSERNAME/split_testnet.sh > /home/YOURUSERNAME/testnet_splits.log 2>&1`
+Add the following entry: `0 * * * * /home/YOUR_USERNAME/split_testnet.sh > /home/YOUR_USERNAME/testnet_splits.log 2>&1`
 
 This will check/replenish your UTXOs every hour
 
