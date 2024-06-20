@@ -26,6 +26,7 @@ cp docker-compose.yml.template docker-compose.yml
 sed "s/USERNAME/${USER}/gi" -i "docker-compose.yml"
 
 echo "Setting up cli wrappers..."
+mkdir -p /home/$USER/.local/bin
 ln -sf ${script_path}/cli_wrappers/doc-cli /home/$USER/.local/bin/doc-cli
 ln -sf ${script_path}/cli_wrappers/marty-cli /home/$USER/.local/bin/marty-cli
 
