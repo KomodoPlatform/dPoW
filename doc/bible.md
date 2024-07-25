@@ -255,9 +255,9 @@ Notary Nodes are responsible for protecting over a billion (fiat) dollars in ass
 | Season 8 Election start                    | 14th June 2024                | 1718409599  |
 | Season 8 Election end                      | 13th July 2024, 23:59:59 UTC* | 1720915199  |
 | Season 8 Election Winners announced        | 19th July 2024                | 1721347200  |
-| Season 8 Election Winners pubkey deadline  | 28th July 2024                | 1722124800  |
-| Komodo daemon Season 8 update released     | 28th August 2024 (estimated)  | 1724803200  |
-| Hardfork / dPoW season 8 start             | 28th Sept 2024 (estimated)    | 1727481600  |
+| Season 8 Election Winners pubkey deadline  | 4th August 2024               | 1722124800  |
+| Komodo daemon Season 8 update released     | 4th Sept 2024 (estimated)     | 1724803200  |
+| Hardfork / dPoW season 8 start             | 4th Oct 2024 (estimated)      | 1727481600  |
 
 * Votes cast in the election are valid until the first notarised block (inclusive) after 13th July 2024, 23:59:59 UTC.
 
