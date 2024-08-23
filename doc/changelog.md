@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.16
+
+- Removes VOTE2024
+- Replaces GLEEC with new launch params
+- Updates `komodod` to [`0adeeab`](https://github.com/KomodoPlatform/komodo/commit/0adeeabdd484ef40539d1275c6a765f5c530ea79)
+
 ## 0.7.15
 
 - Adds VOTE2024
