@@ -25,7 +25,7 @@ sudo ufw allow 23344/tcp comment 'GLEEC p2p port'
 ```
 
 
-### Update `komodod` to the latest version.
+### Update `komodod` and `mm2` to the latest version.
 
 ```bash
 cd ~/komodo/src/
@@ -34,6 +34,19 @@ git checkout master && git pull
 ```
 
 Once built, stop and restart KMD and all smartchains on the main server.
+Repeat the update for your 3P komodo daemon.
+
+Download the latest `mm2` release from the [releases page](https://github.com/KomodoPlatform/komodo-defi-framework/releases/tag/v2.1.0-beta), replace your existing `mm2` binary, then restart `mm2`.
+
+If using the docker container, pull the latest and restart the container.
+
+```bash
+cd ~/notary_docker_3p
+./update mm2
+./update
+./start
+```
+
 
 
 ### Restart Iguana
@@ -48,7 +61,7 @@ git pull
 pkill -9 iguana
 cd iguana
 ./m_notary_build
-./m_notary_main
+./m_notary_main && ./m_notary_3rdparty
 ```
 
 Make sure notarisations are progressing.
