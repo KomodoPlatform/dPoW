@@ -1,14 +1,43 @@
 # dPoW 0.7.16 update information
 
-## On your **Main node**
+This update moves the existing GLEEC chain to the 3rd party node, and launches a new GLEEC chain on the main server. Both will be protected by dPoW until the start of the next notary season.
 
-### Stop and remove `VOTE2024` and `GLEEC` chains
+
+### Stop and remove `VOTE2024`
 
 ```bash
 komodo-cli -ac_name=VOTE2024 stop
-komodo-cli -ac_name=GLEEC stop
 rm -rf ~/.komodo/VOTE2024
-rm -rf ~/.komodo/GLEEC
+```
+
+### Update `komodod` to the latest version.
+
+```bash
+cd ~/komodo/src/
+git checkout master && git pull
+./zcutil/build.sh -j$(nproc)
+```
+Once built, stop and restart KMD and all smartchains on the main server.
+
+Repeat the update for your 3P komodo daemon (if using the docker containers repo, you can skip this step).
+
+
+### Update `mm2` to the latest version.
+
+Download the latest `mm2` release from the [releases page](https://github.com/KomodoPlatform/komodo-defi-framework/releases/tag/v2.1.0-beta), replace your existing `mm2` binary, then restart `mm2`.
+
+If using the docker container, pull the latest and restart the container.
+
+```bash
+cd ~/notary_docker_3p
+./update mm2
+```
+
+### Stop GLEEC, and move old data to a new folder
+
+```bash
+komodo-cli -ac_name=GLEEC stop
+mv ~/.komodo/GLEEC ~/.komodo/GLEEC_OLD
 ```
 
 ### Restart GLEEC with new launch params
@@ -24,29 +53,22 @@ komodo-cli -ac_name=GLEEC importprivkey "yourprivkey"
 sudo ufw allow 23344/tcp comment 'GLEEC p2p port'
 ```
 
+### Restart GLEEC (OLD) on 3rd Party node
 
-### Update `komodod` and `mm2` to the latest version.
+If you are **not** using docker container repo for 3P, launch GLEEC (old) including the `datadir` parameter:
 
 ```bash
-cd ~/komodo/src/
-git checkout master && git pull
-./zcutil/build.sh -j$(nproc)
+source ~/dPoW/iguana/pubkey_3p.txt
+komodod -pubkey=$pubkey -ac_name=GLEEC -ac_supply=210000000 -ac_public=1 -ac_staked=100 -addnode=95.217.161.126 -addnode=209.222.101.247 -addnode=103.195.100.32 -datadir=${HOME}/.komodo/GLEEC_OLD &
 ```
 
-Once built, stop and restart KMD and all smartchains on the main server.
-Repeat the update for your 3P komodo daemon.
-
-Download the latest `mm2` release from the [releases page](https://github.com/KomodoPlatform/komodo-defi-framework/releases/tag/v2.1.0-beta), replace your existing `mm2` binary, then restart `mm2`.
-
-If using the docker container, pull the latest and restart the container.
+If you are using docker container repo for 3P:
 
 ```bash
 cd ~/notary_docker_3p
-./update mm2
 ./update
 ./start
 ```
-
 
 
 ### Restart Iguana
