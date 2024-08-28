@@ -36,9 +36,9 @@ cd ~/notary_docker_3p
 ### Stop GLEEC (OLD), move data and send balance to 3p address
 
 ```bash
-komodo-cli -ac_name=GLEEC sendtoaddress ${YOUR_3P_KMD_ADDRESS} $(komodo-cli -ac_name=GLEEC getbalance) "" "" true
+komodo-cli -ac_name=GLEEC sendtoaddress RUq3kkWUU5UdbVwmLeMHAST7SCyfgNZsBA $(komodo-cli -ac_name=GLEEC getbalance) "" "" true
 komodo-cli -ac_name=GLEEC stop
-mv ~/.komodo/GLEEC ~/.komodo/GLEEC_OLD
+mv ~/.komodo/GLEEC/ ~/.komodo/GLEEC_OLD/
 mv ~/.komodo/GLEEC_OLD/wallet.dat ~/.komodo/GLEEC_OLD/wallet.bak
 ```
 
