@@ -78,7 +78,7 @@ cd ~/notary_docker_3p
 Import your 3P private key into the GLEEC (OLD) chain.
     
 ```bash
-komodo-cli -ac_name=GLEEC -conf=${HOME}/.komodo/GLEEC_OLD importprivkey ${YOUR_3P_PRIVATE_KEY} 
+komodo-cli -ac_name=GLEEC -datadir=${HOME}/.komodo/GLEEC_OLD importprivkey ${YOUR_3P_PRIVATE_KEY} 
 ```
 
 ### Restart Iguana
