@@ -33,23 +33,27 @@ cd ~/notary_docker_3p
 ./update mm2
 ```
 
-### Stop GLEEC, and move old data to a new folder
+### Stop GLEEC (OLD), move data and send balance to 3p address
 
 ```bash
+komodo-cli -ac_name=GLEEC sendtoaddress ${YOUR_3P_KMD_ADDRESS} $(komodo-cli -ac_name=GLEEC getbalance) "" "" true
 komodo-cli -ac_name=GLEEC stop
 mv ~/.komodo/GLEEC ~/.komodo/GLEEC_OLD
 ```
 
-### Restart GLEEC with new launch params
+### Start GLEEC (new) on main server with new launch params
 
 ```bash
 source ~/dPoW/iguana/pubkey.txt
 komodod -pubkey=$pubkey -ac_name=GLEEC -ac_supply=1000000000 -ac_end=1 -ac_public=1 -ac_staked=50 -addnode=65.21.52.182 -addnode=135.181.80.132 &
 
 # Import your private key
-komodo-cli -ac_name=GLEEC importprivkey "yourprivkey"
+komodo-cli -ac_name=GLEEC importprivkey ${YOUR_MAIN_PRIVATE_KEY}
+```
 
-# Open GLEEC P2P Port
+# Open GLEEC (new) P2P Port
+    
+```bash
 sudo ufw allow 23344/tcp comment 'GLEEC p2p port'
 ```
 
@@ -69,7 +73,7 @@ cd ~/notary_docker_3p
 ./update
 ./start
 ```
-
+You'll need to import your 3P private key into the GLEEC (OLD) chain.
 
 ### Restart Iguana
 
