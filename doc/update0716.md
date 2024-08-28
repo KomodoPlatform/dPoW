@@ -39,6 +39,7 @@ cd ~/notary_docker_3p
 komodo-cli -ac_name=GLEEC sendtoaddress ${YOUR_3P_KMD_ADDRESS} $(komodo-cli -ac_name=GLEEC getbalance) "" "" true
 komodo-cli -ac_name=GLEEC stop
 mv ~/.komodo/GLEEC ~/.komodo/GLEEC_OLD
+mv ~/.komodo/GLEEC_OLD/wallet.dat ~/.komodo/GLEEC_OLD/wallet.bak
 ```
 
 ### Start GLEEC (new) on main server with new launch params
@@ -73,7 +74,12 @@ cd ~/notary_docker_3p
 ./update
 ./start
 ```
-You'll need to import your 3P private key into the GLEEC (OLD) chain.
+
+Import your 3P private key into the GLEEC (OLD) chain.
+    
+```bash
+komodo-cli -ac_name=GLEEC -conf=${HOME}/.komodo/GLEEC_OLD importprivkey ${YOUR_3P_PRIVATE_KEY} 
+```
 
 ### Restart Iguana
 
