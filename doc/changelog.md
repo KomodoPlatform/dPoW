@@ -3,8 +3,8 @@
 ## 0.7.16
 
 - Removes VOTE2024
-- Replaces GLEEC with new launch params
 - Updates `komodod` to [`0adeeab`](https://github.com/KomodoPlatform/komodo/commit/0adeeabdd484ef40539d1275c6a765f5c530ea79)
+- Updates KDF to [`v2.1.0-beta`](https://github.com/KomodoPlatform/komodo-defi-framework/releases/tag/v2.1.0-beta)
 
 ## 0.7.15
 
