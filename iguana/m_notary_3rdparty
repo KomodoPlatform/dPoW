@@ -8,8 +8,6 @@ stdbuf -oL $1 ../agents/iguana 3rd_party &#> iguana.log 2> error.log  &
 
 myip=$(curl -s4 checkip.amazonaws.com)
 source pubkey.txt
-source pubkey_3p.txt
-echo "Using pubkey [$pubkey] for 3rd party iguana..."
 
 sleep 4
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"SuperNET\",\"method\":\"myipaddr\",\"ipaddr\":\"$myip\"}"
@@ -45,6 +43,8 @@ coins/mil_7779
 sleep 30
 
 # dpow for 3rd party coins.
+source pubkey.txt
+echo $pubkey
 sleep 3
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"CHIPS\",\"pubkey\":\"$pubkey\"}"
 curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"EMC2\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
