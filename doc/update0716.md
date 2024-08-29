@@ -8,7 +8,7 @@ komodo-cli -ac_name=VOTE2024 stop
 rm -rf ~/.komodo/VOTE2024
 ```
 
-### Update `komodod` to the latest version.
+### Update `komodod` to the latest version on main and 3p nodes.
 
 ```bash
 cd ~/komodo/src/
@@ -70,8 +70,7 @@ git pull
 pkill -9 iguana
 cd iguana
 ./m_notary_build
-./m_notary_main
-./m_notary_3rdparty
+./m_notary_{main,3rdparty} # use the appropriate script that matches your node type (main or 3p).
 ```
 
 Make sure notarisations are progressing.
