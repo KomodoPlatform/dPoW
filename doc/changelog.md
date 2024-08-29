@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.17
+
+- Adds new GLEEC chain, moves old GLEEC to GLEEC_OLD
+
 ## 0.7.16
 
 - Removes VOTE2024

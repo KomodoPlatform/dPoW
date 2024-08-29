@@ -10,3 +10,6 @@ sleep 3
 ./listassetchains | while read chain; do
     curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"$chain\",\"pubkey\":\"$pubkey\"}"
 done
+
+# Add old versions of dual coins here
+curl --url "http://127.0.0.1:7776" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"GLEEC_OLD\",\"pubkey\":\"$pubkey\"}"
