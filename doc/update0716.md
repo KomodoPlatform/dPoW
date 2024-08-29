@@ -1,7 +1,5 @@
 # dPoW 0.7.16 update information
 
-This update moves the existing GLEEC chain to the 3rd party node, and launches a new GLEEC chain on the main server. Both will be protected by dPoW until the start of the next notary season.
-
 
 ### Stop and remove `VOTE2024`
 
