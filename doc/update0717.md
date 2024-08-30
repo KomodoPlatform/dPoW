@@ -38,8 +38,8 @@ pkill -9 iguana
 cd iguana
 ./m_notary_build
 ./m_notary_main
-# If you are running 3rd party on same server, start iguana for it as well
-./m_notary_3rdparty
+# If you are running 3rd party in docker on the same server, restart iguana for it as well
+./m_notary_3rdparty_docker
 ```
 
 Make sure notarisations are progressing.
