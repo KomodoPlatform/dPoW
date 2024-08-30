@@ -38,6 +38,7 @@ pkill -9 iguana
 cd iguana
 ./m_notary_build
 ./m_notary_main
+# If you are running 3rd party on same server, start iguana for it as well
 ./m_notary_3rdparty
 ```
 
