@@ -1,17 +1,18 @@
 # dPoW 0.7.16 update information
 
 
-### Stop and remove `VOTE2024`
+### Stop and remove `VOTE2024`, close its port
 
 ```bash
 komodo-cli -ac_name=VOTE2024 stop
 rm -rf ~/.komodo/VOTE2024
+sudo ufw delete allow 60915/tcp
 ```
 
 ### Update `komodod` to the latest version on main and 3p nodes.
 
 ```bash
-cd ~/komodo/src/
+cd ~/komodo/
 git checkout master && git pull
 ./zcutil/build.sh -j$(nproc)
 ```
