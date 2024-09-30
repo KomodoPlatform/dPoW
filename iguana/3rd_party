@@ -1,5 +1,5 @@
 {
-	"port": 13345,
+	"port": 13845,
 	"BTCminsigs": 13,
 	"minsigs": 13,
 	"seeds": [
