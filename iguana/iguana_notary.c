@@ -379,7 +379,7 @@ THREE_STRINGS_AND_DOUBLE(iguana,dpow,symbol,dest,pubkey,freq)
         dp->srcconfirms = DPOW_FIFOSIZE;
     if ( strcmp("LTC",dp->dest) == 0 )
     {
-        dp->freq = 10;
+        dp->freq = 5;
         dp->minsigs = Notaries_BTCminsigs; //DPOW_MINSIGS;
     }
     else
