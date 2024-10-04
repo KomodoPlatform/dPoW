@@ -8,6 +8,7 @@
 komodo-cli -ac_name=GLEEC stop
 mv ~/.komodo/GLEEC ~/.komodo/GLEEC_OLD
 ```
+## All nodes
 #### Launch new version of `GLEEC`
 
 ```bash
@@ -34,6 +35,17 @@ After git pull restart your iguana and adjust your firewall settings accordingly
 - `sudo ufw allow 13845/tcp comment 'iguana s8 3rd p2p' `
 
 If you are a returning Notary Node operator, don't forget to close the Season 7 Iguana ports and the ports for removed coins once Season 8 begins. Follow the instructions in [https://www.cyberciti.biz/faq/how-to-delete-a-ufw-firewall-rule-on-ubuntu-debian-linux/](https://www.cyberciti.biz/faq/how-to-delete-a-ufw-firewall-rule-on-ubuntu-debian-linux/).
+
+#### Update and restart Iguana
+
+```bash
+cd ~/dPoW/iguana
+git checkout master 
+git pull
+make
+./m_notary_main
+./m_notary_3rdparty # or ./m_notary_3rdparty_docker
+```
 
 
 #### Would you like to know more?
