@@ -1,32 +1,5 @@
 [
   {
-    "conf": "chips.conf",
-    "path": "${HOME#'/'}/.chips",
-    "prefetchlag": -1,
-    "poll": 1,
-    "active": 1,
-    "newcoin": "CHIPS",
-    "startpend": 64,
-    "endpend": 64,
-    "services": 0,
-    "maxpeers": 512,
-    "RELAY": -1,
-    "VALIDATE": 0,
-    "portp2p": 57777,
-    "p2p": 57777,
-    "rpc": 57776,
-    "minconfirms": 1,
-    "pubval": 60,
-    "p2shval": 85,
-    "wifval": 188,
-    "git": {
-      "repo": "https://github.com/chips-blockchain/chips",
-      "branch": "master",
-      "commit": "6e7560a",
-      "tag": ""
-    }
-  },
-  {
     "conf": "MCL.conf",
     "path": "${HOME#'/'}/.komodo/MCL",
     "unitval": "20",
