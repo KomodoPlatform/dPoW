@@ -50,5 +50,5 @@ make
 
 #### Would you like to know more?
 
-Full Setup Instructions at [https://github.com/KomodoPlatform/Documentation/blob/nn_docs_update/docs/notary/setup-Komodo-Notary-Node.md](https://github.com/KomodoPlatform/Documentation/blob/nn_docs_update/docs/notary/setup-Komodo-Notary-Node.md)
+Full Setup Instructions at [https://komodoplatform.com/en/docs/notary/](https://komodoplatform.com/en/docs/notary/)
 
