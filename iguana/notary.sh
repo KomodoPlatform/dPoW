@@ -122,22 +122,13 @@ case "$1" in
     curl --url "http://127.0.0.1:7779" --data "{\"method\":\"walletpassphrase\",\"params\":[\"$mysecretpassphrase\", 9999999]}"
 
     # add 3rd party coins to iguana
-    coins/chips_7779
-    coins/emc2_7779
     coins/mcl_7779
-    coins/vrsc_7779
-    coins/aya_7779
     coins/tokel_7779
-    coins/mil_7779
 
     sleep 30
 
-    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"CHIPS\",\"pubkey\":\"$pubkey\"}"
-    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"EMC2\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"MCL\",\"pubkey\":\"$pubkey\"}"
-    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"AYA\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
     curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"TOKEL\",\"pubkey\":\"$pubkey\"}"
-    curl --url "http://127.0.0.1:7779" --data "{\"agent\":\"iguana\",\"method\":\"dpow\",\"symbol\":\"MIL\",\"freq\":5,\"pubkey\":\"$pubkey\"}"
 
   ;;
 
