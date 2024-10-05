@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 import os
 import json
 
@@ -16,5 +16,8 @@ for chain in assetchains:
             for dupe_value in value:
                 params.append(format_param(param, dupe_value))
         else:
+            if param == 'datadir' and '${HOME}' in value:
+                home_dir = os.environ['HOME']
+                value = value.replace('${HOME}', home_dir)
             params.append(format_param(param, value))
     print(' '.join(params))

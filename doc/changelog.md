@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.0
+
+- Adds new GLEEC chain, moves old GLEEC to GLEEC_OLD
+- Removes `AYA`, `CHIPS`, `EMC2`, `MIL`.
+- Updates iguana and dPoW repo for S8 (main, 3P and dockerised 3P)
+
 ## 0.7.16
 
 - Removes VOTE2024

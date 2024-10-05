@@ -158,5 +158,19 @@
 				}
 			}
 		}
+	},
+	"Season_8": {
+		"season_start": 1728049053,
+		"season_start_comment": "Friday, 4 Oct 2023 13:37:33",
+		"season_end": 1999999999,
+		"season_end_comment": "TBA",
+		"season_overtime_end": 1999999999,
+		"season_overtime_end_comment": "TBA",
+		"Servers": {
+			"dPoW-Mainnet": {
+			},
+			"dPoW-3P": {
+			}
+		}
 	}
 }
