@@ -30,7 +30,7 @@ ${PREFIX}komodod -pubkey=$pubkey -ac_name=CCL -ac_supply=200000000 -ac_end=1 -ac
 ${PREFIX}komodod -pubkey=$pubkey -ac_name=CLC -ac_supply=99000000 -ac_reward=50000000 -ac_perc=100000000 -ac_founders=1 -ac_cc=45 -ac_public=1 -ac_snapshot=1440 -ac_pubkey=02df9bda7bfe2bcaa938b29a399fb0ba58cfb6cc3ddc0001062a600f60a8237ad9 -addnode=node.cryptocollider.com -ac_adaptivepow=6 -addnode=209.222.101.247 -addnode=103.195.100.32 $1 &
 ${PREFIX}komodod -pubkey=$pubkey -ac_name=DOC -ac_supply=90000000000 -ac_reward=100000000 -ac_cc=3 -ac_staked=10 -addnode=65.21.77.109 -addnode=65.21.51.47 -addnode=209.222.101.247 -addnode=103.195.100.32 $1 &
 ${PREFIX}komodod -pubkey=$pubkey -ac_name=GLEEC -ac_supply=210000000 -ac_public=1 -ac_staked=100 -addnode=95.217.161.126 -addnode=209.222.101.247 -addnode=103.195.100.32 -datadir=${HOME}/.komodo/GLEEC_OLD $1 &
-${PREFIX}komodod -pubkey=$pubkey -ac_name=GLEEC -ac_suply=1000000000 -ac_end=1 -ac_public=1 -ac_staked=50 -addnode=65.21.52.182 -addnode=135.181.80.132 $1 &
+${PREFIX}komodod -pubkey=$pubkey -ac_name=GLEEC -ac_supply=1000000000 -ac_end=1 -ac_public=1 -ac_staked=50 -addnode=65.21.52.182 -addnode=135.181.80.132 $1 &
 ${PREFIX}komodod -pubkey=$pubkey -ac_name=ILN -ac_supply=10000000000 -ac_cc=2 -addressindex=1 -spentindex=1 -addnode=51.75.122.83 -addnode=209.222.101.247 -addnode=103.195.100.32 $1 &
 ${PREFIX}komodod -pubkey=$pubkey -ac_name=KOIN -ac_supply=125000000 -addnode=3.0.32.10 -addnode=209.222.101.247 -addnode=103.195.100.32 $1 &
 ${PREFIX}komodod -pubkey=$pubkey -ac_name=MARTY -ac_supply=90000000000 -ac_reward=100000000 -ac_cc=3 -ac_staked=10 -addnode=65.21.77.109 -addnode=65.21.51.47 -addnode=209.222.101.247 -addnode=103.195.100.32 $1 &
