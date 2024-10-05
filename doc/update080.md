@@ -26,6 +26,10 @@ source ~/dPoW/iguana/pubkey.txt
 komodod -pubkey=$pubkey -ac_name=GLEEC -ac_supply=210000000 -ac_public=1 -ac_staked=100 -addnode=95.217.161.126 -addnode=209.222.101.247 -addnode=103.195.100.32 -datadir=${HOME}/.komodo/GLEEC_OLD &
 ```
 
+#### Check GLEEC installation
+
+When both GLEEC daemons are running, check your GLEEC installation using `./dPoW/iguana/checkGLEEC.sh`. If everything is correct, it should display "GLEEC install - Ok!". In case of errors, verify that your GLEEC chain launch parameters are correct and that the directory names match the documentation (i.e., GLEEC_OLD for the old GLEEC chain and GLEEC for the new one). Try to resolve the errors by resyncing the chains or correcting any issues you find.
+
 #### Open the Iguana P2P ports
 
 Please note that iguana ports were changed to 13348 for main and 13345 3rd party networks
