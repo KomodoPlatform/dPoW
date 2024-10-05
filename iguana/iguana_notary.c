@@ -559,7 +559,7 @@ STRING_ARG(iguana,addnotary,ipaddr)
 }
 
 // TODO: Confirm that this is the correct list of currencies. Is TOKEL supposed to be in here? It's the only 3rd party coin in the list.
-char NOTARY_CURRENCIES[][65] = { "SUPERNET", "NINJA", "CCL", "PIRATE", "ILN", "DOC", "THC", "MARTY", "KOIN", "GLEEC", "TOKEL", "CLC", "VOTE2024" };
+char NOTARY_CURRENCIES[][65] = { "NINJA", "CCL", "PIRATE", "ILN", "DOC", "THC", "MARTY", "KOIN", "GLEEC", "TOKEL", "CLC", "VOTE2024" };
 
 // "LTC", "USD", "EUR", "JPY", "GBP", "AUD", "CAD", "CHF", "NZD", "CNY", "RUB", "MXN", "BRL", "INR", "HKD", "TRY", "ZAR", "PLN", "NOK", "SEK", "DKK", "CZK", "HUF", "ILS", "KRW", "MYR", "PHP", "RON", "SGD", "THB", "BGN", "IDR", "HRK",
 
