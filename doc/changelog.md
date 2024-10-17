@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.1
+
+- Removes `SUPERNET`, `NINJA`
+- Updates `komodod` to [`bf8ace3`](https://github.com/KomodoPlatform/komodo/commit/bf8ace347f6a684dcb8738e4943474113bdde6ca)
+
 ## 0.8.0
 
 - Adds new GLEEC chain, moves old GLEEC to GLEEC_OLD
