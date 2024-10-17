@@ -18,7 +18,7 @@ ln -s -f $HOME/.komodo/GLEEC_OLD/GLEEC.conf $HOME/.komodo/GLEEC_OLD/GLEEC_OLD.co
 ```bash
 cd ~/komodo/
 git fetch --all
-git checkout 820fe50
+git checkout 2651eaf
 ./zcutil/build.sh -j$(nproc)
 ```
 
