@@ -379,7 +379,7 @@ THREE_STRINGS_AND_DOUBLE(iguana,dpow,symbol,dest,pubkey,freq)
         dp->srcconfirms = DPOW_FIFOSIZE;
     if ( strcmp("LTC",dp->dest) == 0 )
     {
-        dp->freq = 10;
+        dp->freq = 5;
         dp->minsigs = Notaries_BTCminsigs; //DPOW_MINSIGS;
     }
     else
@@ -559,7 +559,7 @@ STRING_ARG(iguana,addnotary,ipaddr)
 }
 
 // TODO: Confirm that this is the correct list of currencies. Is TOKEL supposed to be in here? It's the only 3rd party coin in the list.
-char NOTARY_CURRENCIES[][65] = { "SUPERNET", "NINJA", "CCL", "PIRATE", "ILN", "DOC", "THC", "MARTY", "KOIN", "GLEEC", "TOKEL", "CLC", "VOTE2024" };
+char NOTARY_CURRENCIES[][65] = { "CCL", "PIRATE", "ILN", "DOC", "THC", "MARTY", "KOIN", "GLEEC", "GLEEC_OLD", "TOKEL", "CLC" };
 
 // "LTC", "USD", "EUR", "JPY", "GBP", "AUD", "CAD", "CHF", "NZD", "CNY", "RUB", "MXN", "BRL", "INR", "HKD", "TRY", "ZAR", "PLN", "NOK", "SEK", "DKK", "CZK", "HUF", "ILS", "KRW", "MYR", "PHP", "RON", "SGD", "THB", "BGN", "IDR", "HRK",
 
