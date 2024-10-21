@@ -11,7 +11,9 @@ rm -rf ~/.komodo/NINJA
 
 ### Prepare GLEEC_OLD datafolder by create a symlink (mandatory)
 
+```bash
 ln -s -f $HOME/.komodo/GLEEC_OLD/GLEEC.conf $HOME/.komodo/GLEEC_OLD/GLEEC_OLD.conf
+```
 
 ### Update `komodod` on main node
 
