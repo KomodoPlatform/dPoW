@@ -28,7 +28,7 @@ git checkout 2651eaf
 komodo-cli -ac_name=GLEEC -datadir=$HOME/.komodo/GLEEC_OLD stop; sleep 5
 ~/dPoW/iguana/checkGLEEC.sh # check the GLEEC installation
 source pubkey.txt
-komodod -ac_name=GLEEC -ac_supply=210000000 -ac_public=1 -ac_staked=100 -datadir=${HOME}/.komodo/GLEEC_OLD -addnode=95.217.161.126 -addnode=209.222.101.247 -addnode=103.195.100.32 &
+komodod -pubkey=$pubkey -ac_name=GLEEC -ac_supply=210000000 -ac_public=1 -ac_staked=100 -datadir=${HOME}/.komodo/GLEEC_OLD -addnode=95.217.161.126 -addnode=209.222.101.247 -addnode=103.195.100.32 &
 ```
 
 ### Make sure the old GLEEC chain is running smoothly and has caught up with the latest notarizations
