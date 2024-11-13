@@ -1,0 +1,23 @@
+{
+    // The following will hide unneeded files in the editor
+    "files.exclude": {
+        "**/*.o": true,
+        "**/*.a": true,
+        "**/*.lo": true,
+        "**/*.Po": true,
+        "**/*.Plo": true,
+        "**/*.la": true,
+        "**/*.lai": true,
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/*.o": true,
+        "**/*.a": true,
+        "**/*.lo": true,
+        "**/*.Po": true,
+        "**/*.Plo": true,
+        "**/*.la": true,
+        "**/*.lai": true,
+    }
+}
