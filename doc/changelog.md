@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.2
+
+- Shuts down KDF on Notary 3P node
+
 ## 0.8.1
 
 - Removes `SUPERNET`, `NINJA`
