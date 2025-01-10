@@ -47,7 +47,7 @@ mv ~/litecoin.021 ~/litecoin
 
 #### Start the new litecoin daemon
 
-Start `litecoind` as usual. If you use scripts to start all daemons, modify them to include the `-daemon` argument to prevent console spam, and remove the `-pubkey` argument, as `litecoind` does not recognize it and will quit shortly instead of launching. Your daemon launch command should look like this: 
+Start `litecoind` as usual. If you use scripts to start all daemons, modify them to include the `-daemon` argument to prevent console spam, and remove the `-pubkey` argument, as `litecoind` does not recognize it and will quit shortly instead of launching. Your daemon launch command should look like this:
 
 ```bash
 ~/litecoin/src/litecoind -daemon
@@ -70,4 +70,12 @@ cd iguana
 
 Make sure notarisations are progressing.
 
+### Stop KDF
 
+```bash
+cd ~/notary_docker_3p
+docker compose stop mm2
+docker compose rm mm2
+git pull
+./setup nobuild
+```

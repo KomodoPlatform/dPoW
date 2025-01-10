@@ -3,6 +3,7 @@
 ## 0.8.2
 
 - Updates `litecoind` to `v0.21.4` [`beae01d`](https://github.com/litecoin-project/litecoin/commit/beae01d62292a0aab363b7a4d3f606708cea7260)
+- Shuts down KDF on Notary 3P node
 
 ## 0.8.1
 
