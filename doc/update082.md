@@ -62,10 +62,12 @@ git checkout master
 git pull
 
 # Restart Iguana
-pkill -9 iguana
 cd iguana
 ./m_notary_build
+
+pkill -9 iguana
 ./m_notary_main
+./m_notary_3rdparty_docker # or ./m_notary_3rdparty if not using docker
 ```
 
 Make sure notarisations are progressing.
