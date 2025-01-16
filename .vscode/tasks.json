@@ -1,0 +1,20 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Iguana [debug]",
+            "type": "shell",
+            "command": "make clean; make CFLAGS='-g -Wno-deprecated -O0 -DISNOTARYNODE=1' CFLAGS_NO_OPTIMIZATION='-g -Wno-deprecated -O0 -DISNOTARYNODE=1' -j$(nproc)",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/iguana/"
+            },
+        }
+    ]
+}
