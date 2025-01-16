@@ -45,6 +45,7 @@ pkill -9 iguana
 cd iguana
 ./m_notary_build
 ./m_notary_main
+./m_notary_3rdparty_docker # or ./m_notary_3rdparty if not using docker
 ```
 
 Make sure notarisations are progressing.
