@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.4
+
+- Removes `DOC`, `MARTY` from dPoW
+
 ## 0.8.3
 
 - Adds `BCZERO`, `RAPH`, `MDX` chains to dPoW
