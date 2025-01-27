@@ -168,6 +168,48 @@
 		"season_overtime_end_comment": "TBA",
 		"Servers": {
 			"dPoW-Mainnet": {
+				"SUPERNET": {
+					"start_time": 1728049053,
+					"start_time_comment": "S8 start",
+					"end_time": 1729521795,
+					"end_time_comment": "commit 6ec95c663bd58099e0a160bec66cc01525261764 +24hrs"
+				},
+				"NINJA": {
+					"start_time": 1728049053,
+					"start_time_comment": "S8 start",
+					"end_time": 1729521795,
+					"end_time_comment": "commit 6ec95c663bd58099e0a160bec66cc01525261764 +24hrs"
+				},
+				"BCZERO": {
+					"start_time": 1737306978,
+					"start_time_comment": "commit 86db2fc03255d6615826ebe00e78b2183b41b22f +24hrs",
+					"end_time": 1999999999,
+					"end_time_comment": "S8 end"
+				},
+				"RAPH": {
+					"start_time": 1737306978,
+					"start_time_comment": "commit 86db2fc03255d6615826ebe00e78b2183b41b22f +24hrs",
+					"end_time": 1999999999,
+					"end_time_comment": "S8 end"
+				},
+				"MDX": {
+					"start_time": 1737306978,
+					"start_time_comment": "commit 86db2fc03255d6615826ebe00e78b2183b41b22f +24hrs",
+					"end_time": 1999999999,
+					"end_time_comment": "S8 end"
+				},
+				"DOC": {
+					"start_time": 1728049053,
+					"start_time_comment": "S8 start",
+					"end_time": 1738195200,
+					"end_time_comment": "commit 6ec95c663bd58099e0a160bec66cc01525261764 +24hrs"
+				},
+				"MARTY": {
+					"start_time": 1728049053,
+					"start_time_comment": "S8 start",
+					"end_time": 1738195200,
+					"end_time_comment": "commit 6ec95c663bd58099e0a160bec66cc01525261764 +24hrs"
+				}
 			},
 			"dPoW-3P": {
 			}
