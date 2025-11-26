@@ -1,0 +1,414 @@
+{
+  "explorer": "https://kip0002.kmdexplorer.io",
+  "title": "Should KMD's Block Reward be reduced?",
+  "categories": {
+    "KIP0002": {
+      "options": [
+        {
+          "name": "Yes",
+          "text": "Reduce block reward from 3 KMD to 1 KMD",
+          "votes": 13555466.524659,
+          "address": "RReduceB1ockRewardXXXXXXXXXXEsozaY",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RReduceB1ockRewardXXXXXXXXXXEsozaY.png",
+          "utxos": []
+        },
+        {
+          "name": "No",
+          "text": "Keep block reward as 3 KMD",
+          "votes": 598558.643599,
+          "address": "RNoChangeXXXXXXXXXXXXXXXXXXXYRvSwz",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RNoChangeXXXXXXXXXXXXXXXXXXXYRvSwz.png",
+          "utxos": []
+        }
+      ]
+    }
+  },
+  "snapshot_at": 1713441600,
+  "airdrop_at": 1713700800,
+  "starts_at": 1713700800,
+  "ends_at": 1714780799,
+  "overtime_ended_at": 1714830011,
+  "first_overtime_block": {
+    "height": 41027,
+    "hash": "0a3e292f9e39ba27343d438df288a9a28d5baa9e692f7e0648af2ae64ef5bd73",
+    "time": 1714780839
+  },
+  "results_official": null,
+  "final_ntx_block": {
+    "height": 41032,
+    "hash": "0160286a6811310644a2bbff45b8ebda21b7d832b91a150395ba7ec0244d2c2d",
+    "time": 1714781085
+  },
+  "current_block": {
+    "height": 121645,
+    "hash": "095c308d826856edb92809ed5e34b13782f7a3c5537d7f0486926ce9fd035a05",
+    "time": 1721021082
+  },
+  "updated_time": 1721021029,
+  "status": "historical",
+  "recent_votes": [
+    {
+      "txid": "7059615ab0ae5170a010469121341e4ce76d812787bd28467e7576150f8c7950",
+      "amount": 68747.86500684,
+      "height": 41019,
+      "time": 1714780503,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "d73bd5332baca809c7f9d35f18a1577d7b15873fee2916b7271e218188457e9f",
+      "amount": 32813.07262647,
+      "height": 41019,
+      "time": 1714780503,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "f07009a5b66758562ff3e734672c9d8ce5d0773f46fe840607a0cc14abf47616",
+      "amount": 29530.19114579,
+      "height": 41019,
+      "time": 1714780503,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "6ae8ed4afe402547a8b9c1e73ec288d927cc055aeb4049388ed90966ac909df1",
+      "amount": 42264.96305748,
+      "height": 41019,
+      "time": 1714780503,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "8a9220c943536cf2f797de86f2132188d1d89bb937b8899c5ba450edb6e1779e",
+      "amount": 106907.34187979,
+      "height": 41019,
+      "time": 1714780503,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "2ff8a5f8b47d815d03404a650ae53af4d0d32fe82937c89abd6bb9c6c2dec58e",
+      "amount": 11043.94381844,
+      "height": 41019,
+      "time": 1714780503,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "24279df48a998811496a772a5e78daf9d696f1082c7f6faee85939a1812683bc",
+      "amount": 64953.33705129,
+      "height": 41019,
+      "time": 1714780503,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "7df43428caf47a27028ffcc358a0d6e6f0a76ec1ef1b552a327c782c9c0f10b8",
+      "amount": 35894.47976871,
+      "height": 41014,
+      "time": 1714780055,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "8ccbf8a0b4ba484793e7dfb8c503665e2e0228399179c134b76f029de5bf32bc",
+      "amount": 76787.44999673,
+      "height": 41011,
+      "time": 1714779874,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "303840a7636d3792d319824b5df91d67dbd9dfa0d5805dd953ef550942d2a1bd",
+      "amount": 6803.70218866,
+      "height": 41011,
+      "time": 1714779874,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "d3a1875ad5cd07545b3f7ecb64a4a071b7900b707a027efae1829e8056a7e86e",
+      "amount": 542316.0216969,
+      "height": 40955,
+      "time": 1714776205,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "1ab8b7ff2526e38afea1e16c2acb9a1c18cc53ce10314ab6e4b010ef4f7fa21e",
+      "amount": 232438.63437781,
+      "height": 40763,
+      "time": 1714764798,
+      "candidate": "No",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "430a27cd9263265624cccdf06ea3a616c153b2ec1ec533144a3b9153a35696d3",
+      "amount": 111923.9360314,
+      "height": 40754,
+      "time": 1714764376,
+      "candidate": "No",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "50fa3b7f91786cb61a8d65fec7f69d3729b0f4e30a3d43b0a2b33d76349f2dae",
+      "amount": 17100,
+      "height": 40333,
+      "time": 1714738867,
+      "candidate": "No",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "e9fe6443a89924cb14a6e5ef85706350cf49cde92afb53424b4c87fa6635d81a",
+      "amount": 4189.36947659,
+      "height": 40290,
+      "time": 1714736284,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "1c0b666c064354e1146e3b1f8454817ba8204b2aae5d01d8799d6eb9dddc17ec",
+      "amount": 140341.99806741,
+      "height": 39860,
+      "time": 1714710954,
+      "candidate": "No",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "6e00a50ea0c137bad1051d3b8b7d5fe6e17a4e14491ca48862d4bb51b80a27c2",
+      "amount": 206487.88581175,
+      "height": 38760,
+      "time": 1714644377,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "16dc183447aff80c938dcc3ecabd02586614939a3b1a8fc3260a44ba8aabdf8c",
+      "amount": 4979.49794717,
+      "height": 38671,
+      "time": 1714639139,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "2789112493fcb8ad82141bd8f9c6a2c3f4cd3c1742cda3f792ef9b906231c54c",
+      "amount": 15775.35298811,
+      "height": 38570,
+      "time": 1714633046,
+      "candidate": "No",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "314de1b6028a18b957e55d7b1af78e694404b03b8f7978bcd417e27374fc93fd",
+      "amount": 251812.96127076,
+      "height": 34955,
+      "time": 1714415595,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "b91260417b585e5742fdf342b91dc8ac131c576ba7dffc863d24cca8e65bccf6",
+      "amount": 11872457.99188616,
+      "height": 32168,
+      "time": 1714248184,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "39652d73f8dcc7d29c10317e897ce81dbdbe5fb3af9a49eadf9b43d6c1104f66",
+      "amount": 4142.93969642,
+      "height": 30581,
+      "time": 1714152447,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "60d289fde7daf865cd00641d8ff3edebaef4c858207f6ecf8f09951530910fb7",
+      "amount": 205.33829717,
+      "height": 29446,
+      "time": 1714084726,
+      "candidate": "No",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "1eebac784c6116f334931a2490706d16cd13fec2135fd9107c08eaf255486089",
+      "amount": 836.3293606,
+      "height": 29104,
+      "time": 1714063686,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "a51cf8d84c8901da3733c17deda227bd4f44a9596d87053ec6bd8ad86c115889",
+      "amount": 10000.51020973,
+      "height": 28455,
+      "time": 1714024758,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "1ddf850a990ea0e3d5428ff0de469240776c8ba0cb2d456abddaf428052c39e0",
+      "amount": 526.34740956,
+      "height": 27620,
+      "time": 1713974870,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "47d40fa37aa33ab4716cf3d618c1dd2fb6c7b785e3e7b31ff65a4a83aca87c12",
+      "amount": 501.13938814,
+      "height": 27450,
+      "time": 1713964556,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "acde8d68eb2463b6d9b0b816a7d1461a59d2e752e5042d1cf1fbd4be36e79183",
+      "amount": 1.0042508,
+      "height": 26560,
+      "time": 1713911264,
+      "candidate": "No",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "cceb0cd284eb529d39090615b0d26bed9b6e18811bab1f57dc7ceaeed2982e21",
+      "amount": 2349.99399,
+      "height": 25743,
+      "time": 1713861803,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "7e73ba4a15f557cb326a10c2f2f3e2378fae48b7336b741532a405215fd9d9a6",
+      "amount": 11.67925193,
+      "height": 25206,
+      "time": 1713829414,
+      "candidate": "No",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "ce6db1499115f372a3c93a49cc6cc0a156a05a4a797246fdb10963c280578fe3",
+      "amount": 1904.572768,
+      "height": 25116,
+      "time": 1713824201,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "78683c98135313487d31c884dd6b59ec60be6a71dbe802abf9e6b8bfb25a7095",
+      "amount": 80619.84982605,
+      "height": 24987,
+      "time": 1713816489,
+      "candidate": "No",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "fe138846a53e177fa608bba7a44d64a6dac29e2eb0e2d45a4c0b30da2e99d384",
+      "amount": 116107.2744086,
+      "height": 24864,
+      "time": 1713809085,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "fd3dabead8ad65d341b5254b2d995c60ca884b8c106947b1571ddc35439effdb",
+      "amount": 0.81098976,
+      "height": 24815,
+      "time": 1713806073,
+      "candidate": "No",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "8aea3c3ca9e64fdcd25f9148956eb1b1325d96340eaba2813e5c9a5dac22b9d1",
+      "amount": 5090.27134602,
+      "height": 24327,
+      "time": 1713776723,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "1da025c651d4e9f9208d5ca67f999593c5f5704a4ce9705975a058b24a9871c6",
+      "amount": 0.99998,
+      "height": 24326,
+      "time": 1713776671,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "d682cae021285b433f0d40d9b6710c0fc54048279ce6ebf749ef371816ee1fe8",
+      "amount": 30001.47819752,
+      "height": 24148,
+      "time": 1713766334,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "6bcf2a95701add67dc5807e2dccfee602cf03a21b7d288ce1a6f68bdbc60a35c",
+      "amount": 2499.2531665,
+      "height": 24120,
+      "time": 1713764432,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "c5cf0a345bdcc5649a8f7e9116375baee0c83d2b4c66990d55119eb009ae1756",
+      "amount": 156.90823793,
+      "height": 24085,
+      "time": 1713762097,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "a9f8fbee91ad2bdba31ad2171082c45374386418b5c87752b2abdafb252a046e",
+      "amount": 2937.00363662,
+      "height": 23716,
+      "time": 1713740031,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "e21e99b926a96c8cbcf05450ae334a31860601243b0d3811467180baa955b8bb",
+      "amount": 140.03851846,
+      "height": 23676,
+      "time": 1713737760,
+      "candidate": "No",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "11340233215cb00dbe9793d57418120531777477f2149a7c5c0ce4697d9dd4cb",
+      "amount": 20321.42723394,
+      "height": 23231,
+      "time": 1713710953,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "a6f254a50f32c3a107bee0cb41272fef8d4ab5a357d8b73c1a7d790804cd34ab",
+      "amount": 100,
+      "height": 23226,
+      "time": 1713710691,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "fffc807ad1b0bf1e9473d04a438bdaf96e395448440dff264ba229610e0f7377",
+      "amount": 0.001,
+      "height": 15957,
+      "time": 1713273935,
+      "candidate": "Yes",
+      "region": "KIP0002"
+    },
+    {
+      "txid": "fffc807ad1b0bf1e9473d04a438bdaf96e395448440dff264ba229610e0f7377",
+      "amount": 0.001,
+      "height": 15957,
+      "time": 1713273935,
+      "candidate": "No",
+      "region": "KIP0002"
+    }
+  ],
+  "sum_votes": 14154025.168258,
+  "count_votes": 45,
+  "final_ntx_block_tx": "1c04160d68b91e3b7032ae27085d4d5af43934a49baa834f21a46bb84be98bc0"
+}
