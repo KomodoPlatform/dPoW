@@ -1,0 +1,470 @@
+{
+  "explorer": "https://kip0003.kmdexplorer.io",
+  "title": "Should KMD's Transaction Fees be increased and/or burned?",
+  "categories": {
+    "KIP0003": {
+      "options": [
+        {
+          "name": "No Change",
+          "text": "No change to transaction fees",
+          "votes": 1311915.054719,
+          "address": "RNoChangeXXXXXXXXXXXXXXXXXXXYRvSwz",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RNoChangeXXXXXXXXXXXXXXXXXXXYRvSwz.png",
+          "utxos": []
+        },
+        {
+          "name": "Burn, but no transaction fee increase",
+          "text": "Do not increase transaction fees and burn 100% of existing fees.",
+          "votes": 12218959.573843,
+          "address": "RBurn1XFeeXXXXXXXXXXXXXXXXXXrbe6NL",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RBurn1XFeeXXXXXXXXXXXXXXXXXXrbe6NL.png",
+          "utxos": []
+        },
+        {
+          "name": "Increase 10x with Burn",
+          "text": "Increase transaction fees by 10x and burn 100% of transaction fees.",
+          "votes": 482285.711007,
+          "address": "RBurnTenXFeeXXXXXXXXXXXXXXXXSh3yBe",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RBurnTenXFeeXXXXXXXXXXXXXXXXSh3yBe.png",
+          "utxos": []
+        },
+        {
+          "name": "Increase 100x with Burn",
+          "text": "Increase transaction fees by 100x and burn 100% of transaction fees.",
+          "votes": 25400.926181,
+          "address": "RBurnHundredXFeeXXXXXXXXXXXXj2Furm",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RBurnHundredXFeeXXXXXXXXXXXXj2Furm.png",
+          "utxos": []
+        },
+        {
+          "name": "Increase 10x without Burn",
+          "text": "Increase transaction fees by 10x and do not burn the transaction fees.",
+          "votes": 83153.910497,
+          "address": "RNoBurnTenXFeeXXXXXXXXXXXXXX1PMoXA",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RNoBurnTenXFeeXXXXXXXXXXXXXX1PMoXA.png",
+          "utxos": []
+        },
+        {
+          "name": "Increase 100x without Burn",
+          "text": "Increase transaction fees by 100x and do not burn the transaction fees.",
+          "votes": 31906.051966,
+          "address": "RNoBurnHundredXFeeXXXXXXXXXXiG5upG",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RNoBurnHundredXFeeXXXXXXXXXXiG5upG.png",
+          "utxos": []
+        }
+      ]
+    }
+  },
+  "snapshot_at": 1713441600,
+  "airdrop_at": 1713700800,
+  "starts_at": 1713700800,
+  "ends_at": 1714780799,
+  "overtime_ended_at": 1714829929,
+  "first_overtime_block": {
+    "height": 41018,
+    "hash": "04f40059f9f8b611e4a182546d77d441ccca65ce1f9b8eb2f095039b58e3db63",
+    "time": 1714780910
+  },
+  "results_official": null,
+  "final_ntx_block": {
+    "height": 41022,
+    "hash": "04100df56ec8005f5f6e2e133debf77061b12ca6a578116f8a0776f5cf1112c0",
+    "time": 1714781104
+  },
+  "current_block": {
+    "height": 120969,
+    "hash": "0c4e455a877cdeabb496de4b259c7fb2825d6684e8f545a01b76a02a3117a889",
+    "time": 1721019977
+  },
+  "updated_time": 1721021029,
+  "status": "historical",
+  "recent_votes": [
+    {
+      "txid": "b76b5e7ee390f23a47391c20d8d9eed3b9d24c0bcb97e3ff93b9031eb4d9b78e",
+      "amount": 76787.44999673,
+      "height": 40965,
+      "time": 1714777628,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "384864cf828faec96cd5823ce8260705d1da179d6cb9f9c01e0da82634dd9880",
+      "amount": 6803.70218866,
+      "height": 40963,
+      "time": 1714777543,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "525c214c55ef6761ecebd1acf702563e86f06eabc1717f8dc4a3dcb3519db49b",
+      "amount": 64953.33705129,
+      "height": 40960,
+      "time": 1714777411,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "f04df0886c85fe319a5f1b34ad5d11dbf832e535cf6edb1d4ebdc8651f09f756",
+      "amount": 106907.34187979,
+      "height": 40960,
+      "time": 1714777411,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "4420a132da3d6421f3326e5e09e2a1f53f75e1fe29ba1030c3f8636ace422050",
+      "amount": 11043.94381844,
+      "height": 40959,
+      "time": 1714777349,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "da2d26fd5966bb7be0758bc0a80c9e858258e767b0081d8833c027a1b09b3e83",
+      "amount": 68747.86500684,
+      "height": 40959,
+      "time": 1714777349,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "d007dddb4e9b35ca379e276754480aba3e13ff0ebe9c3bb91cc3e133278524f7",
+      "amount": 29530.19114579,
+      "height": 40959,
+      "time": 1714777349,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "dd17db3b0fff545a0cae96b0ece51dea356412ace21f689e02f6d59786958f13",
+      "amount": 35894.47976871,
+      "height": 40959,
+      "time": 1714777349,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "20a4ac00dec3b38310ba4d0d85a49eb8c3100b2efeafe3963d6215a2945106db",
+      "amount": 42264.96305748,
+      "height": 40959,
+      "time": 1714777349,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "6fa3cf815efe32697378d0b944c0ed2c0962da0a18abcafc271510a9e167fd6f",
+      "amount": 32813.07262647,
+      "height": 40959,
+      "time": 1714777349,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "ff64946ee9f6815e0fcbf87f0631aa74bcde13bbb26857f2e214358b2a43a9ed",
+      "amount": 542316.0216969,
+      "height": 40947,
+      "time": 1714776629,
+      "candidate": "No Change",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "df7dd991094f45b79ad497915ef2b1def487dc462ef3604f01b8ba7ebabf390e",
+      "amount": 232438.63437781,
+      "height": 40752,
+      "time": 1714764869,
+      "candidate": "No Change",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "f6bedf18455429da332fb03a4838441d818821461d351fa98e78fee41ba1584a",
+      "amount": 111923.9360314,
+      "height": 40746,
+      "time": 1714764412,
+      "candidate": "No Change",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "b5cc7e1c165de462c1206c29b9077ddab4b7430e479f09bc2d5bb4f00afe1d75",
+      "amount": 17100,
+      "height": 40318,
+      "time": 1714738817,
+      "candidate": "No Change",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "68f6a58ef823db28615b818beaebf8dd18a632d6b07ad7c4b6888ef2bc9fb201",
+      "amount": 4189.36947659,
+      "height": 40279,
+      "time": 1714736481,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "15c6b5b675e8d2f5b5d291bb22d34f84b49f7f2bbc4b94fba3f04438a54e094c",
+      "amount": 140341.99806741,
+      "height": 39853,
+      "time": 1714710926,
+      "candidate": "No Change",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "448917621c22e75f72997f86fad6f0bf1eb52099978d6f16ffc3c8ee0fd468d6",
+      "amount": 206487.88581175,
+      "height": 38749,
+      "time": 1714644740,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "53fed62f67ea3ea3ee72bd8cda49364ddde20094bc12388f92cab9bbb757822f",
+      "amount": 4979.49794717,
+      "height": 38658,
+      "time": 1714639188,
+      "candidate": "Increase 100x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "a452a2af45d4ca0cebed1fe09557a05c26dc5a40a55ed3052b331f1c40f8f38d",
+      "amount": 15775.35298811,
+      "height": 38557,
+      "time": 1714632975,
+      "candidate": "No Change",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "a7fea3fa7a3d6f6d4b8c665db086b93a3d91e5fba5911690e68bf14fb73b38fe",
+      "amount": 251812.96127076,
+      "height": 34939,
+      "time": 1714415701,
+      "candidate": "No Change",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "6f36daca78a8e3dbd3374058011b87c8337a73e2ce8c8d828659a5ad067200a7",
+      "amount": 2534.05967078,
+      "height": 33133,
+      "time": 1714307019,
+      "candidate": "Increase 10x without Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "785ad7d0ed84310156c539c83786606598b0dcbb0eb2924cbe4a4e775a6d27f8",
+      "amount": 11872457.99188616,
+      "height": 32163,
+      "time": 1714248687,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "6ce2f9bb5839ba0ec3ca66730e950a1d472cac702f335aacc6659accf3bffa18",
+      "amount": 4142.93969642,
+      "height": 30553,
+      "time": 1714152059,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "205b4bb434903271f4a37940072452ed7ee6955ddf3763ad5d6d7c4a41c7916b",
+      "amount": 205.33829717,
+      "height": 29423,
+      "time": 1714084361,
+      "candidate": "No Change",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "338dd9181ee0d10fa32fad59bd3a84268595432f31fe68b0ba55f6d8a7d908f9",
+      "amount": 836.3293606,
+      "height": 29085,
+      "time": 1714063986,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "5d07a97fee137892b6f05e193804153d12e40654993af84556a2740360d68d58",
+      "amount": 10000.51020973,
+      "height": 28443,
+      "time": 1714025115,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "5e80d3228f5d52a52e527444428cf74964f986f19de620b7ae6184b1d085863a",
+      "amount": 526.34740956,
+      "height": 27605,
+      "time": 1713974917,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "0dbff77ed7b5262ad8a405e7c81c8bd48a22839a2fc65663c3386001e9e6e7d8",
+      "amount": 501.13938814,
+      "height": 27439,
+      "time": 1713964691,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "076e7091db002db3cb21d0178d42bac2ae70963f7248edb45c0e5ae865c57aaf",
+      "amount": 1.0042508,
+      "height": 26543,
+      "time": 1713911283,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "8a461f8a2b1f7c7e953c472e2d877b805ef0a369cfdd76eaee73cb1664579d03",
+      "amount": 2349.99399,
+      "height": 25731,
+      "time": 1713861778,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "8f80559409165d1808c67e73460eedf6522830da5e80f00cf8c237e07e2bbce8",
+      "amount": 11.67925193,
+      "height": 25186,
+      "time": 1713829431,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "6719b30e49cc9e511d32b904317986d57110f26926f603c7e731a2843abdbb73",
+      "amount": 1904.572768,
+      "height": 25103,
+      "time": 1713824447,
+      "candidate": "Increase 100x without Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "f0f63794228eceb5cc218c00e88db57149d069a057a9efeb35c436b99eda2368",
+      "amount": 80619.84982605,
+      "height": 24970,
+      "time": 1713816570,
+      "candidate": "Increase 10x without Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "f68daa75f7367105fb6ff8894ab51f0e282cbe0cf4927cc982421e6a55f49151",
+      "amount": 116107.2743086,
+      "height": 24850,
+      "time": 1713809245,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "d3a262f801389d469e1e6bdab10d375e27abde6e1df1c89732e506b57c76a687",
+      "amount": 0.81098976,
+      "height": 24798,
+      "time": 1713806123,
+      "candidate": "No Change",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "7e911bb47b20bf54984f19e87baf4a6f431402ef41112cafc6f7617298b956d1",
+      "amount": 5090.27134602,
+      "height": 24322,
+      "time": 1713777207,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "d05a6f25c98c9ca18277a4bd8bb1b0249f08ac308c07ddbd4e129c51e9d38526",
+      "amount": 30001.47819752,
+      "height": 24145,
+      "time": 1713766678,
+      "candidate": "Increase 100x without Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "a2a68b44e8fda9bb934d3baf9abf2b1033e445172c71a5e0552677c3b60c7bf7",
+      "amount": 2499.2531665,
+      "height": 24113,
+      "time": 1713764540,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "7fb69c4fa83798773f01559a2e103af84f96419b97ea8a8fa960deaa19e37a8e",
+      "amount": 156.90823793,
+      "height": 24074,
+      "time": 1713762243,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "1cdf36fa5d24c8d43a15e350d38f6abb86bb035f591160b77f08296f40e6164f",
+      "amount": 140.03851846,
+      "height": 23667,
+      "time": 1713737850,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "1d79e11bd6069ece1fe1a99cb24221abb3dc411b5f08ba712a90e835102d8dfb",
+      "amount": 20321.42723394,
+      "height": 23226,
+      "time": 1713711269,
+      "candidate": "Increase 100x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "9b8a2011a5869c0b337bde55919a4b16d4b5179390dc769d1b4bbb0de91c1f2d",
+      "amount": 100,
+      "height": 23221,
+      "time": 1713711011,
+      "candidate": "Increase 100x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "38e7e5717477ff29438b6da5a329edd053e261e4c547d38fa9a8c4eac771e6a4",
+      "amount": 0.001,
+      "height": 15946,
+      "time": 1713274046,
+      "candidate": "No Change",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "38e7e5717477ff29438b6da5a329edd053e261e4c547d38fa9a8c4eac771e6a4",
+      "amount": 0.001,
+      "height": 15946,
+      "time": 1713274046,
+      "candidate": "Burn, but no transaction fee increase",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "38e7e5717477ff29438b6da5a329edd053e261e4c547d38fa9a8c4eac771e6a4",
+      "amount": 0.001,
+      "height": 15946,
+      "time": 1713274046,
+      "candidate": "Increase 10x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "38e7e5717477ff29438b6da5a329edd053e261e4c547d38fa9a8c4eac771e6a4",
+      "amount": 0.001,
+      "height": 15946,
+      "time": 1713274046,
+      "candidate": "Increase 100x with Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "38e7e5717477ff29438b6da5a329edd053e261e4c547d38fa9a8c4eac771e6a4",
+      "amount": 0.001,
+      "height": 15946,
+      "time": 1713274046,
+      "candidate": "Increase 10x without Burn",
+      "region": "KIP0003"
+    },
+    {
+      "txid": "38e7e5717477ff29438b6da5a329edd053e261e4c547d38fa9a8c4eac771e6a4",
+      "amount": 0.001,
+      "height": 15946,
+      "time": 1713274046,
+      "candidate": "Increase 100x without Burn",
+      "region": "KIP0003"
+    }
+  ],
+  "sum_votes": 14153621.228212,
+  "count_votes": 48,
+  "final_ntx_block_tx": "325cfa4f00b55ffe9af5733b0db16449b487d260aadd73e2f73024146a6cd3db"
+}
