@@ -35,7 +35,7 @@ sudo ufw allow 30260/tcp comment 'RAPH p2p port'
 sudo ufw allow 18481/tcp comment 'MDX p2p port'
 ```
 
-## Build andRestart Iguana
+## Build and Restart Iguana
 
 ```bash
 # Update dPoW repo
