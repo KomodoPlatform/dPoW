@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.5
+
+- Updates `komodod` to [`e0f463a`](https://github.com/GLEECBTC/komodo-daemon/commit/e0f463a5e0fee7e7c8db7f1b46a2b89926abab96)
+
 ## 0.8.4
 
 - Removes `DOC`, `MARTY` from dPoW
