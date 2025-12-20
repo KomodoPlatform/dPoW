@@ -1,0 +1,462 @@
+{
+  "explorer": "https://kip0004.kmdexplorer.io",
+  "title": "2025 Consensus Upgrade",
+  "categories": {
+    "KIP0004": {
+      "options": [
+        {
+          "name": "No change",
+          "text": "No change to consensus mechanism - keep Proof of Work (PoW)",
+          "votes": 633158.672948,
+          "address": "RNoChangeXXXXXXXXXXXXXXXXXXXYRvSwz",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RNoChangeXXXXXXXXXXXXXXXXXXXYRvSwz.png",
+          "utxos": []
+        },
+        {
+          "name": "PoS",
+          "text": "Change PoW to Proof of Stake",
+          "votes": 13022611.385747,
+          "address": "RStakeXXXXXXXXXXXXXXXXXXXXXXWvVS8u",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RStakeXXXXXXXXXXXXXXXXXXXXXXWvVS8u.png",
+          "utxos": []
+        },
+        {
+          "name": "PoS + Masternodes",
+          "text": " Change PoW to PoS and add nodal reward component equal to 50% of block reward",
+          "votes": 6316.498947,
+          "address": "RMNStakeXXXXXXXXXXXXXXXXXXXXVWUPDF",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RMNStakeXXXXXXXXXXXXXXXXXXXXVWUPDF.png",
+          "utxos": []
+        },
+        {
+          "name": "Gridcoin v1 style PoS",
+          "text": " Change PoW to PoS based on Gridcoin system; allowing consumer hardware to crunch solutions to scientific problems and receive a reward upon staking a block.",
+          "votes": 476404.395166,
+          "address": "RGridXXXXXXXXXXXXXXXXXXXXXXXQyajqY",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RGridXXXXXXXXXXXXXXXXXXXXXXXQyajqY.png",
+          "utxos": []
+        },
+        {
+          "name": "“Gridcoin v1 style PoS” + Masternodes",
+          "text": "Change PoW to PoS based on Gridcoin system; allowing consumer hardware to crunch solutions to scientific problems and receive a reward upon staking a block and add nodal reward component equal to 50% of block reward.",
+          "votes": 31906.862955,
+          "address": "RMNGridXXXXXXXXXXXXXXXXXXXXXpyzf3Z",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_template/vote/src/qrcodes/RMNGridXXXXXXXXXXXXXXXXXXXXXpyzf3Z.png",
+          "utxos": []
+        }
+      ]
+    }
+  },
+  "snapshot_at": 1713441600,
+  "airdrop_at": 1713700800,
+  "starts_at": 1713700800,
+  "ends_at": 1714780799,
+  "overtime_ended_at": 1714830046,
+  "first_overtime_block": {
+    "height": 41036,
+    "hash": "03d3f2e3b0f8c41a3db7bd9a2e113e65c94b93e34a1388bddc273b1a1042b109",
+    "time": 1714780802
+  },
+  "results_official": null,
+  "final_ntx_block": {
+    "height": 41044,
+    "hash": "03fc5dc3f9a783d493626e74af0abf9a964cbc011341431812166c44e5de7536",
+    "time": 1714781190
+  },
+  "current_block": {
+    "height": 121313,
+    "hash": "01703f1447102819b05ebf75dbda980c88bcb07cb9abc14726a29da58a2159c9",
+    "time": 1721021067
+  },
+  "updated_time": 1721021029,
+  "status": "historical",
+  "recent_votes": [
+    {
+      "txid": "ac7c47b56ff368c50d27b4dad927d8d45f155000b4aad098098331dca56fe094",
+      "amount": 76787.44999673,
+      "height": 40990,
+      "time": 1714777626,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "baf96e7d3652980c117d3b9a8d6b413a832615ad5c15b977f6432580b9c88707",
+      "amount": 6803.70218866,
+      "height": 40983,
+      "time": 1714777167,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "d1bda5f2d4d0ea2f58aa478876920684be2e0888bd2d30864182ecf424626636",
+      "amount": 29530.19114579,
+      "height": 40983,
+      "time": 1714777167,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "0dc4c2ef0c18e53aafc8dd932f475f272ceddd693a3d4881bfe5385e1c1b9cd2",
+      "amount": 64953.33705129,
+      "height": 40983,
+      "time": 1714777167,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "c7e6bc0f4c9a55c4c4a99751493584b484fbf9fe596270cd382eed528a3d8479",
+      "amount": 68747.86500684,
+      "height": 40983,
+      "time": 1714777167,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "6227d101aaf00172f6df70c07a2b0cba7ef926775de55fee8d779ca224e81686",
+      "amount": 32813.07262647,
+      "height": 40983,
+      "time": 1714777167,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "525a04dec2bcda41d5ae990e9fd6e62c622130ac5e4df61638e37ce53f5820d5",
+      "amount": 106907.34187979,
+      "height": 40983,
+      "time": 1714777167,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "a3c88e2feca7e4219af14a9da24d412093410246b1f33d2ad90c7a37717485d5",
+      "amount": 42264.96305748,
+      "height": 40983,
+      "time": 1714777167,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "6a2ae914bfe85b15c319a60f950e443296b78170727d3872472c2a38102699bd",
+      "amount": 11043.94381844,
+      "height": 40982,
+      "time": 1714777083,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "cf120d75599a3dd6293f425a8c7023135ce89d157448a015683ad8ee7bd2dcf1",
+      "amount": 35894.47976871,
+      "height": 40982,
+      "time": 1714777083,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "13af89290e6b5ac465ee7a9b1760a4cdc5f1e1971fddd420ea01489faff802ac",
+      "amount": 542316.0216969,
+      "height": 40977,
+      "time": 1714776759,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "80c997159e70c024561ffecae32e8a55bdc51101165dfe7994fd663789da674e",
+      "amount": 232438.63437781,
+      "height": 40774,
+      "time": 1714764810,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "6bed4e19fb1a5c343d34a87885ed6079e78820a249634fdc825913763d393aff",
+      "amount": 111923.9360314,
+      "height": 40767,
+      "time": 1714764412,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "11d24722e6e65a746e5b57b80b043e06e4479cdbf77d7fa93b828c04eb5bff1e",
+      "amount": 15.51095607,
+      "height": 40737,
+      "time": 1714762569,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "a8c07ba7a03f0c8a00285ab113b7f4360eb58542bc0d89ffbe84935f9f16fda5",
+      "amount": 17100,
+      "height": 40344,
+      "time": 1714738840,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "8dc9d5db58d37fefb64005e775a5f9784b6283a07df490db9b367d84871dce67",
+      "amount": 4189.36947659,
+      "height": 40312,
+      "time": 1714736697,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "6f369fac4213c1992d3f5654c0daffa414ae17aa0a509e453c91ef98d1def2d5",
+      "amount": 140341.99806741,
+      "height": 39877,
+      "time": 1714710834,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "be636c5965f28d8ae996a40c9c2b99da6930e38a46b1636e1d7418b25705ad26",
+      "amount": 206487.88581175,
+      "height": 38774,
+      "time": 1714644548,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "9188f05c9227e9e2693b9769b2623d9cd4fc2cc8c6d029461efae2adc9deb25e",
+      "amount": 4979.49794717,
+      "height": 38686,
+      "time": 1714639223,
+      "candidate": "PoS + Masternodes",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "1f197cdb47f7e7e93375b239f47ffa9b6402fa10cca9af5c11e6f54fdb42225d",
+      "amount": 15775.35298811,
+      "height": 38586,
+      "time": 1714633146,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "d1d1b8e52ce13cc85b0a858b12aba7d8c15b0813edb169a2cfeeb49057864b1c",
+      "amount": 251812.96127076,
+      "height": 34963,
+      "time": 1714415716,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "cd85dae3a90db4ba3b54572f6e56f6cc96d84ae34ae23eedcc9fc0f98f539077",
+      "amount": 11872457.99188616,
+      "height": 32197,
+      "time": 1714249086,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "8cb94592be8ee1889d942ef3e310fa535d026f94f17efe9b86e4d406cbd03325",
+      "amount": 1337,
+      "height": 30588,
+      "time": 1714152247,
+      "candidate": "PoS + Masternodes",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "38b7da27e0fbbb4049e8c11eb1d55d60599ba8698375d298a49d8f85e5b60f9a",
+      "amount": 836.3293606,
+      "height": 29106,
+      "time": 1714063233,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "fe1272e8d0242ac59ec910df71aad5db70f3b7107397f9674e98cfa58ee65eba",
+      "amount": 22101.07696258,
+      "height": 28945,
+      "time": 1714053825,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "fe72ef9b7060382a111a26c7b8abb93eb7324d7c50f72e86ad3e866ee078716b",
+      "amount": 10000.51020973,
+      "height": 28477,
+      "time": 1714025432,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "3d559b70185fe70744e62ed1d962b57871014bcc2e25413c8b101d25ff8025f1",
+      "amount": 526.34740956,
+      "height": 27638,
+      "time": 1713975047,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "4115f2b1df0134fff2838e7ddcfdf7fd8257d7480e20003dfbae0f4db6cd5c0f",
+      "amount": 501.13938814,
+      "height": 27465,
+      "time": 1713964831,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "d970d62dbbfdabf03256f7e0a835ede0feb21c0c713ad48e13dbaaa0cf74bd54",
+      "amount": 1.0042508,
+      "height": 26575,
+      "time": 1713911382,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "73bdc0f819a20eccadcb6ed0746283e22e9e308a9ae724c06a8a4702f08b291e",
+      "amount": 2349.99399,
+      "height": 25761,
+      "time": 1713861909,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "4aa908848b19566186404b7514b1c76831a19af2fd3b61cc1abc4bafe9d6132d",
+      "amount": 11.67925193,
+      "height": 25218,
+      "time": 1713829513,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "9d9032d12d9887014fbb3161255b34b836a9086c7e1fb17fc18de2e8e15a62f1",
+      "amount": 1904.572768,
+      "height": 25138,
+      "time": 1713824673,
+      "candidate": "“Gridcoin v1 style PoS” + Masternodes",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "123152f44586455bf93e8eb725c91ac1d4e0fc5f5c0df7b89e195fce792ec43a",
+      "amount": 80619.84982605,
+      "height": 25004,
+      "time": 1713816661,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "172787ce46fb1a7f5201cff0fae3ea88248e7c33ab45fb638af4893a1109d215",
+      "amount": 116107.2743086,
+      "height": 24884,
+      "time": 1713809445,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "c1de12466f38827d0f4d360b3dfedde5ca90c399d01737787b5f1582d1f4b8f8",
+      "amount": 0.81098976,
+      "height": 24832,
+      "time": 1713806454,
+      "candidate": "“Gridcoin v1 style PoS” + Masternodes",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "50eaf73c14a5c4040e74eaa15277dc4ed5a7044a15779f117c74c99db37527f6",
+      "amount": 5090.27134602,
+      "height": 24793,
+      "time": 1713803878,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "3c6e79bb2cb885a19529833c20cf8ed861d82f170d553d8ecdb1a28c01b3f6d5",
+      "amount": 205.33829717,
+      "height": 24237,
+      "time": 1713770448,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "367ba1e38174d6751d6417f5d5d37e0ef7b2bb5cfb1f4ac9d45169fb37c34b26",
+      "amount": 30001.47819752,
+      "height": 24180,
+      "time": 1713766955,
+      "candidate": "“Gridcoin v1 style PoS” + Masternodes",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "7c9ec7845ff0c50c493d3e9dd9369e522daa23080efbba771e0252d92fbed283",
+      "amount": 2499.2531665,
+      "height": 24142,
+      "time": 1713764747,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "43ac0cef7d13a2fdd24fb8f495dbb40913976c5870842d630e518e04eed722fe",
+      "amount": 156.90823793,
+      "height": 24098,
+      "time": 1713762329,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "7999d1fd0f6f7c0313c440b66c26bcc6d8e5ae4bdf65f5d2a4e65306d8a74ebe",
+      "amount": 140.03851846,
+      "height": 23696,
+      "time": 1713738049,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "8db42185351bd9ea9d36238c180867484ca06609e15f7d194c8d664759b2e4f6",
+      "amount": 20321.42723394,
+      "height": 23252,
+      "time": 1713711268,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "1bad5ef43f1abf2921005cf271b648c7ef4352bfd015a65e092718f200fba80f",
+      "amount": 100,
+      "height": 23248,
+      "time": 1713711112,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "02ef5d6f71418e4a8ca5142c73854414b2cc9601467c04aac727fb293eef593a",
+      "amount": 0.001,
+      "height": 15979,
+      "time": 1713274305,
+      "candidate": "No change",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "02ef5d6f71418e4a8ca5142c73854414b2cc9601467c04aac727fb293eef593a",
+      "amount": 0.001,
+      "height": 15979,
+      "time": 1713274305,
+      "candidate": "PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "02ef5d6f71418e4a8ca5142c73854414b2cc9601467c04aac727fb293eef593a",
+      "amount": 0.001,
+      "height": 15979,
+      "time": 1713274305,
+      "candidate": "PoS + Masternodes",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "02ef5d6f71418e4a8ca5142c73854414b2cc9601467c04aac727fb293eef593a",
+      "amount": 0.001,
+      "height": 15979,
+      "time": 1713274305,
+      "candidate": "Gridcoin v1 style PoS",
+      "region": "KIP0004"
+    },
+    {
+      "txid": "02ef5d6f71418e4a8ca5142c73854414b2cc9601467c04aac727fb293eef593a",
+      "amount": 0.001,
+      "height": 15979,
+      "time": 1713274305,
+      "candidate": "“Gridcoin v1 style PoS” + Masternodes",
+      "region": "KIP0004"
+    }
+  ],
+  "sum_votes": 14170397.815764,
+  "count_votes": 48,
+  "final_ntx_block_tx": "c7723f9a560af6a5a9f2b3d7faebcbf15bc16f46d05ee7c728293baedfdda4e4"
+}

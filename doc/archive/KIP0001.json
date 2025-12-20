@@ -1,0 +1,860 @@
+{
+  "explorer": "https://kip0001.explorer.kmd.io",
+  "results_official": true,
+  "title": "Should KMD's Active User Reward be reduced?",
+  "categories": {
+    "KIP0001": {
+      "options": [
+        {
+          "candidate": "Yes",
+          "address": "RReduceRewardsXXXXXXXXXXXXXXUxPxuC",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_docker/vote/src/qrcodes/RReduceRewardsXXXXXXXXXXXXXXUxPxuC.png",
+          "text": "Reduce the active user reward amount to 0.01% APR in order to decrease the KMD total supply over time.",
+          "votes": 11263467.493214,
+          "testnet": [],
+          "veteran": false,
+          "utxos": []
+        },
+        {
+          "candidate": "No",
+          "address": "RKeepRewardsXXXXXXXXXXXXXXXXYKRSuF",
+          "qr_code": "https://raw.githubusercontent.com/smk762/fast_api_docker/vote/src/qrcodes/RKeepRewardsXXXXXXXXXXXXXXXXYKRSuF.png",
+          "text": "Keep the active user reward amount at 5.1% APR.",
+          "votes": 2209606.348421,
+          "testnet": [],
+          "veteran": false,
+          "utxos": []
+        }
+      ]
+    }
+  },
+  "ends_at": 1680307199,
+  "overtime_ended_at": 1680308596,
+  "first_overtime_block": {
+    "height": 20682,
+    "hash": "0016568e1fd2c83c45371e75ac2397a1b74080abc343e46852e9e6f6ae5341a5",
+    "time": 1680307208
+  },
+  "final_ntx_block": {
+    "height": 20686,
+    "hash": "002a7b835c9f4f7f3cafe9a7e5d1bc9d91ece9b736ee497aff2bc36428c9a217",
+    "time": 1680307640
+  },
+  "current_block": {
+    "height": 26827,
+    "hash": "0d835d7f59141e3440d9b2f07533cd09c7c25fb1fc8523d7c056b6fe7ea771d0",
+    "time": 1682964478
+  },
+  "snapshot_at": 1677887999,
+  "airdrop_at": 1678147199,
+  "airdropped_supply": 136900000,
+  "starts_at": 1678147199,
+  "updated_time": 1682964626,
+  "status": "historical",
+  "final_ntx_block_tx": "f8eab7fd9e87e3411ee401ca346649decd01dc0d31f90ae34e7db2fa7dde001c",
+  "extra_info": {},
+  "recent_votes": [
+    {
+      "txid": "cd9160f36f7433219d915226e5f17902a64dcab2782fdaf36252e3d175b11ad9",
+      "amount": 1331.41539861,
+      "height": 26613,
+      "time": 1682633452,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "33f40ad6f9a8fac6d30c4dee0812baa60bad5a4e310aaa7be1bcffd636fcb181",
+      "amount": 153.62905387,
+      "height": 26375,
+      "time": 1682278921,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "2719c48e0042a76de7d80b7bacdfefae990770227fd7469b35996ce8e7cbd3c1",
+      "amount": 7558.6882155,
+      "height": 24581,
+      "time": 1681036607,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "8ffb99c22770ee688292a831664e31764d5ddfd5ca8f61abfb2a76b5edc00779",
+      "amount": 1.25535268,
+      "height": 20785,
+      "time": 1680323662,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "e77d2943cbd310abcb56fcc720fb36595a6994f82efe0e572ae4e37efba9930d",
+      "amount": 38359.17714003,
+      "height": 20572,
+      "time": 1680291280,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "d49f758876822a01a71d3f21d80e6ac3a5ac74c7c5b2ffaf79f2223f9f40b64f",
+      "amount": 25760.31430499,
+      "height": 20571,
+      "time": 1680291259,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "04399c7ef111517b1f850594da561a38305b719c4a8a93f1e9a2b013bd8e001f",
+      "amount": 25012.79686311,
+      "height": 20571,
+      "time": 1680291259,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "9e856a1877d822f9e44b4ab56e5b7134d675adb98546130e196887146445119e",
+      "amount": 18155.67273577,
+      "height": 20571,
+      "time": 1680291259,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "2f373164edf4c0b4d2a9445139d3ab5910cee79be126e4419ec78347eff331a6",
+      "amount": 17489.41425296,
+      "height": 20571,
+      "time": 1680291259,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "5dee120476331d67ade57c6e98c84dfcccb267d1b32f94df5f7888194fda0d7f",
+      "amount": 5314.73607269,
+      "height": 20570,
+      "time": 1680291176,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "c6eb27972e4ca32eee73c2bbe304c7fbbd286e753f2162f5944ff9cf53fbfc90",
+      "amount": 96102.40809764,
+      "height": 20569,
+      "time": 1680290971,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "856b8d348788803f10f3dfb6c70b7b49693f4e4c5edf2ff28ab0dd07ba43360b",
+      "amount": 9202.0674635,
+      "height": 20482,
+      "time": 1680277742,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "80b89fa35c80e24fd5a56883f698e60b72eccfe37e5fdc254d439ca652e26673",
+      "amount": 0.33391264,
+      "height": 20362,
+      "time": 1680257937,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "4de8a72f5cc9fc8a233b7d77164b242e9b5638159e307325d96421ea61aafde0",
+      "amount": 999.38524094,
+      "height": 20272,
+      "time": 1680245131,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "7efe91a62bd550c6e8f2c3eec17d078df23feeb9af6c9bccbe49e0d303029f93",
+      "amount": 0.00762,
+      "height": 20005,
+      "time": 1680203618,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "e4b86fdd0c92a26ef927c5a654ba3c21efdddde6ca83d2c1e0ff99e5de9b52e3",
+      "amount": 0.00762,
+      "height": 20003,
+      "time": 1680203546,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "e7dbed75f4a040cc0b55dd689b6a680aa9f5aaddd2f9d2baa31b68012d7dd8a3",
+      "amount": 0.00762,
+      "height": 20002,
+      "time": 1680203445,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "d3a5cad890796af31cb5a4e65431e070848d5da80796ebdb0acda9fc34c28d8c",
+      "amount": 0.00762,
+      "height": 19995,
+      "time": 1680202281,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "2ae15f846d7cce31ca693fb9f2bb5ac14ec87c8f75bfc9a11e9ed6a5354a7263",
+      "amount": 0.00762,
+      "height": 19985,
+      "time": 1680200566,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "97db82faa4fe6324be4250efefaaf50d2c43941f9299d93639662ee760299a23",
+      "amount": 0.00762,
+      "height": 19964,
+      "time": 1680197926,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "440641d58caeb73e60e37d0a951e8c2186cc7f0e0f837fdb272c72443caf8e65",
+      "amount": 0.00762,
+      "height": 19961,
+      "time": 1680197346,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "0c5367d3446e0a60f83f0577e5134ca7ccf29c21b919995de38610710232e05a",
+      "amount": 0.00762,
+      "height": 19961,
+      "time": 1680197346,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "7388afc0f8276d00ed7dc4a6ade247ce81193f87ad608d7a7fb7e702e6e2d45d",
+      "amount": 0.00762,
+      "height": 19960,
+      "time": 1680197254,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "3425d7dfa88f83c565392ffa74d7c34d65b06b0b775d8e2e8772dfcf4393b6ce",
+      "amount": 0.00762,
+      "height": 19960,
+      "time": 1680197254,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "c6ae5839ca2d710a64715b6f53051b74a737a92d540ab10ec0296567a6becf50",
+      "amount": 0.00762,
+      "height": 19960,
+      "time": 1680197254,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "b993f5ff3030ccd313e63030bdbce275679247575fe1568c95d35da1962ff224",
+      "amount": 0.00762,
+      "height": 19960,
+      "time": 1680197254,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "07d92084171e73dabb891f318c88ab48633f5d14652b07493ae59c875556bf1a",
+      "amount": 0.00762,
+      "height": 19960,
+      "time": 1680197254,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "98d4a7b09ceafb499335c604b6b0c0ebbbebff9e614403468efbea574e61310c",
+      "amount": 0.00762,
+      "height": 19960,
+      "time": 1680197254,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "f67271b414f64461a5832936daeb98a06db058790a594c249b0dfbd0162d0c5b",
+      "amount": 0.00762,
+      "height": 19958,
+      "time": 1680197090,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "ba3b908162480f709d4a95f1d132ee189033b2d8bd3a6e91d52e33e15068a289",
+      "amount": 0.00762,
+      "height": 19958,
+      "time": 1680197090,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "b8773c8756f2fa4617250cb5f462e88afcd4439d163f4c25ef9e16472592be2c",
+      "amount": 0.00762,
+      "height": 19959,
+      "time": 1680197088,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "2b23dcf27c37889ce83aea927246fc8ce6f5f9c0d504792bcbab4efdd879e59d",
+      "amount": 0.00762,
+      "height": 19959,
+      "time": 1680197088,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "ad927d710dfd6941c3ef21e3d350efc7aa8c6a677ed1689536205422376594ec",
+      "amount": 0.00762,
+      "height": 19959,
+      "time": 1680197088,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "711d32d780dd344d0324010bc2908d61d86c944ede2cfe5b85982704b8ecc6b0",
+      "amount": 0.00762,
+      "height": 19957,
+      "time": 1680196950,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "812c313f0f754f728f8b37211a24983091ee42a58d771636d68d39a54f78570b",
+      "amount": 0.00762,
+      "height": 19955,
+      "time": 1680196897,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "0a0c4e8ec40e023254a1cc25f4f247d7e6ff9e52735bd37e0b8ff00250532a2e",
+      "amount": 0.00762,
+      "height": 19954,
+      "time": 1680196870,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "e092640f2491650a6ae887db51aaf75caee21c00a240eb8a0dd7982dfdcb4009",
+      "amount": 0.00762,
+      "height": 19954,
+      "time": 1680196870,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "652acbbead1c6ada062abe6e6ff62c316d83e3bde029c80579ea338fb9c2d1ed",
+      "amount": 0.00762,
+      "height": 19954,
+      "time": 1680196870,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "acb6d4e0c22b9050be3f1ca935f2fcf3b010c4cc0138baba0ee3d6395afd95c3",
+      "amount": 0.00762,
+      "height": 19953,
+      "time": 1680196784,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "be449c582d56aa65024e1c6cc306df1837bcc5f1709f75459c60dc4ac1070105",
+      "amount": 0.00762,
+      "height": 19952,
+      "time": 1680196749,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "3b4e92590bd59b1f4772c20a8ed821b91433c9b6711acec961e545fcca3a73c6",
+      "amount": 0.00762,
+      "height": 19951,
+      "time": 1680196722,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "fdef3a3bdf7b3955ea465d99d25962bd582eeffe91eec178f082e9b8d5cc5f27",
+      "amount": 0.00762,
+      "height": 19951,
+      "time": 1680196722,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "3ab6233147f681b8ffa112295577325c5d74e584724d2133a7f867db86beca13",
+      "amount": 0.00762,
+      "height": 19951,
+      "time": 1680196722,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "000e4e12944931d47a43941060babdde39398f8b92b0a6bc7de3103550d9f62f",
+      "amount": 0.00762,
+      "height": 19951,
+      "time": 1680196722,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "67ea27f919b5780a93556a46e5ab010d67e63c6d1a480c54e0098796d6eb1fe9",
+      "amount": 0.00762,
+      "height": 19951,
+      "time": 1680196722,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "070629954cf0a9390e92488c1e6f9589a10946d4d1fd77b426bede539bdc9a96",
+      "amount": 0.00762,
+      "height": 19950,
+      "time": 1680196569,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "6cdc090e9a06509f631b75c07cfcaf8476e7fdd18e2a08f47729ac011ce8c5e2",
+      "amount": 0.00762,
+      "height": 19949,
+      "time": 1680196538,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "990e31b5cd412d44e5cfd3d57a04a27f837a28048bf9b5c0594f7f7936ca618e",
+      "amount": 0.00762,
+      "height": 19947,
+      "time": 1680196504,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "75bc1f424d1940f5d1fb9b3c6ac9a3342c2372d9de3264f3a10a49849f500b5f",
+      "amount": 0.00762,
+      "height": 19947,
+      "time": 1680196504,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "cc79c9a9604c36365aaeeff19de839fa1d549cbef0c73182d5c1d1b253077b5d",
+      "amount": 0.00762,
+      "height": 19947,
+      "time": 1680196504,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "6ef5b2701d09b7ccbedf3c2a2e9aed5ad191b5f0ac9b80c7df7b82f83d27d5c0",
+      "amount": 0.00762,
+      "height": 19946,
+      "time": 1680196416,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "df4c3f0ccccccc5cabb2455afa7a086fa42a406d4f4ab7261a7b3f3e03412aca",
+      "amount": 0.00762,
+      "height": 19945,
+      "time": 1680196407,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "1057d56ad1b6d2e33456e36b6b9a7a90c13869643d7edef549b0e76ce9894189",
+      "amount": 0.00762,
+      "height": 19944,
+      "time": 1680196359,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "cf2760e81e767bb0630e2af0e583b4cc5c68caaf45fa5cabc2d4d4863268ca0a",
+      "amount": 0.00762,
+      "height": 19943,
+      "time": 1680196336,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "dcb3d969ea79f5613017ec8ae05c9b8d76820360da1a04ce1361ac8c236690dd",
+      "amount": 0.00762,
+      "height": 19942,
+      "time": 1680196298,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "3daa6aa9bdcedd0b536f827fd71f2a1d41d6e54af0b35fc148b583d1ed46a887",
+      "amount": 0.00762,
+      "height": 19941,
+      "time": 1680196276,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "c8856cf1be05db3e0aa166292a132f702ba65b9211150593efa1d3b711496187",
+      "amount": 0.00762,
+      "height": 19940,
+      "time": 1680196252,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "f924a703c63329d779e5c6f1de8ba480096e717018d17fefc022ec61c9118c30",
+      "amount": 0.00762,
+      "height": 19940,
+      "time": 1680196252,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "3ce0dcd535b30358d8d87f1e188fde65774a2fafe2c6835b957b792c23599c09",
+      "amount": 0.00762,
+      "height": 19940,
+      "time": 1680196252,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "27ab611634bafdc12ecf29233572b9ddc826b827d840ca23559f254e757af50d",
+      "amount": 0.00762,
+      "height": 19939,
+      "time": 1680196154,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "f040e914e13bd2c023a14a4c137728e0130657cbce783bbf13b3558e54389864",
+      "amount": 0.00762,
+      "height": 19939,
+      "time": 1680196154,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "ccf908d156f282657483efebd98c703838402fa6df8de811627c5b7890e198c5",
+      "amount": 0.00762,
+      "height": 19939,
+      "time": 1680196154,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "9725895c301978ae6134b070804c144cd4887a50f23bf3c5e9b96661c272a7f2",
+      "amount": 0.00762,
+      "height": 19939,
+      "time": 1680196154,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "d5f70429d251b058422be2e42b07cce8316aaa21aaa1f375652f85d95911ed80",
+      "amount": 0.00762,
+      "height": 19939,
+      "time": 1680196154,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "8e1c589be4746a7b889e8e12fd2ca79de911e27cac2e5cbf75ea7557214d7984",
+      "amount": 0.00762,
+      "height": 19939,
+      "time": 1680196154,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "ca63ae2e4ffb3e33822467f7d3e365b97ac8d8b334c3368df9c996a3f1f3ffe4",
+      "amount": 0.00762,
+      "height": 19939,
+      "time": 1680196154,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "7186d919e2c7fe80e0de84d0e7f0d6ca16a13d5f3a83c1ebe0b824a67ec9376d",
+      "amount": 0.00762,
+      "height": 19938,
+      "time": 1680195941,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "f16d0dd1835b5c09bfe285c20cf72b60ac55497d9d65b2df9a8e53cb4a0e5fee",
+      "amount": 0.00762,
+      "height": 19938,
+      "time": 1680195941,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "c684e2c7fc29332dbb523549cbce0cb2a18cf923e1a77ae2bc024f5a139c5fa1",
+      "amount": 0.00762,
+      "height": 19938,
+      "time": 1680195941,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "27d5f41b13d1795d50504c8c2cdf7c40b558a76d81f11e643fa8324aa5981950",
+      "amount": 0.00762,
+      "height": 19937,
+      "time": 1680195907,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "917b4074774bc42f1c94256cdc6be8777db591c4035ffd21a9a4e9474eb64d36",
+      "amount": 0.00762,
+      "height": 19937,
+      "time": 1680195907,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "4e91e1d126211a8cb2ef71805d03ecaaf603963c109089e9b33bfcb1d988f664",
+      "amount": 0.00762,
+      "height": 19937,
+      "time": 1680195907,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "3f95de086a252d8063ec8ff92e02ae077549d13a85e52a7438a79c71745baa18",
+      "amount": 0.00762,
+      "height": 19935,
+      "time": 1680195764,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "d055ddfb39395d96ba156e074c22bf4d9bf1ad9af530ae7f81a7639507e4ee73",
+      "amount": 0.00762,
+      "height": 19935,
+      "time": 1680195764,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "3136bf495bf7c80918be3fefd7ee71b1a063deb2a71a809f5b04f4c2ebb82029",
+      "amount": 0.00762,
+      "height": 19935,
+      "time": 1680195764,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "bdc8124e2b68b22b46de779b477a1a962194c4dee6fb31f00d1130b6de5fba68",
+      "amount": 0.00762,
+      "height": 19934,
+      "time": 1680195667,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "05539bcf8f0624dfa062146946928046c2a828039e56ca17528e10af03fd4336",
+      "amount": 0.00762,
+      "height": 19933,
+      "time": 1680195635,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "d361f897cb4cf7407b3ef04e2b115ae6cee17ddb6c2d6cc6dafea408c6c1503a",
+      "amount": 0.00762,
+      "height": 19932,
+      "time": 1680195614,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "79d3e8b8efcc4fd33d1d6d7884b53de4333233fbbe55ae7b805ccf1fa24ff5ef",
+      "amount": 0.00762,
+      "height": 19932,
+      "time": 1680195614,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "051b64560ed3706afcf7ca64147dd99769897b0eb9bb5d22687d5951766eb6aa",
+      "amount": 0.00762,
+      "height": 19932,
+      "time": 1680195614,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "439aed19a5384d66aa4a45e9353718ec424cd5837b3a3ea8f64697ce6de85fe4",
+      "amount": 0.00762,
+      "height": 19931,
+      "time": 1680195522,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "451299f343b0b4b71f1ea54aef62d06ca89e27e5c5a6219972f2520f07faf8b5",
+      "amount": 0.00762,
+      "height": 19930,
+      "time": 1680195492,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "d48592043d07d8f3666af46cb2c8fb44a1cfd4fb8c45c57905581e34c609076b",
+      "amount": 0.00762,
+      "height": 19930,
+      "time": 1680195492,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "67671bb32ed1f6fa46ecb4808c3391005d269fe374fc7866011bce88e3a145a2",
+      "amount": 0.00762,
+      "height": 19930,
+      "time": 1680195492,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "e3e1c966ca23aa5df7b80f017876cfa79ee45b6f29d0ff9d5dea5e750c408d7d",
+      "amount": 0.00762,
+      "height": 19930,
+      "time": 1680195492,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "bcf0b36cae1ed1efa1aebde19d860d1be6b8825304aac75253c4fd3e0031df6b",
+      "amount": 0.00762,
+      "height": 19930,
+      "time": 1680195492,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "8a4a536f6b67d1a8dee01b7b91da2e115d2ff47365e3d66083b30ea1c0fa1556",
+      "amount": 0.00762,
+      "height": 19929,
+      "time": 1680195332,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "b51b39909c17aae1f375677fadad37a838fdf48756c5c457740fb677aad24410",
+      "amount": 0.00762,
+      "height": 19928,
+      "time": 1680195317,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "4d5e3cf689b6e8baee3b8ae28d0926f7296bbb71599f4d403f7604ac3af90229",
+      "amount": 0.00762,
+      "height": 19928,
+      "time": 1680195317,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "87e4ccb442501d48379ec9fea3e35a0c579ce573c43d6c34ef08a230deb2d094",
+      "amount": 0.00762,
+      "height": 19928,
+      "time": 1680195317,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "da18c23a2aa12e8ed3f212716062da909e9c93140d755f2323a21ab40fbf4481",
+      "amount": 0.00762,
+      "height": 19927,
+      "time": 1680195245,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "b4e5dd42128813acc0c5ecf09ca7d94eb407719078e16cba088569aa0f30e9c8",
+      "amount": 0.00762,
+      "height": 19927,
+      "time": 1680195245,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "cd63eb19afb0895155ce802f1ccdffe81836f29a4123e45c117065cc14138a51",
+      "amount": 0.00762,
+      "height": 19927,
+      "time": 1680195245,
+      "candidate": "Yes",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "d58d785cc2dade1d1c3ff40fda0f497fd20cc93ef2a4787ed1ece1cf3c19a46f",
+      "amount": 0.00762,
+      "height": 19927,
+      "time": 1680195245,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "efea20b4773980160f77957751c1c3aba12b96c71c2a66d65d530fe094d00b6b",
+      "amount": 0.00762,
+      "height": 19927,
+      "time": 1680195245,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "4e043e71a895d628bbb3601c4f2e89ab541ae535c4bad0f4daf2be4e191f87bb",
+      "amount": 0.00762,
+      "height": 19927,
+      "time": 1680195245,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "94a76456c4904f1befa68e62b58d094d1c9231ce52848963a33be9b16eafbff5",
+      "amount": 0.00762,
+      "height": 19927,
+      "time": 1680195245,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "4daa0f0a48eb6550886ebc804f9d5957e16ee2de1066305855c1d62b68aefa99",
+      "amount": 0.00762,
+      "height": 19927,
+      "time": 1680195245,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "660da1cbd4ffe7443b5e045b8bf739dc4fe44eadbe4a1fd81ffced46ee8f7ca0",
+      "amount": 0.00762,
+      "height": 19927,
+      "time": 1680195245,
+      "candidate": "No",
+      "region": "aur_poll"
+    },
+    {
+      "txid": "f7fa9fdcb788fe7d88c74a869ca5c093863601548aebe2d93f79486b0189a174",
+      "amount": 0.00762,
+      "height": 19927,
+      "time": 1680195245,
+      "candidate": "No",
+      "region": "aur_poll"
+    }
+  ],
+  "sum_votes": 13473073.841632,
+  "count_votes": 11128
+}
