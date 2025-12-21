@@ -3,6 +3,7 @@
 ## 0.8.5
 
 - Updates `komodod` to [`e0f463a`](https://github.com/GLEECBTC/komodo-daemon/commit/e0f463a5e0fee7e7c8db7f1b46a2b89926abab96)
+- Updates `tokeld` to [`96234b4`](https://github.com/TokelPlatform/tokel/commit/96234b46472d51bb0ea3c2ac31a150b7b8ff5f92)
 
 ## 0.8.4
 
