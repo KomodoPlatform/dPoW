@@ -5,17 +5,28 @@ Related Komodod pull request: https://github.com/GLEECBTC/komodo-daemon/pull/672
 Related Komodod release: https://github.com/GLEECBTC/komodo-daemon/releases/tag/v0.9.2
 
 
-### Stop, Update and restart KMD and all assetchains
+### Stop, Update and restart KMD, TKL and all assetchains
 
 ```bash
+# Rebuild KMD
 komodo-cli stop # repeat for KMD 3P and all assetchains
 cd ~/komodo
 git pull
 git checkout e0f463a 
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 source ~/dPoW/pubkey.txt
-komodod -pubkey=${pubkey} # repeat for KMD 3P and all assetchains
+komodod -pubkey=${pubkey} & # repeat for KMD 3P and all assetchains
+
+# Rebuild TKL
+komodo-cli -ac_name=TOKEL stop
+cd ~/tokel
+git pull
+git checkout 96234b4
+./zcutil/build.sh -j$(expr $(nproc) - 1)
+source ~/dPoW/pubkey.txt
+tokeld -pubkey=${pubkey} &
 ```
+
 
 #### If using docker:
 ```bash
