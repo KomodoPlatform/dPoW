@@ -33,12 +33,12 @@ tokeld -pubkey=${pubkey} &
 # Main server
 cd ~/notary_docker_main
 git checkout main && git pull
-./start # This wil stop, recreate compose file, then rebuild and restart
+./update # This wil stop, recreate compose file, then rebuild and restart
 
 # 3P server
 cd ~/notary_docker_3p
 git checkout main && git pull
-./start # This wil stop, recreate compose file, then rebuild and restart
+./update # This wil stop, recreate compose file, then rebuild and restart
 ```
 
 Once all coin RPCs are ready and responding:
