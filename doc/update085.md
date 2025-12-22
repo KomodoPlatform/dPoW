@@ -32,15 +32,13 @@ tokeld -pubkey=${pubkey} &
 ```bash
 # Main server
 cd ~/notary_docker_main
-./stop
-docker compose up -d --build 
-docker compose logs -f --tail 33
+git checkout main && git pull
+./start # This wil stop, recreate compose file, then rebuild and restart
 
 # 3P server
 cd ~/notary_docker_3p
-./stop
-docker compose up -d --build 
-docker compose logs -f --tail 33
+git checkout main && git pull
+./start # This wil stop, recreate compose file, then rebuild and restart
 ```
 
 Once all coin RPCs are ready and responding:
